@@ -65,3 +65,10 @@ for pull quotes.
 
 `Contact.jsx` currently shows a success state on submit. Point `onSubmit` at your
 provider of choice (Formspree, Resend, a Next/Vercel function, etc.).
+
+## Deploy
+
+The project is hosted on Vercel and connected to this GitHub repository:
+every push to `main` triggers a production deploy automatically
+(https://origoni-site.vercel.app). Preview deployments are created for other
+branches. No manual `vercel deploy` is needed for normal changes.
