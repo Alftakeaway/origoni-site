@@ -53,6 +53,7 @@ export const strings = {
       readArticle: 'Leggi l’articolo',
       back: 'Torna al giornale',
       filterAll: 'Tutti',
+      feed: 'Feed RSS',
       authorBio:
         'Scrittrice e saggista. Non escludo il ritorno (Nemapress, 2023) e tre libri fra iconografia sacra, inchiesta urbana e storia artigiana.',
       authorNote: 'Firma ospite — non è un testo dell’autrice',
@@ -71,6 +72,7 @@ export const strings = {
       where: 'Dove',
       role: 'Ruolo',
       source: 'Fonte',
+      calendar: 'Aggiungi al calendario',
       pending: 'Le prossime date si aggiungono qui; le voci marcate «bozza» sono in attesa di conferma.',
     },
     about: {
@@ -100,6 +102,16 @@ export const strings = {
       emptyTitle: 'Lo scaffale è ancora da riempire',
       empty:
         'Questo scaffale è ancora vuoto: le schede arriveranno con i libri in lettura e con quelli finiti, ognuno con una riga di commento. I libri pubblicati sono nella sezione Opere.',
+    },
+    a11y: {
+      open: 'Preferenze di lettura',
+      title: 'Lettura',
+      close: 'Chiudi le preferenze',
+      text: 'Corpo del testo',
+      size1: 'Testo normale',
+      size2: 'Testo grande',
+      size3: 'Testo molto grande',
+      contrast: 'Alto contrasto',
     },
     contact: {
       eyebrow: 'Corrispondenza',
@@ -182,6 +194,7 @@ export const strings = {
       readArticle: 'Read article',
       back: 'Back to journal',
       filterAll: 'All',
+      feed: 'RSS feed',
       authorBio:
         'Writer and essayist. Non escludo il ritorno (Nemapress, 2023) and three books on sacred iconography, urban inquiry and craft history.',
       authorNote: 'Guest piece — not text by the author',
@@ -200,6 +213,7 @@ export const strings = {
       where: 'Where',
       role: 'Role',
       source: 'Source',
+      calendar: 'Add to calendar',
       pending: 'Upcoming dates are added here; entries marked “draft” await confirmation.',
     },
     about: {
@@ -229,6 +243,16 @@ export const strings = {
       emptyTitle: 'The shelf is not stocked yet',
       empty:
         'This shelf is still empty: the cards will arrive with the books in progress and the ones finished, each with a line of comment. The published books are under Works.',
+    },
+    a11y: {
+      open: 'Reading preferences',
+      title: 'Reading',
+      close: 'Close reading preferences',
+      text: 'Text size',
+      size1: 'Normal text',
+      size2: 'Large text',
+      size3: 'Extra large text',
+      contrast: 'High contrast',
     },
     contact: {
       eyebrow: 'Correspondence',

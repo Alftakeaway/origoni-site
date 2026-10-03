@@ -1,0 +1,36 @@
+/* Alto contrasto. Il tema è carta/inchiostro, e l'unica vera barriera alla
+   lettura qui è il grigio chiaro del corpo testo e l'oro su fondo chiaro:
+   si scuriscono quelli, senza toccare la struttura della pagina.
+   File separato: Tailwind riscrive i selettori grezzi che stanno nel foglio
+   con @tailwind/@apply, e le utility con la barra (.bg-white/70) si rompono. */
+html.co-contrast body {
+  background-color: #fff;
+}
+
+html.co-contrast .text-ink-muted,
+html.co-contrast .text-ink-soft,
+html.co-contrast .article-body p {
+  color: #14120f !important;
+}
+
+html.co-contrast .bg-paper-warm,
+html.co-contrast .bg-white\/70 {
+  background-color: #fff !important;
+}
+
+html.co-contrast .border-ink\/8,
+html.co-contrast .border-ink\/10,
+html.co-contrast .border-ink\/12 {
+  border-color: rgba(20, 18, 15, 0.45) !important;
+}
+
+html.co-contrast .eyebrow,
+html.co-contrast .text-gold-dark {
+  color: #6f5520 !important;
+}
+
+html.co-contrast .text-paper\/45,
+html.co-contrast .text-paper\/50,
+html.co-contrast .text-paper\/60 {
+  color: #f4efe4 !important;
+}

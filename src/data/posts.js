@@ -4,6 +4,8 @@
 // `blocks` rende la lettura integrale: { type: 'p', text: { it, en } } per i paragrafi,
 // { type: 'quote', text: { it, en } } per le citazioni a piena larghezza.
 // Le categorie sono chiavi fisse; le etichette stanno nei dizionari i18n.
+// `iso` è la data tecnica (AAAA-MM-GG) letta da scripts/build-feed.mjs per il feed RSS;
+// `date` resta l'etichetta leggibile in pagina.
 export const categoryKeys = ['reviews', 'essays', 'notes']
 
 export const posts = [
@@ -16,6 +18,7 @@ export const posts = [
     category: 'reviews',
     date: { it: '18 settembre 2026', en: 'September 18, 2026' },
     readTime: 9,
+    iso: '2026-09-18',
     draft: true,
     excerpt: {
       it:
@@ -91,6 +94,7 @@ export const posts = [
     category: 'essays',
     date: { it: '30 agosto 2026', en: 'August 30, 2026' },
     readTime: 7,
+    iso: '2026-08-30',
     draft: true,
     excerpt: {
       it:
@@ -150,6 +154,7 @@ export const posts = [
     category: 'notes',
     date: { it: '12 agosto 2026', en: 'August 12, 2026' },
     readTime: 6,
+    iso: '2026-08-12',
     draft: true,
     excerpt: {
       it:
@@ -209,6 +214,7 @@ export const posts = [
     category: 'reviews',
     date: { it: '22 luglio 2026', en: 'July 22, 2026' },
     readTime: 8,
+    iso: '2026-07-22',
     draft: true,
     excerpt: {
       it:
@@ -259,6 +265,7 @@ export const posts = [
     category: 'notes',
     date: { it: '30 giugno 2026', en: 'June 30, 2026' },
     readTime: 5,
+    iso: '2026-06-30',
     draft: true,
     excerpt: {
       it:
@@ -309,6 +316,7 @@ export const posts = [
     category: 'essays',
     date: { it: '14 maggio 2026', en: 'May 14, 2026' },
     readTime: 10,
+    iso: '2026-05-14',
     draft: true,
     excerpt: {
       it:

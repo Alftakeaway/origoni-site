@@ -69,3 +69,6 @@
     animation: none !important;
   }
 }
+
+/* Le regole dell'alto contrasto stanno in src/contrast.css: importato dopo
+   questo foglio, così Tailwind non tocca i selettori grezzi. */

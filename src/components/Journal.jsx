@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Clock, ArrowUpRight } from 'lucide-react'
+import { Clock, ArrowUpRight, Rss } from 'lucide-react'
 import { posts, categoryKeys } from '../data/posts'
 import { useLang } from '../i18n/LanguageContext'
 import DraftBadge from './DraftBadge'
@@ -58,6 +58,14 @@ export default function Journal() {
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
             {t('journal.intro')}
           </p>
+          <a
+            href="/feed.xml"
+            type="application/rss+xml"
+            className="mt-4 inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
+          >
+            <Rss size={13} className="text-gold-dark" />
+            {t('journal.feed')}
+          </a>
         </Reveal>
 
         {/* Post cards */}

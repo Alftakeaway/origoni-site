@@ -4,7 +4,8 @@
 // (anno, giorno o forma del pezzo) e sono marcate come bozza nel sito.
 // I campi di testo sono bilingui: { it, en } — italiano prima.
 //
-// { id, sort: 'AAAA-MM-GG' per l'ordinamento, year, dateLabel: { it, en },
+// { id, sort: 'AAAA-MM-GG' per l'ordinamento, time?: 'HH:MM' (mancante = tutto il giorno),
+//   year, dateLabel: { it, en },
 //   title: { it, en }, kind: { it, en }, place: { it, en }, city,
 //   role: { it, en }, detail: { it, en }, draft?, sources: [{ label, href }] }
 
@@ -61,6 +62,7 @@ export const events = [
   {
     id: 'cyrano-alghero',
     sort: '2024-06-13',
+    time: '19:00',
     year: 2024,
     dateLabel: { it: '13 giugno 2024', en: '13 June 2024' },
     title: { it: 'Il cold case arriva ad Alghero', en: 'The cold case reaches Alghero' },
@@ -136,6 +138,7 @@ export const events = [
   {
     id: 'salone-2026-biblioteche',
     sort: '2026-05-17',
+    time: '10:30',
     year: 2026,
     dateLabel: { it: '17 maggio 2026, ore 10:30', en: '17 May 2026, 10:30 a.m.' },
     title: {
@@ -189,6 +192,7 @@ export const events = [
   {
     id: 'mandrarossa-finale',
     sort: '2026-07-25',
+    time: '20:00',
     year: 2026,
     dateLabel: { it: '25 luglio 2026, ore 20', en: '25 July 2026, 8 p.m.' },
     title: { it: 'Premio Mandrarossa — finale della seconda edizione', en: 'Premio Mandrarossa — second edition final' },

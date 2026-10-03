@@ -1,5 +1,6 @@
-import { Calendar, MapPin, ExternalLink, Users } from 'lucide-react'
+import { Calendar, CalendarPlus, MapPin, ExternalLink, Users } from 'lucide-react'
 import { events } from '../data/events'
+import { icsForEvent } from '../utils/ics'
 import { useLang } from '../i18n/LanguageContext'
 import DraftBadge from './DraftBadge'
 import Reveal from './Reveal'
@@ -24,7 +25,15 @@ export default function Events() {
         </Reveal>
 
         <div className="relative mt-14 border-l border-ink/12 pl-8 md:pl-12">
-          {sorted.map((e, i) => (
+          {sorted.map((e, i) => {
+            const place = `${tr(e.place)}${e.city && e.city !== '—' ? `, ${e.city}` : ''}`
+            const ics = icsForEvent(e, {
+              title: tr(e.title),
+              place,
+              description: tr(e.detail),
+              url: `${window.location.origin}/#events`,
+            })
+            return (
             <Reveal key={e.id} delay={(i % 3) * 0.08} className="relative pb-12 last:pb-0">
               <span
                 aria-hidden
@@ -52,7 +61,7 @@ export default function Events() {
                   </span>
                   <span className="inline-flex items-center gap-2">
                     <MapPin size={13} className="text-gold-dark" />
-                    {tr(e.place)}
+                    {place}
                   </span>
                   <span className="inline-flex items-center gap-2">
                     <Users size={13} className="text-gold-dark" />
@@ -81,10 +90,19 @@ export default function Events() {
                       />
                     </a>
                   ))}
+                  <a
+                    href={ics}
+                    download={`${e.id}.ics`}
+                    className="ml-auto inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
+                  >
+                    <CalendarPlus size={13} />
+                    {t('events.calendar')}
+                  </a>
                 </div>
               </article>
             </Reveal>
-          ))}
+            )
+          })}
         </div>
 
         <Reveal>
