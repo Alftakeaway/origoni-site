@@ -1,7 +1,12 @@
 // Dati di contatto e fonti pubbliche.
 // Recapiti forniti dall'autrice (ottobre 2026).
+// L'indirizzo è tenuto spezzato e codificato, e ricomposto solo a runtime:
+// i crawler che estraggono gli indirizzi dal sorgente non lo trovano in chiaro.
+// Per disattivare la posta in uscita cancellare la riga `email`.
+const encodedEmail = ['Y2xhdWRpYW9yaWdvbmk=', 'eWFob28uaXQ=']
+
 export const contact = {
-  email: 'claudiaorigoni@yahoo.it',
+  email: `${atob(encodedEmail[0])}@${atob(encodedEmail[1])}`,
   socials: [{ label: 'Instagram', href: 'https://www.instagram.com/claudiaorigoni' }],
 }
 

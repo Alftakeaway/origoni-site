@@ -51,8 +51,11 @@ src/
 
 - New book: add an object to `src/data/works.js` (bilingual fields are `{ it, en }`).
   Text belongs to the data file, chrome labels to `src/i18n/strings.js`.
-- Contact address and social profiles: `src/data/site.js`. While `email` is empty the
-  site shows no contact details and the form says so instead of pretending to send.
+- Contact address and social profiles: `src/data/site.js`. The address is kept split and
+  base64-encoded in `encodedEmail` so scrapers never see it in the shipped bundle; to change
+  it, re-encode each half with `btoa('local-part')` and `btoa('domain')`. Delete the `email`
+  line and the site shows no contact details, with the form saying so instead of pretending
+  to send.
 - Source list: `sources` in `src/data/site.js`; `About.jsx` renders it.
 
 ## Contact form
