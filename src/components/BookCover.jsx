@@ -1,7 +1,10 @@
 import { useLang } from '../i18n/LanguageContext'
 
-// Le copertine reali non sono riproducibili qui, quindi la bibliografia usa
-// copertine tipografiche generate: nessun fotografico spacciato per copertina.
+// Con la copertina editoriale vera (public/covers) la si mostra per intero,
+// senza ritagli: le due più vecchie arrivano a 200 px dai cataloghi, quindi
+// un crop sarebbe peggio di un bordo del colore del tono.
+// Senza copertina si disegna una copertina tipografica: niente foto stock
+// spacciate per copertine.
 const tones = {
   ink: {
     shell: 'bg-ink text-paper',
@@ -32,6 +35,19 @@ const tones = {
 export default function BookCover({ work, large = false }) {
   const { tr } = useLang()
   const tone = tones[work.tone] || tones.ink
+
+  if (work.cover) {
+    return (
+      <div className={`flex h-full w-full items-center justify-center ${tone.shell}`}>
+        <img
+          src={work.cover}
+          alt={tr(work.title)}
+          loading="lazy"
+          className="h-auto max-h-full w-auto max-w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+        />
+      </div>
+    )
+  }
 
   return (
     <div

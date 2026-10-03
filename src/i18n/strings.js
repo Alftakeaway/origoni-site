@@ -27,6 +27,7 @@ export const strings = {
       year: 'Anno',
       pages: 'Pagine',
       coAuthors: 'Con',
+      coverSource: 'Copertina editoriale, immagine da',
     },
     about: {
       eyebrow: 'Sull’autrice',
@@ -41,6 +42,7 @@ export const strings = {
         'Il libro è stato presentato a Roma, alla libreria “Le Storie” di Garbatella, il 23 marzo 2024, e ne è seguita un’intervista pubblica nel 2024. Restano da aggiungere i prossimi eventi e i materiali stampa: questa pagina riporta solo ciò che è verificabile nei cataloghi editoriali e nella stampa.',
       ],
       sourcesTitle: 'Fonti usate per questa bibliografia',
+      coversTitle: 'I libri citati, in ordine di pubblicazione',
     },
     contact: {
       eyebrow: 'Corrispondenza',
@@ -97,6 +99,7 @@ export const strings = {
       year: 'Year',
       pages: 'Pages',
       coAuthors: 'With',
+      coverSource: 'Publisher cover art, image from',
     },
     about: {
       eyebrow: 'About the author',
@@ -111,6 +114,7 @@ export const strings = {
         'The book was presented in Rome at the bookshop “Le Storie” in Garbatella on 23 March 2024, followed by a public interview later that year. Forthcoming events and press materials still need to be added: this page carries only what can be verified in publisher catalogues and the press.',
       ],
       sourcesTitle: 'Sources behind this bibliography',
+      coversTitle: 'The books mentioned here, in order of publication',
     },
     contact: {
       eyebrow: 'Correspondence',

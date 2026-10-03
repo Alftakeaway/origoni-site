@@ -1,6 +1,8 @@
 // Bibliografia reale: solo opere verificabili, con editore, anno e ISBN.
 // I campi di testo sono bilingui: { it, en } — l'italiano è la lingua primaria.
 // Le fonti sono raccolte in src/data/site.js e mostrate nella pagina.
+// `cover` è la copertina editoriale (in public/covers, con `coverCredit`):
+// dove manca, BookCover disegna una copertina tipografica.
 export const works = [
   {
     id: 'non-escludo-il-ritorno',
@@ -11,6 +13,8 @@ export const works = [
     isbn: '9788876293023',
     pages: '160',
     tone: 'ink',
+    cover: '/covers/non-escludo-il-ritorno.jpg',
+    coverCredit: 'ibs.it',
     synopsis: {
       it:
         'Primo romanzo. Un giallo storico che riprende un vero cold case sardo: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei \u2014 «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese» \u2014 e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
@@ -51,6 +55,8 @@ export const works = [
     publisher: 'Barbieri',
     isbn: '9788886187626',
     tone: 'sage',
+    cover: '/covers/i-fiori-dei-santi.jpg',
+    coverCredit: 'ibs.it',
     synopsis: {
       it:
         'Il libro d\u2019esordio, catalogo di un\u2019iconografia letta attraverso i fiori: i gigli, le rose, le palme e le erbe che compongono gli attributi dei santi, seguiti nelle storie e nelle leggende che li hanno messi in immagine.',
@@ -84,6 +90,8 @@ export const works = [
     isbn: '9788874210527',
     coAuthors: 'Elisabetta Valentini, Simona Filippini',
     tone: 'terracotta',
+    cover: '/covers/alza-gli-occhi-e-guarda.jpg',
+    coverCredit: 'ibs.it',
     synopsis: {
       it:
         'Con Elisabetta Valentini e Simona Filippini, un lavoro a tre voci su Sanità e Forcella: due quartieri di Napoli osservati nelle immagini, tra i contrasti sociali che li attraversano e le potenzialità che restano invisibili a chi li attraversa senza guardarli. Edizione illustrata, per la collana «Città si diventa».',
@@ -113,6 +121,8 @@ export const works = [
     isbn: '9788887432916',
     coAuthors: 'Elena La Delfa',
     tone: 'gold',
+    cover: '/covers/oro-nero-di-modica.jpg',
+    coverCredit: 'ancorastore.it',
     synopsis: {
       it:
         'Scritto con Elena La Delfa e dedicato all’«oro nero» di Modica: il cioccolato della città barocca, la sua lavorazione e il legame che tiene insieme un centro urbano, la sua storia artigianale e una materia che è insieme economia e identità.',

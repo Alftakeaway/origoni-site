@@ -136,6 +136,12 @@ export default function WorkModal({ work, onClose }) {
                 </a>
               ))}
             </div>
+
+            {work.coverCredit && (
+              <p className="mt-6 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                {t('work.coverSource')} {work.coverCredit}
+              </p>
+            )}
           </div>
         </div>
       </motion.div>

@@ -1,10 +1,12 @@
 import { Quote, Link2 } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
 import { sources } from '../data/site'
+import { works } from '../data/works'
 import Reveal from './Reveal'
 
 export default function About() {
-  const { t } = useLang()
+  const { t, tr } = useLang()
+  const cited = works.filter((w) => w.cover).sort((a, b) => a.year - b.year)
 
   return (
     <section id="about" className="relative bg-paper-warm py-28 md:py-36">
@@ -39,6 +41,29 @@ export default function About() {
           ))}
 
           <Reveal>
+            {cited.length > 0 && (
+              <>
+                <h3 className="mt-12 font-sans text-[11px] uppercase tracking-literary text-ink-muted">
+                  {t('about.coversTitle')}
+                </h3>
+                <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-5">
+                  {cited.map((w) => (
+                    <li key={w.id}>
+                      <img
+                        src={w.cover}
+                        alt={tr(w.title)}
+                        loading="lazy"
+                        className="max-h-32 w-auto shadow-card"
+                      />
+                      <p className="mt-2 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                        {w.year}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
             <h3 className="mt-12 font-sans text-[11px] uppercase tracking-literary text-ink-muted">
               {t('about.sourcesTitle')}
             </h3>
