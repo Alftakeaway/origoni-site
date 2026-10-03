@@ -5,6 +5,8 @@ export const strings = {
     docTitle: 'Claudia Origoni — Scrittrice e saggista',
     nav: {
       works: 'Opere',
+      journal: 'Giornale',
+      events: 'Eventi',
       about: 'Sull’autrice',
       shelf: 'Scaffale',
       contact: 'Contatti',
@@ -27,6 +29,8 @@ export const strings = {
       intro:
         'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Editore, anno e ISBN di ogni titolo sono riportati nella scheda.',
       readMore: 'Apri la scheda',
+      draftNote:
+        'Le sei schede marcate «bozza» sono segnaposto decisi con l’autrice: titoli, anni e sinossi provvisori in attesa dei testi definitivi, da confermare voce per voce.',
     },
     work: {
       isbn: 'ISBN',
@@ -34,6 +38,40 @@ export const strings = {
       pages: 'Pagine',
       coAuthors: 'Con',
       coverSource: 'Copertina editoriale, immagine da',
+    },
+    draft: {
+      label: 'Bozza',
+      banner:
+        'Voce provvisoria: questo testo non è definitivo ed è in attesa della conferma dell’autrice. Togliere il marchio «bozza» solo a contenuto verificato.',
+    },
+    journal: {
+      eyebrow: 'Il giornale letterario',
+      heading: 'Appunti dalla scrivania',
+      intro:
+        'Recensioni, saggi brevi e note di scrittura. I pezzi marcati «bozza» sono testi provvisori messi in pagina per far vedere la struttura del giornale: vanno sostituiti con gli articoli veri.',
+      readMin: 'min di lettura',
+      readArticle: 'Leggi l’articolo',
+      back: 'Torna al giornale',
+      filterAll: 'Tutti',
+      authorBio:
+        'Scrittrice e saggista. Non escludo il ritorno (Nemapress, 2023) e tre libri fra iconografia sacra, inchiesta urbana e storia artigiana.',
+      authorNote: 'Firma ospite — non è un testo dell’autrice',
+    },
+    categories: {
+      reviews: 'Recensioni',
+      essays: 'Saggi',
+      notes: 'Note di scrittura',
+    },
+    events: {
+      eyebrow: 'Il libro in pubblico',
+      heading: 'Presentazioni, premi, incontri',
+      intro:
+        'Un diario delle volte in cui i libri sono usciti dallo studio: presentazioni, interviste pubbliche, semifinali di premi. Ogni voce rimanda alla fonte da cui è stata ricavata.',
+      when: 'Quando',
+      where: 'Dove',
+      role: 'Ruolo',
+      source: 'Fonte',
+      pending: 'Le prossime date si aggiungono qui; le voci marcate «bozza» sono in attesa di conferma.',
     },
     about: {
       eyebrow: 'Sull’autrice',
@@ -45,7 +83,7 @@ export const strings = {
         'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali nell’iconografia sacra — i gigli, le rose e le palme che diventano attributi dei santi — seguito nelle storie e nelle leggende che li hanno messi in immagine.',
         'Nel 2005 firma con Elisabetta Valentini e Simona Filippini Alza gli occhi e guarda (Edizioni Intra Moenia), lavoro a tre voci sui quartieri Sanità e Forcella a Napoli, tra contrasti sociali e potenzialità nascoste. Nel 2009 esce L’oro nero di Modica (Coppola Editore), scritto con Elena La Delfa sul cioccolato della città barocca e sul legame che tiene insieme un centro urbano e la sua storia artigianale.',
         'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero cold case sardo, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
-        'Il libro è stato presentato a Roma, alla libreria “Le Storie” di Garbatella, il 23 marzo 2024, e ne è seguita un’intervista pubblica nel 2024. Restano da aggiungere i prossimi eventi e i materiali stampa: questa pagina riporta solo ciò che è verificabile nei cataloghi editoriali e nella stampa.',
+        'Accanto ai libri c’è il lavoro per il Premio Letterario Mandrarossa, che Claudia Origoni ha fondato e dirige: ogni sezione del premio porta il nome di un’etichetta, e la giuria della seconda edizione era presieduta da Concita De Gregorio. Date e luoghi degli incontri sono raccolti nella sezione Eventi, con la fonte accanto a ciascuna voce.',
       ],
       sourcesTitle: 'Fonti usate per questa bibliografia',
       coversTitle: 'I libri citati, in ordine di pubblicazione',
@@ -96,6 +134,8 @@ export const strings = {
     docTitle: 'Claudia Origoni — Writer and essayist',
     nav: {
       works: 'Works',
+      journal: 'Journal',
+      events: 'Events',
       about: 'About',
       shelf: 'Shelf',
       contact: 'Contact',
@@ -118,6 +158,8 @@ export const strings = {
       intro:
         'Four books in twenty-three years: a catalogue of floral symbols in sacred art, two inquiries written in several voices, and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, year and ISBN.',
       readMore: 'Open the entry',
+      draftNote:
+        'The six entries marked “draft” are placeholders agreed with the author: provisional titles, years and synopses awaiting the final texts, to be confirmed one by one.',
     },
     work: {
       isbn: 'ISBN',
@@ -125,6 +167,40 @@ export const strings = {
       pages: 'Pages',
       coAuthors: 'With',
       coverSource: 'Publisher cover art, image from',
+    },
+    draft: {
+      label: 'Draft',
+      banner:
+        'Provisional entry: this text is not final and awaits the author’s confirmation. The “draft” mark comes off only once the content is verified.',
+    },
+    journal: {
+      eyebrow: 'The literary journal',
+      heading: 'Notes from the desk',
+      intro:
+        'Reviews, short essays and writing notes. The pieces marked “draft” are provisional texts placed on the page to show how the journal works: they are to be replaced with the author’s real articles.',
+      readMin: 'min read',
+      readArticle: 'Read article',
+      back: 'Back to journal',
+      filterAll: 'All',
+      authorBio:
+        'Writer and essayist. Non escludo il ritorno (Nemapress, 2023) and three books on sacred iconography, urban inquiry and craft history.',
+      authorNote: 'Guest piece — not text by the author',
+    },
+    categories: {
+      reviews: 'Book reviews',
+      essays: 'Essays',
+      notes: 'Writing notes',
+    },
+    events: {
+      eyebrow: 'The book in public',
+      heading: 'Presentations, prizes, meetings',
+      intro:
+        'A record of the times the books left the study: presentations, public interviews, prize semifinals. Each entry links to the source it was drawn from.',
+      when: 'When',
+      where: 'Where',
+      role: 'Role',
+      source: 'Source',
+      pending: 'Upcoming dates are added here; entries marked “draft” await confirmation.',
     },
     about: {
       eyebrow: 'About the author',
@@ -136,7 +212,7 @@ export const strings = {
         'Claudia Origoni works with documents before she works with sentences. Her first book, I fiori dei santi (Barbieri, 2000), is a study of floral symbols in sacred iconography — the lilies, roses and palms that become the attributes of saints — followed through the stories and legends that put them into images.',
         'In 2005 she signed Alza gli occhi e guarda (Edizioni Intra Moenia) with Elisabetta Valentini and Simona Filippini, a three-voice work on the Neapolitan quarters of Sanità and Forcella, between social contrast and hidden potential. In 2009 came L’oro nero di Modica (Coppola Editore), written with Elena La Delfa about the chocolate of the Baroque town and the bond between a city and its craft history.',
         'In 2023 she published her first novel, Non escludo il ritorno (Nemapress): a historical mystery built on a real Sardinian cold case, the murder of Vanda Serra in Aidomaggiore in 1925, and the inquiry around Don Giovanni Spanu and his innocence. The real village becomes the fictional Aitadei: “since the case is still contested, I felt I had to change at least the name of the town”. Her publisher presents her as “an author with Sardinian roots”, and research into past lives is one of the trails the novel follows.',
-        'The book was presented in Rome at the bookshop “Le Storie” in Garbatella on 23 March 2024, followed by a public interview later that year. Forthcoming events and press materials still need to be added: this page carries only what can be verified in publisher catalogues and the press.',
+        'Beside the books there is the work for the Premio Letterario Mandrarossa, which Claudia Origoni founded and directs: each section of the prize carries the name of a wine label, and the jury of the second edition was chaired by Concita De Gregorio. The dates and places of the meetings are gathered in the Events section, with the source next to each entry.',
       ],
       sourcesTitle: 'Sources behind this bibliography',
       coversTitle: 'The books mentioned here, in order of publication',

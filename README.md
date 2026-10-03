@@ -1,6 +1,7 @@
 # Claudia Origoni — Sito dell'autrice
 
-Single-page site for the author: verified bibliography, biography with sources, and contact.
+Single-page site for the author: verified bibliography, literary journal, public events
+with sources, biography, reading log and contact.
 
 ## Stack
 
@@ -10,8 +11,19 @@ Single-page site for the author: verified bibliography, biography with sources, 
 - **Framer Motion** for physics-based scroll reveals, modals, and page-level transitions
 - **Lucide React** for icons
 
-Book "covers" are generated typographically (`BookCover.jsx`): the real cover art is not
-reproducible here, so no stock photo is presented as a cover.
+Book covers are the real publisher jacket images, scanned from the catalogues listed in
+`sources` (`public/covers/`). Where no image is available `BookCover.jsx` draws a
+typographic cover instead — no stock photo is ever presented as a cover.
+
+## Bozze (placeholder content)
+
+Six bibliography entries and all six journal posts are provisional texts agreed with the
+author on 3 October 2026: they exist to show the structure of the page before the real
+material arrives. Any entry with `draft: true` in `works.js`, `posts.js` or `events.js`
+renders a terracotta **BOZZA / DRAFT** badge on the card and a banner in the detail view.
+To confirm an entry: replace the text, then delete its `draft: true` line. The badge is
+the only thing separating invented placeholder copy from verified fact on the live site,
+so nothing marked draft should lose the flag without a check against a source.
 
 ## Setup
 
@@ -30,6 +42,8 @@ src/
   index.css               # Tailwind layers, paper-grain texture, article typography
   data/
     works.js              # Bibliography: title, publisher, year, ISBN, synopsis, links
+    posts.js              # Journal articles: category, date, read time, blocks (p / quote)
+    events.js             # Public events, each with the source it came from
     shelf.js              # Reading log: currently empty until the real titles arrive
     site.js               # Contact address + socials + list of public sources
   i18n/
@@ -39,8 +53,12 @@ src/
     Navbar.jsx            # Sticky blur-on-scroll nav + mobile menu + language toggle
     Hero.jsx              # Animated gradient field, floating glyphs, staggered copy
     Works.jsx             # Masonry grid (CSS columns) with hover zoom
-    BookCover.jsx         # Typographic cover, four tones
+    BookCover.jsx         # Cover art with typographic fallback, four tones
     WorkModal.jsx         # Detail view: synopsis, ISBN facts, notes, external links
+    Journal.jsx           # Category filter + post cards with typographic header
+    PostView.jsx          # Full-screen reader: progress bar, drop cap, pull quotes
+    Events.jsx            # Vertical timeline of presentations, prizes, panels
+    DraftBadge.jsx        # BOZZA / DRAFT marker for provisional entries
     About.jsx             # Biography + quote + sources
     Shelf.jsx             # Reading log cards: status, rating, progress, note
     Contact.jsx           # Inquiry form handed off to the visitor's mail client
@@ -58,7 +76,8 @@ src/
   it, re-encode each half with `btoa('local-part')` and `btoa('domain')`. Delete the `email`
   line and the site shows no contact details, with the form saying so instead of pretending
   to send.
-- Source list: `sources` in `src/data/site.js`; `About.jsx` renders it.
+- Source list: `sources` in `src/data/site.js`; `About.jsx` renders it. Each event in
+  `src/data/events.js` carries its own `sources` array, and `Events.jsx` prints them.
 - Reading log: entries go in `src/data/shelf.js`, whose header comment documents the shape.
   While the array is empty the section shows an honest "not stocked yet" panel instead of
   placeholder titles — nothing here ships a book she has not actually read.

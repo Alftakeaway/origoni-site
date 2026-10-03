@@ -41,10 +41,15 @@ export default function Navbar() {
 
   const links = [
     { label: t('nav.works'), href: '#works' },
+    { label: t('nav.journal'), href: '#journal' },
+    { label: t('nav.events'), href: '#events' },
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.shelf'), href: '#shelf' },
     { label: t('nav.contact'), href: '#contact' },
   ]
+
+  // In alto a destra c’è già il pulsante “Scrivimi”: il link Contatti è ridondante.
+  const desktopLinks = links.filter((l) => l.href !== '#contact')
 
   return (
     <motion.header
@@ -69,12 +74,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-7 md:flex">
-          {links.map((l) => (
+        <ul className="hidden items-center gap-4 md:flex xl:gap-7">
+          {desktopLinks.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="link-underline font-sans text-[13px] uppercase tracking-literary text-ink-muted transition-colors hover:text-ink"
+                className="link-underline font-sans text-[12px] uppercase tracking-widest text-ink-muted transition-colors hover:text-ink xl:tracking-literary"
               >
                 {l.label}
               </a>

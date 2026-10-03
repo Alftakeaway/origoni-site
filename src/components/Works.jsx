@@ -4,6 +4,7 @@ import { BookOpen } from 'lucide-react'
 import { works } from '../data/works'
 import { useLang } from '../i18n/LanguageContext'
 import BookCover from './BookCover'
+import DraftBadge from './DraftBadge'
 import Reveal from './Reveal'
 import WorkModal from './WorkModal'
 
@@ -22,6 +23,12 @@ export default function Works() {
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
             {t('works.intro')}
           </p>
+          {works.some((w) => w.draft) && (
+            <div className="mt-4 flex max-w-xl items-start gap-3 rounded-lg border border-dashed border-terracotta/45 bg-terracotta/8 p-4">
+              <DraftBadge />
+              <p className="text-[13px] leading-relaxed text-ink-soft">{t('works.draftNote')}</p>
+            </div>
+          )}
         </Reveal>
 
         {/* Masonry-style grid via CSS columns */}
@@ -42,6 +49,7 @@ export default function Works() {
                   <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 font-sans text-[10px] uppercase tracking-widest text-ink-soft backdrop-blur">
                     {tr(w.type)}
                   </span>
+                  {w.draft && <DraftBadge className="absolute right-4 top-4" />}
                   <span className="absolute bottom-4 right-4 flex translate-y-3 items-center gap-1.5 rounded-full bg-paper/90 px-3 py-1.5 font-sans text-[11px] uppercase tracking-widest text-ink opacity-0 backdrop-blur transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                     <BookOpen size={13} className="text-gold-dark" /> {t('works.readMore')}
                   </span>

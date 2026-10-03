@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { X, ExternalLink, BookMarked } from 'lucide-react'
+import { X, ExternalLink, BookMarked, PencilLine } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
 import BookCover from './BookCover'
+import DraftBadge from './DraftBadge'
 
 /**
  * Immersive detail view for a work: synopsis, verified bibliographic facts,
@@ -61,6 +62,7 @@ export default function WorkModal({ work, onClose }) {
             <p className="eyebrow mb-3">
               {tr(work.type)} &middot; {work.year}
             </p>
+            {work.draft && <DraftBadge className="mb-4" />}
             <h3 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
               {tr(work.title)}
             </h3>
@@ -73,39 +75,50 @@ export default function WorkModal({ work, onClose }) {
               {work.publisher}
             </p>
 
+            {work.draft && (
+              <div className="mt-5 flex items-start gap-3 rounded-lg border border-terracotta/35 bg-terracotta/10 p-4">
+                <PencilLine size={15} className="mt-0.5 shrink-0 text-terracotta" />
+                <p className="text-[13px] leading-relaxed text-ink-soft">{t('draft.banner')}</p>
+              </div>
+            )}
+
             <p className="mt-6 text-[15px] leading-relaxed text-ink-soft">{tr(work.synopsis)}</p>
 
             {/* Dati bibliografici verificati */}
-            <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-ink/10 bg-paper-warm p-5 text-sm">
-              <div>
-                <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                  {t('work.isbn')}
-                </dt>
-                <dd className="mt-1 tabular-nums text-ink-soft">{work.isbn}</dd>
-              </div>
-              <div>
-                <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                  {t('work.year')}
-                </dt>
-                <dd className="mt-1 text-ink-soft">{work.year}</dd>
-              </div>
-              {work.pages && (
+            {(work.isbn || work.pages || work.coAuthors) && (
+              <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-ink/10 bg-paper-warm p-5 text-sm">
+                {work.isbn && (
+                  <div>
+                    <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                      {t('work.isbn')}
+                    </dt>
+                    <dd className="mt-1 tabular-nums text-ink-soft">{work.isbn}</dd>
+                  </div>
+                )}
                 <div>
                   <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                    {t('work.pages')}
+                    {t('work.year')}
                   </dt>
-                  <dd className="mt-1 text-ink-soft">{work.pages}</dd>
+                  <dd className="mt-1 text-ink-soft">{work.year}</dd>
                 </div>
-              )}
-              {work.coAuthors && (
-                <div>
-                  <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                    {t('work.coAuthors')}
-                  </dt>
-                  <dd className="mt-1 text-ink-soft">{work.coAuthors}</dd>
-                </div>
-              )}
-            </dl>
+                {work.pages && (
+                  <div>
+                    <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                      {t('work.pages')}
+                    </dt>
+                    <dd className="mt-1 text-ink-soft">{work.pages}</dd>
+                  </div>
+                )}
+                {work.coAuthors && (
+                  <div>
+                    <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                      {t('work.coAuthors')}
+                    </dt>
+                    <dd className="mt-1 text-ink-soft">{work.coAuthors}</dd>
+                  </div>
+                )}
+              </dl>
+            )}
 
             {/* Note e contesto */}
             <div className="mt-7 space-y-4">
@@ -118,24 +131,26 @@ export default function WorkModal({ work, onClose }) {
             </div>
 
             {/* Links */}
-            <div className="mt-8 flex flex-wrap gap-3">
-              {work.links.map((l, i) => (
-                <a
-                  key={i}
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={
-                    i === 0
-                      ? 'inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-xs uppercase tracking-widest text-paper transition-all duration-300 hover:bg-gold-dark hover:shadow-book'
-                      : 'inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-sans text-xs uppercase tracking-widest text-ink-soft transition-all duration-300 hover:border-gold hover:text-gold-dark'
-                  }
-                >
-                  <ExternalLink size={13} />
-                  {tr(l.label)}
-                </a>
-              ))}
-            </div>
+            {work.links?.length > 0 && (
+              <div className="mt-8 flex flex-wrap gap-3">
+                {work.links.map((l, i) => (
+                  <a
+                    key={i}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={
+                      i === 0
+                        ? 'inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-xs uppercase tracking-widest text-paper transition-all duration-300 hover:bg-gold-dark hover:shadow-book'
+                        : 'inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-sans text-xs uppercase tracking-widest text-ink-soft transition-all duration-300 hover:border-gold hover:text-gold-dark'
+                    }
+                  >
+                    <ExternalLink size={13} />
+                    {tr(l.label)}
+                  </a>
+                ))}
+              </div>
+            )}
 
             {work.coverCredit && (
               <p className="mt-6 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
