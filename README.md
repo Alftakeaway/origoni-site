@@ -30,6 +30,7 @@ src/
   index.css               # Tailwind layers, paper-grain texture, article typography
   data/
     works.js              # Bibliography: title, publisher, year, ISBN, synopsis, links
+    shelf.js              # Reading log: currently empty until the real titles arrive
     site.js               # Contact address + socials + list of public sources
   i18n/
     strings.js            # Every UI string, Italian primary + English
@@ -41,6 +42,7 @@ src/
     BookCover.jsx         # Typographic cover, four tones
     WorkModal.jsx         # Detail view: synopsis, ISBN facts, notes, external links
     About.jsx             # Biography + quote + sources
+    Shelf.jsx             # Reading log cards: status, rating, progress, note
     Contact.jsx           # Inquiry form handed off to the visitor's mail client
     Footer.jsx
     Cursor.jsx            # Spring-physics cursor follower (fine pointers only)
@@ -57,6 +59,9 @@ src/
   line and the site shows no contact details, with the form saying so instead of pretending
   to send.
 - Source list: `sources` in `src/data/site.js`; `About.jsx` renders it.
+- Reading log: entries go in `src/data/shelf.js`, whose header comment documents the shape.
+  While the array is empty the section shows an honest "not stocked yet" panel instead of
+  placeholder titles — nothing here ships a book she has not actually read.
 
 ## Contact form
 

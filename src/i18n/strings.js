@@ -3,7 +3,13 @@
 export const strings = {
   it: {
     docTitle: 'Claudia Origoni — Scrittrice e saggista',
-    nav: { works: 'Opere', about: 'Sull’autrice', contact: 'Contatti', write: 'Scrivimi' },
+    nav: {
+      works: 'Opere',
+      about: 'Sull’autrice',
+      shelf: 'Scaffale',
+      contact: 'Contatti',
+      write: 'Scrivimi',
+    },
     hero: {
       eyebrow: 'Romanzi · Saggistica · Ricerche',
       tagline: '«Sono sempre stata un’appassionata di ricerche storiche.»',
@@ -46,6 +52,17 @@ export const strings = {
       note:
         'Le copertine sono le immagini editoriali riprese dai cataloghi elencati qui sopra; i diritti restano agli editori. Segnalazioni, correzioni e integrazioni si raccolgono nella sezione Contatti.',
     },
+    shelf: {
+      eyebrow: 'Il diario di lettura',
+      heading: 'Sullo scaffale',
+      intro:
+        'Cosa c’è adesso sul comodino: cosa sto leggendo, cosa ho appena finito, cosa aspetto per la stagione giusta. Con una riga di commento per ogni libro.',
+      progress: 'Avanzamento',
+      status: { reading: 'In lettura', finished: 'Finito', queued: 'In attesa' },
+      emptyTitle: 'Lo scaffale è ancora da riempire',
+      empty:
+        'Questo scaffale è ancora vuoto: le schede arriveranno con i libri in lettura e con quelli finiti, ognuno con una riga di commento. I libri pubblicati sono nella sezione Opere.',
+    },
     contact: {
       eyebrow: 'Corrispondenza',
       headingA: 'Le lettere sono',
@@ -77,7 +94,13 @@ export const strings = {
 
   en: {
     docTitle: 'Claudia Origoni — Writer and essayist',
-    nav: { works: 'Works', about: 'About', contact: 'Contact', write: 'Write to me' },
+    nav: {
+      works: 'Works',
+      about: 'About',
+      shelf: 'Shelf',
+      contact: 'Contact',
+      write: 'Write to me',
+    },
     hero: {
       eyebrow: 'Novels · Non-fiction · Research',
       tagline: '“I have always been passionate about historical research.”',
@@ -119,6 +142,17 @@ export const strings = {
       coversTitle: 'The books mentioned here, in order of publication',
       note:
         'The covers are the publisher jacket images taken from the catalogues listed above; all rights remain with the publishers. Corrections and additions are welcome through the Contact section.',
+    },
+    shelf: {
+      eyebrow: 'The reading log',
+      heading: 'On the shelf',
+      intro:
+        'What is on the bedside table now: what I am reading, what I have just finished, what I am saving for the right season. With a line of comment on each book.',
+      progress: 'Progress',
+      status: { reading: 'Reading', finished: 'Finished', queued: 'Waiting' },
+      emptyTitle: 'The shelf is not stocked yet',
+      empty:
+        'This shelf is still empty: the cards will arrive with the books in progress and the ones finished, each with a line of comment. The published books are under Works.',
     },
     contact: {
       eyebrow: 'Correspondence',

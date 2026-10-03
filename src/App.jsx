@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Works from './components/Works'
 import About from './components/About'
+import Shelf from './components/Shelf'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Cursor from './components/Cursor'
@@ -20,6 +21,7 @@ export default function App() {
           <Hero />
           <Works />
           <About />
+          <Shelf />
           <Contact />
         </main>
         <Footer />
