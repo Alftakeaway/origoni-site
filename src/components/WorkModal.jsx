@@ -1,15 +1,16 @@
 import { useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { X, ExternalLink, Quote } from 'lucide-react'
+import { X, ExternalLink, BookMarked } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
+import BookCover from './BookCover'
 
 /**
- * Immersive detail view for a featured work: synopsis, press quotes, links.
- * Locks body scroll and closes on Escape / backdrop click.
+ * Immersive detail view for a work: synopsis, verified bibliographic facts,
+ * external links. Locks body scroll and closes on Escape / backdrop click.
  */
 export default function WorkModal({ work, onClose }) {
   const reduce = useReducedMotion()
-  const { tr } = useLang()
+  const { t, tr } = useLang()
 
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose()
@@ -51,13 +52,8 @@ export default function WorkModal({ work, onClose }) {
 
         <div className="grid md:grid-cols-[2fr_3fr]">
           {/* Cover */}
-          <div className="relative h-64 overflow-hidden md:h-full">
-            <img
-              src={work.cover}
-              alt={tr(work.title)}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent md:bg-gradient-to-r" />
+          <div className="relative h-64 overflow-hidden md:h-[30rem] md:self-start">
+            <BookCover work={work} large />
           </div>
 
           {/* Details */}
@@ -68,24 +64,56 @@ export default function WorkModal({ work, onClose }) {
             <h3 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
               {tr(work.title)}
             </h3>
-            <p className="mt-2 font-sans text-xs uppercase tracking-widest text-ink-muted">
+            {work.subtitle && (
+              <p className="mt-2 font-serif text-lg italic leading-snug text-ink-muted">
+                {tr(work.subtitle)}
+              </p>
+            )}
+            <p className="mt-3 font-sans text-xs uppercase tracking-widest text-ink-muted">
               {work.publisher}
             </p>
 
             <p className="mt-6 text-[15px] leading-relaxed text-ink-soft">{tr(work.synopsis)}</p>
 
-            {/* Press quotes */}
+            {/* Dati bibliografici verificati */}
+            <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-ink/10 bg-paper-warm p-5 text-sm">
+              <div>
+                <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                  {t('work.isbn')}
+                </dt>
+                <dd className="mt-1 tabular-nums text-ink-soft">{work.isbn}</dd>
+              </div>
+              <div>
+                <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                  {t('work.year')}
+                </dt>
+                <dd className="mt-1 text-ink-soft">{work.year}</dd>
+              </div>
+              {work.pages && (
+                <div>
+                  <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                    {t('work.pages')}
+                  </dt>
+                  <dd className="mt-1 text-ink-soft">{work.pages}</dd>
+                </div>
+              )}
+              {work.coAuthors && (
+                <div>
+                  <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                    {t('work.coAuthors')}
+                  </dt>
+                  <dd className="mt-1 text-ink-soft">{work.coAuthors}</dd>
+                </div>
+              )}
+            </dl>
+
+            {/* Note e contesto */}
             <div className="mt-7 space-y-4">
-              {work.reviews.map((r, i) => (
-                <figure key={i} className="rounded-lg border-l-2 border-gold bg-paper-warm p-4">
-                  <Quote size={14} className="mb-2 text-gold-dark" />
-                  <blockquote className="font-serif text-lg italic leading-snug text-ink-soft">
-                    {tr(r.quote)}
-                  </blockquote>
-                  <figcaption className="mt-2 font-sans text-[11px] uppercase tracking-widest text-ink-muted">
-                    &mdash; {r.source}
-                  </figcaption>
-                </figure>
+              {(work.notes ?? []).map((n, i) => (
+                <div key={i} className="flex gap-3 border-l-2 border-gold pl-4">
+                  <BookMarked size={15} className="mt-1 shrink-0 text-gold-dark" />
+                  <p className="font-serif text-[17px] leading-snug text-ink-soft">{tr(n)}</p>
+                </div>
               ))}
             </div>
 
@@ -95,6 +123,8 @@ export default function WorkModal({ work, onClose }) {
                 <a
                   key={i}
                   href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={
                     i === 0
                       ? 'inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-xs uppercase tracking-widest text-paper transition-all duration-300 hover:bg-gold-dark hover:shadow-book'

@@ -13,7 +13,9 @@ export default function Footer() {
           </span>
         </div>
 
-        <p className="text-center font-serif text-sm italic">{t('footer.quote')}</p>
+        <p className="text-center font-sans text-[11px] uppercase tracking-widest text-paper/45">
+          {t('footer.line')}
+        </p>
 
         <div className="flex items-center gap-6">
           <span className="font-sans text-[11px] uppercase tracking-widest">

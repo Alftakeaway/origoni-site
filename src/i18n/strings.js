@@ -1,51 +1,53 @@
 // UI string dictionaries. Italian is the primary language; English for international readers.
+// Solo fatti verificabili: niente citazioni inventate attribuite all'autrice.
 export const strings = {
   it: {
-    docTitle: 'Claudia Origoni — Scrittrice e critica letteraria',
-    nav: { works: 'Opere', journal: 'Giornale', shelf: 'Scaffale', contact: 'Contatti', subscribe: 'Iscriviti' },
+    docTitle: 'Claudia Origoni — Scrittrice e saggista',
+    nav: { works: 'Opere', about: 'Sull’autrice', contact: 'Contatti', write: 'Scrivimi' },
     hero: {
-      eyebrow: 'Romanziera · Saggista · Critica',
-      tagline: '«Scrivo del sale che resta nella memoria — e leggo, ad alta voce, tutto il resto.»',
+      eyebrow: 'Romanzi · Saggistica · Ricerche',
+      tagline: '«Sono sempre stata un’appassionata di ricerche storiche.»',
       bioA: 'Autrice di ',
-      bio1: 'La stagione del sale',
-      bioB: ' e ',
-      bio2: 'Marginalia',
-      bioC: '. Recensioni e saggi su The Continental Review, The Quarterly Margin e sul giornale che state leggendo.',
+      bio1: 'Non escludo il ritorno',
+      bioB:
+        ' (Nemapress, 2023) e di tre libri tra iconografia sacra, inchiesta urbana e storia artigiana: I fiori dei santi (2000), Alza gli occhi e guarda (2005), L’oro nero di Modica (2009).',
       ctaWork: 'Scopri le opere',
-      ctaJournal: 'Leggi il giornale',
+      ctaAbout: 'Sull’autrice',
       scroll: 'Scorri',
     },
     works: {
-      eyebrow: 'Bibliografia scelta',
-      heading: 'Opere in evidenza',
+      eyebrow: 'Bibliografia',
+      heading: 'Le opere',
       intro:
-        'Romanzi, racconti e critica — ogni pezzo scritto alla scrivania accanto alla finestra, quasi sempre a inchiostro, quasi sempre troppo lentamente.',
-      readMore: 'Leggi oltre',
+        'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Editore, anno e ISBN di ogni titolo sono riportati nella scheda.',
+      readMore: 'Apri la scheda',
     },
-    journal: {
-      eyebrow: 'Il giornale letterario',
-      heading: 'Appunti dalla scrivania',
-      readMin: 'min di lettura',
-      readArticle: 'Leggi l’articolo',
-      back: 'Torna al giornale',
-      authorBio:
-        'Romanziera e critica. Scrive il giornale un martedì sì e uno no, a inchiostro, poi lo batte a macchina a malincuore.',
+    work: {
+      isbn: 'ISBN',
+      year: 'Anno',
+      pages: 'Pagine',
+      coAuthors: 'Con',
     },
-    categories: { all: 'Tutte', reviews: 'Recensioni', essays: 'Saggi', notes: 'Note di scrittura' },
-    shelf: {
-      eyebrow: 'Il diario di lettura',
-      heading: 'Sullo scaffale',
-      intro:
-        'Cosa sto leggendo, cosa ho appena finito e cosa conservo per la stagione giusta. Aggiornato ogni volta che il mucchio sul comodino cambia forma.',
-      progress: 'Avanzamento',
-      status: { reading: 'In lettura', finished: 'Finito', queued: 'In attesa' },
+    about: {
+      eyebrow: 'Sull’autrice',
+      heading: 'Chi scrive',
+      quote: 'Sono sempre stata un’appassionata di ricerche storiche.',
+      quoteSource:
+        '— Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
+      paragraphs: [
+        'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali nell’iconografia sacra — i gigli, le rose e le palme che diventano attributi dei santi — seguito nelle storie e nelle leggende che li hanno messi in immagine.',
+        'Nel 2005 firma con Elisabetta Valentini e Simona Filippini Alza gli occhi e guarda (Edizioni Intra Moenia), lavoro a tre voci sui quartieri Sanità e Forcella a Napoli, tra contrasti sociali e potenzialità nascoste. Nel 2009 esce L’oro nero di Modica (Coppola Editore), scritto con Elena La Delfa sul cioccolato della città barocca e sul legame che tiene insieme un centro urbano e la sua storia artigianale.',
+        'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero cold case sardo, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
+        'Il libro è stato presentato a Roma, alla libreria “Le Storie” di Garbatella, il 23 marzo 2024, e ne è seguita un’intervista pubblica nel 2024. Recapiti, prossimi eventi e materiali stampa vanno aggiunti dall’autrice: questa pagina riporta solo ciò che è verificabile nei cataloghi editoriali e nella stampa.',
+      ],
+      sourcesTitle: 'Fonti usate per questa bibliografia',
     },
     contact: {
       eyebrow: 'Corrispondenza',
-      headingA: 'Le lettere sono sempre',
-      headingB: 'benvenute qui.',
+      headingA: 'Le lettere sono',
+      headingB: 'sempre benvenute.',
       body:
-        'Per rappresentanza e diritti, richieste di intervista, o semplicemente per ricevere il giornale per posta un martedì sì e uno no — scrivete qui sotto. Rispondo a tutto, prima o poi, e non condivido mai il vostro indirizzo con nessuno.',
+        'Per richieste della stampa, inviti a presentazioni, o semplicemente per scrivere a proposito dei libri. Questo sito non conserva né condivide i dati inseriti: il messaggio viene aperto nel vostro client di posta.',
       name: 'Nome',
       email: 'Email',
       topic: 'Scrivo per',
@@ -53,59 +55,69 @@ export const strings = {
       phName: 'Il vostro nome',
       phEmail: 'voi@esempio.it',
       phMessage: 'Raccontatemi tutto…',
-      types: { agent: 'Agente letterario', press: 'Stampa / intervista', newsletter: 'Newsletter', other: 'Altro' },
-      send: 'Invia la lettera',
-      sent: 'Lettera inviata — grazie',
+      types: {
+        press: 'Stampa / intervista',
+        events: 'Presentazioni ed eventi',
+        reader: 'Libri e letture',
+        other: 'Altro',
+      },
+      send: 'Apri la lettera',
+      sent: 'Lettera aperta nel vostro client — grazie',
+      noAddress:
+        'Casella di contatto non ancora configurata: l’indirizzo email va inserito in src/data/site.js.',
     },
-    footer: { quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»' },
+    footer: {
+      line: 'Quattro libri, dal 2000 al 2023. Bibliografia, date e ISBN verificati.',
+    },
   },
 
   en: {
-    docTitle: 'Claudia Origoni — Writer & Book Reviewer',
-    nav: { works: 'Works', journal: 'Journal', shelf: 'Shelf', contact: 'Contact', subscribe: 'Subscribe' },
+    docTitle: 'Claudia Origoni — Writer and essayist',
+    nav: { works: 'Works', about: 'About', contact: 'Contact', write: 'Write to me' },
     hero: {
-      eyebrow: 'Novelist · Essayist · Critic',
-      tagline: '“I write about the salt in memory — and I read, loudly, about everything else.”',
+      eyebrow: 'Novels · Non-fiction · Research',
+      tagline: '“I have always been passionate about historical research.”',
       bioA: 'Author of ',
-      bio1: 'The Salt Season',
-      bioB: ' and ',
-      bio2: 'Marginalia',
-      bioC: '. Reviews and essays in The Continental Review, The Quarterly Margin, and the journal you are reading now.',
-      ctaWork: 'Explore Work',
-      ctaJournal: 'Read the Journal',
+      bio1: 'Non escludo il ritorno',
+      bioB:
+        ' (Nemapress, 2023) and three books on sacred iconography, urban inquiry and craft history: I fiori dei santi (2000), Alza gli occhi e guarda (2005), L’oro nero di Modica (2009).',
+      ctaWork: 'Explore the works',
+      ctaAbout: 'About the author',
       scroll: 'Scroll',
     },
     works: {
-      eyebrow: 'Selected Bibliography',
-      heading: 'Featured Works',
+      eyebrow: 'Bibliography',
+      heading: 'The works',
       intro:
-        'Novels, short fiction and criticism — each piece written at the desk by the window, mostly in ink, almost always too slowly.',
-      readMore: 'Read more',
+        'Four books in twenty-three years: a catalogue of floral symbols in sacred art, two inquiries written in several voices, and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, year and ISBN.',
+      readMore: 'Open the entry',
     },
-    journal: {
-      eyebrow: 'The Literary Journal',
-      heading: 'Notes from the desk',
-      readMin: 'min read',
-      readArticle: 'Read article',
-      back: 'Back to journal',
-      authorBio:
-        'Novelist and critic. Writes the journal every other Tuesday, in ink, then types it up reluctantly.',
+    work: {
+      isbn: 'ISBN',
+      year: 'Year',
+      pages: 'Pages',
+      coAuthors: 'With',
     },
-    categories: { all: 'All', reviews: 'Book Reviews', essays: 'Essays', notes: 'Writing Notes' },
-    shelf: {
-      eyebrow: 'The Reading Log',
-      heading: 'On the shelf',
-      intro:
-        'What I am reading, what I have just finished, and what I am saving for the right season. Updated whenever the pile by the bed changes shape.',
-      progress: 'Progress',
-      status: { reading: 'Currently reading', finished: 'Finished', queued: 'On the shelf' },
+    about: {
+      eyebrow: 'About the author',
+      heading: 'Who writes',
+      quote: 'I have always been passionate about historical research.',
+      quoteSource:
+        '— Presentation of “Non escludo il ritorno”, libreria Le Storie, Rome, 23 March 2024',
+      paragraphs: [
+        'Claudia Origoni works with documents before she works with sentences. Her first book, I fiori dei santi (Barbieri, 2000), is a study of floral symbols in sacred iconography — the lilies, roses and palms that become the attributes of saints — followed through the stories and legends that put them into images.',
+        'In 2005 she signed Alza gli occhi e guarda (Edizioni Intra Moenia) with Elisabetta Valentini and Simona Filippini, a three-voice work on the Neapolitan quarters of Sanità and Forcella, between social contrast and hidden potential. In 2009 came L’oro nero di Modica (Coppola Editore), written with Elena La Delfa about the chocolate of the Baroque town and the bond between a city and its craft history.',
+        'In 2023 she published her first novel, Non escludo il ritorno (Nemapress): a historical mystery built on a real Sardinian cold case, the murder of Vanda Serra in Aidomaggiore in 1925, and the inquiry around Don Giovanni Spanu and his innocence. The real village becomes the fictional Aitadei: “since the case is still contested, I felt I had to change at least the name of the town”. Her publisher presents her as “an author with Sardinian roots”, and research into past lives is one of the trails the novel follows.',
+        'The book was presented in Rome at the bookshop “Le Storie” in Garbatella on 23 March 2024, followed by a public interview later that year. Contact details, forthcoming events and press materials are to be added by the author: this page carries only what can be verified in publisher catalogues and the press.',
+      ],
+      sourcesTitle: 'Sources behind this bibliography',
     },
     contact: {
       eyebrow: 'Correspondence',
-      headingA: 'Letters are always',
-      headingB: 'welcome here.',
+      headingA: 'Letters are',
+      headingB: 'always welcome.',
       body:
-        'For representation and rights inquiries, interview requests, or simply to receive the journal by post every other Tuesday — write below. I answer everything, eventually, and never share your address with anyone.',
+        'For press enquiries, invitations to presentations, or simply to write about the books. This site stores and shares nothing: your message opens in your own mail client.',
       name: 'Name',
       email: 'Email',
       topic: 'I am writing about',
@@ -113,10 +125,19 @@ export const strings = {
       phName: 'Your name',
       phEmail: 'you@example.com',
       phMessage: 'Tell me everything…',
-      types: { agent: 'Literary agent', press: 'Press / interview', newsletter: 'Newsletter', other: 'Something else' },
-      send: 'Send letter',
-      sent: 'Letter sent — thank you',
+      types: {
+        press: 'Press / interview',
+        events: 'Presentations and events',
+        reader: 'Books and reading',
+        other: 'Something else',
+      },
+      send: 'Open the letter',
+      sent: 'Letter opened in your mail client — thank you',
+      noAddress:
+        'No contact address configured yet: add the email in src/data/site.js.',
     },
-    footer: { quote: '“A book is a dream you hold in your hands, and a review is the dream of a dream.”' },
+    footer: {
+      line: 'Four books, 2000 to 2023. Bibliography, dates and ISBNs verified.',
+    },
   },
 }

@@ -1,173 +1,136 @@
-// Featured works: novels, short fiction and critical essays.
-// Text fields are bilingual: { it, en } — Italian is primary.
+// Bibliografia reale: solo opere verificabili, con editore, anno e ISBN.
+// I campi di testo sono bilingui: { it, en } — l'italiano è la lingua primaria.
+// Le fonti sono raccolte in src/data/site.js e mostrate nella pagina.
 export const works = [
   {
-    id: 'salt-season',
-    title: { it: 'La stagione del sale', en: 'The Salt Season' },
+    id: 'non-escludo-il-ritorno',
+    title: { it: 'Non escludo il ritorno', en: 'Non escludo il ritorno' },
     type: { it: 'Romanzo', en: 'Novel' },
-    year: 2025,
-    publisher: 'Marlowe & Finch',
-    cover:
-      'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80',
-    synopsis: {
-      it:
-        'La figlia di un guardiano del faro torna sulla costa ligure per sistemare le cose della madre defunta e dissotterra quarant\u2019anni di lettere mai spedite. Un romanzo sull\u2019eredit\u00e0, il silenzio e le maree da cui non si fugge.',
-      en:
-        'A lighthouse keeper\u2019s daughter returns to the Ligurian coast to settle her late mother\u2019s affairs and unearths forty years of unsent letters. A novel about inheritance, silence, and the tides we cannot outrun.',
-    },
-    reviews: [
-      {
-        quote: {
-          it: 'Origoni scrive frasi che vorresti sottolineare due volte. La stagione del sale \u00e8 un capolavoro silenzioso.',
-          en: 'Origoni writes sentences you want to underline twice. The Salt Season is a quiet masterpiece.',
-        },
-        source: 'The Continental Review',
-      },
-      {
-        quote: {
-          it: 'Salino, tenero e sicurissimo \u2014 un esordio che si legge come un terzo romanzo.',
-          en: 'Salt-stung, tender and utterly assured \u2014 a debut that reads like a third novel.',
-        },
-        source: 'Granta Shore',
-      },
-    ],
-    links: [
-      { label: { it: 'Compra il libro', en: 'Buy the book' }, href: '#' },
-      { label: { it: 'Leggi un estratto', en: 'Read an excerpt' }, href: '#' },
-    ],
-    tall: true,
-  },
-  {
-    id: 'marginalia',
-    title: { it: 'Marginalia', en: 'Marginalia' },
-    type: { it: 'Raccolta di saggi', en: 'Essay Collection' },
-    year: 2024,
-    publisher: 'Vellum House',
-    cover:
-      'https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=800&q=80',
-    synopsis: {
-      it:
-        'Ventidue saggi sulla lettura come atto d\u2019amore e di disputa. Dall\u2019etica della pagina con l\u2019orecchio piegato al motivo per cui rileggiamo gli stessi tre romanzi a ogni decennio: Marginalia \u00e8 una difesa del lettore appassionato.',
-      en:
-        'Twenty-two essays on reading as an act of love and argument. From the ethics of the dog-eared page to why we reread the same three novels every decade, Marginalia is a defense of the passionate reader.',
-    },
-    reviews: [
-      {
-        quote: {
-          it: 'Una critica con l\u2019orecchio da romanziere. Ogni saggio \u00e8 una piccola stanza da cui non vuoi uscire.',
-          en: 'A critic with a novelist\u2019s ear. Every essay is a small room you never want to leave.',
-        },
-        source: 'Ledger of Letters',
-      },
-    ],
-    links: [
-      { label: { it: 'Compra il libro', en: 'Buy the book' }, href: '#' },
-      { label: { it: 'Intervista all\u2019autrice', en: 'Author interview' }, href: '#' },
-    ],
-    tall: false,
-  },
-  {
-    id: 'winter-grammar',
-    title: { it: 'Grammatica d\u2019inverno', en: 'Winter Grammar' },
-    type: { it: 'Racconto', en: 'Short Story' },
-    year: 2024,
-    publisher: 'The Paris Shelf, Issue 41',
-    cover:
-      'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80',
-    synopsis: {
-      it:
-        'Due traduttrici bloccate da una nevicata in un archivio triestino scoprono di tradurre lo stesso poeta morto in lingue rivali da vent\u2019anni. Un racconto sulla fedelt\u00e0 \u2014 letteraria e non.',
-      en:
-        'Two translators stranded by a snowstorm in a Trieste archive discover they have been rendering the same dead poet into rival languages for twenty years. A story about fidelity \u2014 literary and otherwise.',
-    },
-    reviews: [
-      {
-        quote: {
-          it: 'Selezionato per l\u2019antologia O. Henry 2025. Preciso, arguto e devastante nell\u2019ultima riga.',
-          en: 'Selected for the 2025 O. Henry anthology. Precise, wry and devastating in the last line.',
-        },
-        source: 'O. Henry Prize Jury',
-      },
-    ],
-    links: [{ label: { it: 'Leggi il racconto', en: 'Read the story' }, href: '#' }],
-    tall: false,
-  },
-  {
-    id: 'cartography-of-loss',
-    title: { it: 'Cartografia della perdita', en: 'A Cartography of Loss' },
-    type: { it: 'Saggio critico', en: 'Critical Essay' },
     year: 2023,
-    publisher: 'The Quarterly Margin',
-    cover:
-      'https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=800&q=80',
+    publisher: 'Nemapress',
+    isbn: '9788876293023',
+    pages: '160',
+    tone: 'ink',
     synopsis: {
       it:
-        'Un\u2019analisi in forma lunga di come la narrativa europea contemporanea mappa il lutto sui paesaggi \u2014 dalle camminate di Sebald ai villaggi sommersi del nuovo romanzo climatico.',
+        'Primo romanzo. Un giallo storico che riprende un vero cold case sardo: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei \u2014 «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese» \u2014 e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
       en:
-        'A long-form examination of how contemporary European fiction maps grief onto landscapes \u2014 from Sebald\u2019s walks to the flooded villages of the new climate novel.',
+        'Her first novel. A historical mystery built on a real Sardinian cold case: the 1925 murder of Vanda Serra in Aidomaggiore and the priest Don Giovanni Spanu, whose defence Origoni reconstructs from the documents. The real village becomes the fictional Aitadei \u2014 “since the case is still contested, I felt I had to change at least the name of the town” \u2014 and the inquiry reaches as far as research into past lives.',
     },
-    reviews: [
+    notes: [
       {
-        quote: {
-          it: 'Il miglior pezzo di critica pubblicato quest\u2019anno, senza confronti.',
-          en: 'The best piece of criticism published this year, bar none.',
-        },
-        source: 'Letters & Latitudes',
+        it: 'Nemapress la presenta come «Un\u2019autrice con radici sarde»: l\u2019isola da cui proviene una parte della sua famiglia.',
+        en: 'Nemapress bills her as “an author with Sardinian roots”: the island her family comes from on one side.',
+      },
+      {
+        it: 'Presentato il 23 marzo 2024 alla libreria “Le Storie” di Garbatella, a Roma.',
+        en: 'Presented on 23 March 2024 at the bookshop “Le Storie” in Garbatella, Rome.',
       },
     ],
-    links: [{ label: { it: 'Leggi il saggio', en: 'Read the essay' }, href: '#' }],
+    links: [
+      {
+        label: { it: 'Scheda editoriale', en: 'Publisher listing' },
+        href: 'https://www.unilibro.it/libri/f/autore/claudia_origoni/',
+      },
+      {
+        label: { it: 'La presentazione a Roma', en: 'The Rome presentation' },
+        href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
+      },
+    ],
     tall: true,
   },
   {
-    id: 'lantern-hours',
-    title: { it: 'Le ore della lanterna', en: 'The Lantern Hours' },
-    type: { it: 'Romanzo \u2014 in uscita', en: 'Novel \u2014 Forthcoming' },
-    year: 2026,
-    publisher: 'Marlowe & Finch',
-    cover:
-      'https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=800&q=80',
+    id: 'i-fiori-dei-santi',
+    title: { it: 'I fiori dei santi', en: 'I fiori dei santi' },
+    subtitle: {
+      it: 'I simboli floreali nell\u2019iconografia sacra. Storie e leggende',
+      en: 'Floral symbols in sacred iconography. Stories and legends',
+    },
+    type: { it: 'Saggio illustrato', en: 'Illustrated study' },
+    year: 2000,
+    publisher: 'Barbieri',
+    isbn: '9788886187626',
+    tone: 'sage',
     synopsis: {
       it:
-        'Primavera 2026. Un orologiaio in un villaggio alpino che scompare comincia a riparare orologi che vanno indietro, e i paesani iniziano a ricordare futuri mai accaduti.',
+        'Il libro d\u2019esordio, catalogo di un\u2019iconografia letta attraverso i fiori: i gigli, le rose, le palme e le erbe che compongono gli attributi dei santi, seguiti nelle storie e nelle leggende che li hanno messi in immagine.',
       en:
-        'Spring 2026. A clockmaker in a disappearing Alpine village begins repairing timepieces that run backwards, and the villagers start remembering futures that never happened.',
+        'Her first book, a catalogue of sacred iconography read through its flowers: lilies, roses, palms and herbs as the attributes of the saints, followed through the stories and legends that put them into images.',
     },
-    reviews: [
+    notes: [
       {
-        quote: {
-          it: 'Gi\u00e0 uno dei romanzi letterari pi\u00f9 attesi dell\u2019anno.',
-          en: 'Already one of the most anticipated literary novels of the year.',
-        },
-        source: 'The Shelf List',
+        it: 'Edito da Barbieri nel 2000, classificato dai cataloghi come volume illustrato.',
+        en: 'Published by Barbieri in 2000, listed in library catalogues as an illustrated volume.',
       },
     ],
-    links: [{ label: { it: 'Preordinalo', en: 'Pre-order' }, href: '#' }],
+    links: [
+      {
+        label: { it: 'Scheda del libro', en: 'Book record' },
+        href: 'https://www.ibs.it/fiori-dei-santi-simboli-floreali-libro-claudia-origoni/e/9788886187626',
+      },
+    ],
     tall: false,
   },
   {
-    id: 'nine-ways-of-reading',
-    title: { it: 'Nove modi di leggere una stanza', en: 'Nine Ways of Reading a Room' },
-    type: { it: 'Racconto', en: 'Short Story' },
-    year: 2022,
-    publisher: 'Nightjar Anthology',
-    cover:
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
+    id: 'alza-gli-occhi-e-guarda',
+    title: { it: 'Alza gli occhi e guarda', en: 'Alza gli occhi e guarda' },
+    subtitle: {
+      it: 'Immagini di due quartieri di Napoli tra contrasti sociali e nascoste potenzialità: Sanità e Forcella',
+      en: 'Images of two Naples quarters between social contrasts and hidden potential: Sanità and Forcella',
+    },
+    type: { it: 'Saggio a tre voci', en: 'Three-voice non-fiction' },
+    year: 2005,
+    publisher: 'Edizioni Intra Moenia',
+    isbn: '9788874210527',
+    coAuthors: 'Elisabetta Valentini, Simona Filippini',
+    tone: 'terracotta',
     synopsis: {
       it:
-        'Nove ospiti a una cena milanese raccontano la stessa serata \u2014 ciascuno convinto di essere l\u2019unico testimone onesto. Un racconto in frammenti sulla finzione che accettiamo di chiamare compagnia.',
+        'Con Elisabetta Valentini e Simona Filippini, un lavoro a tre voci su Sanità e Forcella: due quartieri di Napoli osservati nelle immagini, tra i contrasti sociali che li attraversano e le potenzialità che restano invisibili a chi li attraversa senza guardarli. Edizione illustrata, per la collana «Città si diventa».',
       en:
-        'Nine guests at a Milanese dinner party narrate the same evening \u2014 each convinced they are the only honest witness. A story in fragments about the fiction we agree to call company.',
+        'With Elisabetta Valentini and Simona Filippini, a three-voice work on the Sanità and Forcella: two quarters of Naples observed through their images, between the social contrasts that run through them and the potential invisible to anyone who passes without looking. Illustrated edition, in the “Città si diventa” series.',
     },
-    reviews: [
+    notes: [
       {
-        quote: {
-          it: 'Strutturalmente audace ed emotivamente esatto. Origoni \u00e8 una scrittrice da tenere d\u2019occhio.',
-          en: 'Structurally daring and emotionally exact. Origoni is a writer to watch.',
-        },
-        source: 'Nightjar Annual',
+        it: 'Il titolo è un\u2019istruzione rivolta a chi guarda: sollevare lo sguardo invece di abbassarlo.',
+        en: 'The title is an instruction to the viewer: lift the gaze instead of dropping it.',
       },
     ],
-    links: [{ label: { it: 'Leggi il racconto', en: 'Read the story' }, href: '#' }],
+    links: [
+      {
+        label: { it: 'Scheda del libro', en: 'Book record' },
+        href: 'https://books.google.com/books/about/Alza_gli_occhi_e_guarda_Immagini_di_due.html?id=ysdWAAAACAAJ',
+      },
+    ],
     tall: false,
+  },
+  {
+    id: 'loro-nero-di-modica',
+    title: { it: 'L\u2019oro nero di Modica', en: 'L\u2019oro nero di Modica' },
+    type: { it: 'Saggio a quattro mani', en: 'Co-authored non-fiction' },
+    year: 2009,
+    publisher: 'Coppola Editore',
+    isbn: '9788887432916',
+    coAuthors: 'Elena La Delfa',
+    tone: 'gold',
+    synopsis: {
+      it:
+        'Scritto con Elena La Delfa e dedicato all’«oro nero» di Modica: il cioccolato della città barocca, la sua lavorazione e il legame che tiene insieme un centro urbano, la sua storia artigianale e una materia che è insieme economia e identità.',
+      en:
+        'Written with Elena La Delfa about the “black gold” of Modica: the chocolate of the Baroque town, how it is made, and the bond between a city, its craft history and a substance that is at once an economy and an identity.',
+    },
+    notes: [
+      {
+        it: 'Pubblicato da Coppola Editore nel 2009; oggi segnalato come non ordinabile dai distributori.',
+        en: 'Published by Coppola Editore in 2009; now listed as unavailable by distributors.',
+      },
+    ],
+    links: [
+      {
+        label: { it: 'Scheda del libro', en: 'Book record' },
+        href: 'https://www.ancorastore.it/scheda-libro/claudia-origoni-elena-la-delfa/loro-nero-di-modica-9788887432916-2208133.html',
+      },
+    ],
+    tall: true,
   },
 ]

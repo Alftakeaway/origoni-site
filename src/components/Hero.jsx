@@ -93,13 +93,11 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-ink-muted"
+          className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted"
         >
           {t('hero.bioA')}
           <span className="font-medium text-ink-soft">{t('hero.bio1')}</span>
           {t('hero.bioB')}
-          <span className="font-medium text-ink-soft">{t('hero.bio2')}</span>
-          {t('hero.bioC')}
         </motion.p>
 
         <motion.div
@@ -117,11 +115,11 @@ export default function Hero() {
             />
           </a>
           <a
-            href="#journal"
+            href="#about"
             className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-8 py-4 font-sans text-sm uppercase tracking-widest text-ink-soft transition-all duration-300 hover:border-gold hover:text-gold-dark"
           >
             <Quote size={15} />
-            {t('hero.ctaJournal')}
+            {t('hero.ctaAbout')}
           </a>
         </motion.div>
       </motion.div>

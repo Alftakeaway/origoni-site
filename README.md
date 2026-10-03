@@ -1,7 +1,6 @@
-# Claudia Origoni — Literary Portfolio & Journal
+# Claudia Origoni — Sito dell'autrice
 
-A modern, animated single-page site for a professional writer and book reviewer:
-curated portfolio, immersive long-form journal, reading log, and press contact.
+Single-page site for the author: verified bibliography, biography with sources, and contact.
 
 ## Stack
 
@@ -10,7 +9,9 @@ curated portfolio, immersive long-form journal, reading log, and press contact.
   Cormorant Garamond + Playfair Display + Plus Jakarta Sans)
 - **Framer Motion** for physics-based scroll reveals, modals, and page-level transitions
 - **Lucide React** for icons
-- Unsplash placeholder imagery (swap for real covers/portraits in `src/data/*`)
+
+Book "covers" are generated typographically (`BookCover.jsx`): the real cover art is not
+reproducible here, so no stock photo is presented as a cover.
 
 ## Setup
 
@@ -28,18 +29,19 @@ src/
   App.jsx                 # Section composition + MotionConfig (reduced-motion aware)
   index.css               # Tailwind layers, paper-grain texture, article typography
   data/
-    works.js              # Featured bibliography (drives Works grid + modal)
-    posts.js              # Journal posts with block content (paragraphs / pull quotes)
-    shelf.js              # Reading log entries (status, rating, progress)
+    works.js              # Bibliography: title, publisher, year, ISBN, synopsis, links
+    site.js               # Contact address + socials + list of public sources
+  i18n/
+    strings.js            # Every UI string, Italian primary + English
+    LanguageContext.jsx   # IT/EN toggle, persists, syncs <html lang> and title
   components/
-    Navbar.jsx            # Sticky blur-on-scroll nav + mobile menu
+    Navbar.jsx            # Sticky blur-on-scroll nav + mobile menu + language toggle
     Hero.jsx              # Animated gradient field, floating glyphs, staggered copy
     Works.jsx             # Masonry grid (CSS columns) with hover zoom
-    WorkModal.jsx         # Immersive detail view: synopsis, press quotes, links
-    Journal.jsx           # Category filter + animated card grid
-    PostView.jsx          # Full-screen reading view: progress bar, drop cap, pull quotes
-    Shelf.jsx             # Bookshelf cards with ratings and progress bars
-    Contact.jsx           # Inquiry form (agent / press / newsletter) + socials
+    BookCover.jsx         # Typographic cover, four tones
+    WorkModal.jsx         # Detail view: synopsis, ISBN facts, notes, external links
+    About.jsx             # Biography + quote + sources
+    Contact.jsx           # Inquiry form handed off to the visitor's mail client
     Footer.jsx
     Cursor.jsx            # Spring-physics cursor follower (fine pointers only)
     Reveal.jsx            # Shared fade-up-on-scroll wrapper
@@ -47,10 +49,17 @@ src/
 
 ## Editing content
 
-All copy lives in `src/data/`. Add a work, post, or shelf entry as a new object —
-the grids, filters, and modals pick it up automatically. Post bodies use a tiny
-block format: `{ type: 'p', text }` for paragraphs and `{ type: 'quote', text }`
-for pull quotes.
+- New book: add an object to `src/data/works.js` (bilingual fields are `{ it, en }`).
+  Text belongs to the data file, chrome labels to `src/i18n/strings.js`.
+- Contact address and social profiles: `src/data/site.js`. While `email` is empty the
+  site shows no contact details and the form says so instead of pretending to send.
+- Source list: `sources` in `src/data/site.js`; `About.jsx` renders it.
+
+## Contact form
+
+No backend on purpose: submitting opens a `mailto:` draft with the composed subject and
+body, so nothing is stored or forwarded by this site. If a real inbox/form service is
+wanted later, point `onSubmit` in `Contact.jsx` at Formspree, Resend, or a serverless function.
 
 ## Motion & accessibility
 
@@ -60,11 +69,6 @@ for pull quotes.
 - The cursor follower only activates on fine-pointer devices.
 - Modals lock body scroll, close on Escape and backdrop click, and expose
   `role="dialog"` / `aria-modal`.
-
-## Wiring the contact form
-
-`Contact.jsx` currently shows a success state on submit. Point `onSubmit` at your
-provider of choice (Formspree, Resend, a Next/Vercel function, etc.).
 
 ## Deploy
 

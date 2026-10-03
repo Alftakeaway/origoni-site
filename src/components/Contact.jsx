@@ -1,31 +1,34 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Check, Mail, Instagram, Twitter, Newspaper, AtSign } from 'lucide-react'
+import { Send, Check, Mail, AtSign } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
+import { contact } from '../data/site'
 import Reveal from './Reveal'
 
-const inquiryTypes = ['agent', 'press', 'newsletter', 'other']
-
-const socials = [
-  { label: 'Substack', icon: Newspaper, href: '#' },
-  { label: 'Instagram', icon: Instagram, href: '#' },
-  { label: 'Bluesky', icon: AtSign, href: '#' },
-  { label: 'Twitter', icon: Twitter, href: '#' },
-]
+const inquiryTypes = ['press', 'events', 'reader', 'other']
 
 export default function Contact() {
   const { t } = useLang()
-  const [form, setForm] = useState({ name: '', email: '', type: 'newsletter', message: '' })
-  const [sent, setSent] = useState(false)
+  const [form, setForm] = useState({ name: '', email: '', type: 'reader', message: '' })
+  const [status, setStatus] = useState(null)
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
 
   const onSubmit = (e) => {
     e.preventDefault()
-    // Placeholder submit — wire to a form service (Formspree, Resend, etc.) in production.
-    setSent(true)
-    setTimeout(() => setSent(false), 5000)
-    setForm({ name: '', email: '', type: 'newsletter', message: '' })
+    if (!contact.email) {
+      setStatus('unconfigured')
+      setTimeout(() => setStatus(null), 7000)
+      return
+    }
+    // Hand the composed letter to the visitor's mail client: nothing is stored here.
+    const subject = `[${t(`contact.types.${form.type}`)}] ${form.name}`
+    const body = `${form.message}\n\n— ${form.name} <${form.email}>`
+    window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`
+    setStatus('sent')
+    setTimeout(() => setStatus(null), 7000)
   }
 
   const inputCls =
@@ -50,30 +53,36 @@ export default function Contact() {
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-paper/60">{t('contact.body')}</p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                aria-label={s.label}
-                className="group inline-flex items-center gap-2.5 rounded-full border border-paper/15 px-5 py-2.5 font-sans text-xs uppercase tracking-widest text-paper/70 transition-all duration-300 hover:border-gold hover:text-gold-light"
-              >
-                <s.icon
-                  size={14}
-                  className="text-gold-light transition-transform duration-300 group-hover:-translate-y-0.5"
-                />
-                {s.label}
-              </a>
-            ))}
-          </div>
+          {contact.socials.length > 0 && (
+            <div className="mt-10 flex flex-wrap gap-3">
+              {contact.socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="group inline-flex items-center gap-2.5 rounded-full border border-paper/15 px-5 py-2.5 font-sans text-xs uppercase tracking-widest text-paper/70 transition-all duration-300 hover:border-gold hover:text-gold-light"
+                  >
+                    <AtSign
+                      size={14}
+                      className="text-gold-light transition-transform duration-300 group-hover:-translate-y-0.5"
+                    />
+                    {s.label}
+                  </a>
+              ))}
+            </div>
+          )}
 
-          <a
-            href="mailto:studio@claudiaorigoni.com"
-            className="link-underline mt-10 inline-flex items-center gap-2 font-serif text-lg italic text-paper/80"
-          >
-            <Mail size={16} className="text-gold-light" />
-            studio@claudiaorigoni.com
-          </a>
+          {contact.email && (
+            <a
+              href={`mailto:${contact.email}`}
+              className="link-underline mt-10 inline-flex items-center gap-2 font-serif text-lg italic text-paper/80"
+            >
+              <Mail size={16} className="text-gold-light" />
+              {contact.email}
+            </a>
+          )}
         </Reveal>
 
         {/* Right: form */}
@@ -148,30 +157,23 @@ export default function Contact() {
               whileTap={{ scale: 0.98 }}
               className="mt-7 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gold px-8 py-4 font-sans text-sm uppercase tracking-widest text-ink shadow-book transition-colors duration-300 hover:bg-gold-light"
             >
-              <AnimatePresence mode="wait" initial={false}>
-                {sent ? (
-                  <motion.span
-                    key="sent"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    className="inline-flex items-center gap-2"
-                  >
-                    <Check size={16} /> {t('contact.sent')}
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="send"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    className="inline-flex items-center gap-2"
-                  >
-                    <Send size={15} /> {t('contact.send')}
-                  </motion.span>
-                )}
-              </AnimatePresence>
+              <Send size={15} /> {t('contact.send')}
             </motion.button>
+
+            <AnimatePresence>
+              {status && (
+                <motion.p
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  role="status"
+                  className="mt-5 flex items-start gap-2.5 text-sm leading-relaxed text-paper/75"
+                >
+                  <Check size={15} className="mt-0.5 shrink-0 text-gold-light" />
+                  {status === 'sent' ? t('contact.sent') : t('contact.noAddress')}
+                </motion.p>
+              )}
+            </AnimatePresence>
           </form>
         </Reveal>
       </div>

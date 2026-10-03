@@ -41,8 +41,7 @@ export default function Navbar() {
 
   const links = [
     { label: t('nav.works'), href: '#works' },
-    { label: t('nav.journal'), href: '#journal' },
-    { label: t('nav.shelf'), href: '#shelf' },
+    { label: t('nav.about'), href: '#about' },
     { label: t('nav.contact'), href: '#contact' },
   ]
 
@@ -88,7 +87,7 @@ export default function Navbar() {
               href="#contact"
               className="rounded-full border border-ink/15 bg-ink px-5 py-2.5 font-sans text-[12px] uppercase tracking-widest text-paper transition-all duration-300 hover:bg-gold-dark hover:shadow-book"
             >
-              {t('nav.subscribe')}
+              {t('nav.write')}
             </a>
           </li>
         </ul>

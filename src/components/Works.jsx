@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen } from 'lucide-react'
 import { works } from '../data/works'
 import { useLang } from '../i18n/LanguageContext'
+import BookCover from './BookCover'
 import Reveal from './Reveal'
 import WorkModal from './WorkModal'
 
@@ -35,14 +36,9 @@ export default function Works() {
                 className="group block w-full cursor-pointer overflow-hidden rounded-xl border border-ink/8 bg-white/70 text-left shadow-card transition-shadow duration-500 hover:shadow-book-hover"
                 aria-label={tr(w.title)}
               >
-                <div className={`relative overflow-hidden ${w.tall ? 'h-80' : 'h-56'}`}>
-                  <img
-                    src={w.cover}
-                    alt={tr(w.title)}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className={`relative overflow-hidden ${w.tall ? 'h-80' : 'h-64'}`}>
+                  <BookCover work={w} />
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ink/25 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 font-sans text-[10px] uppercase tracking-widest text-ink-soft backdrop-blur">
                     {tr(w.type)}
                   </span>
