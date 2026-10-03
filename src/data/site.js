@@ -1,10 +1,8 @@
 // Dati di contatto e fonti pubbliche.
-// L'email e i profili vanno inseriti dall'autrice: finché restano vuoti,
-// il sito non mostra recapiti (e il modulo non promette invii che non può fare).
+// Recapiti forniti dall'autrice (ottobre 2026).
 export const contact = {
-  email: '',
-  socials: [],
-  // { label: 'Instagram', href: 'https://instagram.com/...' }
+  email: 'claudiaorigoni@yahoo.it',
+  socials: [{ label: 'Instagram', href: 'https://www.instagram.com/claudiaorigoni' }],
 }
 
 // Fonti usate per compilare bibliografia e biografia: solo pagine verificabili.
