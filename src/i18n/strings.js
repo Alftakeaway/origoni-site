@@ -43,6 +43,8 @@ export const strings = {
       ],
       sourcesTitle: 'Fonti usate per questa bibliografia',
       coversTitle: 'I libri citati, in ordine di pubblicazione',
+      note:
+        'Le copertine sono le immagini editoriali riprese dai cataloghi elencati qui sopra; i diritti restano agli editori. Segnalazioni, correzioni e integrazioni si raccolgono nella sezione Contatti.',
     },
     contact: {
       eyebrow: 'Corrispondenza',
@@ -115,6 +117,8 @@ export const strings = {
       ],
       sourcesTitle: 'Sources behind this bibliography',
       coversTitle: 'The books mentioned here, in order of publication',
+      note:
+        'The covers are the publisher jacket images taken from the catalogues listed above; all rights remain with the publishers. Corrections and additions are welcome through the Contact section.',
     },
     contact: {
       eyebrow: 'Correspondence',
