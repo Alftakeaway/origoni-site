@@ -91,7 +91,7 @@ export const events = [
     dateLabel: { it: '28 giugno 2025', en: '28 June 2025' },
     title: { it: 'Premio Letterario Mandrarossa: la prima premiazione', en: 'Premio Letterario Mandrarossa — first award ceremony' },
     kind: { it: 'Premio', en: 'Prize' },
-    place: { it: 'Teatro Panoramico della Valle dei Templi, Agrigento', en: 'Panoramic Theatre of the Valley of the Temples, Agrigento' },
+    place: { it: 'Teatro Panoramico della Valle dei Templi', en: 'Panoramic Theatre of the Valley of the Temples' },
     city: 'Agrigento',
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
     detail: {
@@ -197,7 +197,7 @@ export const events = [
     dateLabel: { it: '25 luglio 2026, ore 20', en: '25 July 2026, 8 p.m.' },
     title: { it: 'Premio Mandrarossa: finale della seconda edizione', en: 'Premio Mandrarossa — second edition final' },
     kind: { it: 'Premio', en: 'Prize' },
-    place: { it: 'Tempio di Hera, Parco Archeologico di Selinunte', en: 'Temple of Hera, Archaeological Park of Selinunte' },
+    place: { it: 'Tempio di Hera, Parco archeologico', en: 'Temple of Hera, Archaeological Park' },
     city: 'Selinunte',
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
     detail: {
