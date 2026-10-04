@@ -1,6 +1,6 @@
 import { Quote, Link2 } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
-import { sources } from '../data/site'
+import { portrait, sources } from '../data/site'
 import { works } from '../data/works'
 import Reveal from './Reveal'
 
@@ -12,7 +12,18 @@ export default function About() {
     <section id="about" className="relative bg-paper-warm py-28 md:py-36">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
-          <p className="eyebrow mb-4">{t('about.eyebrow')}</p>
+          <figure>
+            <img
+              src={portrait.src}
+              alt={tr(portrait.alt)}
+              loading="lazy"
+              className="mx-auto block w-full max-w-[420px] rounded-xl shadow-card"
+            />
+            <figcaption className="mt-2 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+              {tr(portrait.credit)}
+            </figcaption>
+          </figure>
+          <p className="eyebrow mb-4 mt-10">{t('about.eyebrow')}</p>
           <h2 className="font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
             {t('about.heading')}
           </h2>

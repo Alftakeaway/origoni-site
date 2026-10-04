@@ -27,11 +27,11 @@ export const strings = {
       eyebrow: 'Bibliografia',
       heading: 'Le opere',
       intro:
-        'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Per ogni titolo la scheda riporta editore, anno e ISBN.',
+        'Otto titoli dal 2000 al 2026: un catalogo di simboli floreali nell’arte sacra, un volume fotografico su due quartieri di Napoli, un saggio a quattro mani sul cioccolato di Modica, una biografia d’artista, tre testi in volumi collettanei e un romanzo storico costruito su un caso di cronaca del 1925. Per ogni titolo la scheda riporta editore, anno e, dove esiste, ISBN.',
       readMore: 'Apri la scheda',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
-        'Le sei schede marcate «bozza» sono segnaposto decisi con l’autrice: titoli, anni e sinossi provvisori in attesa dei testi definitivi, da confermare voce per voce.',
+        'Le schede marcate «bozza» non sono definitive: per alcune titoli, anni e sinossi sono segnaposto decisi con l’autrice; per altre manca un dato di catalogo, e la scheda lo dice.',
     },
     work: {
       isbn: 'ISBN',
@@ -84,14 +84,15 @@ export const strings = {
         'Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
       paragraphs: [
         'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali dell’iconografia sacra (i gigli, le rose e le palme che diventano attributi dei santi), seguito nelle storie e nelle leggende che li hanno raffigurati.',
-        'Nel 2005 firma con Elisabetta Valentini e Simona Filippini Alza gli occhi e guarda (Edizioni Intra Moenia), lavoro a tre voci sui quartieri Sanità e Forcella a Napoli, tra contrasti sociali e potenzialità nascoste. Nel 2009 esce L’oro nero di Modica (Coppola Editore), scritto con Elena La Delfa sul cioccolato della città barocca e sul legame che tiene insieme un centro urbano e la sua storia artigianale.',
+        'Nel 2005 esce Alza gli occhi e guarda (Edizioni Intra Moenia), volume fotografico sui quartieri napoletani della Sanità e di Forcella: fotografie di Elisabetta Valentini e Simona Filippini, testo suo, tra contrasti sociali e potenzialità nascoste. Nel 2009 pubblica con Elena La Delfa L’oro nero di Modica (Coppola Editore ed Edizioni Nemapress), il cioccolato della città barocca e il legame che tiene insieme un centro urbano e la sua storia artigianale.',
         'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero caso irrisolto della cronaca sarda, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
+        'Fuori dai libri c’è un altro mestiere. La nota editoriale che accompagna L’oro nero di Modica la dichiara «romana di nascita, napoletana per storia personale», laureata in Filosofia, docente di marketing fieristico e responsabile dell’ufficio studi di Fiera Roma, e la descrive come «scrittrice, imprenditrice innamorata della Sicilia e della Contea di Modica». Nella stessa nota il lavoro modicano arriva al recupero di alcune case dell’Ottocento intorno alla chiesa di San Giovanni, a Modica Alta, e all’idea di una cioccolata «astrologicamente compatibile con i vari segni zodiacali».',
         'Accanto ai libri c’è il lavoro per il Premio Letterario Mandrarossa, che Claudia Origoni ha fondato e dirige: ogni sezione del premio porta il nome di un’etichetta di vino, e Concita De Gregorio ha presieduto la giuria della seconda edizione. La sezione Eventi raccoglie date e luoghi degli incontri, con la fonte accanto a ciascuna voce.',
       ],
       sourcesTitle: 'Fonti usate per questa bibliografia',
       coversTitle: 'I libri citati, in ordine di pubblicazione',
       note:
-        'Le copertine sono le immagini editoriali riprese dai cataloghi elencati qui sopra; i diritti restano agli editori. Segnalazioni, correzioni e integrazioni si raccolgono nella sezione Contatti.',
+        'Le copertine sono immagini editoriali: alcune riprese dai cataloghi elencati qui sopra, altre fotografate dall’autrice nelle proprie copie; i diritti restano agli editori. Le fotografie degli incontri vengono dal suo archivio privato. Segnalazioni, correzioni e integrazioni si raccolgono nella sezione Contatti.',
     },
     shelf: {
       eyebrow: 'Il diario di lettura',
@@ -140,7 +141,7 @@ export const strings = {
     },
     footer: {
       quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»',
-      line: 'Quattro libri, dal 2000 al 2023. Bibliografia, date e ISBN verificati.',
+      line: 'Dal 2000 al 2026. Bibliografia, date e fonti verificate; le bozze restano segnate.',
     },
   },
 
@@ -170,11 +171,11 @@ export const strings = {
       eyebrow: 'Bibliography',
       heading: 'The works',
       intro:
-        'Four books in twenty-three years: a catalogue of floral symbols in sacred art, two inquiries written in several voices, and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, year and ISBN.',
+        'Eight titles from 2000 to 2026: a catalogue of floral symbols in sacred art, a photography volume on two quarters of Naples, a co-authored study of the chocolate of Modica, an artist biography, three pieces in collective volumes and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, its year and, where it exists, its ISBN.',
       readMore: 'Open the entry',
       coverPlaceholder: 'Provisional cover',
       draftNote:
-        'The six entries marked “draft” are placeholders agreed with the author: provisional titles, years and synopses awaiting the final texts, to be confirmed one by one.',
+        'Entries marked “draft” are not final: for some, the titles, years and synopses are placeholders agreed with the author; for others a catalogue datum is missing, and the entry says so.',
     },
     work: {
       isbn: 'ISBN',
@@ -227,14 +228,15 @@ export const strings = {
         'Presentation of “Non escludo il ritorno”, libreria Le Storie, Rome, 23 March 2024',
       paragraphs: [
         'Claudia Origoni works with documents before she works with sentences. Her first book, I fiori dei santi (Barbieri, 2000), is a study of floral symbols in sacred iconography — the lilies, roses and palms that become the attributes of saints — followed through the stories and legends that depicted them.',
-        'In 2005 she signed Alza gli occhi e guarda (Edizioni Intra Moenia) with Elisabetta Valentini and Simona Filippini, a three-voice work on the Neapolitan quarters of Sanità and Forcella, between social contrast and hidden potential. In 2009 came L’oro nero di Modica (Coppola Editore), written with Elena La Delfa about the chocolate of the Baroque town and the bond between a city and its craft history.',
+        'In 2005 came Alza gli occhi e guarda (Edizioni Intra Moenia), a photography volume on the Neapolitan quarters of Sanità and Forcella: photographs by Elisabetta Valentini and Simona Filippini, her own text, between social contrast and hidden potential. In 2009 she published L’oro nero di Modica (Coppola Editore and Edizioni Nemapress) with Elena La Delfa, on the chocolate of the Baroque town and the bond between a city and its craft history.',
         'In 2023 she published her first novel, Non escludo il ritorno (Nemapress): a historical mystery built on a real Sardinian cold case, the murder of Vanda Serra in Aidomaggiore in 1925, and the inquiry around Don Giovanni Spanu and his innocence. The real village becomes the fictional Aitadei: “since the case is still contested, I felt I had to change at least the name of the town”. Her publisher presents her as “an author with Sardinian roots”, and research into past lives is one of the trails the novel follows.',
+        'Outside her books there is another trade. The publisher’s note that comes with L’oro nero di Modica states her as “Roman by birth, Neapolitan by personal history”, a graduate in Philosophy, a teacher of trade-fair marketing and head of the research office of Fiera Roma, and describes her as “a writer, an entrepreneur in love with Sicily and the County of Modica”. In the same note her Modica work reaches the recovery of some nineteenth-century houses around the church of San Giovanni, in Modica Alta, and the idea of a chocolate “astrologically compatible with the various zodiac signs”.',
         'Beside the books there is the work for the Premio Letterario Mandrarossa, which Claudia Origoni founded and directs: each section of the prize carries the name of a wine label, and Concita De Gregorio chaired the jury of the second edition. The Events section gathers dates and places, with the source next to each entry.',
       ],
       sourcesTitle: 'Sources behind this bibliography',
       coversTitle: 'The books mentioned here, in order of publication',
       note:
-        'The covers are the publisher jacket images taken from the catalogues listed above; all rights remain with the publishers. Corrections and additions are welcome through the Contact section.',
+        'The covers are publisher jacket images: some taken from the catalogues listed above, some photographed by the author from her own copies; all rights remain with the publishers. The photographs of the meetings come from her private archive. Corrections and additions are welcome through the Contact section.',
     },
     shelf: {
       eyebrow: 'The reading log',
@@ -284,7 +286,7 @@ export const strings = {
     footer: {
       quote:
         '“A book is a dream you hold in your hands, and a review is the dream of a dream.”',
-      line: 'Four books, 2000 to 2023. Bibliography, dates and ISBNs verified.',
+      line: '2000 to 2026. Bibliography, dates and sources verified; drafts marked as such.',
     },
   },
 }

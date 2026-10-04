@@ -4,10 +4,17 @@
 // (anno, giorno o forma del pezzo) e il sito le marca come bozza.
 // I campi di testo sono bilingui: { it, en }, italiano prima.
 //
-// { id, sort: 'AAAA-MM-GG' per l'ordinamento, time?: 'HH:MM' (mancante = tutto il giorno),
-//   year, dateLabel: { it, en },
-//   title: { it, en }, kind: { it, en }, place: { it, en }, city,
-//   role: { it, en }, detail: { it, en }, draft?, sources: [{ label, href }] }
+// `photo` è la fotografia dell'evento in public/foto, con `photoCaption`;
+// `sources` può essere vuoto o senza `href`, quando la fonte è un documento
+// cartaceo o una fotografia dell'archivio dell'autrice.
+// `wholeMonth: true` dice che il giorno non è noto: la data serve solo
+// all'ordinamento e il calendario .ics non viene offerto, per non mentire.
+// `sort: '0000-00-00'` marca le voci senza data, che finiscono in fondo.
+//
+// { id, sort, time?, wholeMonth?, year?, dateLabel: { it, en },
+//   title: { it, en }, kind: { it, en }, place?: { it, en }, city?,
+//   role: { it, en }, detail: { it, en }, draft?, photo?, photoCaption?,
+//   sources: [{ label, href? }] }
 
 export const events = [
   {
@@ -60,6 +67,34 @@ export const events = [
     ],
   },
   {
+    id: 'salone-2024-torino',
+    sort: '2024-05-18',
+    wholeMonth: true,
+    year: 2024,
+    dateLabel: { it: 'maggio 2024', en: 'May 2024' },
+    title: {
+      it: '«Non escludo il ritorno» al Salone del Libro',
+      en: '“Non escludo il ritorno” at the Salone del Libro',
+    },
+    kind: { it: 'Fiera del libro', en: 'Book fair' },
+    place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
+    city: 'Torino',
+    role: { it: 'Autrice', en: 'Author' },
+    draft: true,
+    photo: '/foto/torino-salone-2024.jpg',
+    photoCaption: {
+      it: 'L’autrice mostra il romanzo sugli scaffali di una libreria al Salone.',
+      en: 'The author holds up the novel on a bookshop shelf at the Salone.',
+    },
+    detail: {
+      it:
+        'Una fotografia dell’archivio dell’autrice la ritrae al Salone del Libro del 2024 con in mano il romanzo, e data l’incontro a maggio. Il giorno, lo stand e la forma dell’appuntamento non risultano da nessuna cronaca: la voce resta bozza finché non arriva la data.',
+      en:
+        'A photograph from the author’s archive shows her at the 2024 Salone del Libro holding the novel, and dates the appearance to May. The day, the stand and the shape of the event appear in no report: the entry stays a draft until the date arrives.',
+    },
+    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+  },
+  {
     id: 'cyrano-alghero',
     sort: '2024-06-13',
     time: '19:00',
@@ -71,6 +106,11 @@ export const events = [
     city: 'Alghero',
     role: { it: 'Autrice, con Neria De Giovanni', en: 'Author, with Neria De Giovanni' },
     draft: true,
+    photo: '/foto/alghero-cyrano-2024.jpg',
+    photoCaption: {
+      it: 'Alla libreria Cyrano, giugno 2024: l’incontro si tiene fra gli scaffali del «Libri · Vino · Swago» di Alghero.',
+      en: 'At the Cyrano bookshop, June 2024: the meeting takes place among the shelves of the «Libri · Vino · Swago» in Alghero.',
+    },
     detail: {
       it:
         'Presentazione in Sardegna con Neria De Giovanni, in collaborazione con il festival Florinas in giallo: il romanzo torna nell’isola cui appartengono il caso e le radici familiari dell’autrice.',
@@ -83,6 +123,115 @@ export const events = [
         href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2352/il-cold-case-di-claudia-origoni-arriva-ad-alghero',
       },
     ],
+  },
+  {
+    id: 'roma-trastevere-2024',
+    sort: '2024-10-15',
+    wholeMonth: true,
+    year: 2024,
+    dateLabel: { it: 'ottobre 2024', en: 'October 2024' },
+    title: {
+      it: 'Presentazione del romanzo a Trastevere',
+      en: 'Presentation of the novel in Trastevere',
+    },
+    kind: { it: 'Presentazione', en: 'Book presentation' },
+    place: { it: 'Trastevere', en: 'Trastevere' },
+    city: 'Roma',
+    role: { it: 'Autrice', en: 'Author' },
+    draft: true,
+    photo: '/foto/roma-trastevere-2024.jpg',
+    photoCaption: {
+      it: 'Un tavolo, il romanzo chiuso davanti a lei, la sera dell’incontro.',
+      en: 'A table, the novel closed in front of her, on the evening of the meeting.',
+    },
+    detail: {
+      it:
+        'La fotografia di un incontro romano d’autunno la ritrae seduta a un tavolo con il romanzo davanti. Il locale che ha ospitato la serata, il giorno e chi è intervenuto con lei non compaiono in nessuna cronaca consultata: la voce resta bozza.',
+      en:
+        'The photograph of a Roman autumn meeting shows her seated at a table with the novel in front of her. The venue, the day and whoever spoke with her appear in no report consulted: the entry stays a draft.',
+    },
+    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+  },
+  {
+    id: 'mandrarossa-presentazione-2025',
+    sort: '2025-05-09',
+    year: 2025,
+    dateLabel: { it: '9 maggio 2025', en: '9 May 2025' },
+    title: {
+      it: 'Premio Letterario Mandrarossa, l’incontro di maggio',
+      en: 'Premio Letterario Mandrarossa, the May meeting',
+    },
+    kind: { it: 'Premio', en: 'Prize' },
+    role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
+    draft: true,
+    photo: '/foto/premio-mandrarossa-2025.jpg',
+    photoCaption: {
+      it: 'Le etichette Mandrarossa sul tavolo: il premio nasce dal legame fra i vini di Settesoli e le sezioni del riconoscimento.',
+      en: 'The Mandrarossa labels on the table: the prize grows out of the link between Settesoli’s wines and the sections of the award.',
+    },
+    detail: {
+      it:
+        'Un ritratto firmato «Premio Letterario Mandrarossa 9 maggio 2025» la mostra a un tavolo all’aperto, con le bottiglie dell’azienda davanti. È la prova fotografica di un appuntamento che precede di poche settimane la prima premiazione di giugno, e che nessuna delle fonti finora raccolte descrive: manca il luogo, e manca il nome esatto della serata.',
+      en:
+        'A portrait captioned “Premio Letterario Mandrarossa 9 May 2025” shows her at an outdoor table with the estate’s bottles in front of her. It is photographic evidence of an appointment that comes a few weeks before the first award ceremony in June, and that none of the sources gathered so far describes: the place is missing, and so is the exact name of the evening.',
+    },
+    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+  },
+  {
+    id: 'salone-2026-dajani',
+    sort: '2026-05-16',
+    wholeMonth: true,
+    year: 2026,
+    dateLabel: { it: 'maggio 2026', en: 'May 2026' },
+    title: {
+      it: 'Tavolo al Salone del Libro con Antonio Dajani',
+      en: 'Panel at the Salone del Libro with Antonio Dajani',
+    },
+    kind: { it: 'Incontro', en: 'Panel' },
+    place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
+    city: 'Torino',
+    role: { it: 'Relatrice', en: 'Panellist' },
+    draft: true,
+    photo: '/foto/autrice-salone-2026.jpg',
+    photoCaption: {
+      it:
+        'Il microfono fra le mani, lo stand con i libri alle spalle: la fotografia viene dall’archivio dell’autrice.',
+      en: 'The microphone in her hands, the book stand behind: the photograph comes from the author’s archive.',
+    },
+    detail: {
+      it:
+        'Una fotografia la ritrae a un tavolo del Salone del Libro 2026, il microfono fra le mani, con un allestimento di libri alle spalle; il file reca i nomi «Mandrarossa» e «Antonio Dajani» e la data dell’edizione. Lo striscione sullo sfondo è tagliato dalla cornice e lascia leggere soltanto «L’identità s…», quindi il titolo esatto dell’incontro, il giorno e chi sedeva al tavolo restano da confermare.',
+      en:
+        'A photograph shows her at a table of the 2026 Salone del Libro, microphone in hand, a display of books behind; the file carries the names “Mandrarossa” and “Antonio Dajani” and the date of the edition. The banner in the background is cut by the frame and yields only “L’identità s…”, so the exact title of the panel, the day and who sat at the table remain to be confirmed.',
+    },
+    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+  },
+  {
+    id: 'palermo-presentazione',
+    sort: '0000-00-00',
+    dateLabel: { it: 'senza data', en: 'undated' },
+    title: {
+      it: 'Presentazione a Palermo, a Palazzo del Poeta',
+      en: 'Presentation in Palermo, at Palazzo del Poeta',
+    },
+    kind: { it: 'Presentazione', en: 'Book presentation' },
+    place: { it: 'Palazzo del Poeta', en: 'Palazzo del Poeta' },
+    city: 'Palermo',
+    role: { it: 'Autrice', en: 'Author' },
+    draft: true,
+    photo: '/foto/palermo-presentazione.jpg',
+    photoCaption: {
+      it:
+        'Tre donne sotto le volte di pietra, il romanzo in mano e una borsa dell’editore: la data dell’incontro non è scritta da nessuna parte.',
+      en: 'Three women under stone vaults, the novel in hand and a bag from the publisher: the date of the meeting is written nowhere.',
+    },
+    detail: {
+      it:
+        'Una fotografia d’archivio documenta una presentazione palermitana del romanzo: l’autrice fra due interlocutrici, il volume esposto, una borsa con il marchio Nemapress. La scheda promozionale dell’editore, che accompagna il libro con il ritratto dell’autrice e una sua frase sul romanzo, colloca l’incontro a «Palazzo del Poeta, Palermo»; né quella scheda né altre fonti danno l’anno, e la voce resta bozza e in fondo alla timeline finché la data non arriva.',
+      en:
+        'An archive photograph documents a Palermitan presentation of the novel: the author between two interlocutors, the volume on show, a bag carrying the Nemapress mark. The publisher’s card that accompanies the book places the meeting at “Palazzo del Poeta, Palermo”, but neither that card nor other sources give the year: the entry stays a draft, and at the bottom of the timeline, until the date arrives.',
+    },
+    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
   },
   {
     id: 'mandrarossa-prima-edizione',
@@ -114,6 +263,7 @@ export const events = [
   {
     id: 'salone-2025-premio',
     sort: '2025-05-18',
+    wholeMonth: true,
     year: 2025,
     dateLabel: { it: 'maggio 2025', en: 'May 2025' },
     title: { it: 'Il Premio Mandrarossa al Salone del Libro', en: 'The Premio Mandrarossa at the Salone del Libro' },

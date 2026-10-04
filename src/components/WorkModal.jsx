@@ -97,12 +97,14 @@ export default function WorkModal({ work, onClose }) {
                     <dd className="mt-1 tabular-nums text-ink-soft">{work.isbn}</dd>
                   </div>
                 )}
-                <div>
-                  <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                    {t('work.year')}
-                  </dt>
-                  <dd className="mt-1 text-ink-soft">{work.year}</dd>
-                </div>
+                {work.year && (
+                  <div>
+                    <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                      {t('work.year')}
+                    </dt>
+                    <dd className="mt-1 text-ink-soft">{work.year}</dd>
+                  </div>
+                )}
                 {work.pages && (
                   <div>
                     <dt className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
