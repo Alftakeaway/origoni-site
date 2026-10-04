@@ -123,7 +123,7 @@ export const events = [
     role: { it: 'Responsabile del premio', en: 'Director of the prize' },
     detail: {
       it:
-        'Il premio viene presentato al pubblico del Salone del Libro: la cronaca la descrive al tavolo dei relatori come responsabile del premio, tra i festival e i premi letterari della Sicilia.',
+        'Presentazione del premio al pubblico del Salone del Libro: la cronaca la descrive al tavolo dei relatori come responsabile del premio, tra i festival e i premi letterari della Sicilia.',
       en:
         'The prize is presented to the Salone del Libro audience: the coverage places her at the panel table as director of the prize, among the festivals and literary prizes of Sicily.',
     },

@@ -119,7 +119,7 @@ export const strings = {
       headingA: 'Le lettere sono',
       headingB: 'sempre benvenute.',
       body:
-        'Per richieste della stampa, inviti a presentazioni, o semplicemente per scrivere a proposito dei libri. Questo sito non conserva né condivide i dati inseriti: il messaggio viene aperto nel vostro client di posta.',
+        'Per richieste della stampa, inviti a presentazioni, o semplicemente per scrivere a proposito dei libri. Questo sito non conserva né condivide i dati inseriti: il messaggio si apre nel vostro client di posta.',
       name: 'Nome',
       email: 'Email',
       topic: 'Scrivo per',
@@ -134,7 +134,7 @@ export const strings = {
         other: 'Altro',
       },
       send: 'Apri la lettera',
-      sent: 'Lettera aperta nel vostro client, grazie',
+      sent: 'La lettera si è aperta nel vostro client, grazie',
       noAddress:
         'Casella di contatto non ancora configurata: l’indirizzo email va inserito in src/data/site.js.',
     },
