@@ -21,6 +21,17 @@ const categoryWash = {
   notes: 'from-gold/15 via-paper to-paper',
 }
 
+// L'iniziale da mostrare in filigrana salta l'articolo: sei titoli su sei che
+// cominciano per «Il» o «The» davano sei lettere identiche, tutte uguali e
+// tutte mozzate dal bordo della fascia.
+const ARTICOLO = /^(?:the|a|an|il|lo|la|le|i|gli|un|una|uno)\b\s*|^(?:l'|d'|d’)\s*/i
+
+function inizialeTitolo(titolo) {
+  let resto = titolo.trim()
+  while (ARTICOLO.test(resto)) resto = resto.replace(ARTICOLO, '').trim()
+  return (resto.charAt(0) || '').toUpperCase()
+}
+
 export default function Journal() {
   const [filter, setFilter] = useState('all')
   const [active, setActive] = useState(null)
@@ -88,9 +99,9 @@ export default function Journal() {
                 >
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute -bottom-9 right-2 select-none font-display text-[7.5rem] font-semibold leading-none text-ink/10"
+                    className="pointer-events-none absolute bottom-0 right-3 select-none font-display text-[6.5rem] font-semibold leading-none text-ink/10"
                   >
-                    {tr(p.title).charAt(0)}
+                    {inizialeTitolo(tr(p.title))}
                   </span>
                   <span
                     className={`relative m-4 rounded-full px-3 py-1 font-sans text-[10px] uppercase tracking-widest ${categoryStyles[p.category]}`}

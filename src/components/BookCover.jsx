@@ -32,9 +32,24 @@ const tones = {
   },
 }
 
-export default function BookCover({ work, large = false }) {
-  const { tr } = useLang()
+export default function BookCover({ work, large = false, pane = false }) {
+  const { t, tr } = useLang()
   const tone = tones[work.tone] || tones.ink
+
+  // Il reticolo e il tratteggio dicono che questa non è una copertina, è il
+  // posto che la copertina aspetta.
+  const segnaposto = (
+    <>
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(135deg, currentColor 0 1px, transparent 1px 10px)',
+        }}
+      />
+      <div className="pointer-events-none absolute inset-3 rounded-lg border border-dashed border-current opacity-25" />
+    </>
+  )
 
   if (work.cover) {
     return (
@@ -43,8 +58,31 @@ export default function BookCover({ work, large = false }) {
           src={work.cover}
           alt={tr(work.title)}
           loading="lazy"
-          className="h-auto max-h-full w-auto max-w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          className={
+            pane
+              ? 'h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]'
+              : 'h-auto max-h-full w-auto max-w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]'
+          }
         />
+      </div>
+    )
+  }
+
+  // Nella card orizzontale il titolo sta già a destra: la fascia qui riporta
+  // solo l'anno e la dichiarazione di provvisorietà.
+  if (pane) {
+    return (
+      <div
+        aria-hidden
+        className={`relative flex h-full w-full flex-col items-center justify-between ${tone.shell}`}
+      >
+        {segnaposto}
+        <span className="relative mt-5 font-sans tabular-nums text-[9px] opacity-70">
+          {work.year}
+        </span>
+        <p className="relative mb-5 max-w-[7.5rem] text-center font-sans text-[9px] uppercase leading-relaxed tracking-widest opacity-70">
+          {t('works.coverPlaceholder')}
+        </p>
       </div>
     )
   }
@@ -52,9 +90,11 @@ export default function BookCover({ work, large = false }) {
   return (
     <div
       aria-hidden
-      className={`flex h-full w-full flex-col justify-between ${tone.shell} transition-transform duration-700 ease-out group-hover:scale-[1.03]`}
+      className={`relative flex h-full w-full flex-col justify-between ${tone.shell} transition-transform duration-700 ease-out group-hover:scale-[1.03]`}
     >
-      <div className="flex items-start justify-between gap-4">
+      {segnaposto}
+
+      <div className="relative flex items-start justify-between gap-4">
         {/* Sulle card la riga inferiore già mostra editore e anno: qui basta l'anno,
             altrimenti il badge del tipo lo copre. */}
         {large && work.publisher && (
@@ -69,7 +109,7 @@ export default function BookCover({ work, large = false }) {
         </span>
       </div>
 
-      <div className={large ? 'px-8 pb-10' : 'px-5 pb-6'}>
+      <div className={`relative ${large ? 'px-8 pb-10' : 'px-5 pb-6'}`}>
         <p
           className={`font-display font-semibold leading-tight ${
             large ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'
@@ -87,6 +127,9 @@ export default function BookCover({ work, large = false }) {
           </p>
         )}
         <div className={`mt-4 h-px w-16 ${tone.rule}`} />
+        <p className="mt-3 font-sans text-[9px] uppercase tracking-widest opacity-70">
+          {t('works.coverPlaceholder')}
+        </p>
       </div>
     </div>
   )

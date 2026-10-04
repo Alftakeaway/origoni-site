@@ -41,7 +41,6 @@ export const works = [
         href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
       },
     ],
-    tall: true,
   },
   {
     id: 'i-fiori-dei-santi',
@@ -75,7 +74,6 @@ export const works = [
         href: 'https://www.ibs.it/fiori-dei-santi-simboli-floreali-libro-claudia-origoni/e/9788886187626',
       },
     ],
-    tall: false,
   },
   {
     id: 'alza-gli-occhi-e-guarda',
@@ -110,7 +108,6 @@ export const works = [
         href: 'https://books.google.com/books/about/Alza_gli_occhi_e_guarda_Immagini_di_due.html?id=ysdWAAAACAAJ',
       },
     ],
-    tall: false,
   },
   {
     id: 'loro-nero-di-modica',
@@ -141,7 +138,6 @@ export const works = [
         href: 'https://www.ancorastore.it/scheda-libro/claudia-origoni-elena-la-delfa/loro-nero-di-modica-9788887432916-2208133.html',
       },
     ],
-    tall: true,
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
@@ -163,7 +159,6 @@ export const works = [
       en:
         'A lighthouse keeper’s daughter returns to the Ligurian coast to settle her late mother’s affairs and unearths forty years of unsent letters. A novel about inheritance, silence, and the tides we cannot outrun.',
     },
-    tall: true,
   },
   {
     id: 'marginalia',
@@ -179,7 +174,6 @@ export const works = [
       en:
         'Twenty-two essays on reading as an act of love and argument. From the ethics of the dog-eared page to why we reread the same three novels every decade.',
     },
-    tall: false,
   },
   {
     id: 'winter-grammar',
@@ -195,7 +189,6 @@ export const works = [
       en:
         'Two translators stranded by a snowstorm in a Trieste archive discover they have been rendering the same dead poet into rival languages for twenty years. A story about fidelity — literary and otherwise.',
     },
-    tall: false,
   },
   {
     id: 'cartography-of-loss',
@@ -211,7 +204,6 @@ export const works = [
       en:
         'A long-form examination of how contemporary European fiction maps grief onto landscapes — from Sebald’s walks to the flooded villages of the new climate novel.',
     },
-    tall: true,
   },
   {
     id: 'lantern-hours',
@@ -227,7 +219,6 @@ export const works = [
       en:
         'Spring 2026. A clockmaker in a disappearing Alpine village begins repairing timepieces that run backwards, and the villagers start remembering futures that never happened.',
     },
-    tall: false,
   },
   {
     id: 'nine-ways-of-reading',
@@ -243,6 +234,5 @@ export const works = [
       en:
         'Nine guests at a Milanese dinner party narrate the same evening — each convinced they are the only honest witness. A story in fragments about the fiction we agree to call company.',
     },
-    tall: false,
   },
 ]

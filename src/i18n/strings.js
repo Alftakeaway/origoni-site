@@ -29,6 +29,7 @@ export const strings = {
       intro:
         'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Editore, anno e ISBN di ogni titolo sono riportati nella scheda.',
       readMore: 'Apri la scheda',
+      coverPlaceholder: 'Copertina provvisoria',
       draftNote:
         'Le sei schede marcate «bozza» sono segnaposto decisi con l’autrice: titoli, anni e sinossi provvisori in attesa dei testi definitivi, da confermare voce per voce.',
     },
@@ -171,6 +172,7 @@ export const strings = {
       intro:
         'Four books in twenty-three years: a catalogue of floral symbols in sacred art, two inquiries written in several voices, and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, year and ISBN.',
       readMore: 'Open the entry',
+      coverPlaceholder: 'Provisional cover',
       draftNote:
         'The six entries marked “draft” are placeholders agreed with the author: provisional titles, years and synopses awaiting the final texts, to be confirmed one by one.',
     },
