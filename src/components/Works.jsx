@@ -59,7 +59,7 @@ export default function Works() {
                     {tr(w.title)}
                   </h3>
                   <p className="mt-1.5 font-sans text-xs uppercase tracking-widest text-ink-muted">
-                    {w.publisher} &middot; {w.year}
+                    {[w.publisher, w.year].filter(Boolean).join(' · ')}
                   </p>
                 </div>
               </motion.button>

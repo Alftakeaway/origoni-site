@@ -57,7 +57,7 @@ export default function BookCover({ work, large = false }) {
       <div className="flex items-start justify-between gap-4">
         {/* Sulle card la riga inferiore già mostra editore e anno: qui basta l'anno,
             altrimenti il badge del tipo lo copre. */}
-        {large && (
+        {large && work.publisher && (
           <span className={`px-8 pt-8 font-sans uppercase tracking-literary text-[11px] ${tone.label}`}>
             {work.publisher}
           </span>

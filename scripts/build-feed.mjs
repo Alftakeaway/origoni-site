@@ -30,7 +30,7 @@ const items = [...posts]
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xml:base="${SITE}/">
   <channel>
-    <title>Claudia Origoni — Appunti dalla scrivania</title>
+    <title>Claudia Origoni, appunti dalla scrivania</title>
     <link>${SITE}/#journal</link>
     <description>Recensioni, saggi brevi e note di scrittura di Claudia Origoni.</description>
     <language>it</language>

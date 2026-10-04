@@ -26,7 +26,7 @@ export default function Events() {
 
         <div className="relative mt-14 border-l border-ink/12 pl-8 md:pl-12">
           {sorted.map((e, i) => {
-            const place = `${tr(e.place)}${e.city && e.city !== '—' ? `, ${e.city}` : ''}`
+            const place = `${tr(e.place)}${e.city ? `, ${e.city}` : ''}`
             const ics = icsForEvent(e, {
               title: tr(e.title),
               place,

@@ -2,7 +2,7 @@
 // Solo fatti verificabili: niente citazioni inventate attribuite all'autrice.
 export const strings = {
   it: {
-    docTitle: 'Claudia Origoni — Scrittrice e saggista',
+    docTitle: 'Claudia Origoni, scrittrice e saggista',
     nav: {
       works: 'Opere',
       journal: 'Giornale',
@@ -56,7 +56,7 @@ export const strings = {
       feed: 'Feed RSS',
       authorBio:
         'Scrittrice e saggista. Non escludo il ritorno (Nemapress, 2023) e tre libri fra iconografia sacra, inchiesta urbana e storia artigiana.',
-      authorNote: 'Firma ospite — non è un testo dell’autrice',
+      authorNote: 'Firma ospite: non è un testo dell’autrice',
     },
     categories: {
       reviews: 'Recensioni',
@@ -80,9 +80,9 @@ export const strings = {
       heading: 'Chi scrive',
       quote: 'Sono sempre stata un’appassionata di ricerche storiche.',
       quoteSource:
-        '— Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
+        'Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
       paragraphs: [
-        'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali nell’iconografia sacra — i gigli, le rose e le palme che diventano attributi dei santi — seguito nelle storie e nelle leggende che li hanno messi in immagine.',
+        'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali dell’iconografia sacra (i gigli, le rose e le palme che diventano attributi dei santi), seguito nelle storie e nelle leggende che li hanno messi in immagine.',
         'Nel 2005 firma con Elisabetta Valentini e Simona Filippini Alza gli occhi e guarda (Edizioni Intra Moenia), lavoro a tre voci sui quartieri Sanità e Forcella a Napoli, tra contrasti sociali e potenzialità nascoste. Nel 2009 esce L’oro nero di Modica (Coppola Editore), scritto con Elena La Delfa sul cioccolato della città barocca e sul legame che tiene insieme un centro urbano e la sua storia artigianale.',
         'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero cold case sardo, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
         'Accanto ai libri c’è il lavoro per il Premio Letterario Mandrarossa, che Claudia Origoni ha fondato e dirige: ogni sezione del premio porta il nome di un’etichetta, e la giuria della seconda edizione era presieduta da Concita De Gregorio. Date e luoghi degli incontri sono raccolti nella sezione Eventi, con la fonte accanto a ciascuna voce.',
@@ -133,7 +133,7 @@ export const strings = {
         other: 'Altro',
       },
       send: 'Apri la lettera',
-      sent: 'Lettera aperta nel vostro client — grazie',
+      sent: 'Lettera aperta nel vostro client, grazie',
       noAddress:
         'Casella di contatto non ancora configurata: l’indirizzo email va inserito in src/data/site.js.',
     },

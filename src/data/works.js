@@ -1,5 +1,5 @@
 // Bibliografia reale: solo opere verificabili, con editore, anno e ISBN.
-// I campi di testo sono bilingui: { it, en } — l'italiano è la lingua primaria.
+// I campi di testo sono bilingui: { it, en }, con l'italiano come lingua primaria.
 // Le fonti sono raccolte in src/data/site.js e mostrate nella pagina.
 // `cover` è la copertina editoriale (in public/covers, con `coverCredit`):
 // dove manca, BookCover disegna una copertina tipografica.
@@ -17,7 +17,7 @@ export const works = [
     coverCredit: 'ibs.it',
     synopsis: {
       it:
-        'Primo romanzo. Un giallo storico che riprende un vero cold case sardo: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei \u2014 «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese» \u2014 e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
+        'Primo romanzo. Un giallo storico che riprende un vero cold case sardo: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei (\u00abtrattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese\u00bb), e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
       en:
         'Her first novel. A historical mystery built on a real Sardinian cold case: the 1925 murder of Vanda Serra in Aidomaggiore and the priest Don Giovanni Spanu, whose defence Origoni reconstructs from the documents. The real village becomes the fictional Aitadei \u2014 “since the case is still contested, I felt I had to change at least the name of the town” \u2014 and the inquiry reaches as far as research into past lives.',
     },
@@ -147,14 +147,14 @@ export const works = [
   // ─────────────────────────────────────────────────────────────────────────────
   // Segnaposto decisi con l'autrice (3 ottobre 2026): titoli, anni e sinossi sono
   // provvisori, da sostituire con i testi definitivi. `draft: true` li marca come
-  // bozza nel sito — togliere il flag voce per voce quando il testo è confermato.
+  // bozza nel sito; togliere il flag voce per voce quando il testo è confermato.
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'salt-season',
     title: { it: 'La stagione del sale', en: 'The Salt Season' },
     type: { it: 'Romanzo', en: 'Novel' },
     year: 2025,
-    publisher: '—',
+    publisher: '',
     tone: 'ink',
     draft: true,
     synopsis: {
@@ -170,7 +170,7 @@ export const works = [
     title: { it: 'Marginalia', en: 'Marginalia' },
     type: { it: 'Raccolta di saggi', en: 'Essay collection' },
     year: 2024,
-    publisher: '—',
+    publisher: '',
     tone: 'sage',
     draft: true,
     synopsis: {
@@ -186,12 +186,12 @@ export const works = [
     title: { it: 'Grammatica d’inverno', en: 'Winter Grammar' },
     type: { it: 'Racconto', en: 'Short story' },
     year: 2024,
-    publisher: '—',
+    publisher: '',
     tone: 'terracotta',
     draft: true,
     synopsis: {
       it:
-        'Due traduttrici bloccate da una nevicata in un archivio triestino scoprono di tradurre lo stesso poeta morto in lingue rivali da vent’anni. Un racconto sulla fedeltà — letteraria e non.',
+        'Due traduttrici bloccate da una nevicata in un archivio triestino scoprono di tradurre lo stesso poeta morto in lingue rivali da vent’anni. Un racconto sulla fedeltà, letteraria e non.',
       en:
         'Two translators stranded by a snowstorm in a Trieste archive discover they have been rendering the same dead poet into rival languages for twenty years. A story about fidelity — literary and otherwise.',
     },
@@ -202,12 +202,12 @@ export const works = [
     title: { it: 'Cartografia della perdita', en: 'A Cartography of Loss' },
     type: { it: 'Saggio critico', en: 'Critical essay' },
     year: 2023,
-    publisher: '—',
+    publisher: '',
     tone: 'gold',
     draft: true,
     synopsis: {
       it:
-        'Un’analisi in forma lunga di come la narrativa europea contemporanea mappa il lutto sui paesaggi — dalle camminate di Sebald ai villaggi sommersi del nuovo romanzo climatico.',
+        'Un’analisi in forma lunga di come la narrativa europea contemporanea mappa il lutto sui paesaggi: dalle camminate di Sebald ai villaggi sommersi del nuovo romanzo climatico.',
       en:
         'A long-form examination of how contemporary European fiction maps grief onto landscapes — from Sebald’s walks to the flooded villages of the new climate novel.',
     },
@@ -218,7 +218,7 @@ export const works = [
     title: { it: 'Le ore della lanterna', en: 'The Lantern Hours' },
     type: { it: 'Romanzo', en: 'Novel' },
     year: 2026,
-    publisher: '—',
+    publisher: '',
     tone: 'ink',
     draft: true,
     synopsis: {
@@ -234,12 +234,12 @@ export const works = [
     title: { it: 'Nove modi di leggere una stanza', en: 'Nine Ways of Reading a Room' },
     type: { it: 'Racconto', en: 'Short story' },
     year: 2022,
-    publisher: '—',
+    publisher: '',
     tone: 'sage',
     draft: true,
     synopsis: {
       it:
-        'Nove ospiti a una cena milanese raccontano la stessa serata — ciascuno convinto di essere l’unico testimone onesto. Un racconto in frammenti sulla finzione che accettiamo di chiamare compagnia.',
+        'Nove ospiti a una cena milanese raccontano la stessa serata, ciascuno convinto di essere l’unico testimone onesto. Un racconto in frammenti sulla finzione che accettiamo di chiamare compagnia.',
       en:
         'Nine guests at a Milanese dinner party narrate the same evening — each convinced they are the only honest witness. A story in fragments about the fiction we agree to call company.',
     },

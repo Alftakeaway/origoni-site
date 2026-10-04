@@ -1,7 +1,7 @@
 // Appunti e articoli del giornale. Le voci con `draft: true` sono testi provvisori,
 // da sostituire con i pezzi veri dell'autrice: il sito le mostra marcate come bozza.
-// I campi di testo sono bilingui: { it, en } — italiano prima.
-// `blocks` rende la lettura integrale: { type: 'p', text: { it, en } } per i paragrafi,
+// I campi di testo sono bilingui: { it, en }, italiano prima.
+// `blocks` serve alla lettura integrale: { type: 'p', text: { it, en } } per i paragrafi,
 // { type: 'quote', text: { it, en } } per le citazioni a piena larghezza.
 // Le categorie sono chiavi fisse; le etichette stanno nei dizionari i18n.
 // `iso` è la data tecnica (AAAA-MM-GG) letta da scripts/build-feed.mjs per il feed RSS;
@@ -31,7 +31,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Le grandi saghe familiari condividono un segreto: non parlano mai davvero delle famiglie. Parlano delle correnti in cui le famiglie sono costrette a nuotare \u2014 la storia, la migrazione, il denaro, la vergogna. Pachinko di Min Jin Lee lo capisce meglio di quasi ogni romanzo dell\u2019ultimo decennio, ed \u00e8 per questo che il suo celebre incipit, \u00abLa storia ci ha traditi, ma non importa\u00bb, suona non come rassegnazione ma come promessa.',
+            'Le grandi saghe familiari condividono un segreto: non parlano mai davvero delle famiglie. Parlano delle correnti in cui le famiglie sono costrette a nuotare, la storia, la migrazione, il denaro, la vergogna. Pachinko di Min Jin Lee lo capisce meglio di quasi ogni romanzo dell\u2019ultimo decennio, ed \u00e8 per questo che il suo celebre incipit, \u00abLa storia ci ha traditi, ma non importa\u00bb, suona non come rassegnazione ma come promessa.',
           en:
             'Great family sagas share a secret: they are never really about families. They are about the currents that families are forced to swim in \u2014 history, migration, money, shame. Min Jin Lee\u2019s Pachinko understands this better than almost any novel of the last decade, which is why its famous opening line, \u201cHistory has failed us, but no matter,\u201d lands not as resignation but as a promise.',
         },
@@ -47,7 +47,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'A rileggerlo, ci\u00f2 che colpisce \u00e8 la misura di Lee. La tentazione, con quattro generazioni di coreani zainichi in Giappone, \u00e8 il melodramma, e il melodramma sarebbe stato perdonabile. Invece la prosa resta piana, quasi austera, e l\u2019emozione si accumula come la neve su un ramo \u2014 invisibile, finch\u00e9 il suo peso non spezza qualcosa.',
+            'A rileggerlo, ci\u00f2 che colpisce \u00e8 la misura di Lee. La tentazione, con quattro generazioni di coreani zainichi in Giappone, \u00e8 il melodramma, e il melodramma sarebbe stato perdonabile. Invece la prosa resta piana, quasi austera, e l\u2019emozione si accumula come la neve su un ramo, invisibile, finch\u00e9 il suo peso non spezza qualcosa.',
           en:
             'What strikes me on rereading is Lee\u2019s restraint. The temptation with four generations of Zainichi Koreans in Japan is melodrama, and melodrama would have been forgivable. Instead, the prose stays plain, almost austere, and the emotion accumulates the way snow accumulates on a branch \u2014 invisibly, until the weight of it breaks something.',
         },
@@ -72,7 +72,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Se il romanzo ha un difetto, \u00e8 quello che aveva anche Tolstoj: l\u2019ultima generazione \u00e8 meno viva della prima. Noa e Mozasu reggono il tema magnificamente, ma non il dolore. Eppure anche questo potrebbe essere intenzionale \u2014 l\u2019appiattirsi della memoria mentre un popolo si assimila, la saga che diventa quietamente una vita.',
+            'Se il romanzo ha un difetto, \u00e8 quello che aveva anche Tolstoj: l\u2019ultima generazione \u00e8 meno viva della prima. Noa e Mozasu reggono il tema magnificamente, ma non il dolore. Eppure anche questo potrebbe essere intenzionale: l\u2019appiattirsi della memoria mentre un popolo si assimila, la saga che diventa quietamente una vita.',
           en:
             'If the novel has a flaw, it is the one Tolstoy also had: the later generation is less vivid than the first. Noa and Mozasu carry the theme beautifully but not the ache. Yet this too may be intentional \u2014 the flattening of memory as a people assimilates, the saga quietly becoming a life.',
         },
@@ -98,7 +98,7 @@ export const posts = [
     draft: true,
     excerpt: {
       it:
-        'Oggi ottimizziamo tutto \u2014 i tragitti, il sonno, i libri. Ma un romanzo non \u00e8 contenuto da consumare: \u00e8 una macchina per produrre un certo tipo di tempo.',
+        'Oggi ottimizziamo tutto: i tragitti, il sonno, i libri. Ma un romanzo non \u00e8 un prodotto da consumare, \u00e8 una macchina per produrre un certo tipo di tempo.',
       en:
         'We optimize everything now \u2014 our commutes, our sleep, our books. But a novel is not content to be consumed. It is a machine for producing a particular kind of time.',
     },
@@ -107,7 +107,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Da qualche parte, negli ultimi dieci anni, la lettura \u00e8 entrata nell\u2019economia del benessere. Le app contano le pagine come i passi; i corsi di lettura veloce promettono tutto Middlemarch in un pomeriggio. Vorrei sostenere che \u00e8 un errore di categoria \u2014 e dei pi\u00f9 costosi.',
+            'Da qualche parte, negli ultimi dieci anni, la lettura \u00e8 entrata nell\u2019economia del benessere. Le app contano le pagine come i passi; i corsi di lettura veloce promettono tutto Middlemarch in un pomeriggio. Vorrei sostenere che \u00e8 un errore di categoria, e dei pi\u00f9 costosi.',
           en:
             'Somewhere in the last ten years, reading joined the wellness economy. Apps now track our pages like steps; speed-reading courses promise the whole of Middlemarch in an afternoon. I want to argue that this is a category error \u2014 and a costly one.',
         },
@@ -116,7 +116,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Un romanzo non \u00e8 contenuto. \u00c8 una macchina per produrre un certo tipo di tempo. Quando George Eliot rallenta per descrivere la luce in una biblioteca, non sta allungando il conteggio delle parole: sta insegnando al vostro sistema nervoso a muoversi alla velocit\u00e0 della sua attenzione morale. Leggetelo in fretta e ricevete la trama. Leggetelo lentamente e ricevete la persona che il libro sta cercando di farvi diventare per quattrocento pagine.',
+            'Un romanzo non \u00e8 un prodotto da consumare. \u00c8 una macchina per produrre un certo tipo di tempo. Quando George Eliot rallenta per descrivere la luce in una biblioteca, non sta gonfiando il numero delle parole: sta insegnando al vostro sistema nervoso a muoversi alla velocit\u00e0 della sua attenzione morale. Leggetelo in fretta e ricevete la trama. Leggetelo lentamente e ricevete la persona che il libro sta cercando di farvi diventare per quattrocento pagine.',
           en:
             'A novel is not content. It is a machine for producing a particular kind of time. When George Eliot slows to describe the light in a library, she is not padding the word count; she is teaching your nervous system to move at the speed of her moral attention. Read it fast and you receive the plot. Read it slowly and you receive the person she is trying to make you become for four hundred pages.',
         },
@@ -132,7 +132,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'C\u2019\u00e8 anche una ragione di mestiere. Le frasi migliori della prosa narrativa sono costruite per essere rilette \u2014 una cerniera di sintassi che gira il significato al secondo contatto. La lettura veloce \u00e8 strutturalmente incapace di coglierle, come un turista su un autobus non pu\u00f2 cogliere il volto di nessuno, in strada.',
+            'C\u2019\u00e8 anche una ragione di mestiere. Le frasi migliori della prosa narrativa sono costruite per essere rilette: una cerniera di sintassi che gira il significato al secondo contatto. La lettura veloce \u00e8 strutturalmente incapace di coglierle, come un turista su un autobus non pu\u00f2 cogliere il volto di nessuno, in strada.',
           en:
             'There is a craft reason for this too. The best sentences in prose fiction are built to be reread \u2014 a hinge of syntax that turns the meaning on second contact. Speed reading is structurally incapable of catching these, the way a tourist on a bus cannot catch the face of anyone on the street.',
         },
@@ -158,7 +158,7 @@ export const posts = [
     draft: true,
     excerpt: {
       it:
-        'Appunti da diciotto mesi di revisione di un romanzo che crollava sempre nel mezzo \u2014 e dall\u2019accorgimento strutturale che alla fine l\u2019ha retto.',
+        'Appunti da diciotto mesi di revisione di un romanzo che crollava sempre nel mezzo, e dall\u2019accorgimento strutturale che alla fine l\u2019ha retto.',
       en:
         'Notes from eighteen months of revising a novel that kept collapsing in the middle \u2014 and the structural trick that finally held it up.',
     },
@@ -176,7 +176,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'L\u2019accorgimento che ha salvato il libro viene dalla saggistica: ho scritto in una frase che cosa il secondo atto dovesse davvero sostenere. Non ci\u00f2 che accade \u2014 ci\u00f2 che afferma. Il mio \u00e8 risultato essere: \u00abla memoria \u00e8 un lavoro di riparazione\u00bb. Ogni scena che non faceva avanzare o complicava quell\u2019affermazione \u00e8 stata tagliata, per quanto bella. Quaranta pagine sono morte. Il libro ha cominciato a respirare.',
+            'L\u2019accorgimento che ha salvato il libro viene dalla saggistica: ho scritto in una frase che cosa il secondo atto dovesse davvero sostenere. Non ci\u00f2 che accade, ma ci\u00f2 che afferma. Il mio \u00e8 risultato essere: \u00abla memoria \u00e8 un lavoro di riparazione\u00bb. Ogni scena che non faceva avanzare o complicava quell\u2019affermazione \u00e8 stata tagliata, per quanto bella. Quaranta pagine sono morte. Il libro ha cominciato a respirare.',
           en:
             'The trick that saved the book was borrowed from nonfiction: I wrote a one-sentence claim for what the second act was actually about. Not what happens \u2014 what it argues. Mine turned out to be \u201cmemory is a kind of repair work.\u201d Every scene that didn\u2019t advance or complicate that claim got cut, however beautiful. Forty pages died. The book started breathing.',
         },
@@ -184,7 +184,7 @@ export const posts = [
       {
         type: 'quote',
         text: {
-          it: 'Non ci\u00f2 che accade \u2014 ci\u00f2 che afferma. Ogni scena che non faceva avanzare l\u2019affermazione \u00e8 stata tagliata, per quanto bella.',
+          it: 'Non ci\u00f2 che accade, ma ci\u00f2 che afferma. Ogni scena che non faceva avanzare l\u2019affermazione \u00e8 stata tagliata, per quanto bella.',
           en: 'Not what happens \u2014 what it argues. Every scene that didn\u2019t advance the claim got cut, however beautiful.',
         },
       },
@@ -243,7 +243,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'La pazienza del romanzo per le cose piccole \u2014 l\u2019acqua, la luce, il rumore di un bambino al piano di sopra \u2014 non \u00e8 decorazione. \u00c8 la teologia di Ames resa tattile: il mondo come dono che continua ad arrivare. Robinson si fida del lettore fino a fargliene sentire il peso senza una sola voce alzata.',
+            'La pazienza del romanzo per le cose piccole (l\u2019acqua, la luce, il rumore di un bambino al piano di sopra) non \u00e8 decorazione. \u00c8 la teologia di Ames resa tattile: il mondo come dono che continua ad arrivare. Robinson si fida del lettore fino a fargliene sentire il peso senza una sola voce alzata.',
           en:
             'The novel\u2019s patience with small things \u2014 water, light, the sound of a child upstairs \u2014 is not decoration. It is Ames\u2019s theology made tactile: the world as a gift that keeps arriving. Robinson trusts the reader to feel the weight of this without a single raised voice.',
         },
@@ -269,7 +269,7 @@ export const posts = [
     draft: true,
     excerpt: {
       it:
-        'Perch\u00e9 tengo un commonplace book, un diario dei sogni e un archivio degli scarti \u2014 e come mai \u00e8 il terzo a fare quasi tutto il lavoro.',
+        'Perch\u00e9 tengo un commonplace book, un diario dei sogni e un archivio degli scarti, e come mai \u00e8 il terzo a fare quasi tutto il lavoro.',
       en:
         'Why I keep a commonplace book, a dream journal and a \u2018rubbish\u2019 file \u2014 and how the third one does most of the work.',
     },
@@ -287,7 +287,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Tengo tre archivi. Il commonplace book ospita le frasi degli altri: versi dai romanzi, necrologi, scatole di cereali. Il diario dei sogni sono due pagine al risveglio, senza interpretazioni. Il terzo, niente affatto glamour, \u00e8 l\u2019archivio degli scarti \u2014 ogni paragrafo tagliato, ogni incipit abbandonato. \u00c8 quello a fare quasi tutto il lavoro.',
+            'Tengo tre archivi. Il commonplace book ospita le frasi degli altri: versi dai romanzi, necrologi, scatole di cereali. Il diario dei sogni sono due pagine al risveglio, senza interpretazioni. Il terzo, niente affatto elegante, \u00e8 l\u2019archivio degli scarti: ogni paragrafo tagliato, ogni incipit abbandonato. \u00c8 quello a fare quasi tutto il lavoro.',
           en:
             'I keep three files. The commonplace book holds other people\u2019s sentences: lines from novels, obituaries, cereal boxes. The dream journal is two pages on waking, no interpretation. The third, unglamorous one, is the rubbish file \u2014 every cut paragraph, every abandoned opening. That file does most of the work.',
         },
@@ -338,7 +338,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Tradurre non \u00e8 copiare con difficolt\u00e0. \u00c8 scrivere sotto vincolo \u2014 il vincolo del significato altrui \u2014 e ogni traduttore prende migliaia di piccole decisioni autoriali che un romanziere prende una volta sola. Il traduttore che rende un gioco di parole intraducibile ha scritto una battuta che non \u00e8 mai esistita.',
+            'Tradurre non \u00e8 copiare con difficolt\u00e0. \u00c8 scrivere sotto vincolo (il vincolo del significato altrui), e ogni traduttore prende migliaia di piccole decisioni autoriali che un romanziere prende una volta sola. Il traduttore che rende un gioco di parole intraducibile ha scritto una battuta che non \u00e8 mai esistita.',
           en:
             'Translation is not copying with difficulty. It is writing under constraint \u2014 the constraint of another person\u2019s meaning \u2014 and every translator makes thousands of small authorial decisions that a novelist makes once. The translator who renders a pun untranslatable has written a joke that never existed.',
         },
@@ -354,7 +354,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Ci\u00f2 che dobbiamo \u00e8 concreto: il nome del traduttore in copertina, royalty invece di compensi forfettari, e \u2014 la cosa pi\u00f9 alla portata di un lettore \u2014 curiosit\u00e0. Seguite i traduttori come seguite gli autori. Leggete un libro perch\u00e9 l\u2019ha tradotto quella persona. Il canone della letteratura mondiale \u00e8, in pratica, un canone di persone che l\u2019hanno scritta due volte.',
+            'Ci\u00f2 che dobbiamo \u00e8 concreto: il nome del traduttore in copertina, royalty invece di compensi forfettari, e, la cosa pi\u00f9 alla portata di un lettore, curiosit\u00e0. Seguite i traduttori come seguite gli autori. Leggete un libro perch\u00e9 l\u2019ha tradotto quella persona. Il canone della letteratura mondiale \u00e8, in pratica, un canone di persone che l\u2019hanno scritta due volte.',
           en:
             'What we owe is concrete: the translator\u2019s name on the cover, royalties rather than flat fees, and \u2014 most within a reader\u2019s power \u2014 curiosity. Follow translators the way you follow authors. Read a book because Ann Goldstein translated it. The canon of world literature is, in practice, a canon of people who wrote it twice.',
         },

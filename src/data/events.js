@@ -2,7 +2,7 @@
 // Ogni voce rimanda alla fonte da cui è stata ricavata: niente date o ruoli di memoria.
 // Le voci con `draft: true` hanno un dato che la fonte non conferma del tutto
 // (anno, giorno o forma del pezzo) e sono marcate come bozza nel sito.
-// I campi di testo sono bilingui: { it, en } — italiano prima.
+// I campi di testo sono bilingui: { it, en }, italiano prima.
 //
 // { id, sort: 'AAAA-MM-GG' per l'ordinamento, time?: 'HH:MM' (mancante = tutto il giorno),
 //   year, dateLabel: { it, en },
@@ -31,7 +31,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Portale Letterario — la segnalazione dell’incontro',
+        label: 'Portale Letterario, la segnalazione dell’incontro',
         href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2272/a-libroteca-di-roma-claudia-origoni-e-il-suo-romanzo-cold-case',
       },
     ],
@@ -54,7 +54,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Cara Garbatella — la cronaca della serata',
+        label: 'Cara Garbatella, la cronaca della serata',
         href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
       },
     ],
@@ -79,7 +79,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Portale Letterario — l’incontro di Alghero',
+        label: 'Portale Letterario, l’incontro di Alghero',
         href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2352/il-cold-case-di-claudia-origoni-arriva-ad-alghero',
       },
     ],
@@ -89,7 +89,7 @@ export const events = [
     sort: '2025-06-28',
     year: 2025,
     dateLabel: { it: '28 giugno 2025', en: '28 June 2025' },
-    title: { it: 'Premio Letterario Mandrarossa — prima premiazione', en: 'Premio Letterario Mandrarossa — first award ceremony' },
+    title: { it: 'Premio Letterario Mandrarossa: la prima premiazione', en: 'Premio Letterario Mandrarossa — first award ceremony' },
     kind: { it: 'Premio', en: 'Prize' },
     place: { it: 'Teatro Panoramico della Valle dei Templi, Agrigento', en: 'Panoramic Theatre of the Valley of the Temples, Agrigento' },
     city: 'Agrigento',
@@ -102,11 +102,11 @@ export const events = [
     },
     sources: [
       {
-        label: 'Welcome Network — il bilancio della prima edizione',
+        label: 'Welcome Network, il bilancio della prima edizione',
         href: 'https://www.welcomenetworkag.it/2025-07-05/successo-per-la-prima-edizione-del-premio-mandrarossa/',
       },
       {
-        label: 'Rai Cultura — la prima edizione',
+        label: 'Rai Cultura, la prima edizione',
         href: 'https://www.raicultura.it/letteratura/eventi/Premio-Letterario-Mandrarossa-7eaf73f1-2628-457e-bf39-ce272ab6640b.html',
       },
     ],
@@ -118,7 +118,7 @@ export const events = [
     dateLabel: { it: 'maggio 2025', en: 'May 2025' },
     title: { it: 'Il Premio Mandrarossa al Salone del Libro', en: 'The Premio Mandrarossa at the Salone del Libro' },
     kind: { it: 'Incontro', en: 'Panel' },
-    place: { it: 'Salone Internazionale del Libro, Torino — stand della Sicilia', en: 'Salone Internazionale del Libro, Turin — Sicilian pavilion' },
+    place: { it: 'Stand della Sicilia al Salone del Libro', en: 'Salone Internazionale del Libro, Turin — Sicilian pavilion' },
     city: 'Torino',
     role: { it: 'Responsabile del premio', en: 'Director of the prize' },
     detail: {
@@ -130,7 +130,7 @@ export const events = [
     draft: true,
     sources: [
       {
-        label: 'Welcome Network — festival e premi in Sicilia al Salone 2025',
+        label: 'Welcome Network, festival e premi in Sicilia al Salone 2025',
         href: 'https://www.welcomenetworkag.it/2025-05-20/salone-del-libro-2025-festival-e-premi-in-sicilia/',
       },
     ],
@@ -146,7 +146,7 @@ export const events = [
       en: '“From Niscemi to the libraries of Sicily. Gli Olmi”',
     },
     kind: { it: 'Tavola rotonda', en: 'Round table' },
-    place: { it: 'Salone del Libro, Lingotto — Spazio Sicilia', en: 'Salone del Libro, Lingotto — Spazio Sicilia' },
+    place: { it: 'Lo Spazio Sicilia al Lingotto', en: 'Salone del Libro, Lingotto — Spazio Sicilia' },
     city: 'Torino',
     role: { it: 'Relatrice', en: 'Panellist' },
     detail: {
@@ -157,7 +157,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Salone del Libro — programma ufficiale',
+        label: 'Salone del Libro, programma ufficiale',
         href: 'https://www.salonelibro.it/programma-eventi/da_niscemi_alle_biblioteche_di_sicilia/22576',
       },
     ],
@@ -173,18 +173,18 @@ export const events = [
     },
     kind: { it: 'Pubblicazione', en: 'Publication' },
     place: { it: 'Vanity Fair Italia', en: 'Vanity Fair Italia' },
-    city: '—',
+    city: '',
     role: { it: 'Firma del pezzo (da confermare)', en: 'Byline (to be confirmed)' },
     detail: {
       it:
-        'Un pezzo pubblicato su Vanity Fair Italia prende la biblioteca Marsiano di Niscemi — a lungo «sospesa sul ciglio del precipizio della frana», come la descrive il titolo — come caso di un patrimonio culturale lasciato indietro. La data di uscita è quella dei metadati della testata e la forma (intervista o articolo firmato) è da confermare sul testo integrale.',
+        'Un pezzo pubblicato su Vanity Fair Italia prende a esempio la biblioteca Marsiano di Niscemi, che il titolo descrive a lungo «sospesa sul ciglio del precipizio della frana»: un patrimonio culturale lasciato indietro. La data di uscita è quella dei metadati della testata e la forma (intervista o articolo firmato) è da confermare sul testo integrale.',
       en:
         'A piece published in Vanity Fair Italia takes the Marsiano library in Niscemi — long “hanging on the edge of the landslide”, as the headline puts it — as a case of cultural heritage left behind. The publication date comes from the masthead’s metadata and the form of the piece (interview or signed article) still needs checking against the full text.',
     },
     draft: true,
     sources: [
       {
-        label: 'Vanity Fair — il pezzo',
+        label: 'Vanity Fair, l’articolo',
         href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
       },
     ],
@@ -195,7 +195,7 @@ export const events = [
     time: '20:00',
     year: 2026,
     dateLabel: { it: '25 luglio 2026, ore 20', en: '25 July 2026, 8 p.m.' },
-    title: { it: 'Premio Mandrarossa — finale della seconda edizione', en: 'Premio Mandrarossa — second edition final' },
+    title: { it: 'Premio Mandrarossa: finale della seconda edizione', en: 'Premio Mandrarossa — second edition final' },
     kind: { it: 'Premio', en: 'Prize' },
     place: { it: 'Tempio di Hera, Parco Archeologico di Selinunte', en: 'Temple of Hera, Archaeological Park of Selinunte' },
     city: 'Selinunte',
@@ -208,15 +208,15 @@ export const events = [
     },
     sources: [
       {
-        label: 'Winenews — i vincitori',
+        label: 'Winenews, i vincitori',
         href: 'https://www.winenews.it/it/la-sicilia-terra-di-vino-e-di-scrittori-festeggia-i-vincitori-del-premio-letterario-mandrarossa_597888/',
       },
       {
-        label: 'Linkiesta — le diciotto opere finaliste',
+        label: 'Linkiesta, le diciotto opere finaliste',
         href: 'https://www.linkiesta.it/2026/07/premio-mandrarossa-finalisti-selinunte-2026/',
       },
       {
-        label: 'Rai Cultura — la seconda edizione',
+        label: 'Rai Cultura, la seconda edizione',
         href: 'https://www.raicultura.it/letteratura/articoli/2026/07/Valeria-Parrella-vince-il-Premio-Mandrarossa-2026-c4163368-150c-4edc-996a-01daabf61016.html',
       },
     ],

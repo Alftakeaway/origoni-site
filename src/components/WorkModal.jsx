@@ -71,9 +71,11 @@ export default function WorkModal({ work, onClose }) {
                 {tr(work.subtitle)}
               </p>
             )}
-            <p className="mt-3 font-sans text-xs uppercase tracking-widest text-ink-muted">
-              {work.publisher}
-            </p>
+            {work.publisher && (
+              <p className="mt-3 font-sans text-xs uppercase tracking-widest text-ink-muted">
+                {work.publisher}
+              </p>
+            )}
 
             {work.draft && (
               <div className="mt-5 flex items-start gap-3 rounded-lg border border-terracotta/35 bg-terracotta/10 p-4">
