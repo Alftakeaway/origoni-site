@@ -38,7 +38,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Portale Letterario, la segnalazione dell’incontro',
+        label: { it: 'Portale Letterario, la segnalazione dell’incontro', en: 'Portale Letterario, the notice of the event' },
         href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2272/a-libroteca-di-roma-claudia-origoni-e-il-suo-romanzo-cold-case',
       },
     ],
@@ -61,7 +61,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Cara Garbatella, la cronaca della serata',
+        label: { it: 'Cara Garbatella, la cronaca della serata', en: 'Cara Garbatella, the report of the evening' },
         href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
       },
     ],
@@ -92,7 +92,7 @@ export const events = [
       en:
         'A photograph from the author’s archive shows her at the 2024 Salone del Libro holding the novel, and dates the appearance to May. The day, the stand and the shape of the event appear in no report: the entry stays a draft until the date arrives.',
     },
-    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+    sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
     id: 'cyrano-alghero',
@@ -119,7 +119,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Portale Letterario, l’incontro di Alghero',
+        label: { it: 'Portale Letterario, l’incontro di Alghero', en: 'Portale Letterario, the Alghero event' },
         href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2352/il-cold-case-di-claudia-origoni-arriva-ad-alghero',
       },
     ],
@@ -150,7 +150,7 @@ export const events = [
       en:
         'The photograph of a Roman autumn meeting shows her seated at a table with the novel in front of her. The venue, the day and whoever spoke with her appear in no report consulted: the entry stays a draft.',
     },
-    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+    sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
     id: 'mandrarossa-prima-presentazione',
@@ -168,25 +168,25 @@ export const events = [
     photo: '/foto/roma-parlamento-2025.jpg',
     photoCaption: {
       it: 'L’autrice sul palco della sala del Parlamento europeo, quinta da sinistra nella fotografia che il sito del premio mette in fondo alla pagina Gli Olmi, senza didascalia.',
-      en: 'The author on the stage of the European Parliament’s hall, fifth from the left in the photograph the prize’s site places at the foot of its Gli Olmi page without a caption.',
+      en: 'The author on the stage of the European Parliament’s hall in Rome, fifth from the left in the photograph that the prize’s own site places at the foot of its Gli Olmi page, without a caption.',
     },
     detail: {
       it:
         'Il comunicato stampa datato Roma 19 febbraio 2025 annuncia la prima edizione del Premio Letterario Mandrarossa, «La Sicilia che non ti aspetti», presentata nella sala Cinema dell’Europa Experience David Sassoli, sede dell’Ufficio del Parlamento europeo in Italia. Il documento elenca fra i presenti Giuseppe Bursi, presidente delle Cantine Settesoli, Fabrizio Spada per il Parlamento europeo, il vicepresidente della Camera Giorgio Mulè, la deputata Giovanna Iacono e «Claudia Origoni del Premio Letterario Mandrarossa», e indica in Roberta Urso la moderatrice. Nella stessa occasione il premio descrive come funziona: le librerie indipendenti delle città capitali della cultura dal 2015, più Roma, Milano e Napoli, compongono la giuria territoriale e propongono i titoli, che una giuria tecnica con Aldo Cazzullo alla presidenza valuta.',
       en:
-        'The press release, dated Rome 19 February 2025, announces the first edition of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, presented in the Sala Cinema dell’Europa Experience David Sassoli, home of the European Parliament’s office in Italy. The document lists among those present Giuseppe Bursi, president of Cantine Settesoli, Fabrizio Spada for the European Parliament, the Deputy Speaker of the Chamber Giorgio Mulè, the MP Giovanna Iacono and “Claudia Origoni del Premio Letterario Mandrarossa”, with Roberta Urso moderating. On the same occasion the prize sets out how it works: the independent bookshops of the Italian Cities of Culture since 2015, plus Rome, Milan and Naples, form the territorial jury and put forward the titles that a technical jury with Aldo Cazzullo as chair then assesses.',
+        'The press release, dated Rome 19 February 2025, announces the first edition of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, presented at the Sala Cinema dell’Europa Experience David Sassoli, home of the European Parliament’s office in Italy. It names those present: Giuseppe Bursi, president of Cantine Settesoli, Fabrizio Spada of the European Parliament, Giorgio Mulè, Deputy Speaker of the Chamber, Giovanna Iacono of its Culture Committee, and “Claudia Origoni del Premio Letterario Mandrarossa”, with Roberta Urso moderating. The same release sets out how the prize works: the independent bookshops of the Italian Cities of Culture since 2015, plus Rome, Milan and Naples, make up the territorial jury and put forward the titles, which a technical jury chaired by Aldo Cazzullo then assesses.',
     },
     sources: [
       {
-        label: 'Sicilia da Gustare, il comunicato stampa',
+        label: { it: 'Sicilia da Gustare, il comunicato stampa', en: 'Sicilia da Gustare, the press release' },
         href: 'https://siciliadagustare.com/premio-letterario-mandrarossa/',
       },
       {
-        label: 'Mantova Uno, la presentazione romana',
+        label: { it: 'Mantova Uno, la presentazione romana', en: 'Mantova Uno, the Rome presentation' },
         href: 'https://mantovauno.it/lavoro/con-il-premio-mandrarossa-arte-enologica-e-letteraria-a-braccetto/',
       },
       {
-        label: 'Premio Mandrarossa, la fotografia',
+        label: { it: 'Premio Mandrarossa, la fotografia', en: 'Premio Mandrarossa, the photograph' },
         href: 'https://www.premiomandrarossa.it/gli-olmi/',
       },
     ],
@@ -214,7 +214,7 @@ export const events = [
       en:
         'A portrait captioned “Premio Letterario Mandrarossa 9 May 2025” shows her at an outdoor table with the estate’s bottles in front of her. It is photographic evidence of an appointment that comes a few weeks before the first award ceremony in June, and that none of the sources gathered so far describes: the place is missing, and so is the exact name of the evening.',
     },
-    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+    sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
     id: 'salone-2026-dajani',
@@ -243,7 +243,7 @@ export const events = [
       en:
         'A photograph shows her at a table of the 2026 Salone del Libro, microphone in hand, a display of books behind; the file carries the names “Mandrarossa” and “Antonio Dajani” and the date of the edition. The banner in the background is cut by the frame and yields only “L’identità s…”, so the exact title of the panel, the day and who sat at the table remain to be confirmed.',
     },
-    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+    sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
     id: 'palermo-presentazione',
@@ -270,7 +270,7 @@ export const events = [
       en:
         'An archive photograph documents a Palermitan presentation of the novel: the author between two interlocutors, the volume on show, a bag carrying the Nemapress mark. The publisher’s card that accompanies the book places the meeting at “Palazzo del Poeta, Palermo”, but neither that card nor other sources give the year: the entry stays a draft, and at the bottom of the timeline, until the date arrives.',
     },
-    sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
+    sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
     id: 'mandrarossa-prima-edizione',
@@ -290,11 +290,11 @@ export const events = [
     },
     sources: [
       {
-        label: 'Welcome Network, il bilancio della prima edizione',
+        label: { it: 'Welcome Network, il bilancio della prima edizione', en: 'Welcome Network, the review of the first edition' },
         href: 'https://www.welcomenetworkag.it/2025-07-05/successo-per-la-prima-edizione-del-premio-mandrarossa/',
       },
       {
-        label: 'Rai Cultura, la prima edizione',
+        label: { it: 'Rai Cultura, la prima edizione', en: 'Rai Cultura, the first edition' },
         href: 'https://www.raicultura.it/letteratura/eventi/Premio-Letterario-Mandrarossa-7eaf73f1-2628-457e-bf39-ce272ab6640b.html',
       },
     ],
@@ -319,7 +319,7 @@ export const events = [
     draft: true,
     sources: [
       {
-        label: 'Welcome Network, festival e premi in Sicilia al Salone 2025',
+        label: { it: 'Welcome Network, festival e premi in Sicilia al Salone 2025', en: 'Welcome Network, Sicilian festivals and prizes at the 2025 Salone' },
         href: 'https://www.welcomenetworkag.it/2025-05-20/salone-del-libro-2025-festival-e-premi-in-sicilia/',
       },
     ],
@@ -346,11 +346,11 @@ export const events = [
     },
     sources: [
       {
-        label: 'Salone del Libro, programma ufficiale',
+        label: { it: 'Salone del Libro, programma ufficiale', en: 'Salone del Libro, official programme' },
         href: 'https://www.salonelibro.it/programma-eventi/da_niscemi_alle_biblioteche_di_sicilia/22576',
       },
       {
-        label: 'Premio Mandrarossa, la pagina Gli Olmi',
+        label: { it: 'Premio Mandrarossa, la pagina Gli Olmi', en: 'Premio Mandrarossa, the Gli Olmi page' },
         href: 'https://www.premiomandrarossa.it/gli-olmi/',
       },
     ],
@@ -376,7 +376,7 @@ export const events = [
     },
     sources: [
       {
-        label: 'Vanity Fair, l’intervista',
+        label: { it: 'Vanity Fair, l’intervista', en: 'Vanity Fair, the interview' },
         href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
       },
     ],
@@ -400,15 +400,15 @@ export const events = [
     },
     sources: [
       {
-        label: 'Winenews, i vincitori',
+        label: { it: 'Winenews, i vincitori', en: 'Winenews, the winners' },
         href: 'https://www.winenews.it/it/la-sicilia-terra-di-vino-e-di-scrittori-festeggia-i-vincitori-del-premio-letterario-mandrarossa_597888/',
       },
       {
-        label: 'Linkiesta, le diciotto opere finaliste',
+        label: { it: 'Linkiesta, le diciotto opere finaliste', en: 'Linkiesta, the eighteen finalists' },
         href: 'https://www.linkiesta.it/2026/07/premio-mandrarossa-finalisti-selinunte-2026/',
       },
       {
-        label: 'Rai Cultura, la seconda edizione',
+        label: { it: 'Rai Cultura, la seconda edizione', en: 'Rai Cultura, the second edition' },
         href: 'https://www.raicultura.it/letteratura/articoli/2026/07/Valeria-Parrella-vince-il-Premio-Mandrarossa-2026-c4163368-150c-4edc-996a-01daabf61016.html',
       },
     ],

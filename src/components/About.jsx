@@ -88,7 +88,7 @@ export default function About() {
                     className="group inline-flex items-start gap-2.5 font-serif text-[17px] leading-snug text-ink-soft transition-colors hover:text-gold-dark"
                   >
                     <Link2 size={14} className="mt-1.5 shrink-0 text-gold-dark" />
-                    {s.label}
+                    {tr(s.label)}
                   </a>
                 </li>
               ))}

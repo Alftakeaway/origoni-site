@@ -114,7 +114,7 @@ export default function Events() {
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-gold-dark transition-colors hover:text-terracotta-dark"
                       >
-                        {s.label}
+                        {tr(s.label)}
                         <ExternalLink
                           size={12}
                           className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -125,7 +125,7 @@ export default function Events() {
                         key={j}
                         className="inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-ink-soft"
                       >
-                        {s.label}
+                        {tr(s.label)}
                       </span>
                     ),
                   )}
