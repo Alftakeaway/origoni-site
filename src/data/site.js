@@ -71,4 +71,8 @@ export const sources = [
     label: 'AGI, «Radici di carta», il libro degli Olmi sulle biblioteche siciliane',
     href: 'https://www.agi.it/cultura/news/2026-10-03/radici-di-carta-olmi-biblioteche-sicilia-lettura-39367446/',
   },
+  {
+    label: 'Vanity Fair Italia, intervista a Claudia Origoni del 5 luglio 2026',
+    href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
+  },
 ]

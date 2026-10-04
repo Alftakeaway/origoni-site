@@ -75,6 +75,12 @@ export const works = [
         en:
           'The list of contributors published by AGI on 3 October 2026 includes Claudia Origoni; the publisher’s card carries the title of the piece and its opening.',
       },
+      {
+        it:
+          'L’antologia nasce dall’appello di Stefania Auci per la biblioteca Marsiano di Niscemi. Nell’intervista a Vanity Fair del 5 luglio 2026 l’autrice racconta di essere entrata a far parte del movimento Gli Olmi, «un collettivo composto da oltre quaranta scrittori, giornalisti e intellettuali», e spiega che il nome viene da Fata Nascim, il nome originario di Niscemi, «passo dell’olmo». Nello stesso colloquio annuncia la rassegna «Radici di carta» a Niscemi dal 20 al 28 agosto e la destinazione dei proventi del libro alle biblioteche e agli archivi in difficoltà.',
+        en:
+          'The anthology grew out of Stefania Auci’s appeal for the Marsiano library in Niscemi. In her interview with Vanity Fair on 5 July 2026 she says she joined the Gli Olmi movement, “a collective of more than forty writers, journalists and intellectuals”, and explains that the name comes from Fata Nascim, the original name of Niscemi, “pass of the elm”. In the same conversation she announces the Radici di carta festival in Niscemi from 20 to 28 August, and the book’s proceeds going to libraries and archives in difficulty.',
+      },
     ],
     links: [
       {
@@ -84,6 +90,10 @@ export const works = [
       {
         label: { it: 'AGI, «Radici di carta», il libro degli Olmi', en: 'AGI, “Radici di carta”, the Olmi book' },
         href: 'https://www.agi.it/cultura/news/2026-10-03/radici-di-carta-olmi-biblioteche-sicilia-lettura-39367446/',
+      },
+      {
+        label: { it: 'Vanity Fair, l’intervista del 5 luglio 2026', en: 'Vanity Fair, the interview of 5 July 2026' },
+        href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
       },
     ],
   },

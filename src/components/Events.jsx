@@ -44,7 +44,11 @@ export default function Events() {
                 aria-hidden
                 className="absolute -left-[41px] top-2 h-3 w-3 rounded-full border-2 border-paper bg-gold-dark md:-left-[57px]"
               />
-              <article className="overflow-hidden rounded-xl border border-ink/8 bg-white/70 shadow-card md:grid md:grid-cols-[minmax(0,240px)_1fr]">
+              <article
+                className={`overflow-hidden rounded-xl border border-ink/8 bg-white/70 shadow-card ${
+                  e.photo ? 'md:grid md:grid-cols-[minmax(0,240px)_1fr]' : ''
+                }`}
+              >
                 {e.photo && (
                   <figure className="md:h-full">
                     <img

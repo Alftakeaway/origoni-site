@@ -301,9 +301,9 @@ export const events = [
     role: { it: 'Relatrice', en: 'Panellist' },
     detail: {
       it:
-        'Incontro dedicato alle biblioteche dimenticate di Sicilia, con gli scrittori che sostengono il recupero del patrimonio librario. Il programma ufficiale la elenca tra i relatori insieme ad Ambrosecchio, Auci, Barbàra, Bellomo, Di Natale, Grammatico, Maugeri, Savatteri e Terranova.',
+        'Incontro dedicato alle biblioteche dimenticate di Sicilia, con gli scrittori che sostengono il recupero del patrimonio librario. Il titolo è quello del movimento Gli Olmi, di cui l’autrice fa parte. Il programma ufficiale la elenca tra i relatori insieme ad Ambrosecchio, Auci, Barbàra, Bellomo, Di Natale, Grammatico, Maugeri, Savatteri e Terranova.',
       en:
-        'A meeting on the forgotten libraries of Sicily, with the writers backing the recovery of their book collections. The official programme lists her among the panellists alongside Ambrosecchio, Auci, Barbàra, Bellomo, Di Natale, Grammatico, Maugeri, Savatteri and Terranova.',
+        'A meeting on the forgotten libraries of Sicily, with the writers backing the recovery of their book collections. The title is that of the Gli Olmi movement, which she belongs to. The official programme lists her among the panellists alongside Ambrosecchio, Auci, Barbàra, Bellomo, Di Natale, Grammatico, Maugeri, Savatteri and Terranova.',
     },
     sources: [
       {
@@ -324,17 +324,16 @@ export const events = [
     kind: { it: 'Pubblicazione', en: 'Publication' },
     place: { it: 'Vanity Fair Italia', en: 'Vanity Fair Italia' },
     city: '',
-    role: { it: 'Firma del pezzo (da confermare)', en: 'Byline (to be confirmed)' },
+    role: { it: 'Intervistata', en: 'Interviewee' },
     detail: {
       it:
-        'Un pezzo pubblicato su Vanity Fair Italia prende a esempio la biblioteca Marsiano di Niscemi, che il titolo descrive a lungo «sospesa sul ciglio del precipizio della frana»: un patrimonio culturale lasciato indietro. La data di uscita è quella dei metadati della testata e la forma (intervista o articolo firmato) è da confermare sul testo integrale.',
+        'Il pezzo riporta una sua intervista a cura di Gabriella Cantafio, nella quale Vanity Fair la presenta come «ideatrice e responsabile del Premio Narrativo Mandrarossa». Parlando della biblioteca Marsiano, rimasta «sospesa sul ciglio del precipizio della frana», afferma che è diventata «il simbolo di un problema più ampio: troppo spesso ci si occupa del patrimonio culturale solo quando è in emergenza». Racconta anche di essere entrata nel movimento Gli Olmi, nato dall’appello di Stefania Auci per la biblioteca di Niscemi: il gruppo dona alla Marsiano una copia di tutte le opere in concorso, con l’obiettivo di aprirvi una sezione di narrativa contemporanea.',
       en:
-        'A piece published in Vanity Fair Italia takes the Marsiano library in Niscemi — long “hanging on the edge of the landslide”, as the headline puts it — as a case of cultural heritage left behind. The publication date comes from the masthead’s metadata and the form of the piece (interview or signed article) still needs checking against the full text.',
+        'The piece carries an interview edited by Gabriella Cantafio, in which Vanity Fair presents her as “ideatrice e responsabile del Premio Narrativo Mandrarossa”, the prize’s founder and director. Speaking of the Marsiano library, left “sospesa sul ciglio del precipizio della frana”, she says it has become “il simbolo di un problema più ampio: troppo spesso ci si occupa del patrimonio culturale solo quando è in emergenza”. She also describes joining Gli Olmi, the movement that grew out of Stefania Auci’s appeal for the Niscemi library: the group donates a copy of every competing work to the Marsiano, hoping to open a contemporary fiction section there.',
     },
-    draft: true,
     sources: [
       {
-        label: 'Vanity Fair, l’articolo',
+        label: 'Vanity Fair, l’intervista',
         href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
       },
     ],
