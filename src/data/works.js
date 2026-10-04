@@ -83,9 +83,9 @@ export const works = [
       },
       {
         it:
-          'La pagina Gli Olmi del sito del premio dichiara: «Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi». La stessa testata ufficiale presenta il premio come Premio Letterario Mandrarossa e ne conta due edizioni, oltre trenta librerie coinvolte e cinque sezioni tematiche.',
+          'La pagina Gli Olmi del sito del premio dichiara: «Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi». La stessa testata ufficiale presenta il premio come Premio Letterario Mandrarossa, «la Sicilia che non ti aspetti», e ne conta due edizioni, oltre trenta librerie coinvolte e cinque sezioni tematiche.',
         en:
-          'The Gli Olmi page on the prize’s own site states: “Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi”. The same official page names the prize Premio Letterario Mandrarossa and counts two editions, more than thirty bookshops and five thematic sections.',
+          'The Gli Olmi page on the prize’s own site states: “Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi”. The same official page names the prize Premio Letterario Mandrarossa, “la Sicilia che non ti aspetti”, and counts two editions, more than thirty bookshops and five thematic sections.',
       },
     ],
     links: [

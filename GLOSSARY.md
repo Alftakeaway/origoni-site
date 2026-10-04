@@ -36,6 +36,10 @@ _Avoid_: tappe, tour, presenza
 Il modo in cui l'autrice partecipa a un evento: presenta, conversa, legge, firma, presiede, coordina. È il campo che distingue un suo intervento da una serata che la ospita.
 _Avoid_: ospite usato da solo, perché dice chi c'è e non cosa fa. Regge solo come specificazione di un ruolo già nominato («Autrice ospite»)
 
+**Premio**:
+Il Premio Letterario Mandrarossa, con il suo motto «la Sicilia che non ti aspetti»: fondato e diretto da Claudia Origoni per Cantine Settesoli, due edizioni all'attivo, ogni sezione col nome di un'etichetta di vino. Alla prima occorrenza si scrive il nome completo, poi basta «Premio Mandrarossa».
+_Avoid_: Premio Narrativo (è la resa che Vanity Fair dà del nome il 5 luglio 2026, non è il nome), «premio letterario» usato come nome proprio
+
 **Fonte**:
 Ciò che attesta un evento o un dato: una notizia firmata, una voce di catalogo, un comunicato. Ogni voce pubblicata ne porta almeno una.
 _Avoid_: link (che è un indirizzo senza garanzia di contenuto), riferimento
