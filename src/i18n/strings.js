@@ -138,6 +138,7 @@ export const strings = {
         'Casella di contatto non ancora configurata: l’indirizzo email va inserito in src/data/site.js.',
     },
     footer: {
+      quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»',
       line: 'Quattro libri, dal 2000 al 2023. Bibliografia, date e ISBN verificati.',
     },
   },
@@ -279,6 +280,8 @@ export const strings = {
         'No contact address configured yet: add the email in src/data/site.js.',
     },
     footer: {
+      quote:
+        '“A book is a dream you hold in your hands, and a review is the dream of a dream.”',
       line: 'Four books, 2000 to 2023. Bibliography, dates and ISBNs verified.',
     },
   },
