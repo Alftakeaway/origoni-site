@@ -75,4 +75,8 @@ export const sources = [
     label: 'Vanity Fair Italia, intervista a Claudia Origoni del 5 luglio 2026',
     href: 'https://www.vanityfair.it/article/claudia-origoni-la-biblioteca-marsiano-di-niscemi-premio-mandrarossa',
   },
+  {
+    label: 'Premio Mandrarossa, il sito ufficiale e la pagina Gli Olmi',
+    href: 'https://www.premiomandrarossa.it/gli-olmi/',
+  },
 ]

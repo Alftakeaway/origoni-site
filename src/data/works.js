@@ -81,11 +81,21 @@ export const works = [
         en:
           'The anthology grew out of Stefania Auci’s appeal for the Marsiano library in Niscemi. In her interview with Vanity Fair on 5 July 2026 she says she joined the Gli Olmi movement, “a collective of more than forty writers, journalists and intellectuals”, and explains that the name comes from Fata Nascim, the original name of Niscemi, “pass of the elm”. In the same conversation she announces the Radici di carta festival in Niscemi from 20 to 28 August, and the book’s proceeds going to libraries and archives in difficulty.',
       },
+      {
+        it:
+          'La pagina Gli Olmi del sito del premio dichiara: «Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi». La stessa testata ufficiale presenta il premio come Premio Letterario Mandrarossa e ne conta due edizioni, oltre trenta librerie coinvolte e cinque sezioni tematiche.',
+        en:
+          'The Gli Olmi page on the prize’s own site states: “Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi”. The same official page names the prize Premio Letterario Mandrarossa and counts two editions, more than thirty bookshops and five thematic sections.',
+      },
     ],
     links: [
       {
         label: { it: 'La scheda del volume', en: 'The volume record' },
         href: 'https://www.unilibro.it/libro/auci-s-cur-terranova-n-cur-/radici-di-carta/9791281956568',
+      },
+      {
+        label: { it: 'Premio Mandrarossa, la pagina Gli Olmi', en: 'Premio Mandrarossa, the Gli Olmi page' },
+        href: 'https://www.premiomandrarossa.it/gli-olmi/',
       },
       {
         label: { it: 'AGI, «Radici di carta», il libro degli Olmi', en: 'AGI, “Radici di carta”, the Olmi book' },

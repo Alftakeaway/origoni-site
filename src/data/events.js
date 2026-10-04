@@ -310,6 +310,10 @@ export const events = [
         label: 'Salone del Libro, programma ufficiale',
         href: 'https://www.salonelibro.it/programma-eventi/da_niscemi_alle_biblioteche_di_sicilia/22576',
       },
+      {
+        label: 'Premio Mandrarossa, la pagina Gli Olmi',
+        href: 'https://www.premiomandrarossa.it/gli-olmi/',
+      },
     ],
   },
   {
