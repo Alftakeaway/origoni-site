@@ -79,4 +79,8 @@ export const sources = [
     label: 'Premio Mandrarossa, il sito ufficiale e la pagina Gli Olmi',
     href: 'https://www.premiomandrarossa.it/gli-olmi/',
   },
+  {
+    label: 'Sicilia da Gustare, il comunicato della prima edizione del premio',
+    href: 'https://siciliadagustare.com/premio-letterario-mandrarossa/',
+  },
 ]

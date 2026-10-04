@@ -153,6 +153,45 @@ export const events = [
     sources: [{ label: 'Fotografia dell’autrice, archivio privato' }],
   },
   {
+    id: 'mandrarossa-prima-presentazione',
+    sort: '2025-02-19',
+    year: 2025,
+    dateLabel: { it: '19 febbraio 2025', en: '19 February 2025' },
+    title: {
+      it: 'Presentazione della prima edizione del Premio Letterario Mandrarossa',
+      en: 'Presentation of the first edition of the Premio Letterario Mandrarossa',
+    },
+    kind: { it: 'Premio', en: 'Prize' },
+    place: { it: 'Sala Cinema dell’Europa Experience David Sassoli', en: 'Sala Cinema dell’Europa Experience David Sassoli' },
+    city: 'Roma',
+    role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
+    photo: '/foto/roma-parlamento-2025.jpg',
+    photoCaption: {
+      it: 'L’autrice sul palco della sala del Parlamento europeo, quinta da sinistra nella fotografia che il sito del premio mette in fondo alla pagina Gli Olmi, senza didascalia.',
+      en: 'The author on the stage of the European Parliament’s hall, fifth from the left in the photograph the prize’s site places at the foot of its Gli Olmi page without a caption.',
+    },
+    detail: {
+      it:
+        'Il comunicato stampa datato Roma 19 febbraio 2025 annuncia la prima edizione del Premio Letterario Mandrarossa, «La Sicilia che non ti aspetti», presentata nella sala Cinema dell’Europa Experience David Sassoli, sede dell’Ufficio del Parlamento europeo in Italia. Il documento elenca fra i presenti Giuseppe Bursi, presidente delle Cantine Settesoli, Fabrizio Spada per il Parlamento europeo, il vicepresidente della Camera Giorgio Mulè, la deputata Giovanna Iacono e «Claudia Origoni del Premio Letterario Mandrarossa», e indica in Roberta Urso la moderatrice. Nella stessa occasione il premio descrive come funziona: le librerie indipendenti delle città capitali della cultura dal 2015, più Roma, Milano e Napoli, compongono la giuria territoriale e propongono i titoli, che una giuria tecnica con Aldo Cazzullo alla presidenza valuta.',
+      en:
+        'The press release, dated Rome 19 February 2025, announces the first edition of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, presented in the Sala Cinema dell’Europa Experience David Sassoli, home of the European Parliament’s office in Italy. The document lists among those present Giuseppe Bursi, president of Cantine Settesoli, Fabrizio Spada for the European Parliament, the Deputy Speaker of the Chamber Giorgio Mulè, the MP Giovanna Iacono and “Claudia Origoni del Premio Letterario Mandrarossa”, with Roberta Urso moderating. On the same occasion the prize sets out how it works: the independent bookshops of the Italian Cities of Culture since 2015, plus Rome, Milan and Naples, form the territorial jury and put forward the titles that a technical jury with Aldo Cazzullo as chair then assesses.',
+    },
+    sources: [
+      {
+        label: 'Sicilia da Gustare, il comunicato stampa',
+        href: 'https://siciliadagustare.com/premio-letterario-mandrarossa/',
+      },
+      {
+        label: 'Mantova Uno, la presentazione romana',
+        href: 'https://mantovauno.it/lavoro/con-il-premio-mandrarossa-arte-enologica-e-letteraria-a-braccetto/',
+      },
+      {
+        label: 'Premio Mandrarossa, la fotografia',
+        href: 'https://www.premiomandrarossa.it/gli-olmi/',
+      },
+    ],
+  },
+  {
     id: 'mandrarossa-presentazione-2025',
     sort: '2025-05-09',
     year: 2025,
