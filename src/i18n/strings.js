@@ -19,7 +19,7 @@ export const strings = {
       bio1: 'Non escludo il ritorno',
       bioB:
         ' (Nemapress, 2023) e di tre libri tra iconografia sacra, inchiesta urbana e storia artigiana: I fiori dei santi (2000), Alza gli occhi e guarda (2005), L’oro nero di Modica (2009).',
-      ctaWork: 'Scopri le opere',
+      ctaWork: 'Sfoglia le opere',
       ctaAbout: 'Sull’autrice',
       scroll: 'Scorri',
     },
@@ -27,7 +27,7 @@ export const strings = {
       eyebrow: 'Bibliografia',
       heading: 'Le opere',
       intro:
-        'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Editore, anno e ISBN di ogni titolo sono riportati nella scheda.',
+        'Quattro libri in ventitré anni: un catalogo di simboli floreali nell’arte sacra, due inchieste a più voci, un romanzo storico costruito su un caso di cronaca del 1925. Per ogni titolo la scheda riporta editore, anno e ISBN.',
       readMore: 'Apri la scheda',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
@@ -56,7 +56,7 @@ export const strings = {
       filterAll: 'Tutti',
       feed: 'Feed RSS',
       authorBio:
-        'Scrittrice e saggista. Non escludo il ritorno (Nemapress, 2023) e tre libri fra iconografia sacra, inchiesta urbana e storia artigiana.',
+        'Scrittrice e saggista. Non escludo il ritorno (Nemapress, 2023) e tre libri tra iconografia sacra, inchiesta urbana e storia artigiana.',
       authorNote: 'Firma ospite: non è un testo dell’autrice',
     },
     categories: {
@@ -68,13 +68,13 @@ export const strings = {
       eyebrow: 'Il libro in pubblico',
       heading: 'Presentazioni, premi, incontri',
       intro:
-        'Un diario delle volte in cui i libri sono usciti dallo studio: presentazioni, interviste pubbliche, semifinali di premi. Ogni voce rimanda alla fonte da cui è stata ricavata.',
+        'Un diario delle volte in cui i libri sono usciti dallo studio: presentazioni, interviste pubbliche, semifinali di premi. Ogni voce rimanda alla fonte che la documenta.',
       when: 'Quando',
       where: 'Dove',
       role: 'Ruolo',
       source: 'Fonte',
       calendar: 'Aggiungi al calendario',
-      pending: 'Le prossime date si aggiungono qui; le voci marcate «bozza» sono in attesa di conferma.',
+      pending: 'Le prossime date troveranno posto qui; le voci marcate «bozza» sono in attesa di conferma.',
     },
     about: {
       eyebrow: 'Sull’autrice',
@@ -83,10 +83,10 @@ export const strings = {
       quoteSource:
         'Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
       paragraphs: [
-        'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali dell’iconografia sacra (i gigli, le rose e le palme che diventano attributi dei santi), seguito nelle storie e nelle leggende che li hanno messi in immagine.',
+        'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali dell’iconografia sacra (i gigli, le rose e le palme che diventano attributi dei santi), seguito nelle storie e nelle leggende che li hanno raffigurati.',
         'Nel 2005 firma con Elisabetta Valentini e Simona Filippini Alza gli occhi e guarda (Edizioni Intra Moenia), lavoro a tre voci sui quartieri Sanità e Forcella a Napoli, tra contrasti sociali e potenzialità nascoste. Nel 2009 esce L’oro nero di Modica (Coppola Editore), scritto con Elena La Delfa sul cioccolato della città barocca e sul legame che tiene insieme un centro urbano e la sua storia artigianale.',
-        'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero cold case sardo, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
-        'Accanto ai libri c’è il lavoro per il Premio Letterario Mandrarossa, che Claudia Origoni ha fondato e dirige: ogni sezione del premio porta il nome di un’etichetta, e la giuria della seconda edizione era presieduta da Concita De Gregorio. Date e luoghi degli incontri sono raccolti nella sezione Eventi, con la fonte accanto a ciascuna voce.',
+        'Nel 2023 pubblica il suo primo romanzo, Non escludo il ritorno (Nemapress): un giallo storico costruito su un vero caso irrisolto della cronaca sarda, l’omicidio di Vanda Serra avvenuto ad Aidomaggiore nel 1925, con l’inchiesta su don Giovanni Spanu e sulla sua innocenza. Il paese reale diventa il fittizio Aitadei: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese». L’editore la presenta come «un’autrice con radici sarde», e la ricerca sulle vite precedenti è una delle piste che il romanzo segue.',
+        'Accanto ai libri c’è il lavoro per il Premio Letterario Mandrarossa, che Claudia Origoni ha fondato e dirige: ogni sezione del premio porta il nome di un’etichetta di vino, e Concita De Gregorio ha presieduto la giuria della seconda edizione. La sezione Eventi raccoglie date e luoghi degli incontri, con la fonte accanto a ciascuna voce.',
       ],
       sourcesTitle: 'Fonti usate per questa bibliografia',
       coversTitle: 'I libri citati, in ordine di pubblicazione',
@@ -136,7 +136,7 @@ export const strings = {
       send: 'Apri la lettera',
       sent: 'La lettera si è aperta nel vostro client, grazie',
       noAddress:
-        'Casella di contatto non ancora configurata: l’indirizzo email va inserito in src/data/site.js.',
+        'Casella di contatto non ancora configurata: l’indirizzo email va inserito tra i dati del sito.',
     },
     footer: {
       quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»',
@@ -162,7 +162,7 @@ export const strings = {
       bio1: 'Non escludo il ritorno',
       bioB:
         ' (Nemapress, 2023) and three books on sacred iconography, urban inquiry and craft history: I fiori dei santi (2000), Alza gli occhi e guarda (2005), L’oro nero di Modica (2009).',
-      ctaWork: 'Explore the works',
+      ctaWork: 'Browse the works',
       ctaAbout: 'About the author',
       scroll: 'Scroll',
     },
@@ -200,7 +200,7 @@ export const strings = {
       feed: 'RSS feed',
       authorBio:
         'Writer and essayist. Non escludo il ritorno (Nemapress, 2023) and three books on sacred iconography, urban inquiry and craft history.',
-      authorNote: 'Guest piece — not text by the author',
+      authorNote: 'Guest piece — not written by the author',
     },
     categories: {
       reviews: 'Book reviews',
@@ -211,25 +211,25 @@ export const strings = {
       eyebrow: 'The book in public',
       heading: 'Presentations, prizes, meetings',
       intro:
-        'A record of the times the books left the study: presentations, public interviews, prize semifinals. Each entry links to the source it was drawn from.',
+        'A record of the times the books left the study: presentations, public interviews, prize semifinals. Each entry links to the source that documents it.',
       when: 'When',
       where: 'Where',
       role: 'Role',
       source: 'Source',
       calendar: 'Add to calendar',
-      pending: 'Upcoming dates are added here; entries marked “draft” await confirmation.',
+      pending: 'Upcoming dates will find their place here; entries marked “draft” await confirmation.',
     },
     about: {
       eyebrow: 'About the author',
       heading: 'Who writes',
       quote: 'I have always been passionate about historical research.',
       quoteSource:
-        '— Presentation of “Non escludo il ritorno”, libreria Le Storie, Rome, 23 March 2024',
+        'Presentation of “Non escludo il ritorno”, libreria Le Storie, Rome, 23 March 2024',
       paragraphs: [
-        'Claudia Origoni works with documents before she works with sentences. Her first book, I fiori dei santi (Barbieri, 2000), is a study of floral symbols in sacred iconography — the lilies, roses and palms that become the attributes of saints — followed through the stories and legends that put them into images.',
+        'Claudia Origoni works with documents before she works with sentences. Her first book, I fiori dei santi (Barbieri, 2000), is a study of floral symbols in sacred iconography — the lilies, roses and palms that become the attributes of saints — followed through the stories and legends that depicted them.',
         'In 2005 she signed Alza gli occhi e guarda (Edizioni Intra Moenia) with Elisabetta Valentini and Simona Filippini, a three-voice work on the Neapolitan quarters of Sanità and Forcella, between social contrast and hidden potential. In 2009 came L’oro nero di Modica (Coppola Editore), written with Elena La Delfa about the chocolate of the Baroque town and the bond between a city and its craft history.',
         'In 2023 she published her first novel, Non escludo il ritorno (Nemapress): a historical mystery built on a real Sardinian cold case, the murder of Vanda Serra in Aidomaggiore in 1925, and the inquiry around Don Giovanni Spanu and his innocence. The real village becomes the fictional Aitadei: “since the case is still contested, I felt I had to change at least the name of the town”. Her publisher presents her as “an author with Sardinian roots”, and research into past lives is one of the trails the novel follows.',
-        'Beside the books there is the work for the Premio Letterario Mandrarossa, which Claudia Origoni founded and directs: each section of the prize carries the name of a wine label, and the jury of the second edition was chaired by Concita De Gregorio. The dates and places of the meetings are gathered in the Events section, with the source next to each entry.',
+        'Beside the books there is the work for the Premio Letterario Mandrarossa, which Claudia Origoni founded and directs: each section of the prize carries the name of a wine label, and Concita De Gregorio chaired the jury of the second edition. The Events section gathers dates and places, with the source next to each entry.',
       ],
       sourcesTitle: 'Sources behind this bibliography',
       coversTitle: 'The books mentioned here, in order of publication',
@@ -277,9 +277,9 @@ export const strings = {
         other: 'Something else',
       },
       send: 'Open the letter',
-      sent: 'Letter opened in your mail client — thank you',
+      sent: 'Your letter has opened in your mail client — thank you',
       noAddress:
-        'No contact address configured yet: add the email in src/data/site.js.',
+        'No contact address set up yet: the email belongs in the site data.',
     },
     footer: {
       quote:

@@ -1,6 +1,6 @@
 // Bibliografia reale: solo opere verificabili, con editore, anno e ISBN.
 // I campi di testo sono bilingui: { it, en }, con l'italiano come lingua primaria.
-// Le fonti sono raccolte in src/data/site.js e mostrate nella pagina.
+// Le fonti stanno in src/data/site.js, e la pagina le elenca.
 // `cover` è la copertina editoriale (in public/covers, con `coverCredit`):
 // dove manca, BookCover disegna una copertina tipografica.
 export const works = [
@@ -17,7 +17,7 @@ export const works = [
     coverCredit: 'ibs.it',
     synopsis: {
       it:
-        'Primo romanzo. Un giallo storico che riprende un vero cold case sardo: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei (\u00abtrattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese\u00bb), e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
+        'Primo romanzo. Un giallo storico che riprende un vero caso irrisolto della cronaca sarda: l\u2019omicidio di Vanda Serra, avvenuto ad Aidomaggiore nel 1925, e il sacerdote don Giovanni Spanu, di cui l\u2019autrice ricostruisce la difesa documenti alla mano. Il paese reale diventa il fittizio Aitadei (\u00abtrattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese\u00bb), e l\u2019indagine si spinge fino alla ricerca sulle vite precedenti.',
       en:
         'Her first novel. A historical mystery built on a real Sardinian cold case: the 1925 murder of Vanda Serra in Aidomaggiore and the priest Don Giovanni Spanu, whose defence Origoni reconstructs from the documents. The real village becomes the fictional Aitadei \u2014 “since the case is still contested, I felt I had to change at least the name of the town” \u2014 and the inquiry reaches as far as research into past lives.',
     },
@@ -58,7 +58,7 @@ export const works = [
     coverCredit: 'ibs.it',
     synopsis: {
       it:
-        'Il libro d\u2019esordio, catalogo di un\u2019iconografia letta attraverso i fiori: i gigli, le rose, le palme e le erbe che compongono gli attributi dei santi, seguiti nelle storie e nelle leggende che li hanno messi in immagine.',
+        'Il libro d\u2019esordio, catalogo di un\u2019iconografia letta attraverso i fiori: i gigli, le rose, le palme e le erbe che compongono gli attributi dei santi, seguiti nelle storie e nelle leggende che li hanno raffigurati.',
       en:
         'Her first book, a catalogue of sacred iconography read through its flowers: lilies, roses, palms and herbs as the attributes of the saints, followed through the stories and legends that put them into images.',
     },
@@ -92,7 +92,7 @@ export const works = [
     coverCredit: 'ibs.it',
     synopsis: {
       it:
-        'Con Elisabetta Valentini e Simona Filippini, un lavoro a tre voci su Sanità e Forcella: due quartieri di Napoli osservati nelle immagini, tra i contrasti sociali che li attraversano e le potenzialità che restano invisibili a chi li attraversa senza guardarli. Edizione illustrata, per la collana «Città si diventa».',
+        'Con Elisabetta Valentini e Simona Filippini, un lavoro a tre voci su Sanità e Forcella: due quartieri di Napoli osservati nelle immagini, tra i contrasti sociali che li attraversano e le potenzialità che restano invisibili a chi passa senza guardarli. Edizione illustrata, per la collana «Città si diventa».',
       en:
         'With Elisabetta Valentini and Simona Filippini, a three-voice work on the Sanità and Forcella: two quarters of Naples observed through their images, between the social contrasts that run through them and the potential invisible to anyone who passes without looking. Illustrated edition, in the “Città si diventa” series.',
     },
@@ -170,7 +170,7 @@ export const works = [
     draft: true,
     synopsis: {
       it:
-        'Ventidue saggi sulla lettura come atto d’amore e di disputa. Dall’etica della pagina con l’orecchio piegato al motivo per cui rileggiamo gli stessi tre romanzi a ogni decennio.',
+        'Ventidue saggi sulla lettura come atto d’amore e di disputa: dall’angolo piegato su una pagina al motivo per cui rileggiamo gli stessi tre romanzi a ogni decennio.',
       en:
         'Twenty-two essays on reading as an act of love and argument. From the ethics of the dog-eared page to why we reread the same three novels every decade.',
     },

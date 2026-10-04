@@ -1,7 +1,7 @@
-// Eventi pubblici in cui i libri dell'autrice sono stati presentati o citati.
-// Ogni voce rimanda alla fonte da cui è stata ricavata: niente date o ruoli di memoria.
+// Eventi pubblici di presentazione e di citazione dei libri dell'autrice.
+// Ogni voce rimanda alla fonte che la documenta: niente date o ruoli di memoria.
 // Le voci con `draft: true` hanno un dato che la fonte non conferma del tutto
-// (anno, giorno o forma del pezzo) e sono marcate come bozza nel sito.
+// (anno, giorno o forma del pezzo) e il sito le marca come bozza.
 // I campi di testo sono bilingui: { it, en }, italiano prima.
 //
 // { id, sort: 'AAAA-MM-GG' per l'ordinamento, time?: 'HH:MM' (mancante = tutto il giorno),
@@ -48,9 +48,9 @@ export const events = [
     role: { it: 'Autrice ospite', en: 'Guest author' },
     detail: {
       it:
-        'Il romanzo è stato presentato alla libreria Le Storie di Garbatella. La cronaca del quartiere riporta la sua dichiarazione sui documenti del caso e sulla scelta di cambiare il nome del paese: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese».',
+        'Claudia Origoni presenta il romanzo alla libreria Le Storie di Garbatella. La cronaca del quartiere riporta la sua dichiarazione sui documenti del caso e sulla scelta di cambiare il nome del paese: «trattandosi di un caso tuttora controverso, ho sentito la necessità di riformulare almeno il nome del paese».',
       en:
-        'The novel was presented at the Le Storie bookshop in Garbatella. The local coverage reports her statement on the documents of the case and on renaming the village: “since the case is still contested, I felt I had to change at least the name of the town”.',
+        'Claudia Origoni presents the novel at the Le Storie bookshop in Garbatella. The local coverage reports her statement on the documents of the case and on renaming the village: “since the case is still contested, I felt I had to change at least the name of the town”.',
     },
     sources: [
       {
@@ -96,9 +96,9 @@ export const events = [
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
     detail: {
       it:
-        'Prima edizione del premio letterario fondato e diretto da Claudia Origoni, nato dall’unione tra narrazione e arte enologica con le etichette Mandrarossa di Cantine Settesoli: ogni sezione porta il nome di un vino. La giuria tecnica era presieduta da Aldo Cazzullo; il premio Narrativa è andato a Titti Marrone.',
+        'Prima edizione del premio letterario fondato e diretto da Claudia Origoni, nato dall’unione tra narrazione e arte enologica con le etichette Mandrarossa di Cantine Settesoli: ogni sezione porta il nome di un vino. Aldo Cazzullo ha presieduto la giuria tecnica; il premio Narrativa è andato a Titti Marrone.',
       en:
-        'First edition of the literary prize founded and directed by Claudia Origoni, built on the link between storytelling and winemaking with the Mandrarossa labels of Cantine Settesoli: each section carries the name of a wine. The technical jury was chaired by Aldo Cazzullo; the Narrative award went to Titti Marrone.',
+        'First edition of the literary prize founded and directed by Claudia Origoni, built on the link between storytelling and winemaking with the Mandrarossa labels of Cantine Settesoli: each section carries the name of a wine. Aldo Cazzullo chaired the technical jury; the Narrative award went to Titti Marrone.',
     },
     sources: [
       {
@@ -125,7 +125,7 @@ export const events = [
       it:
         'Presentazione del premio al pubblico del Salone del Libro: la cronaca la descrive al tavolo dei relatori come responsabile del premio, tra i festival e i premi letterari della Sicilia.',
       en:
-        'The prize is presented to the Salone del Libro audience: the coverage places her at the panel table as director of the prize, among the festivals and literary prizes of Sicily.',
+        'Presentation of the prize to the Salone del Libro audience: the coverage places her at the panel table as director of the prize, among the festivals and literary prizes of Sicily.',
     },
     draft: true,
     sources: [

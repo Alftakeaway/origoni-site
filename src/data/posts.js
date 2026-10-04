@@ -176,7 +176,7 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'L\u2019accorgimento che ha salvato il libro viene dalla saggistica: ho scritto in una frase che cosa il secondo atto dovesse davvero sostenere. Non ci\u00f2 che accade, ma ci\u00f2 che afferma. Il mio \u00e8 risultato essere: \u00abla memoria \u00e8 un lavoro di riparazione\u00bb. Ogni scena che non faceva avanzare o complicava quell\u2019affermazione \u00e8 stata tagliata, per quanto bella. Quaranta pagine sono morte. Il libro ha cominciato a respirare.',
+            'L\u2019accorgimento che ha salvato il libro viene dalla saggistica: ho scritto in una frase che cosa il secondo atto dovesse davvero sostenere. Non ci\u00f2 che accade, ma ci\u00f2 che afferma. Ne \u00e8 nata questa: \u00abla memoria \u00e8 un lavoro di riparazione\u00bb. Ogni scena che non faceva avanzare o complicava quell\u2019affermazione \u00e8 stata tagliata, per quanto bella. Quaranta pagine sono morte. Il libro ha cominciato a respirare.',
           en:
             'The trick that saved the book was borrowed from nonfiction: I wrote a one-sentence claim for what the second act was actually about. Not what happens \u2014 what it argues. Mine turned out to be \u201cmemory is a kind of repair work.\u201d Every scene that didn\u2019t advance or complicate that claim got cut, however beautiful. Forty pages died. The book started breathing.',
         },
@@ -227,9 +227,9 @@ export const posts = [
         type: 'p',
         text: {
           it:
-            'Gilead di Marilynne Robinson \u00e8 scritto come la lettera di un pastore morente al figlio piccolo, il che ne fa uno dei pochi romanzi il cui vero destinatario \u00e8 il futuro. A venticinque anni lo lessi come un libro sulla fede. A quaranta, \u00e8 inconfondibilmente un libro sui padri.',
+            'Marilynne Robinson ha scritto Gilead come la lettera di un pastore morente al figlio piccolo, il che ne fa uno dei pochi romanzi il cui vero destinatario \u00e8 il futuro. A venticinque anni lo lessi come un libro sulla fede. A quaranta, \u00e8 inconfondibilmente un libro sui padri.',
           en:
-            'Marilynne Robinson\u2019s Gilead is written as a dying minister\u2019s letter to his young son, which means it is one of the few novels whose actual addressee is the future. At twenty-five I read it as a book about faith. At forty, it is unmistakably a book about fathers.',
+            'Marilynne Robinson wrote Gilead as a dying minister\u2019s letter to his young son, which makes it one of the few novels whose actual addressee is the future. At twenty-five I read it as a book about faith. At forty, it is unmistakably a book about fathers.',
         },
       },
       {
@@ -331,7 +331,7 @@ export const posts = [
           it:
             'Quando diciamo di \u00abamare Murakami\u00bb, quale Murakami amiamo? Per i lettori italiani \u00e8 in buona parte quello di Antonietta Pastore e di Giorgio Amitrano; per una generazione di lettori americani, Jay Rubin e Philip Gabriel. Le frasi che hanno riordinato la vostra vita interiore sono state scelte, una a una, da una persona il cui nome appare in corpo otto sul colophon.',
           en:
-            'When we say we \u201clove Murakami,\u201d which Murakami do we love? For American readers it is substantially Jay Rubin and Philip Gabriel; for a generation of British readers, Alfred Birnbaum. The sentences that rearranged your interior life were chosen, one by one, by a person whose name appears on the copyright page in eight-point type.',
+            'When we say we \u201clove Murakami,\u201d which Murakami do we love? For Italian readers it is largely the one shaped by Antonietta Pastore and Giorgio Amitrano; for a generation of American readers, Jay Rubin and Philip Gabriel. The sentences that rearranged your interior life were chosen, one by one, by a person whose name appears on the copyright page in eight-point type.',
         },
       },
       {
