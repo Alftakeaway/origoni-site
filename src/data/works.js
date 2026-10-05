@@ -289,36 +289,48 @@ export const works = [
     ],
   },
   {
-    id: 'la-colazione-dei-santi',
-    title: { it: 'La colazione dei santi', en: 'La colazione dei santi' },
-    subtitle: {
-      it: 'In «Prima colazione: come & perché. Storia, scienza e cultura»',
-      en: 'In “Prima colazione: come & perché. Storia, scienza e cultura”',
+    id: 'prima-colazione-come-e-perche',
+    title: {
+      it: 'Prima colazione: come & perché. Storia, scienza e cultura',
+      en: 'Prima colazione: come & perché. Storia, scienza e cultura',
     },
-    type: { it: 'Capitolo in volume collettaneo', en: 'Chapter in an edited volume' },
+    subtitle: {
+      it: 'Volume collettaneo a cura di Mario Mazzetti di Pietralata, con un contributo di Claudia Origoni',
+      en: 'Collective volume edited by Mario Mazzetti di Pietralata, with a contribution by Claudia Origoni',
+    },
+    type: { it: 'Contributo in volume collettaneo', en: 'Contribution to an edited volume' },
     year: 2006,
     publisher: 'Agra Editrice',
     isbn: '9788861400054',
-    tone: 'gold',
+    pages: '180',
+    tone: 'ink',
+    cover: '/covers/prima-colazione.jpg',
+    coverCredit: 'copertina editoriale Agra',
     draft: true,
     synopsis: {
       it:
-        'Un capitolo del volume collettaneo «Prima colazione: come & perché. Storia, scienza e cultura», dato alle stampe da Agra Editrice a Roma nel 2006 sotto la cura di Mario Mazzetti di Pietralata. Il libro indaga il primo pasto della giornata con storici dell’alimentazione e delle religioni, nutrizionisti, scrittori e critici cinematografici; il contributo di Claudia Origoni lo affronta dalla parte dell’agiografia e dell’iconografia sacra.',
+        'Volume collettaneo dato alle stampe da Agra Editrice a Roma nel 2006 sotto la cura di Mario Mazzetti di Pietralata: venti capitoli che prendono il primo pasto della giornata da più lati, con storici dell’alimentazione e delle religioni, nutrizionisti e dietologi, scrittori e critici cinematografici, e un’introduzione di Massimo Montanari. Claudia Origoni è fra i collaboratori del volume. Il titolo e la pagina del suo capitolo non compaiono in nessuna delle schede pubbliche, e la voce aspetta una copia del libro per dirli.',
       en:
-        'A chapter of the collective volume “Prima colazione: come & perché. Storia, scienza e cultura”, published in Rome by Agra Editrice in 2006 under the editorship of Mario Mazzetti di Pietralata. The book studies the first meal of the day with historians of food and religion, nutritionists, writers and film critics; Claudia Origoni’s contribution takes it from the side of hagiography and sacred iconography.',
+        'A collective volume published in Rome by Agra Editrice in 2006 under the editorship of Mario Mazzetti di Pietralata: twenty chapters that take the first meal of the day from several sides, with historians of food and of religions, nutritionists and dietologists, writers and film critics, and an introduction by Massimo Montanari. Claudia Origoni is among the volume’s contributors. The title and page of her chapter appear in none of the published records, and the entry waits on a copy of the book to give them.',
     },
     notes: [
       {
         it:
-          'Il record del Servizio Bibliotecario Nazionale conferma il volume (Roma, Agra, 2006, ISBN 9788861400054) e lo dà di 206 pagine, mentre le schede commerciali ne contano 180. L’attribuzione del capitolo poggia sull’indicazione dell’autrice: nessun catalogo pubblica i singoli contributi, e finché una copia del volume non li conferma la voce resta bozza.',
+          'La voce portava il titolo «La colazione dei santi», che non ha riscontro nelle schede del volume: ora porta quello stampato sulla copertina.',
         en:
-          'The volume is confirmed by the record of the Servizio Bibliotecario Nazionale (Rome, Agra, 2006, ISBN 9788861400054), which counts 206 pages where the trade listings count 180. The chapter attribution rests on the author’s own indication: no catalogue publishes the individual contributions, and until a copy of the volume confirms them the entry stays a draft.',
+          'The entry carried the title “La colazione dei santi”, which has no counterpart in the volume’s records: it now carries the name printed on the jacket.',
+      },
+      {
+        it:
+          'Il record del Servizio Bibliotecario Nazionale conferma il volume (Roma, Agra, 2006, ISBN 9788861400054) e lo dà di 206 pagine, mentre l’editore e le schede commerciali ne contano 180: qui resta il numero dell’editore, e la differenza non è risolta. Nessun catalogo pubblica i singoli contributi, quindi finché una copia del volume non conferma il capitolo la voce resta bozza.',
+        en:
+          'The volume is confirmed by the record of the Servizio Bibliotecario Nazionale (Rome, Agra, 2006, ISBN 9788861400054), which counts 206 pages where the publisher and the trade listings count 180: the publisher’s number is the one kept here, and the difference is unresolved. No catalogue publishes the individual contributions, so until a copy of the volume confirms the chapter the entry stays a draft.',
       },
     ],
     links: [
       {
         label: { it: 'La scheda del volume', en: 'The volume record' },
-        href: 'https://www.amazon.it/Prima-colazione-perch%C3%A9-scienza-cultura/dp/8861400051',
+        href: 'https://www.unilibro.it/libro/mazzetti-di-pietralata-mario/prima-colazione-come-perche-storia-scienza-cultura/9788861400054',
       },
     ],
   },
