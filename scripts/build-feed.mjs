@@ -1,6 +1,8 @@
 // Genera dist/feed.xml dai post reali di src/data/posts.js.
 // Viene eseguito dopo `vite build` (vedi lo script `build` in package.json),
 // così il feed non può divergere dai testi pubblicati.
+// Il RSS non ha un modo per marcare una bozza: le voci con `draft: true` restano
+// in pagina col badge, ma nel feed non ci vanno.
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { posts } from '../src/data/posts.js'
@@ -14,7 +16,9 @@ const enc = (s) =>
 
 const rfc822 = (iso) => new Date(`${iso}T18:00:00`).toUTCString()
 
-const items = [...posts]
+const published = posts.filter((p) => !p.draft)
+
+const items = [...published]
   .sort((a, b) => (a.iso < b.iso ? 1 : -1))
   .map(
     (p) => `    <item>
@@ -34,11 +38,12 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${SITE}/#journal</link>
     <description>Recensioni, saggi brevi e note di scrittura di Claudia Origoni.</description>
     <language>it</language>
-${items}
-  </channel>
+${published.length ? `${items}\n` : ''}  </channel>
 </rss>
 `
 
 const out = resolve(process.cwd(), 'dist/feed.xml')
 writeFileSync(out, xml, 'utf8')
-console.log(`feed: ${posts.length} articoli -> dist/feed.xml`)
+console.log(
+  `feed: ${published.length} ${published.length === 1 ? 'articolo' : 'articoli'} su ${posts.length} (escluse ${posts.length - published.length} bozze) -> dist/feed.xml`,
+)
