@@ -233,10 +233,11 @@ export const works = [
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // Materiale dell'autrice arrivato il 4 ottobre 2026: fotografie dei volumi e un
-  // documento. Qui stanno le opere emerse da quelle carte, distinte per natura:
-  // un articolo in rivista, un contributo in volume collettaneo, un racconto in
-  // antologia. Dove l'anno manca non è stato trovato a catalogo: la voce resta bozza.
+  // Materiale dell'autrice arrivato il 4 e il 5 ottobre 2026: fotografie dei
+  // volumi, pagine firmate, colophon. Qui stanno le opere emerse da quelle
+  // carte, distinte per natura: un articolo in rivista, un contributo in volume
+  // collettaneo, racconti in antologia, un testo in catalogo di mostra. Dove il
+  // contenitore non si riconosce dalle carte, la voce resta bozza.
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'io-son-l-umile-ancella',
@@ -386,6 +387,170 @@ export const works = [
       {
         label: { it: 'La scheda dell’antologia', en: 'The anthology record' },
         href: 'https://www.unilibro.it/libro/viaggiare-con-bisaccia-penna-lungo-la-via-francigena-laziale/9788878484832',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Carte arrivate il 5 ottobre 2026: due antologie della Valle del Tempo, un
+  // catalogo di mostra e una pagina senza contenitore. Ogni voce rimanda alla
+  // pagina firmata che l'autrice ha fotografato nel proprio esemplare.
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    id: '7-7-7-numero-palindromo',
+    title: {
+      it: '7/7/7 è un numero palindromo, esotericamente importante',
+      en: '7/7/7 è un numero palindromo, esotericamente importante',
+    },
+    subtitle: {
+      it: 'In «La mia maturità. Notte prima degli esami. Antologia di racconti», a cura di Emilio Bova, Mario Rovinello e Andrea Tartaglia, a pagina 75',
+      en: 'In “La mia maturità. Notte prima degli esami. Antologia di racconti”, edited by Emilio Bova, Mario Rovinello and Andrea Tartaglia, on page 75',
+    },
+    type: { it: 'Racconto in antologia', en: 'Short story in an anthology' },
+    publisher: 'La Valle del Tempo Edizioni',
+    year: 2025,
+    isbn: '9791281993785',
+    pages: '120',
+    tone: 'terracotta',
+    cover: '/covers/la-mia-maturita.jpg',
+    coverCredit: 'copia dell’autrice',
+    synopsis: {
+      it:
+        'Pagina 75 dell’antologia «La mia maturità. Notte prima degli esami», e il pezzo nasce da una data. Il 7 luglio 1977 è una ripetizione che numerologicamente significava qualcosa: quell’anno, nei Paesi del nord Europa, municipi e chiese si erano intasati di coppie che vollero sposarsi in quella data per buon auspicio. Chissà se la stessa regola valeva per l’esame di stato, visto che l’inizio degli orali era stato sorteggiato sulla lettera O: «O come Origoni, il mio cognome». La sorte la destinava prima di tutti nel primo giorno, a lei che non aveva mai assistito a un esame di maturità negli anni precedenti. All’ansia si era aggiunta la scelta delle materie: aveva portato filosofia confidando che italiano le toccasse d’ufficio, inseguendo la vecchia regola non scritta che vuole premiata agli scrutini la materia scelta dallo studente, quasi a disporre gli esaminatori alla benevolenza. Era andata diversamente, perché l’insegnante di quegli anni, Italia Anziano, era stata scelta, per colmo di disdetta, come membro interno della commissione: fu presentata con la semplice sufficienza, un misero 6. Il ricordo si chiude sulla stima che quel conflitto non scalfì, «come docente e come donna».',
+      en:
+        'Page 75 of the anthology “La mia maturità. Notte prima degli esami”, and the piece is born from a date. 7 July 1977 is a repetition that numerologically meant something: that year, in the countries of northern Europe, town halls and churches were crowded with couples who wanted to marry on that day for luck. Who knows whether the same rule held for the state exam, given that the start of the oral tests had been drawn on the letter O: “O as in Origoni, my surname”. Fate made her the first of all on the first day, for someone who had never sat in on a matura exam in the previous years. To the anxiety came the choice of subjects: she took philosophy, trusting that Italian would fall to her by default, chasing the old unwritten rule that has the subject chosen by the student rewarded at the class councils, as if to dispose the examiners to benevolence. It went otherwise, because the teacher of those years, Italia Anziano, had been chosen, to complete the discomfiture, as an internal member of the board: she was presented with bare sufficiency, a miserable 6. The memory closes on the esteem that conflict did not scratch, “as a teacher and as a woman”.',
+    },
+    notes: [
+      {
+        it:
+          'Il volume è confermato dalla scheda dell’editore: La Valle del Tempo Edizioni, 2025, ISBN 9791281993785, 120 pagine, euro 14,25. Il colophon dell’esemplare fotografato reca «Volume stampato nel giugno del 2025 per la Valle del Tempo».',
+        en:
+          'The volume is confirmed by the publisher’s record: La Valle del Tempo Edizioni, 2025, ISBN 9791281993785, 120 pages, €14.25. The colophon of the copy photographed reads “Volume stampato nel giugno del 2025 per la Valle del Tempo”.',
+      },
+      {
+        it:
+          'La scheda dell’editore non elenca i contributori dell’antologia: il racconto è documentato dalla pagina 75, fotografata insieme alla copertina del volume.',
+        en:
+          'The publisher’s record does not list the anthology’s contributors: the story is documented by page 75, photographed together with the jacket of the volume.',
+      },
+      {
+        it:
+          'Il pezzo esce con la firma «Claudia Origoni*» e una nota a piè di pagina che data gli anni del liceo: «Alunno dal 1972 al 1977».',
+        en:
+          'The piece carries the signature “Claudia Origoni*” and a footnote dating the school years: “Alunno dal 1972 al 1977”.',
+      },
+    ],
+    links: [
+      {
+        label: { it: 'La scheda dell’antologia', en: 'The anthology record' },
+        href: 'https://www.lavalledeltempo.com/la-mia-maturita-notte-prima-degli-esami-antologia-di-racconti/',
+      },
+    ],
+  },
+  {
+    id: 'trappole-e-intervalli',
+    title: { it: 'Trappole e Intervalli', en: 'Trappole e Intervalli' },
+    subtitle: {
+      it: 'In «Il mio intervallo al Liceo Classico Sannazaro di Napoli. Antologia di racconti in memoria del Preside Michele De Vivo», a cura di Emilio Bova, Mario Rovinello e Andrea Tartaglia',
+      en: 'In “Il mio intervallo al Liceo Classico Sannazaro di Napoli. Antologia di racconti in memoria del Preside Michele De Vivo”, edited by Emilio Bova, Mario Rovinello and Andrea Tartaglia',
+    },
+    type: { it: 'Racconto in antologia', en: 'Short story in an anthology' },
+    publisher: 'La Valle del Tempo Edizioni',
+    year: 2024,
+    isbn: '9791281678712',
+    pages: '108',
+    tone: 'sage',
+    cover: '/covers/il-mio-intervallo.jpg',
+    coverCredit: 'copia dell’autrice',
+    synopsis: {
+      it:
+        'Il racconto si apre su una trappola che doveva scattare durante l’intervallo, ed era duplice, perché due dei soggetti non sapevano che ne sarebbero diventati protagonisti, e entrambi, senza saperlo, avevano organizzato il blitz nello stesso momento. Le protagoniste vere erano ragazze, e tre venivano dalla sez. D dell’ultima classe esclusivamente femminile del Liceo Sannazaro: l’ultima costretta al grembiule blu dall’ordinanza negli anni di ginnasio 1972/74, l’ultima a sedersi per tre anni davanti alla mitica professoressa di storia dell’arte Girosi, e a provare le terribili versioni di greco di Nike Cuzzopaulo Pannone, le lezioni dell’ultimo anno del sempre infreddolito professor Veltri. Soprattutto, erano quelle che avevano fondato il primo collettivo femminista di Napoli, il F.A.S. (Femministe Autonome Sannazzaro), che dal loro liceo si era esteso ad altre scuole e alla città intera. Sullo sfondo c’è l’occupazione di terzo liceo, finita su «Il Mattino» con un reportage fotografico che aveva alimentato i malumori di molti genitori; per fortuna i suoi, trasferitisi a Napoli da Roma, erano rimasti fedeli a «Il Messaggero», e quell’articolo non ebbe ripercussioni in casa.',
+      en:
+        'The story opens on a trap that was to spring during the break, and it was a double one, because two of the parties did not know they would become its protagonists, and both, unknowingly, had organised the blitz at the same moment. The real protagonists were girls, three of them from class D of the last all-female form of the Liceo Sannazaro: the last forced to wear the blue pinafore by the school regulation during the gymnasium years 1972/74, the last to sit for three years before the legendary art history teacher Girosi, and to try the terrible Greek versions of Nike Cuzzopaulo Pannone, the lessons of the final year of the always-cold professor Veltri. Above all, they were the ones who had founded the first feminist collective in Naples, the F.A.S. (Femministe Autonome Sannazzaro), which from their school had spread to other schools and to the whole city. In the background is the occupation of the third year of liceo, which filled the pages of “Il Mattino”, with a photo report that had fed the displeasure of many parents; fortunately hers, having moved to Naples from Rome, had stayed loyal to “Il Messaggero”, and that article had no repercussions at home.',
+    },
+    notes: [
+      {
+        it:
+          'Il volume è confermato dalla scheda dell’editore: La Valle del Tempo Edizioni, 2024, ISBN 9791281678712, 108 pagine, euro 12,35. La copertina reca il titolo per intero, la dicitura «Antologia di racconti in memoria del Preside Michele De Vivo» e i tre curatori.',
+        en:
+          'The volume is confirmed by the publisher’s record: La Valle del Tempo Edizioni, 2024, ISBN 9791281678712, 108 pages, €12.35. The jacket carries the title in full, the wording “Antologia di racconti in memoria del Preside Michele De Vivo”, and the three editors.',
+      },
+      {
+        it:
+          'L’elenco dei contributori non si ricava dalle schede pubbliche consultate: il racconto è documentato dalla pagina del volume, che porta la firma «Claudia Origoni*» e la nota «Alunno dal 1972 al 1977».',
+        en:
+          'The list of contributors does not follow from the public records consulted: the story is documented by a page of the volume, which carries the signature “Claudia Origoni*” and the note “Alunno dal 1972 al 1977”.',
+      },
+    ],
+    links: [
+      {
+        label: { it: 'La scheda dell’antologia', en: 'The anthology record' },
+        href: 'https://www.lavalledeltempo.com/il-mio-intervallo-al-liceo-classico-sannazaro-di-napoli/',
+      },
+    ],
+  },
+  {
+    id: 'echi',
+    title: { it: 'Echi', en: 'Echi' },
+    subtitle: {
+      it: 'In «Echi», catalogo della mostra di Alessandra Festuccia, Galleria Atelier Morbiducci, Roma',
+      en: 'In “Echi”, catalogue of Alessandra Festuccia’s exhibition, Galleria Atelier Morbiducci, Rome',
+    },
+    type: { it: 'Testo in catalogo di mostra', en: 'Exhibition catalogue text' },
+    publisher: 'Galleria Atelier Morbiducci',
+    year: 2013,
+    tone: 'gold',
+    cover: '/covers/echi.jpg',
+    coverCredit: 'copia dell’autrice',
+    synopsis: {
+      it:
+        'Il testo che introduce la mostra di Alessandra Festuccia alla Galleria Atelier Morbiducci di Roma prende la parola di Crizia nel Timeo di Platone, «Sta’ a udire, o Socrate una molto maravigliosa Istoria…», e con quella riapre il racconto di Atlantide, l’isola che il sacerdote di Sais espone a Solone perché gli uomini non dimentichino ciò che ciclicamente si ripropone. Le opere della Festuccia sono «bagnate» dell’acqua che sommerge quella terra mitica e ancestrale, presente da millenni nell’anima umana: sono fatte di terra argillosa ricca di sabbia, la chamotte, cotta al forno a 950/1000 gradi come un’eruzione e un incendio, con fogli di giornale e segatura, poi immerse nell’acqua che spegne il pezzo e ne fa emergere le incrostazioni metalliche, simili all’oricalco di cui erano rivestite le mura della città. La chiusura sposta il piano dal mito all’allarme: «Ecco cosa è “Echi” di Atlantide… una ricerca interiore, ma anche e soprattutto un campanello d’allarme per il PIANETA e per il Futuro degli Uomini e delle Donne». Il pezzo firma Claudia Origoni.',
+      en:
+        'The text introducing Alessandra Festuccia’s exhibition at the Galleria Atelier Morbiducci in Rome takes Critias’s words in Plato’s Timaeus, “Listen, Socrates, to a very marvellous story…”, and with them reopens the tale of Atlantis, the island the priest of Sais sets out to Solon so that men do not forget what cyclically returns. Festuccia’s works are “bathed” in the water that submerges that mythical and ancestral land, present for millennia in the human soul: they are made of clay rich in sand, the chamotte, fired in the kiln at 950/1000 degrees like an eruption and a fire, with newspaper sheets and sawdust, then plunged into the water that quenches the piece and brings out its metal encrustations, like the orichalcum that lined the walls of the city. The closing shifts the ground from myth to alarm: “This is what the ‘Echi’ of Atlantis is… an inner search and, above all, an alarm bell for the PLANET and for the Future of Men and Women”. The text is signed Claudia Origoni.',
+    },
+    notes: [
+      {
+        it:
+          'Il colophon del catalogo dà il volume senza ISBN né prezzo: a cura di Renato Flenghi, testi di Claudia Origoni e Renato Flenghi, sonoro di Chino.K, riprese fotografiche di Martina Citro, grafica di Armando Bianchi, «finito di stampare Maggio 2013» presso Arti Grafiche Pomezia.',
+        en:
+          'The catalogue colophon gives the volume without ISBN or price: edited by Renato Flenghi, texts by Claudia Origoni and Renato Flenghi, sound by Chino.K, photographs by Martina Citro, graphics by Armando Bianchi, “finito di stampare Maggio 2013” printed by Arti Grafiche Pomezia.',
+      },
+      {
+        it:
+          'A tenere insieme il testo è il mito nelle sue tappe: Clito e Poseidone, le cinque coppie di gemelli, le dieci circoscrizioni governate da dieci re che una volta l’anno si giudicavano nel tempio di Poseidone, le caste di dodicimila anni fa che dispersero il sapere e la gloria dell’isola. Echi di Atlantide, per l’autrice, sono i rifiuti di plastica che viaggiano dispersi nei mari del pianeta formando isole di detriti, «segno solo della nostra improvvida arroganza e indifferenza».',
+        en:
+          'What holds the text together is the myth in its stages: Cleito and Poseidon, the five pairs of twins, the ten districts ruled by ten kings who judged one another once a year in the temple of Poseidon, the castes of twelve thousand years ago that scattered the island’s knowledge and glory. Echoes of Atlantis, for the author, are the plastic wastes drifting through the seas of the planet forming islands of debris, “only a sign of our heedless arrogance and indifference”.',
+      },
+    ],
+  },
+  {
+    id: 'citazioni-di-una-vita',
+    title: { it: 'Citazioni di una vita', en: 'Citazioni di una vita' },
+    subtitle: {
+      it: 'A pagina 69 di un volume collettaneo non ancora identificato',
+      en: 'On page 69 of an edited volume not yet identified',
+    },
+    type: { it: 'Racconto in volume collettaneo', en: 'Short story in an edited volume' },
+    tone: 'ink',
+    draft: true,
+    synopsis: {
+      it:
+        'Una pagina d’autore, e il pezzo prende due citazioni per tenerle aperte come una cornice. La prima è di Ennio Flaiano, dal «Tempo di uccidere»: «Forse l’esperienza è nel capire il valore di certe parole che la vita ci rivela lentamente e a volte non invano». La seconda è la frase di un uomo incontrato a Rabat: «Ogni uomo o donna di questo mondo ha la sua zattera per raggiungere Dio: tu sei cristiana perché sei nata a Roma, io musulmano perché nato a Rabat, ma Dio è Uno: accetta questo dono, non sporchiamo con il denaro queste parole». Da lì il racconto porta al 1 gennaio 1990 dentro una bottega del suk di Rabat, alla ricerca di una fibula d’argento antica: l’uomo che ha regalato quelle parole è seduto a terra su un tappeto berbero dai colori sgargianti, indossa una djellaba a righe bianche e nere e ha una barba lunga come quella di Zaccaria nella Cappella Sistina. Apre una bacheca impolverata e ne cava la fibula, un oggetto berbero fuso in modo approssimativo, chissà in quale villaggio del deserto, successivamente al 1906, con una moneta di vecchio corso che porta incisa la data 1284, l’anno da cui il Marocco conta le sue monete dall’Egira voluta da Maometto nel 622 d.C. L’avrebbe pagata volentieri qualche migliaio di lire, e invece Seffar gliela regala al termine di un discorso incominciato chissà perché intorno a Dio, in francese, fra due sconosciuti. Il suo negozio, all’ingresso della medina, si chiamava «L’ottava meraviglia del mondo».',
+      en:
+        'An author’s page, and the piece takes two quotations to hold them open like a frame. The first is Ennio Flaiano’s, from “Tempo di uccidere”: “Perhaps experience lies in understanding the value of certain words that life reveals to us slowly and sometimes not in vain”. The second is a sentence heard from a man met in Rabat: “Every man or woman in this world has their own raft to reach God: you are Christian because you were born in Rome, I Muslim because I was born in Rabat, but God is One: accept this gift, let us not soil these words with money”. From there the story carries us on 1 January 1990 into a workshop in the suk of Rabat, in search of an ancient silver fibula: the man who gave those words is sitting on the ground on a Berber carpet of blazing colours, wearing a djellaba with black and white stripes, his beard as long as Zachariah’s in the Sistine Chapel. He opens a dusty case and takes out the fibula, a Berber object roughly cast, who knows in what village of the desert, after 1906, from an old circulating coin engraved with the date 1284, the year Morocco counts its coins from the Hijra decreed by Muhammad in 622 AD. She would have gladly paid several thousand lire for it; instead Seffar gives it to her at the end of a conversation begun for reasons unknown around God, in French, between two strangers. His shop, at the entrance of the medina, was called “L’ottava meraviglia del mondo”, the eighth wonder of the world.',
+    },
+    notes: [
+      {
+        it:
+          'La pagina arriva da una fotografia del volume inviata dall’autrice: fra le carte ricevute non ci sono né il frontespizio né il colophon, quindi contenitore, editore e anno restano da accertare, e la voce si pubblica come bozza.',
+        en:
+          'The page comes from a photograph of the volume sent by the author: among the papers received there is neither the title page nor the colophon, so container, publisher and year remain to be established, and the entry is published as a draft.',
+      },
+      {
+        it:
+          'Sopra il titolo stanno il nome dell’autrice e la qualifica «Imprenditrice e Scrittrice», in calce il numero 69: è quanto la pagina lascia sapere di sé.',
+        en:
+          'Above the title stand the author’s name and the qualification “Imprenditrice e Scrittrice”, at the foot the number 69: this is what the page lets be known about itself.',
       },
     ],
   },

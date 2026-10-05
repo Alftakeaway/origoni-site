@@ -27,7 +27,7 @@ export const strings = {
       eyebrow: 'Bibliografia',
       heading: 'Le opere',
       intro:
-        'Otto titoli dal 2000 al 2026: un catalogo di simboli floreali nell’arte sacra, un volume fotografico su due quartieri di Napoli, un saggio a quattro mani sul cioccolato di Modica, un articolo su una cantante lirica de La Maddalena, tre testi in volumi collettanei e un romanzo storico costruito su un caso di cronaca del 1925. Per ogni titolo la scheda riporta editore, anno e, dove esiste, ISBN.',
+        'Dal 2000 al 2026: un catalogo di simboli floreali nell’arte sacra, un volume fotografico su due quartieri di Napoli, un saggio a quattro mani sul cioccolato di Modica, un articolo su una cantante lirica de La Maddalena, un testo in catalogo di mostra, un romanzo storico costruito su un caso di cronaca del 1925 e quattro racconti usciti in antologia. Per ogni titolo la scheda riporta editore, anno e, dove esiste, ISBN.',
       readMore: 'Apri la scheda',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
@@ -172,7 +172,7 @@ export const strings = {
       eyebrow: 'Bibliography',
       heading: 'The works',
       intro:
-        'Eight titles from 2000 to 2026: a catalogue of floral symbols in sacred art, a photography volume on two quarters of Naples, a co-authored study of the chocolate of Modica, an article on an opera singer from La Maddalena, three pieces in collective volumes and a historical novel built on a real criminal case from 1925. Each entry carries its publisher, its year and, where it exists, its ISBN.',
+        'From 2000 to 2026: a catalogue of floral symbols in sacred art, a photography volume on two quarters of Naples, a co-authored study of the chocolate of Modica, an article on an opera singer from La Maddalena, an exhibition catalogue text, a historical novel built on a real criminal case from 1925 and four short stories published in anthologies. Each entry carries its publisher, its year and, where it exists, its ISBN.',
       readMore: 'Open the entry',
       coverPlaceholder: 'Provisional cover',
       draftNote:

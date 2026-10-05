@@ -56,6 +56,14 @@ export const sources = [
     href: 'https://www.unilibro.it/libro/mazzetti-di-pietralata-mario/prima-colazione-come-perche-storia-scienza-cultura/9788861400054',
   },
   {
+    label: { it: 'La Valle del Tempo, scheda dell’antologia Il mio intervallo (2024)', en: 'La Valle del Tempo, record of the anthology Il mio intervallo (2024)' },
+    href: 'https://www.lavalledeltempo.com/il-mio-intervallo-al-liceo-classico-sannazaro-di-napoli/',
+  },
+  {
+    label: { it: 'La Valle del Tempo, scheda dell’antologia La mia maturità (2025)', en: 'La Valle del Tempo, record of the anthology La mia maturità (2025)' },
+    href: 'https://www.lavalledeltempo.com/la-mia-maturita-notte-prima-degli-esami-antologia-di-racconti/',
+  },
+  {
     label: { it: 'Almanacco Gallurese, indice degli argomenti con la sede dell’articolo su Lia Origoni', en: 'Almanacco Gallurese, index of contents with the location of the article on Lia Origoni' },
     href: 'https://almanaccodisardegna.wordpress.com/argomenti-2/',
   },
