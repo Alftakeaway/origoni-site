@@ -235,34 +235,43 @@ export const works = [
   // ─────────────────────────────────────────────────────────────────────────────
   // Materiale dell'autrice arrivato il 4 ottobre 2026: fotografie dei volumi e un
   // documento. Qui stanno le opere emerse da quelle carte, distinte per natura:
-  // un libro a sé, un capitolo in volume collettaneo, un racconto in antologia.
-  // Dove l'anno manca non è stato trovato a catalogo: la voce resta bozza.
+  // un articolo in rivista, un contributo in volume collettaneo, un racconto in
+  // antologia. Dove l'anno manca non è stato trovato a catalogo: la voce resta bozza.
   // ─────────────────────────────────────────────────────────────────────────────
   {
-    id: 'io-son-l-umile-l-ancella',
-    title: { it: 'Io son l’umile l’ancella…', en: 'Io son l’umile l’ancella…' },
-    subtitle: {
-      it: 'Storia di una artista sarda: Lia Origoni',
-      en: 'The story of a Sardinian artist: Lia Origoni',
+    id: 'io-son-l-umile-ancella',
+    title: {
+      it: 'Io son l’umile ancella. Lia Origoni: Storia di un’artista sarda tra Opera Lirica, Rivista e Teatro',
+      en: 'Io son l’umile ancella. Lia Origoni: Storia di un’artista sarda tra Opera Lirica, Rivista e Teatro',
     },
-    type: { it: 'Biografia d’artista', en: 'Artist biography' },
-    publisher: 'Edizioni di Salpare',
+    subtitle: {
+      it: 'In «Almanacco Gallurese», Sassari, n. 11, annata 2003-2004, a pagina 297',
+      en: 'In “Almanacco Gallurese”, Sassari, no. 11, the 2003-2004 issue, on page 297',
+    },
+    type: { it: 'Articolo in rivista', en: 'Article in a journal' },
+    publisher: 'Almanacco Gallurese',
+    year: 2003,
     tone: 'sage',
-    cover: '/covers/io-son-l-umile-l-ancella.jpg',
-    coverCredit: 'copia dell’autrice',
-    draft: true,
+    cover: '/covers/io-son-l-umile-ancella.jpg',
+    coverCredit: 'stampa Edizioni di Salpare, copia dell’autrice',
     synopsis: {
       it:
-        'La vita di Lia Origoni, attrice e cantante nata a La Maddalena il 20 ottobre 1919 e morta nella stessa città il 26 ottobre 2022: esordio nella rivista romana «Quando meno te l’aspetti» al Teatro Valle nel 1940, i teatri Wintergarten e Scala di Berlino, la «Traviata» alla Scala di Milano, «L’opera da tre soldi» al Sistina, e una carriera che le cronache seguono fino al 2014. Il titolo del libro riprende le parole di Maria all’annuncio: «Ecco l’ancella del Signore».',
+        'La vita di Lia Origoni, attrice e cantante nata a La Maddalena il 20 ottobre 1919 e morta nella stessa città il 26 ottobre 2022: esordio nella rivista romana «Quando meno te l’aspetti» al Teatro Valle nel 1940, i teatri Wintergarten e Scala di Berlino, la «Traviata» alla Scala di Milano, «L’opera da tre soldi» al Sistina, e una carriera che le cronache seguono fino al 2014. Il titolo prende la romanza di Adriana, primo atto dell’«Adriana Lecouvreur» di Francesco Cilea, che fu il cavallo di battaglia della cantante.',
       en:
-        'The life of Lia Origoni, actress and singer born in La Maddalena on 20 October 1919 and who died in the same town on 26 October 2022: her debut in the Roman revue “Quando meno te l’aspetti” at the Teatro Valle in 1940, the Wintergarten and the Scala of Berlin, “La traviata” at the Teatro alla Scala in Milan, “The Threepenny Opera” at the Sistina, and a career the press followed as far as 2014. The title of the book takes up Mary’s words at the Annunciation: “Behold the handmaid of the Lord”.',
+        'The life of Lia Origoni, actress and singer born in La Maddalena on 20 October 1919 and who died in the same town on 26 October 2022: her debut in the Roman revue “Quando meno te l’aspetti” at the Teatro Valle in 1940, the Wintergarten and the Scala of Berlin, “La traviata” at the Teatro alla Scala in Milan, “The Threepenny Opera” at the Sistina, and a career the press followed as far as 2014. The title takes Adriana’s romanza from the first act of Francesco Cilea’s “Adriana Lecouvreur”, which was the singer’s signature piece.',
     },
     notes: [
       {
         it:
-          'Il frontespizio stampa il volume per «Edizioni di Salpare», il marchio che nessuna scheda in rete riportava. L’anno e l’ISBN restano da confermare, e finché nessun catalogo li pubblica la voce rimane bozza.',
+          'Il pezzo è un articolo, non un libro: esce nell’«Almanacco Gallurese», annuario di studi galluresi pubblicato a Sassari, numero 11 dell’annata 2003-2004, a pagina 297, come registra l’indice degli argomenti dell’annuario stesso. Un periodico non porta ISBN, e nessuno se ne aspetta uno.',
         en:
-          'The title page prints the book under “Edizioni di Salpare”, the imprint no online record carried. The year and ISBN still need confirming, and until a catalogue publishes them the entry stays a draft.',
+          'The piece is an article, not a book: it appears in the “Almanacco Gallurese”, the yearbook of Gallura studies published in Sassari, number 11 of the 2003-2004 issue, on page 297, as the yearbook’s own index of contents records. A periodical carries no ISBN, and none is expected.',
+      },
+      {
+        it:
+          'La copia fotografata dall’autrice reca in frontespizio il marchio «Edizioni di Salpare», uno dei marchi editoriali di Alghero. Nessuna fonte dice come si relazioni alla stampa dell’Almanacco, e la scheda lo segnala senza dedurre nulla.',
+        en:
+          'The copy photographed by the author carries the imprint “Edizioni di Salpare” on its title page, one of the publishing houses of Alghero. No source says how it relates to the Almanacco printing, and the entry notes it without drawing any inference.',
       },
       {
         it:
@@ -272,14 +281,18 @@ export const works = [
       },
       {
         it:
-          'L’autrice aveva già scritto di Lia Origoni per «Tottus in Pari», il 29 novembre 2016, con un articolo che la presenta come artista musicale tra le più dotate del suo tempo.',
+          'L’autrice è tornata sul ritratto di Lia Origoni per «Tottus in Pari», il 29 novembre 2016, presentandola come artista musicale tra le più dotate del suo tempo.',
         en:
-          'The author had already written about Lia Origoni for “Tottus in Pari”, on 29 November 2016, in an article that presents her as one of the most gifted musical artists of her time.',
+          'The author returned to the portrait of Lia Origoni for “Tottus in Pari”, on 29 November 2016, presenting her as one of the most gifted musical artists of her time.',
       },
     ],
     links: [
       {
-        label: { it: 'L’articolo del 2016', en: 'The 2016 article' },
+        label: { it: 'L’indice dell’Almanacco', en: 'The Almanacco index' },
+        href: 'https://almanaccodisardegna.wordpress.com/argomenti-2/',
+      },
+      {
+        label: { it: 'La ripresa del 2016', en: 'The 2016 reprint' },
         href: 'https://www.tottusinpari.it/2016-11-29/io-sono-lumile-ancella-lia-origoni-storia-di-unartista-sarda-degli-anni-4060-tra-opera-lirica-rivista-e-teatro/',
       },
       {

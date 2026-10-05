@@ -56,6 +56,10 @@ export const sources = [
     href: 'https://www.unilibro.it/libro/mazzetti-di-pietralata-mario/prima-colazione-come-perche-storia-scienza-cultura/9788861400054',
   },
   {
+    label: { it: 'Almanacco Gallurese, indice degli argomenti con la sede dell’articolo su Lia Origoni', en: 'Almanacco Gallurese, index of contents with the location of the article on Lia Origoni' },
+    href: 'https://almanaccodisardegna.wordpress.com/argomenti-2/',
+  },
+  {
     label: { it: 'Tottus in Pari, l’articolo di Claudia Origoni su Lia Origoni (2016)', en: 'Tottus in Pari, Claudia Origoni’s article on Lia Origoni (2016)' },
     href: 'https://www.tottusinpari.it/2016-11-29/io-sono-lumile-ancella-lia-origoni-storia-di-unartista-sarda-degli-anni-4060-tra-opera-lirica-rivista-e-teatro/',
   },
