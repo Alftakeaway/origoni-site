@@ -99,8 +99,8 @@ l'ho visto con i miei occhi, quindi per ora non ho scritto la scheda per
 intero.
 
 **4. Le date dei cinque incontri.** Di Palermo, di Roma a Trastevere
-nell'ottobre 2024, di Torino nel maggio 2024, del tavolo di maggio 2026 con
-Antonio Dajani e della serata del 9 maggio 2025 per il premio ho il mese o
+nell'ottobre 2024, di Torino nel maggio 2024, del tavolo di maggio 2026 e
+della serata del 9 maggio 2025 per il premio ho il mese o
 l'anno, ma non il giorno. Bastano anche tre o quattro, quelli che ricordi: gli
 altri li lascio come sono senza inventare niente.
 

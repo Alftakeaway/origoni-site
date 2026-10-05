@@ -217,14 +217,14 @@ export const events = [
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
   {
-    id: 'salone-2026-dajani',
+    id: 'salone-2026',
     sort: '2026-05-16',
     wholeMonth: true,
     year: 2026,
     dateLabel: { it: 'maggio 2026', en: 'May 2026' },
     title: {
-      it: 'Tavolo al Salone del Libro con Antonio Dajani',
-      en: 'Panel at the Salone del Libro with Antonio Dajani',
+      it: 'Tavolo al Salone del Libro',
+      en: 'Panel at the Salone del Libro',
     },
     kind: { it: 'Incontro', en: 'Panel' },
     place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
@@ -239,9 +239,9 @@ export const events = [
     },
     detail: {
       it:
-        'Una fotografia la ritrae a un tavolo del Salone del Libro 2026, il microfono fra le mani, con un allestimento di libri alle spalle; il file reca i nomi «Mandrarossa» e «Antonio Dajani» e la data dell’edizione. Lo striscione sullo sfondo è tagliato dalla cornice e lascia leggere soltanto «L’identità s…», quindi il titolo esatto dell’incontro, il giorno e chi sedeva al tavolo restano da confermare.',
+        'Una fotografia la ritrae a un tavolo del Salone del Libro 2026, il microfono fra le mani, con un allestimento di libri alle spalle; il file reca l’etichetta «Mandrarossa» e la data dell’edizione. Lo striscione sullo sfondo è tagliato dalla cornice e lascia leggere soltanto «L’identità s…», quindi il titolo esatto dell’incontro, il giorno e chi sedeva al tavolo restano da confermare.',
       en:
-        'A photograph shows her at a table of the 2026 Salone del Libro, microphone in hand, a display of books behind; the file carries the names “Mandrarossa” and “Antonio Dajani” and the date of the edition. The banner in the background is cut by the frame and yields only “L’identità s…”, so the exact title of the panel, the day and who sat at the table remain to be confirmed.',
+        'A photograph shows her at a table of the 2026 Salone del Libro, microphone in hand, a display of books behind; the file carries the “Mandrarossa” label and the date of the edition. The banner in the background is cut by the frame and yields only “L’identità s…”, so the exact title of the panel, the day and who sat at the table remain to be confirmed.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
