@@ -120,7 +120,7 @@ export const works = [
     isbn: '9788886187626',
     tone: 'sage',
     cover: '/covers/i-fiori-dei-santi.jpg',
-    coverCredit: 'ibs.it',
+    coverCredit: 'copia dell’autrice',
     synopsis: {
       it:
         'Il libro d\u2019esordio, catalogo di un\u2019iconografia letta attraverso i fiori: i gigli, le rose, le palme e le erbe che compongono gli attributi dei santi, seguiti nelle storie e nelle leggende che li hanno raffigurati.',
@@ -129,8 +129,8 @@ export const works = [
     },
     notes: [
       {
-        it: 'Edito da Barbieri nel 2000, classificato dai cataloghi come volume illustrato.',
-        en: 'Published by Barbieri in 2000, listed in library catalogues as an illustrated volume.',
+        it: 'Edito da Barbieri nel 2000, classificato dai cataloghi come volume illustrato. La copertina lo numera 14 del «Catalogo» dell’editore.',
+        en: 'Published by Barbieri in 2000, listed in library catalogues as an illustrated volume. Its jacket numbers it 14 in the publisher’s “Catalogo”.',
       },
     ],
     links: [
@@ -246,8 +246,10 @@ export const works = [
       en: 'The story of a Sardinian artist: Lia Origoni',
     },
     type: { it: 'Biografia d’artista', en: 'Artist biography' },
-    publisher: 'Edizioni Nemapress',
+    publisher: 'Edizioni di Salpare',
     tone: 'sage',
+    cover: '/covers/io-son-l-umile-l-ancella.jpg',
+    coverCredit: 'copia dell’autrice',
     draft: true,
     synopsis: {
       it:
@@ -258,9 +260,15 @@ export const works = [
     notes: [
       {
         it:
-          'L’anno e l’ISBN non sono ancora confermati a catalogo. La copertina in possesso dell’autrice riporta correzioni manuali sul nome e sul marchio editoriale, e serve una copia pulita prima di pubblicare la scheda.',
+          'Il frontespizio stampa il volume per «Edizioni di Salpare», il marchio che nessuna scheda in rete riportava. L’anno e l’ISBN restano da confermare, e finché nessun catalogo li pubblica la voce rimane bozza.',
         en:
-          'The year and ISBN are not confirmed in catalogues yet. The copy the author holds carries hand corrections over the name and the publisher’s mark, and a clean copy is needed before the record is published.',
+          'The title page prints the book under “Edizioni di Salpare”, the imprint no online record carried. The year and ISBN still need confirming, and until a catalogue publishes them the entry stays a draft.',
+      },
+      {
+        it:
+          'Una pagina d’apertura elenca la carriera di Lia Origoni, «sarda de La Maddalena»: i teatri dal Valle al Sistina, dal Teatro dell’Opera di Roma alla Scala di Milano, dal Winter Garten di Berlino al Moulin Rouge di Parigi fino al San Carlo di Napoli; il primo contratto stipulato dalla televisione sperimentale di Stato EIAR, nel 1939; l’essere stata la prima italiana ad aver interpretato «L’Opera da tre soldi» di Bertold Brecht; e gli artisti con cui ha recitato, fra i più famosi del tempo, da Totò ad Anna Magnani, da Macario a Maurice Chevalier, da Tito Schipa a Giorgio Strehler ad Anton Giulio Bragaglia.',
+        en:
+          'An opening page lists the career of Lia Origoni, “sarda de La Maddalena”: the theatres from the Valle to the Sistina, from the Teatro dell’Opera in Rome to the Scala of Milan, from the Winter Garten in Berlin to the Moulin Rouge in Paris and as far as the San Carlo in Naples; the first contract drawn up by the EIAR state experimental television, in 1939; her being the first Italian to act in Bertold Brecht’s “The Threepenny Opera”; and the artists she shared the bill with, among the most famous of the day, from Totò to Anna Magnani, from Macario to Maurice Chevalier, from Tito Schipa to Giorgio Strehler and Anton Giulio Bragaglia.',
       },
       {
         it:

@@ -99,7 +99,7 @@ export const strings = {
       eyebrow: 'Il diario di lettura',
       heading: 'Sullo scaffale',
       intro:
-        'Cosa c’è adesso sul comodino: cosa sto leggendo, cosa ho appena finito, cosa aspetto per la stagione giusta. Con una riga di commento per ogni libro.',
+        'Cosa c’è adesso sul comodino: cosa sto leggendo, cosa ho appena finito, cosa aspetto per la stagione giusta, e ogni tanto una riga sul perché.',
       progress: 'Avanzamento',
       status: { reading: 'In lettura', finished: 'Finito', queued: 'In attesa' },
       emptyTitle: 'Lo scaffale è ancora da riempire',
@@ -244,7 +244,7 @@ export const strings = {
       eyebrow: 'The reading log',
       heading: 'On the shelf',
       intro:
-        'What is on the bedside table now: what I am reading, what I have just finished, what I am saving for the right season. With a line of comment on each book.',
+        'What is on the bedside table now: what I am reading, what I have just finished, what I am saving for the right season, and now and then a line on why.',
       progress: 'Progress',
       status: { reading: 'Reading', finished: 'Finished', queued: 'Waiting' },
       emptyTitle: 'The shelf is not stocked yet',

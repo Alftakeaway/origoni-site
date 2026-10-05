@@ -60,7 +60,8 @@ export default function WorkModal({ work, onClose }) {
           {/* Details */}
           <div className="p-7 md:p-9">
             <p className="eyebrow mb-3">
-              {tr(work.type)} &middot; {work.year}
+              {tr(work.type)}
+              {work.year && <> &middot; {work.year}</>}
             </p>
             {work.draft && <DraftBadge className="mb-4" />}
             <h3 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">

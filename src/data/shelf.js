@@ -14,4 +14,15 @@
 //   cover: '/shelf/lettura-1.jpg',
 //   tint: 'from-[#8A9A7B] to-[#6B7A5E]',
 // }
-export const shelf = []
+export const shelf = [
+  {
+    id: 'la-mala-notte',
+    title: 'La mala notte',
+    author: 'Ugo Barbàra',
+    status: 'finished',
+    rating: null,
+    note: null,
+    cover: '/shelf/la-mala-notte.jpg',
+    tint: 'from-[#7C9AA6] to-[#5B7A86]',
+  },
+]
