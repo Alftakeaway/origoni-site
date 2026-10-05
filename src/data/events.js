@@ -223,25 +223,25 @@ export const events = [
     year: 2026,
     dateLabel: { it: 'maggio 2026', en: 'May 2026' },
     title: {
-      it: 'Tavolo al Salone del Libro',
-      en: 'Panel at the Salone del Libro',
+      it: 'Conferenza stampa al Salone del Libro',
+      en: 'Press conference at the Salone del Libro',
     },
-    kind: { it: 'Incontro', en: 'Panel' },
+    kind: { it: 'Conferenza stampa', en: 'Press conference' },
     place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
     city: 'Torino',
-    role: { it: 'Relatrice', en: 'Panellist' },
+    role: { it: 'Responsabile del Premio Mandrarossa', en: 'Director of the Premio Mandrarossa' },
     draft: true,
-    photo: '/foto/autrice-salone-2026.jpg',
+    photo: '/foto/salone-2026-conferenza.jpg',
     photoCaption: {
       it:
-        'Il microfono fra le mani, lo stand con i libri alle spalle: la fotografia viene dall’archivio dell’autrice.',
-      en: 'The microphone in her hands, the book stand behind: the photograph comes from the author’s archive.',
+        'Al tavolo del Salone, con lo striscione dell’Assessorato regionale alle spalle e le bottiglie davanti.',
+      en: 'At the Salone table, the regional department’s banner behind her and the bottles in front.',
     },
     detail: {
       it:
-        'Una fotografia la ritrae a un tavolo del Salone del Libro 2026, il microfono fra le mani, con un allestimento di libri alle spalle; il file reca l’etichetta «Mandrarossa» e la data dell’edizione. Lo striscione sullo sfondo è tagliato dalla cornice e lascia leggere soltanto «L’identità s…», quindi il titolo esatto dell’incontro, il giorno e chi sedeva al tavolo restano da confermare.',
+        'Una fotografia dell’archivio dell’autrice la ritrae a un tavolo del Salone del Libro 2026, allestito sotto lo striscione della Regione Siciliana, Assessorato dei Beni Culturali e dell’Identità Siciliana; il file reca l’etichetta «Mandrarossa» e la data dell’edizione. Sul tavolo le targhe pieghevoli recano tre nomi, quello dell’autrice con la qualifica di responsabile del premio, quello di Concita De Gregorio come presidente e quello di Melania Petriello come giornalista. Il giorno preciso e il titolo esatto dell’incontro non risultano da nessuna cronaca, quindi la voce resta bozza. Il programma ufficiale del Salone colloca allo Spazio Sicilia, il 17 maggio 2026, l’incontro «Da Niscemi alle biblioteche di Sicilia. Gli Olmi»: che sia lo stesso appuntamento di questo tavolo o un altro della stessa rassegna, la fotografia non lo dice.',
       en:
-        'A photograph shows her at a table of the 2026 Salone del Libro, microphone in hand, a display of books behind; the file carries the “Mandrarossa” label and the date of the edition. The banner in the background is cut by the frame and yields only “L’identità s…”, so the exact title of the panel, the day and who sat at the table remain to be confirmed.',
+        'A photograph from the author’s archive shows her at a table of the 2026 Salone del Libro, set up beneath the Regione Siciliana banner, Department of Cultural Heritage and Sicilian Identity; the file carries the “Mandrarossa” label and the date of the edition. On the table, three folded name cards give three names: the author’s with the qualification of director of the prize, Concita De Gregorio’s as president, and Melania Petriello’s as journalist. The exact day and the precise title of the event appear in no report, so the entry stays a draft. The fair’s official programme places the meeting “Da Niscemi alle biblioteche di Sicilia. Gli Olmi” at the Spazio Sicilia on 17 May 2026: whether it is this same table or another appointment of the same programme, the photograph does not say.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },

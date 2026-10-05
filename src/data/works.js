@@ -270,9 +270,9 @@ export const works = [
       },
       {
         it:
-          'La copia fotografata dall’autrice reca in frontespizio il marchio «Edizioni di Salpare», uno dei marchi editoriali di Alghero. Nessuna fonte dice come si relazioni alla stampa dell’Almanacco, e la scheda lo segnala senza dedurre nulla.',
+          'L’opuscolo fotografato dall’autrice è una pubblicazione autonoma «Edizioni di Salpare», uno dei marchi editoriali di Alghero, ed è stato presentato in Campidoglio. Una pagina d’apertura porta il stemma SPQR del Comune di Roma e ringrazia la «Commissione per le Politiche Sociali». Per parola dell’autrice il testo era già uscito in parte nell’«Almanacco Gallurese», che resta la stampa con l’indicazione del numero e della pagina.',
         en:
-          'The copy photographed by the author carries the imprint “Edizioni di Salpare” on its title page, one of the publishing houses of Alghero. No source says how it relates to the Almanacco printing, and the entry notes it without drawing any inference.',
+          'The booklet photographed by the author is a standalone publication under the “Edizioni di Salpare” imprint, one of the publishing houses of Alghero, and it was presented in the Campidoglio. An opening page carries the SPQR coat of arms of the Comune di Roma and thanks the “Commissione per le Politiche Sociali”. In the author’s words, the text had already appeared in part in the “Almanacco Gallurese”, which remains the printing that gives the issue and the page number.',
       },
       {
         it:
@@ -387,6 +387,42 @@ export const works = [
       {
         label: { it: 'La scheda dell’antologia', en: 'The anthology record' },
         href: 'https://www.unilibro.it/libro/viaggiare-con-bisaccia-penna-lungo-la-via-francigena-laziale/9788878484832',
+      },
+    ],
+  },
+
+  {
+    id: 'il-miraggio-del-futuro-fra-covid-e-fata-morgana',
+    title: {
+      it: 'Il miraggio del futuro fra Covid e Fata Morgana',
+      en: 'Il miraggio del futuro fra Covid e Fata Morgana',
+    },
+    subtitle: {
+      it: 'Antologia a cura di Antonella Pellettieri, collana MenSALe',
+      en: 'An anthology edited by Antonella Pellettieri, MenSALe series',
+    },
+    type: { it: 'Testo in antologia', en: 'Text in an anthology' },
+    publisher: 'Zaccara',
+    tone: 'terracotta',
+    draft: true,
+    synopsis: {
+      it:
+        'Il volume è fra le carte che l’autrice ha fotografato e fra le pubblicazioni che elenca nel proprio profilo professionale. Che cosa contenga di suo, e a quale pagina, resta da scrivere: la scheda si ferma qui e aspetta.',
+      en:
+        'The volume is among the papers the author photographed and among the publications she lists in her professional profile. What her own contribution contains, and on which page, is still to be written: the entry stops here and waits.',
+    },
+    notes: [
+      {
+        it:
+          'La copertina fotografata dall’autrice reca il titolo, la cura di Antonella Pellettieri e la collana MenSALe. L’elenco dei contributori che circola in rete non la nomina, e la voce si tiene sulla parola dell’autrice, che lo comprende fra le sue pubblicazioni.',
+        en:
+          'The cover photographed by the author carries the title, Antonella Pellettieri’s editorship and the MenSALe series. The list of contributors circulating online does not name her, and the entry rests on the author’s own word, which counts the volume among her publications.',
+      },
+      {
+        it:
+          'Nel profilo professionale l’antologia è ricordata come pubblicazione del Consiglio Nazionale delle Ricerche; la copertina porta il nome dell’editore e della collana. Le due indicazioni stanno nella scheda senza che una escluda l’altra.',
+        en:
+          'In the professional profile the anthology is remembered as a publication of the Consiglio Nazionale delle Ricerche; the cover carries the publisher’s name and the series. Both statements stand in the entry, and neither cancels the other.',
       },
     ],
   },

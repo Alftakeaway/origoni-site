@@ -29,11 +29,31 @@ export const shelf = [
     id: 'mare-e-sardegna',
     title: 'Mare e Sardegna',
     author: 'David Herbert Lawrence',
-    status: 'finished',
+    status: 'reading',
     rating: null,
-    note: null,
+    note: {
+      it:
+        'La sta leggendo in questi giorni, e le serve per documentarsi su un altro mistero sardo su cui sta scrivendo.',
+      en:
+        'She is reading it these days, and she needs it to document herself on another Sardinian mystery she is writing about.',
+    },
     cover: '/shelf/mare-e-sardegna.jpg',
     tint: 'from-[#C4705C] to-[#9C4E42]',
+  },
+  {
+    id: 'la-strage-di-modica',
+    title: 'La strage di Modica (29 maggio 1921)',
+    author: 'Giovanni Criscione',
+    status: 'reading',
+    rating: null,
+    note: {
+      it:
+        'La sta studiando negli archivi, senza averne discusso con nessuno dal vivo. Qualcosa del caso è accennato nel suo racconto «Salvate i mobili», uscito nell’antologia «Radici di carta».',
+      en:
+        'She is studying it in the archives, having discussed it with no one in person. Something of the case is hinted at in her short story “Salvate i mobili”, published in the anthology “Radici di carta”.',
+    },
+    cover: '/shelf/la-strage-di-modica.jpg',
+    tint: 'from-[#C0503F] to-[#96372C]',
   },
   {
     id: 'il-canto-della-terra',
