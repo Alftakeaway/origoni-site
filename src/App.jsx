@@ -8,6 +8,7 @@ import Events from './components/Events'
 import About from './components/About'
 import Shelf from './components/Shelf'
 import Contact from './components/Contact'
+import Flashes from './components/Flashes'
 import ReadingControls from './components/ReadingControls'
 import Footer from './components/Footer'
 import Cursor from './components/Cursor'
@@ -29,6 +30,7 @@ export default function App() {
           <About />
           <Shelf />
           <Contact />
+          <Flashes />
         </main>
         <Footer />
       </LanguageProvider>

@@ -33,15 +33,15 @@ and the card credits as a source.
 
 ## Bozze (placeholder content)
 
-As of 8 October 2026, eight of the nineteen bibliography entries, all six journal posts and
-six of the fourteen event cards are provisional: some are placeholder texts agreed with the
-author on 3 October 2026, to show the structure of the page before the real material
-arrives, and the rest are real works missing one catalogue detail. Any entry with
-`draft: true` in `works.js`, `posts.js` or `events.js` renders a terracotta **BOZZA / DRAFT**
-badge on the card and a banner in the detail view. To confirm an entry: replace the text,
-then delete its `draft: true` line. The badge is the only thing separating invented
-placeholder copy from verified fact on the live site, so nothing marked draft should lose
-the flag without a check against a source. Each promotion gets a line in
+As of 8 October 2026, eight of the nineteen bibliography entries, all six journal posts,
+six of the fourteen event cards and the one flash note are provisional: some are placeholder
+texts agreed with the author on 3 October 2026, to show the structure of the page before the
+real material arrives, and the rest are real works missing one catalogue detail. Any entry
+with `draft: true` in `works.js`, `posts.js`, `events.js` or `flashes.js` renders a
+terracotta **BOZZA / DRAFT** badge on the card and a banner in the detail view. To confirm
+an entry: replace the text, then delete its `draft: true` line. The badge is the only thing
+separating invented placeholder copy from verified fact on the live site, so nothing marked
+draft should lose the flag without a check against a source. Each promotion gets a line in
 [CHANGELOG.md](CHANGELOG.md), with the source and the commit.
 
 Drafts are dropped from the RSS as well, since a feed has no way to mark them. While every
@@ -77,13 +77,14 @@ src/
                            # photo, photoCaption, sources, wholeMonth, draft
     shelf.js               # Reading log: status (reading / finished / queued), rating,
                            # progress, note, cover, tint
+    flashes.js             # «Fuori dai libri»: one line or two, an `iso` date, draft
     site.js                # Contact address + socials + press kit path + list of sources
   i18n/
     strings.js             # Every UI string, Italian primary + English
     LanguageContext.jsx    # IT/EN toggle, persists, syncs <html lang> and the title
   components/              # Navbar, Hero, Works, BookCover, WorkModal, Journal, PostView,
-                           # ReadingControls, Events, About, Shelf, Contact, Footer,
-                           # Cursor, DraftBadge, Reveal
+                           # ReadingControls, Events, About, Shelf, Contact, Flashes,
+                           # Footer, Cursor, DraftBadge, Reveal
   utils/ics.js             # .ics composed at runtime as a data URI, floating time
 scripts/build-feed.mjs     # dist/feed.xml from posts.js, minus the drafts
 scripts/make-press-kit.mjs # public/press PDF: bio, bibliography, press, photographs
@@ -117,6 +118,12 @@ public/
   a card can carry title, author and status alone. The `shelf.length === 0` branch in
   `Shelf.jsx` is a fallback for an emptied array: it says the shelf is not stocked rather
   than inventing titles.
+- Flash note: `src/data/flashes.js` holds «Fuori dai libri», the notes at the foot of the
+  page that are not about books. An entry is a date and one line or two — no title, no
+  category, no «read all», since the note ends where it stands. `Flashes.jsx` sorts on `iso`
+  and shows the three newest. The words are the author's own: a lived experience is not
+  something the repository can invent, so the section launched with a single `draft: true`
+  placeholder that says it is a test, and real entries replace it as she dictates them.
 - Contact address and social profiles: `src/data/site.js`. The address is kept split and
   base64-encoded in `encodedEmail`, so it is not sitting in the open in the shipped bundle;
   that keeps the casual crawler, not a reader who goes looking, which is the whole of what

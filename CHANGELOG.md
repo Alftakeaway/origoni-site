@@ -8,6 +8,41 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.4 - 8 ottobre 2026
+
+**Aggiunta: «Fuori dai libri», gli appunti che non riguardano i libri.**
+
+- **Che cosa è cambiato.** L'autrice ha chiesto uno spazio a piè pagina dove mettere
+  un'esperienza di tanto in tanto, «un flash su una notizia speciale», senza un tema da
+  seguire. Non c'era una newsletter da togliere: nel sito non ha mai avuto un blocco suo. Lo
+  spazio nuovo sta sotto i contatti, in una banda chiara fra il buio della sezione e quello
+  del piè di pagina, e si chiama «Fuori dai libri».
+- **Perché non è il Giornale.** Il Giornale tiene le categorie e resta legato alla lettura;
+  gli appunti no. Due contenitori diversi, e la differenza sta nella prima riga: «Notizie,
+  incontri, cose viste. Non riguardano i libri e non hanno un tema: poche righe quando ho
+  qualcosa da dire».
+- **I dati.** `src/data/flashes.js`: una riga, o due, con la sua data. Niente titolo, niente
+  categorie, niente «leggi tutto», perché l'appunto finisce dove sta. I campi sono `id`, `iso`
+  per l'ordine, `date` bilingue per la pagina, `text` bilingue, `draft`.
+- **La pagina.** `Flashes.jsx` ordina per `iso` e ne dà al massimo tre, con la data in
+  maiuscoletto nella colonna di sinistra e la riga in serif, più grande della prosa delle
+  altre sezioni. Se l'elenco si svuota, la sezione resta in pagina e lo dice: «Non c'è ancora
+  nessun appunto. Il primo arriva quando c'è qualcosa da dire», anziché inventarsi una voce
+  che non c'è.
+- **La regola nuova.** Le esperienze non si inventano, e questa volta il vincolo è nel file,
+  non solo nel registro: la sezione apre con un appunto che si dichiara di prova, porta il
+  marchio BOZZA e lo scrive dentro il testo stesso. Le voci vere le scrive chi le vive.
+- **Registro.** `flashes.js` e `Flashes.jsx` entrano nella struttura del readme, che aggiunge
+  una voce sua per gli appunti e mette `flashes.js` fra i file dove `draft: true` accende il
+  marchio. Le etichette stanno nel blocco `flashes` di `strings.js`, in italiano e in inglese.
+- **Gate.** `italian-gate.mjs` importa `flashes.js` e legge `date.it` e `text.it` con gli
+  stessi pattern delle altre prose.
+- **Prova.** Banda verificata in browser in italiano e in inglese su `#flashes`: titolo,
+  occhiello, intro, data, marchio e testo, con l'inglese che rispecchia solo i fatti. Console
+  ferma.
+- **Bozze dopo il giro:** otto in `works.js`, sei nel Giornale, sei negli appuntamenti, una
+  negli appunti.
+
 ## 1.2.3 - 8 ottobre 2026
 
 **Aggiunta: i materiali stampa escono in PDF, e il PDF lo scrivono i dati del sito.**

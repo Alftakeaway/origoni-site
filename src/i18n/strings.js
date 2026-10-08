@@ -145,6 +145,13 @@ export const strings = {
       noAddress:
         'Casella di contatto non ancora configurata: l’indirizzo email va inserito tra i dati del sito.',
     },
+    flashes: {
+      eyebrow: 'Appunti',
+      heading: 'Fuori dai libri',
+      intro:
+        'Notizie, incontri, cose viste. Non riguardano i libri e non hanno un tema: poche righe quando ho qualcosa da dire.',
+      empty: 'Non c’è ancora nessun appunto. Il primo arriva quando c’è qualcosa da dire.',
+    },
     footer: {
       quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»',
       line: 'Dal 2000 al 2026. Bibliografia, date e fonti verificate; le bozze restano segnate.',
@@ -294,6 +301,13 @@ export const strings = {
         'Biography, bibliography, press quotations and photographs in a single PDF. The texts stay in Italian, as they stand on the site.',
       noAddress:
         'No contact address set up yet: the email belongs in the site data.',
+    },
+    flashes: {
+      eyebrow: 'Notes',
+      heading: 'Beyond the books',
+      intro:
+        'News, encounters, things I have come across. They are not about books and they follow no theme: a few lines when there is something to say.',
+      empty: 'No note yet. The first one comes when there is something to say.',
     },
     footer: {
       quote:
