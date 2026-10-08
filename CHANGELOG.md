@@ -34,6 +34,21 @@ e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
   sposta da «Volumi» a «Racconti e testi in antologia o in volume collettaneo».
 - **Bozze dopo il giro:** otto in `works.js`, erano nove.
 
+## 1.1.3 - 8 ottobre 2026
+
+**README riallineato ai sorgenti.**
+
+- **Documentazione.** Il `README.md` descriveva uno stato di due giri fa: lo scaffale era
+  detto «attualmente vuoto» mentre ha cinque schede, l'elenco della struttura non conosceva
+  `ReadingControls.jsx`, `contrast.css`, `src/utils/ics.js`, `scripts/build-feed.mjs` né i
+  file delle immagini, e nessuno ricordava più che cosa stanno a fare `CHANGELOG.md`,
+  `GLOSSARY.md` e i cinque ADR. Riscritto ricontrollando ogni affermazione sui file: chiavi
+  reali dei dati, quattro toni di `BookCover`, `co-read` e `co-lang` in `localStorage`, il
+  `pointer: fine` del cursore, e le sette foto degli eventi, che hanno tutte una fonte
+  dichiarata sulla card. Tolti anche due accenti che non erano più veri: la provenienza
+  delle copertine (ora catalogo o copia dell'autrice, lo dice `coverCredit`) e un servizio
+  di posta nominato per ipotesi nella sezione del form.
+
 ## 1.1.2 - 8 ottobre 2026
 
 **Il sito non pubblicizza più un feed vuoto.**

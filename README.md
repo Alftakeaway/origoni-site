@@ -1,19 +1,35 @@
 # Claudia Origoni — Sito dell'autrice
 
 Single-page site for the author: verified bibliography, literary journal, public events
-with sources, biography, reading log and contact.
+with sources, biography, reading log and contact. Italian first, with an English toggle:
+every text field in the data files is `{ it, en }`, Italian before English.
 
 ## Stack
 
-- **Vite + React 18** (lightweight build, no SSR needed for a portfolio)
+- **Vite 5 + React 18** (lightweight build, no SSR needed for a portfolio)
 - **Tailwind CSS v3** with a custom literary theme (paper / ink / gold / sage palette,
-  Cormorant Garamond + Playfair Display + Plus Jakarta Sans)
+  Cormorant Garamond + Playfair Display + Plus Jakarta Sans). Held at v3 on purpose, see
+  [docs/adr/0004](docs/adr/0004-tailwind-3-niente-v4.md).
 - **Framer Motion** for physics-based scroll reveals, modals, and page-level transitions
 - **Lucide React** for icons
 
-Book covers are the real publisher jacket images, scanned from the catalogues listed in
-`sources` (`public/covers/`). Where no image is available `BookCover.jsx` draws a
-typographic cover instead — no stock photo is ever presented as a cover.
+Covers are the publisher's own jacket art: either the catalogue image or a photograph of a
+copy that belongs to the author, and `coverCredit` on the card says which. Where no image
+exists `BookCover.jsx` draws a typographic cover in one of four tones instead. No stock
+photo is ever presented as a cover. The same holds for the event photographs in
+`public/foto/`: they are either prints from her archive or images the organiser published
+and the card credits as a source.
+
+## Docs and rules
+
+- [CHANGELOG.md](CHANGELOG.md): what changed, and which source made it possible. Versions
+  follow deploys, so one entry is one push to `main`.
+- [GLOSSARY.md](GLOSSARY.md): how titles, sections and the award are written. A title is
+  quoted as it is printed, never shortened.
+- `docs/adr/`: five decisions. Italian as the primary language, the mandatory BOZZA badge,
+  the form without a backend, Tailwind 3, and no long dash in Italian prose.
+- `docs/corrispondenza/`: the letters to the author asking for the material still missing,
+  in the version cleared for a public repository.
 
 ## Bozze (placeholder content)
 
@@ -38,66 +54,75 @@ RSS» link: the site advertises a subscription only once there is something to r
 ```bash
 npm install
 npm run dev      # http://localhost:5173
-npm run build    # production bundle in dist/
+npm run build    # dist/, then dist/feed.xml from scripts/build-feed.mjs
 npm run preview  # serve the production bundle
 ```
 
 ## Structure
 
 ```
+index.html                 # Head, fonts, and the RSS pointer the build may drop
 src/
-  App.jsx                 # Section composition + MotionConfig (reduced-motion aware)
-  index.css               # Tailwind layers, paper-grain texture, article typography
+  main.jsx, App.jsx        # Mount, then the sections under one MotionConfig
+  index.css, contrast.css  # Tailwind layers, paper grain, article typography, high contrast
   data/
-    works.js              # Bibliography: title, publisher, year, ISBN, synopsis, links
-    posts.js              # Journal articles: category, date, read time, blocks (p / quote)
-    events.js             # Public events, each with the source it came from
-    shelf.js              # Reading log: currently empty until the real titles arrive
-    site.js               # Contact address + socials + list of public sources
+    works.js               # Bibliography: title, subtitle, type, year, publisher, isbn,
+                           # pages, coAuthors, tone, cover, coverCredit, synopsis, notes,
+                           # links, draft
+    posts.js               # Journal: category, `iso` date, read time, excerpt, blocks
+                           # (p / quote), draft
+    events.js              # Appointments: sort, time, dateLabel, place, role, detail,
+                           # photo, photoCaption, sources, wholeMonth, draft
+    shelf.js               # Reading log: status (reading / finished / queued), rating,
+                           # progress, note, cover, tint
+    site.js                # Contact address + socials + list of public sources
   i18n/
-    strings.js            # Every UI string, Italian primary + English
-    LanguageContext.jsx   # IT/EN toggle, persists, syncs <html lang> and title
-  components/
-    Navbar.jsx            # Sticky blur-on-scroll nav + mobile menu + language toggle
-    Hero.jsx              # Animated gradient field, floating glyphs, staggered copy
-    Works.jsx             # Masonry grid (CSS columns) with hover zoom
-    BookCover.jsx         # Cover art with typographic fallback, four tones
-    WorkModal.jsx         # Detail view: synopsis, ISBN facts, notes, external links
-    Journal.jsx           # Category filter + post cards with typographic header
-    PostView.jsx          # Full-screen reader: progress bar, drop cap, pull quotes
-    Events.jsx            # Vertical timeline of presentations, prizes, panels
-    DraftBadge.jsx        # BOZZA / DRAFT marker for provisional entries
-    About.jsx             # Biography + quote + sources
-    Shelf.jsx             # Reading log cards: status, rating, progress, note
-    Contact.jsx           # Inquiry form handed off to the visitor's mail client
-    Footer.jsx
-    Cursor.jsx            # Spring-physics cursor follower (fine pointers only)
-    Reveal.jsx            # Shared fade-up-on-scroll wrapper
+    strings.js             # Every UI string, Italian primary + English
+    LanguageContext.jsx    # IT/EN toggle, persists, syncs <html lang> and the title
+  components/              # Navbar, Hero, Works, BookCover, WorkModal, Journal, PostView,
+                           # ReadingControls, Events, About, Shelf, Contact, Footer,
+                           # Cursor, DraftBadge, Reveal
+  utils/ics.js             # .ics composed at runtime as a data URI, floating time
+scripts/build-feed.mjs     # dist/feed.xml from posts.js, minus the drafts
+public/
+  covers/  foto/  shelf/   # Jacket images, event photographs, reading-log covers
 ```
 
 ## Editing content
 
-- New book: add an object to `src/data/works.js` (bilingual fields are `{ it, en }`).
-  Text belongs to the data file, chrome labels to `src/i18n/strings.js`.
+- New book: an object in `src/data/works.js`, bilingual text fields. Words that belong to
+  the book stay in the data file; interface labels go to `src/i18n/strings.js`.
+- New appointment: `src/data/events.js`, with the `sources` entry that documents it. An
+  entry whose day is unknown gets `wholeMonth: true`, and one with no date at all sorts on
+  `0000-00-00` and lands at the end of the timeline: both keep their place in the page, and
+  neither offers the calendar file, which would have to invent a date.
+- Reading log: entries go in `src/data/shelf.js`, whose header comment documents the shape.
+  Only books she has actually read. While the array is empty the section shows an honest
+  "not stocked yet" panel instead of placeholder titles.
 - Contact address and social profiles: `src/data/site.js`. The address is kept split and
-  base64-encoded in `encodedEmail` so scrapers never see it in the shipped bundle; to change
-  it, re-encode each half with `btoa('local-part')` and `btoa('domain')`. Delete the `email`
-  line and the site shows no contact details, with the form saying so instead of pretending
-  to send.
+  base64-encoded in `encodedEmail`, so it is not sitting in the open in the shipped bundle;
+  that keeps the casual crawler, not a reader who goes looking, which is the whole of what
+  the encoding claims to do. To change it, re-encode each half with `btoa('local-part')`
+  and `btoa('domain')`. Delete the `email` line and the site shows no contact details, with
+  the form saying so instead of pretending to send.
 - Source list: `sources` in `src/data/site.js`; `About.jsx` renders it. Each event in
   `src/data/events.js` carries its own `sources` array, and `Events.jsx` prints them.
-- Reading log: entries go in `src/data/shelf.js`, whose header comment documents the shape.
-  While the array is empty the section shows an honest "not stocked yet" panel instead of
-  placeholder titles — nothing here ships a book she has not actually read.
+- Language: Italian prose takes no long dash ([docs/adr/0005](docs/adr/0005-nessun-trattino-lungo-in-italiano.md)),
+  and titles are copied exactly as printed (`GLOSSARY.md`).
 
 ## Contact form
 
 No backend on purpose: submitting opens a `mailto:` draft with the composed subject and
-body, so nothing is stored or forwarded by this site. If a real inbox/form service is
-wanted later, point `onSubmit` in `Contact.jsx` at Formspree, Resend, or a serverless function.
+body, so nothing is stored or forwarded by this site
+([docs/adr/0003](docs/adr/0003-form-senza-backend.md)). If a real inbox or a form service
+is wanted later, point `onSubmit` in `Contact.jsx` at it.
 
-## Motion & accessibility
+## Reading, motion and accessibility
 
+- `ReadingControls.jsx` offers three text sizes and a high-contrast mode, saved in
+  `localStorage` under `co-read`; the contrast rules live in `src/contrast.css`.
+- The language choice persists the same way under `co-lang`, and syncs `<html lang>` with
+  the document title.
 - Every Framer Motion animation respects `prefers-reduced-motion` via
   `<MotionConfig reducedMotion="user">`; CSS keyframe animations are disabled
   with a media query in `index.css`.
