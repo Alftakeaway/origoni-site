@@ -8,6 +8,27 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.5 - 8 ottobre 2026
+
+**Corretto: il racconto in dialetto porta il titolo come lo stampa il volume.**
+
+- **La decisione.** A pagina 89 di *«Viaggiare con bisaccia & penna»* il racconto si apre con
+  «L'Acqua cotta con le Merangole», la A e la M maiuscole. La scheda lo teneva in minuscolo,
+  e la differenza era scritta nella riga di credito in attesa di un parere. Il parere è
+  arrivato: un titolo stampato non si corregge da soli, quindi è la scheda che cede.
+- **Che cosa tocca.** Il campo `title` di `works.js`, in `it` e in `en` insieme: la forma
+  dialettale non si traduce, e la versione inglese del sito la riporta com'è. Il corpo del
+  testo resta minuscolo dove non è il titolo, perché lì nomina la vivanda e non l'opera, e la
+  riga di credito continua a dire come apre la pagina.
+- **Fuori dal sito.** Il press kit si è rigenerato dai dati e la sua tabella prende il titolo
+  nuovo da sola; lo stesso per la voce del profilo professionale, che `make-profilo.mjs`
+  scrive e da cui il documento esce aggiornato.
+- **Prova.** Scheda aperta in browser: il titolo della card, quello in testa alla scheda e
+  quello nella riga di credito sono la stessa stringa. Console ferma. Il gate passa pulito, e
+  `scan-en.mjs` non conta più il titolo dialettale fra i suoi colpi.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti, una negli appunti.
+
 ## 1.2.4 - 8 ottobre 2026
 
 **Aggiunta: «Fuori dai libri», gli appunti che non riguardano i libri.**

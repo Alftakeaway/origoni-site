@@ -427,7 +427,7 @@ export const works = [
   },
   {
     id: 'l-acqua-cotta-con-le-merangole',
-    title: { it: 'L’acqua cotta con le merangole', en: 'L’acqua cotta con le merangole' },
+    title: { it: 'L’Acqua cotta con le Merangole', en: 'L’Acqua cotta con le Merangole' },
     subtitle: {
       it: 'In «Viaggiare con bisaccia & penna. Lungo la via Francigena laziale»',
       en: 'In “Viaggiare con bisaccia & penna. Lungo la via Francigena laziale”',
