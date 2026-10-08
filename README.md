@@ -104,8 +104,10 @@ public/
   `0000-00-00` and lands at the end of the timeline: both keep their place in the page, and
   neither offers the calendar file, which would have to invent a date.
 - Reading log: entries go in `src/data/shelf.js`, whose header comment documents the shape.
-  Only books she has actually read. While the array is empty the section shows an honest
-  "not stocked yet" panel instead of placeholder titles.
+  Only books she has actually read, and the `note` line renders only where she wrote one, so
+  a card can carry title, author and status alone. The `shelf.length === 0` branch in
+  `Shelf.jsx` is a fallback for an emptied array: it says the shelf is not stocked rather
+  than inventing titles.
 - Contact address and social profiles: `src/data/site.js`. The address is kept split and
   base64-encoded in `encodedEmail`, so it is not sitting in the open in the shipped bundle;
   that keeps the casual crawler, not a reader who goes looking, which is the whole of what

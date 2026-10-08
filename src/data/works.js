@@ -5,6 +5,9 @@
 // dove manca, BookCover disegna una copertina tipografica.
 // `press` sono frasi di stampa sull'opera: testo ripreso alla lettera dalla fonte,
 // che resta italiana anche nella versione inglese del sito, quindi non bilingue.
+// `excerpt` è una pagina dell'opera fotografata dall'autrice: `it` e `en` sono array di
+// capoversi trascritti alla lettera, con `credit` che nomina la pagina e il volume.
+// Sta solo dove la pagina esiste: dove `en` manca, l'estrato resta quello italiano stampato.
 export const works = [
   {
     id: 'non-escludo-il-ritorno',
@@ -237,6 +240,24 @@ export const works = [
         href: 'https://books.google.com/books/about/Alza_gli_occhi_e_guarda_Immagini_di_due.html?id=ysdWAAAACAAJ',
       },
     ],
+    excerpt: {
+      credit: {
+        it: 'Da pagina 45 del volume, fotografata dall’autrice. Il testo corre in italiano e in inglese, e le parole sono quelle stampate, corsivi e maiuscoletti compresi. La pagina prosegue oltre l’immagine.',
+        en: 'From page 45 of the volume, photographed by the author. The text runs in Italian and in English, and the wording is the one on the page, italics and small capitals included. The page continues beyond the image.',
+      },
+      it: [
+        'ALZA GLI OCCHI E GUARDA: guarda Napoli, guardala con gli occhi dell’anima, guardala dentro le pieghe di questa città, fuori dalle immagini delle cartoline che mostrano il Vesuvio, il pino e palazzo reale;',
+        'mira Napoli, nobilissima sirena, che incanta e sorprende ancor di più quando ne scopri la vera essenza nei quartieri dimenticati e giudicati malfamati, ma antichi e ricchi di storia, che non vengono mostrati... come i parenti poveri ai pranzi di nozze degli “arrivati” che dimenticano, a volte volentieri, da dove sono “partiti”; quartieri che diventano sconosciuti agli stessi napoletani.',
+        'Vieni, guarda e ascolta...',
+        'Ascolta il silenzio dietro il suono assordante dei motorini che si inseguono nei vicoli della...',
+      ],
+      en: [
+        'BEHOLD NAPOLI: behold with the eyes of your soul, behold within the creases of this city, out of the “postcard” images which show Mt. Vesuvius, the famous pine tree and the Royal Palace.',
+        'Cherish Napoli, regal mermaid, ever more enchanting and surprising once it’s real essence is revealed in the forgotten illreputed quarters, yet antique and full of history, hidden... like the poor relatives at a wedding banquet of someone who “made it” and willingly forgot his starting point, quarters which are often unknown to the Neapolitans themselves.',
+        'Come, behold and listen...',
+        'Listen to the silence behind the blaring sound of the motorbikes chasing one another in the...',
+      ],
+    },
   },
   {
     id: 'loro-nero-di-modica',
@@ -344,6 +365,18 @@ export const works = [
         href: 'https://it.wikipedia.org/wiki/Lia_Origoni',
       },
     ],
+    excerpt: {
+      credit: {
+        it: 'Dalla pagina con il ritratto di Lia Origoni nell’opuscolo «Edizioni di Salpare», fotografata dall’autrice. Le parole sono quelle stampate, «Winter Garten» e «Bertold Brecht» compresi, e restano italiane anche nella versione inglese del sito.',
+        en: 'From the page carrying Lia Origoni’s portrait in the “Edizioni di Salpare” booklet, photographed by the author. The wording is the one on the page, “Winter Garten” and “Bertold Brecht” included, and it stays in Italian in the English version of the site too.',
+      },
+      it: [
+        'Lia Origoni, sarda de La Maddalena, è stata acclamata artista nei teatri più importanti d’Europa: dal Valle al Sistina e al Teatro dell’Opera di Roma, dalla Scala di Milano al Winter Garten di Berlino, dal Moulin Rouge di Parigi al San Carlo di Napoli.',
+        'E’ stata lei a ricevere nel 1939 il primo contratto stipulato dalla TV sperimentale di Stato EIAR.',
+        'Prima italiana ad aver interpretato “L’Opera da tre soldi” di Bertold Brecht.',
+        'Ha recitato in compagnia dei più famosi artisti, quali Totò, Anna Magnani, Macario, Maurice Chevalier, Tito Schipa, Giorgio Strehler, Anton Giulio Bragaglia.',
+      ],
+    },
   },
   {
     id: 'prima-colazione-come-e-perche',
@@ -433,6 +466,21 @@ export const works = [
         href: 'https://www.unilibro.it/libro/viaggiare-con-bisaccia-penna-lungo-la-via-francigena-laziale/9788878484832',
       },
     ],
+    excerpt: {
+      credit: {
+        it: 'Da pagina 89 dell’antologia, fotografata dall’autrice. Il racconto è in dialetto romanesco, e nel volume le parole dialettali stanno in corsivo: questo impaginato il corsivo non lo conserva, le parole sì. La pagina si apre con il titolo «L’Acqua cotta con le Merangole» e la firma «di Claudia Origoni».',
+        en: 'From page 89 of the anthology, photographed by the author. The story is in Roman dialect, and in the volume the dialect words sit in italics: this rendering does not keep the italics, but it keeps the words. The page opens with the heading “L’Acqua cotta con le Merangole” and the signature “di Claudia Origoni”.',
+      },
+      it: [
+        'Massimo era lì, davanti al convento dei padri minori di San Lorenzo lungo la via Francigena e come un pellegrino stanco aspettava il suo turno per entrare.',
+        'Leda e Corrado l’avevano accompagnato con gli abiti da festa; “ ’sto figliolo doveva da studia’, mica doveva spacca’ la pietra e montare le traversine nella ferrovia come il padre”...',
+        'Il voto era compiuto: ’sto fijo era cresciuto e ora lo lasciavano a studia’ lì, da li preti, in mezzo a quella strada che 13 anni prima Corrado aveva percorso scalzo insieme a Leda.',
+        'Corrado non sapeva gnente de la via Francigena, ma d’estate vedeva ’sti pellegrini anna’ verso Roma attraversando la campagna, la su campagna, er su podere: La Bandita.',
+        'Un giorno uno de loro se fermò a chiede un tantinello d’acqua, era stanco e affamato. Corrado s’era appena fatto un po’ d’acqua cotta con le merangole e si misero a mangiare insieme.',
+        'Il pellegrino veniva dal Piemonte, dal sacro Monte d’Oropa e annava a Roma a sciogliere un voto: era finalmente diventato padre di una bella bimba doppo tant’anni.',
+        'A ’ste parole l’occhi chiari e azzurri di Corrado presero d’acqua, quel pellegrino gli parlava al cuore e ravvivava quel desiderio mai appagato di un figliolo.',
+      ],
+    },
   },
 
   {

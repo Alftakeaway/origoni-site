@@ -11,7 +11,7 @@ import DraftBadge from './DraftBadge'
  */
 export default function WorkModal({ work, onClose }) {
   const reduce = useReducedMotion()
-  const { t, tr } = useLang()
+  const { t, tr, lang } = useLang()
 
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose()
@@ -123,6 +123,25 @@ export default function WorkModal({ work, onClose }) {
                   </div>
                 )}
               </dl>
+            )}
+
+            {/* Pagina dell'opera fotografata dall'autrice: trascrizione letterale */}
+            {work.excerpt && (
+              <div className="mt-8">
+                <p className="eyebrow mb-3">{t('work.excerpt')}</p>
+                <div className="rounded-lg border border-terracotta/25 bg-paper-warm px-5 py-6 md:px-7">
+                  <div className="space-y-4">
+                    {(work.excerpt[lang] ?? work.excerpt.it).map((line, i) => (
+                      <p key={i} className="font-serif text-[16px] leading-relaxed text-ink-soft">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                  <p className="mt-6 border-t border-terracotta/20 pt-4 font-serif text-[13px] italic leading-snug text-ink-muted">
+                    {tr(work.excerpt.credit)}
+                  </p>
+                </div>
+              </div>
             )}
 
             {/* Citazioni di stampa: verbatim, restano in italiano anche in EN */}

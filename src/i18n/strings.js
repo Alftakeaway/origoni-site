@@ -39,6 +39,7 @@ export const strings = {
       pages: 'Pagine',
       coAuthors: 'Con',
       press: 'Ne hanno scritto',
+      excerpt: 'Un estratto',
       coverSource: 'Copertina editoriale, immagine da',
     },
     draft: {
@@ -185,6 +186,7 @@ export const strings = {
       pages: 'Pages',
       coAuthors: 'With',
       press: 'From the press, in the original Italian',
+      excerpt: 'An extract',
       coverSource: 'Publisher cover art, image from',
     },
     draft: {

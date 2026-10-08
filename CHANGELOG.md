@@ -8,6 +8,42 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.2 - 8 ottobre 2026
+
+**Aggiunte: tre pagine dell'autrice entrano nelle schede. Sistemato: il readme non descrive più uno scaffale vuoto.**
+
+- **Estratti.** `works.js` prende il campo `excerpt`: una pagina dell'opera fotografata
+  dall'autrice e trascritta alla lettera, con `credit` che nomina la pagina e il volume.
+  Entrano «Alza gli occhi e guarda» da pagina 45, dove il testo corre in italiano e in
+  inglese e le due colonne sono date come sono stampate, «L'acqua cotta con le merangole»
+  da pagina 89 dell'antologia, sette capoversi di dialetto romanesco, e «Io son l'umile
+  ancella» dalla pagina che nell'opuscolo «Edizioni di Salpare» sta sotto il ritratto di
+  Lia Origoni.
+- **Resa.** `WorkModal.jsx` stampa l'estratto fra i dati di catalogo e le citazioni di
+  stampa, su un pannello color carta col bordo di terracotta. Dove la pagina è sola
+  italiana `en` manca, e la versione inglese del sito lascia il testo nell'originale:
+  lo dichiara la riga di credito, come già fanno le note in calce.
+- **Che cosa non è entrato.** «Salvate i mobili» ha la sua apertura in una grafica
+  dell'editore, non in una pagina fotografata, e resta fuori: serve lo scatto del volume.
+  Lo stesso per la pagina 65 di «Prima colazione: come & perché», che fra le foto non c'è.
+  «Trappole e Intervalli» ha una pagina intera, ma il margine interno cade nella rilegatura
+  e un paio di lettere per riga si perdono.
+- **Corsivi.** A pagina 89 le parole dialettali stanno in corsivo nel volume; qui il
+  corsivo non c'è e le parole sì, e la riga di credito lo avverte.
+- **Maiuscole del titolo.** A pagina 89 il racconto si intitola «L'Acqua cotta con le
+  Merangole», con la A e la M maiuscole, mentre la scheda lo porta in minuscolo. La
+  differenza è scritta nella riga di credito, e aspetta una decisione: un titolo stampato
+  non si corregge da soli.
+- **Docs.** Il readme non dice più che lo scaffale è vuoto: `shelf.js` ha cinque schede,
+  e il ramo di riserva in `Shelf.jsx` scatta soltanto se l'array si svuota.
+- **Gate.** `italian-gate.mjs` legge ora anche gli estratti. Le tre pagine passano pulite;
+  dei passivi che il gate segnala per giudicarli, due sono frasi sue, «è stata acclamata»
+  ed «era compiuto», e sono rimasti.
+- **Prova.** Le tre schede aperte in browser, in italiano e in inglese: l'estratto
+  bilingue segue la lingua, gli altri due restano italiani, la console è ferma.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti.
+
 ## 1.2.1 - 8 ottobre 2026
 
 **Sistemati: due dettagli del form di contatto.**
