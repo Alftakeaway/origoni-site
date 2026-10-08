@@ -8,6 +8,37 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.3 - 8 ottobre 2026
+
+**Aggiunta: i materiali stampa escono in PDF, e il PDF lo scrivono i dati del sito.**
+
+- **Press kit.** `scripts/make-press-kit.mjs` compone quattro pagine A4: il ritratto con la
+  nota bio-bibliografica e i contatti, la bibliografia verificata con editore, anno, pagine e
+  ISBN, le frasi di stampa con la pagina da cui vengono, e le sette fotografie degli incontri
+  con il nome del file. Le parole non sono riscritte: lo script importa `works.js`,
+  `events.js`, `site.js` e `strings.js` e stampa quel che il sito già dice, così il PDF non
+  può divergere dalle pagine. Chrome fa da compositore, e `CHROME=` serve solo se il binario
+  non sta in una delle sedi note.
+- **Download.** Il percorso sta in `pressKit.href` dentro `site.js`; `Contact.jsx` lo offre
+  fra Instagram e l'indirizzo, con l'etichetta «Materiali stampa in PDF» e, in inglese,
+  «Press kit (PDF)». La riga sopra avverte che i testi restano italiani.
+- **Che cosa non entra.** Le sei schede BOZZA restano fuori, e la bibliografia del PDF conta
+  undici titoli. Le pagine fotografate non stanno nel kit, che rimanda alle schede del sito.
+  Un recapito di posta nel PDF non c'è: l'indirizzo resta nel modulo, e il kit lo dice senza
+  scriverlo.
+- **Registro.** `npm run press-kit` fra gli script; `.press-build/`, dove il PDF si forma,
+  entra nel `.gitignore`, che intanto perde la riga `.vercel` scritta due volte. Il readme
+  documenta il campo `excerpt` arrivato con la voce precedente senza una riga sua, la regola
+  con cui una pagina entra fra gli estratti, e dove sta il press kit.
+- **Gate.** `italian-gate.mjs` con un HTML in argomento toglie i tag e il foglio di stile
+  prima di leggere, così la prosa del press kit passa dal suo pattern. Resta un solo passivo
+  segnalato, ed è dentro la citazione dell'AGI: suo, non nostro.
+- **Prova.** Il PDF esce in quattro pagine e le quattro sono quelle volute, a schermo largo
+  come il box di stampa. Il modulo di contatto verificato in browser in italiano e in
+  inglese: etichetta, nota e link al file, che il primo clic scarica. Console ferma.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti.
+
 ## 1.2.2 - 8 ottobre 2026
 
 **Aggiunte: tre pagine dell'autrice entrano nelle schede. Sistemato: il readme non descrive più uno scaffale vuoto.**

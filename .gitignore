@@ -1,8 +1,7 @@
 node_modules
 dist
 .vercel
+.press-build
 *.local
 .DS_Store
 npm-debug.log*
-
-.vercel

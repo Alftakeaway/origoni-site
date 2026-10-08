@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Check, Mail, AtSign } from 'lucide-react'
+import { Send, Check, Mail, AtSign, FileDown } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
-import { contact } from '../data/site'
+import { contact, pressKit } from '../data/site'
 import Reveal from './Reveal'
 
 const inquiryTypes = ['press', 'events', 'reader', 'other']
@@ -73,6 +73,23 @@ export default function Contact() {
               ))}
             </div>
           )}
+
+          <div className="mt-10">
+            <p className="max-w-md text-[15px] leading-relaxed text-paper/60">
+              {t('contact.pressKitNote')}
+            </p>
+            <a
+              href={pressKit.href}
+              download
+              className="group mt-4 inline-flex items-center gap-2.5 rounded-full border border-gold/45 bg-gold/10 px-5 py-2.5 font-sans text-xs uppercase tracking-widest text-gold-light transition-all duration-300 hover:border-gold hover:bg-gold/20"
+            >
+              <FileDown
+                size={14}
+                className="transition-transform duration-300 group-hover:-translate-y-0.5"
+              />
+              {t('contact.pressKit')}
+            </a>
+          </div>
 
           {contact.email && (
             <a

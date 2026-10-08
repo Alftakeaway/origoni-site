@@ -10,6 +10,12 @@ export const contact = {
   socials: [{ label: 'Instagram', href: 'https://www.instagram.com/claudiaorigoni' }],
 }
 
+// Materiali stampa per le testate: un PDF che riproduce i testi del sito, rigenerato
+// dai dati della bibliografia e delle fonti. Qui sta solo il percorso pubblico.
+export const pressKit = {
+  href: '/press/press-kit-claudia-origoni.pdf',
+}
+
 // Il ritratto in «Sull'autrice»: la foto d'archivio che l'editore Kalòs ha usato
 // per la scheda dell'autrice nel 2026. Il fotografo non è indicato sul file,
 // quindi il credito resta quello dell'archivio e non un nome inventato.

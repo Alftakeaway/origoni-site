@@ -56,6 +56,7 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # dist/, then dist/feed.xml from scripts/build-feed.mjs
 npm run preview  # serve the production bundle
+npm run press-kit  # public/press/press-kit-claudia-origoni.pdf, from the same data
 ```
 
 ## Structure
@@ -68,14 +69,15 @@ src/
   data/
     works.js               # Bibliography: title, subtitle, type, year, publisher, isbn,
                            # pages, coAuthors, tone, cover, coverCredit, synopsis, notes,
-                           # press (quote, outlet, byline, date, href), links, draft
+                           # press (quote, outlet, byline, date, href), excerpt (credit +
+                           # paragraphs), links, draft
     posts.js               # Journal: category, `iso` date, read time, excerpt, blocks
                            # (p / quote), draft
     events.js              # Appointments: sort, time, dateLabel, place, role, detail,
                            # photo, photoCaption, sources, wholeMonth, draft
     shelf.js               # Reading log: status (reading / finished / queued), rating,
                            # progress, note, cover, tint
-    site.js                # Contact address + socials + list of public sources
+    site.js                # Contact address + socials + press kit path + list of sources
   i18n/
     strings.js             # Every UI string, Italian primary + English
     LanguageContext.jsx    # IT/EN toggle, persists, syncs <html lang> and the title
@@ -84,8 +86,10 @@ src/
                            # Cursor, DraftBadge, Reveal
   utils/ics.js             # .ics composed at runtime as a data URI, floating time
 scripts/build-feed.mjs     # dist/feed.xml from posts.js, minus the drafts
+scripts/make-press-kit.mjs # public/press PDF: bio, bibliography, press, photographs
 public/
   covers/  foto/  shelf/   # Jacket images, event photographs, reading-log covers
+  press/                   # The generated press kit PDF, served as it stands
   robots.txt  sitemap.xml  # Crawlers welcome, and the one page listed for them
   og.jpg                   # 1200x630 share card: the portrait and the hero's own words
 ```
@@ -99,6 +103,11 @@ public/
   sentence is not bilingual and must not be translated: an English reader gets the Italian
   under an English label, because rendering it in English would put words in the critic's
   mouth that nobody wrote.
+- Extract: an `excerpt` carries a page of the book as printed, paragraph by paragraph, with
+  a `credit` line naming the page and the volume. Only where the page has been photographed
+  and read: the text is transcribed, not summarised, and the misprints stay with it. Where
+  the printed page is bilingual both languages stand; where it is not, the English site shows
+  the Italian and says so in the credit.
 - New appointment: `src/data/events.js`, with the `sources` entry that documents it. An
   entry whose day is unknown gets `wholeMonth: true`, and one with no date at all sorts on
   `0000-00-00` and lands at the end of the timeline: both keep their place in the page, and
@@ -116,6 +125,11 @@ public/
   the form saying so instead of pretending to send.
 - Source list: `sources` in `src/data/site.js`; `About.jsx` renders it. Each event in
   `src/data/events.js` carries its own `sources` array, and `Events.jsx` prints them.
+- Press kit: `npm run press-kit` rebuilds `public/press/press-kit-claudia-origoni.pdf` from
+  the same data the pages read, so the PDF cannot say something the site does not already
+  say. Run it again after any change to bio, bibliography, press or event photographs; it
+  needs Chrome, and takes `CHROME=` to point at another binary. The download sits in the
+  contact section, and `pressKit.href` in `src/data/site.js` is where the path lives.
 - Language: Italian prose takes no long dash ([docs/adr/0005](docs/adr/0005-nessun-trattino-lungo-in-italiano.md)),
   and titles are copied exactly as printed (`GLOSSARY.md`).
 

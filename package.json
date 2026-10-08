@@ -1,12 +1,13 @@
 {
   "name": "claudia-origoni",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/build-feed.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "press-kit": "node scripts/make-press-kit.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.11.9",

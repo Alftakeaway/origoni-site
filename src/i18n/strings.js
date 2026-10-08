@@ -139,6 +139,9 @@ export const strings = {
       },
       send: 'Apri la lettera',
       sent: 'La lettera si è aperta nel vostro client, grazie',
+      pressKit: 'Materiali stampa in PDF',
+      pressKitNote:
+        'Bio-bibliografia, citazioni di stampa e fotografie in un unico PDF. I testi sono quelli italiani del sito.',
       noAddress:
         'Casella di contatto non ancora configurata: l’indirizzo email va inserito tra i dati del sito.',
     },
@@ -286,6 +289,9 @@ export const strings = {
       },
       send: 'Open the letter',
       sent: 'Your letter has opened in your mail client — thank you',
+      pressKit: 'Press kit (PDF)',
+      pressKitNote:
+        'Biography, bibliography, press quotations and photographs in a single PDF. The texts stay in Italian, as they stand on the site.',
       noAddress:
         'No contact address set up yet: the email belongs in the site data.',
     },
