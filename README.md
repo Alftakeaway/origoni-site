@@ -17,15 +17,16 @@ typographic cover instead — no stock photo is ever presented as a cover.
 
 ## Bozze (placeholder content)
 
-Eight bibliography entries, all six journal posts and seven event cards are provisional as
-of 8 October 2026: some are placeholder texts agreed with the author on 3 October 2026, to
-show the structure of the page before the real material arrives, and the rest are real works
-missing one catalogue detail. Any entry with `draft: true` in `works.js`, `posts.js` or
-`events.js` renders a terracotta **BOZZA / DRAFT** badge on the card and a banner in the
-detail view. To confirm an entry: replace the text, then delete its `draft: true` line. The
-badge is the only thing separating invented placeholder copy from verified fact on the live
-site, so nothing marked draft should lose the flag without a check against a source. Each
-promotion gets a line in [CHANGELOG.md](CHANGELOG.md), with the source and the commit.
+As of 8 October 2026, eight of the nineteen bibliography entries, all six journal posts and
+six of the fourteen event cards are provisional: some are placeholder texts agreed with the
+author on 3 October 2026, to show the structure of the page before the real material
+arrives, and the rest are real works missing one catalogue detail. Any entry with
+`draft: true` in `works.js`, `posts.js` or `events.js` renders a terracotta **BOZZA / DRAFT**
+badge on the card and a banner in the detail view. To confirm an entry: replace the text,
+then delete its `draft: true` line. The badge is the only thing separating invented
+placeholder copy from verified fact on the live site, so nothing marked draft should lose
+the flag without a check against a source. Each promotion gets a line in
+[CHANGELOG.md](CHANGELOG.md), with the source and the commit.
 
 ## Setup
 

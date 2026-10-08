@@ -5,3 +5,5 @@ Il catalogo verificato è di quattro titoli; il sito ne mostra dieci, il giornal
 Considerato e scartato: pubblicare solo i dati verificati, lasciando sezioni corte. Scartato perché il sito sarebbe stato vuoto per mesi; scartata anche l'ipotesi di togliere i marcatori una volta online, che avrebbe reso indistinguibile il documentato dal provvisorio.
 
 Fa eccezione il solo motto in coda al sito, una frase senza autore tenuta per scelta: non va marcato e non va rimosso.
+
+Nota: i numeri del primo paragrafo sono quelli del 3 ottobre 2026, giorno della decisione. Da allora il catalogo è cresciuto e il conteggio delle bozze cambia a ogni scheda confermata, quindi sta in `CHANGELOG.md` e nella sezione «Bozze» del `README.md`, non qui. La regola invece no, quella non cambia.

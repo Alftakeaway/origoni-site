@@ -105,7 +105,6 @@ export const events = [
     place: { it: 'Libreria Cyrano, ore 19', en: 'Cyrano bookshop, 7 p.m.' },
     city: 'Alghero',
     role: { it: 'Autrice, con Neria De Giovanni', en: 'Author, with Neria De Giovanni' },
-    draft: true,
     photo: '/foto/alghero-cyrano-2024.jpg',
     photoCaption: {
       it: 'Alla libreria Cyrano, giugno 2024: l’incontro si tiene fra gli scaffali del «Libri · Vino · Swago» di Alghero.',

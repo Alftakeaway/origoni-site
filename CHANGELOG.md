@@ -2,7 +2,7 @@
 
 Tiene il conto di che cosa è cambiato nel sito, e di dove sta la prova. Le versioni
 sono legate al deploy: ogni voce corrisponde a un push su `main`, quindi a una
-messa in produzione su Vercel. Il numero maggiore segue `package.json`.
+messa in produzione su Vercel. Il numero segue `package.json`.
 
 Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
@@ -33,6 +33,20 @@ e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
   è pubblico) perde la dizione «titolo e pagina da verificare» sulla voce Agra e la
   sposta da «Volumi» a «Racconti e testi in antologia o in volume collettaneo».
 - **Bozze dopo il giro:** otto in `works.js`, erano nove.
+
+## 1.1.1 - 8 ottobre 2026
+
+**Tolte le bozze: la presentazione di Alghero.**
+
+- **Eventi.** La scheda `cyrano-alghero` perde il badge BOZZA: ogni suo campo è
+  confermato dalla cronaca di Portale Letterario, che dà il giorno e l'ora (giovedì 13
+  giugno 2024, ore 19), il luogo (libreria Cyrano di Alghero), i partecipanti (Claudia
+  Origoni in dialogo con Neria De Giovanni, sul romanzo «Non escludo il ritorno»,
+  Nemapress Edizioni) e il festival partner, «Florinas in giallo, l'isola dei misteri».
+  Non mancava niente, quindi il badge era un residuo. Restano bozze le sei schede di
+  `events.js` che hanno ancora un dato in cerca di fonte.
+- **Bozze dopo il giro:** sei in `events.js`, erano sette. Fermo il conteggio di
+  `works.js` e del Giornale.
 
 ## 1.0.0 - 1 ottobre 2026
 
