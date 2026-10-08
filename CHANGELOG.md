@@ -8,31 +8,38 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
-## 1.1.0 - 8 ottobre 2026
+## 1.2.0 - 8 ottobre 2026
 
-**Inserito: il capitolo di Claudia Origoni nel volume Agra, con titolo e pagina.**
+**Inserite: le citazioni di stampa nelle schede, i metadati di condivisione, robots e sitemap.**
 
-- **Opere.** La voce `prima-colazione-come-e-perche` prende il titolo del suo testo,
-  «La colazione dei Santi e la colazione con i Santi», e passa al sottotitolo il
-  contenitore: «Prima colazione: come & perché. Storia, scienza e cultura», volume
-  collettaneo a cura di Mario Mazzetti di Pietralata, capitolo 4 a pagina 65. È la
-  convenzione delle altre schede uscite in antologia, e scioglie l'equivoco del 5
-  ottobre, quando il titolo «La colazione dei santi» era sembrato inventato: era il
-  titolo vero, dimezzato. Sulla pagina «dei» e «con» sono in corsivo, e la nota lo
-  registra.
-- **Badge tolto.** La scheda non è più bozza: ogni campo viene dal volume o dal
-  catalogo, e la sinossi racconta il capitolo dalla pagina. Restano dichiarate nella
-  seconda nota le due cose non risolte, cioè che nessun catalogo pubblica i singoli
-  contributi e che l'SBN conta 206 pagine dove l'editore ne conta 180.
-- **Fonte.** La pagina 65, fotografata dalla copia dell'autrice e depositata l'8
-  ottobre 2026. Commit `1ba3013`.
-- **Feed.** `scripts/build-feed.mjs` esclude le voci con `draft: true`, che l'RSS non
-  ha modo di marcare. Effetto: `feed.xml` passa da sei item a zero, perché tutte e sei
-  le voci del Giornale sono testi provvisori. Commit `5522ad8`.
-- **Profilo professionale.** Il `.docx` aggiornato (resta fuori dal repository, che
-  è pubblico) perde la dizione «titolo e pagina da verificare» sulla voce Agra e la
-  sposta da «Volumi» a «Racconti e testi in antologia o in volume collettaneo».
-- **Bozze dopo il giro:** otto in `works.js`, erano nove.
+- **Opere.** Tre schede prendono il campo `press`: «Non escludo il ritorno» porta
+  Anna Di Cesare su Cara Garbatella (26 marzo 2024: «si presenta fin da subito come un
+  libro molto enigmatico») e la segnalazione di Portale Letterario (7 giugno 2024: «un
+  giallo storico che riprende un vero cold case»); «Salvate i mobili» porta il sommario
+  dell'AGI del 3 ottobre 2026 sull'antologia; «Alza gli occhi e guarda» porta la scheda
+  bibliografica 2005 del Centro Studi sul Teatro Napoletano Meridionale ed Europeo, che
+  del volume dice «un vero e proprio viaggio fotografico».
+- **Resa.** `WorkModal.jsx` stampa le citazioni fra i dati di catalogo e le note: un
+  `blockquote` per ciascuna, con il nome della testata collegato alla pagina da cui viene,
+  la firma dove la pagina la mostra e la data. L'etichetta è «Ne hanno scritto», e in
+  inglese «From the press, in the original Italian»: la frase citata resta italiana in
+  entrambe le lingue, perché tradurla metterebbe in bocca al critico parole che non ha
+  scritto. `GLOSSARY.md` aggiunge il termine.
+- **Nota nuova.** La stessa scheda del Centro registra che il contributo dell'autrice
+  afferma «la Sanità è femmina e Forcella è maschio»: è una sua frase di pagina, e sta
+  nelle note con la fonte.
+- **Metadati.** `index.html` prende `canonical`, `theme-color` e i gruppi `og:*` e
+  `twitter:*`, con l'immagine di condivisione a 1200x630 (`public/og.jpg`: il ritratto
+  dell'autrice e le parole che l'hero già usa) e la lingua dichiarata, `og:locale it_IT`.
+  Gli indirizzi sono assoluti e vanno cambiati insieme alla sitemap quando il sito avrà
+  un dominio proprio.
+- **Indicizzazione.** `public/robots.txt` e `public/sitemap.xml` rispondono 200: prima
+  entrambi 404. La sitemap elenca la sola pagina, perché `#works`, `#journal` e `#events`
+  sono frammenti della stessa risorsa.
+- **Gate.** `italian-gate.mjs` legge ora anche `press` (citazione, testata, firma, data),
+  così che una frase aggiunta distrattamente ricada negli stessi pattern del resto.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti.
 
 ## 1.1.3 - 8 ottobre 2026
 
@@ -77,6 +84,32 @@ e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
   `events.js` che hanno ancora un dato in cerca di fonte.
 - **Bozze dopo il giro:** sei in `events.js`, erano sette. Fermo il conteggio di
   `works.js` e del Giornale.
+
+## 1.1.0 - 8 ottobre 2026
+
+**Inserito: il capitolo di Claudia Origoni nel volume Agra, con titolo e pagina.**
+
+- **Opere.** La voce `prima-colazione-come-e-perche` prende il titolo del suo testo,
+  «La colazione dei Santi e la colazione con i Santi», e passa al sottotitolo il
+  contenitore: «Prima colazione: come & perché. Storia, scienza e cultura», volume
+  collettaneo a cura di Mario Mazzetti di Pietralata, capitolo 4 a pagina 65. È la
+  convenzione delle altre schede uscite in antologia, e scioglie l'equivoco del 5
+  ottobre, quando il titolo «La colazione dei santi» era sembrato inventato: era il
+  titolo vero, dimezzato. Sulla pagina «dei» e «con» sono in corsivo, e la nota lo
+  registra.
+- **Badge tolto.** La scheda non è più bozza: ogni campo viene dal volume o dal
+  catalogo, e la sinossi racconta il capitolo dalla pagina. Restano dichiarate nella
+  seconda nota le due cose non risolte, cioè che nessun catalogo pubblica i singoli
+  contributi e che l'SBN conta 206 pagine dove l'editore ne conta 180.
+- **Fonte.** La pagina 65, fotografata dalla copia dell'autrice e depositata l'8
+  ottobre 2026. Commit `1ba3013`.
+- **Feed.** `scripts/build-feed.mjs` esclude le voci con `draft: true`, che l'RSS non
+  ha modo di marcare. Effetto: `feed.xml` passa da sei item a zero, perché tutte e sei
+  le voci del Giornale sono testi provvisori. Commit `5522ad8`.
+- **Profilo professionale.** Il `.docx` aggiornato (resta fuori dal repository, che
+  è pubblico) perde la dizione «titolo e pagina da verificare» sulla voce Agra e la
+  sposta da «Volumi» a «Racconti e testi in antologia o in volume collettaneo».
+- **Bozze dopo il giro:** otto in `works.js`, erano nove.
 
 ## 1.0.0 - 1 ottobre 2026
 

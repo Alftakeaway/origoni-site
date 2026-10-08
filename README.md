@@ -68,7 +68,7 @@ src/
   data/
     works.js               # Bibliography: title, subtitle, type, year, publisher, isbn,
                            # pages, coAuthors, tone, cover, coverCredit, synopsis, notes,
-                           # links, draft
+                           # press (quote, outlet, byline, date, href), links, draft
     posts.js               # Journal: category, `iso` date, read time, excerpt, blocks
                            # (p / quote), draft
     events.js              # Appointments: sort, time, dateLabel, place, role, detail,
@@ -86,12 +86,19 @@ src/
 scripts/build-feed.mjs     # dist/feed.xml from posts.js, minus the drafts
 public/
   covers/  foto/  shelf/   # Jacket images, event photographs, reading-log covers
+  robots.txt  sitemap.xml  # Crawlers welcome, and the one page listed for them
+  og.jpg                   # 1200x630 share card: the portrait and the hero's own words
 ```
 
 ## Editing content
 
 - New book: an object in `src/data/works.js`, bilingual text fields. Words that belong to
   the book stay in the data file; interface labels go to `src/i18n/strings.js`.
+- Press quote: a `press` entry carries the sentence exactly as printed, the outlet, the
+  byline where the page shows one, the date and the `href` of the page it came from. The
+  sentence is not bilingual and must not be translated: an English reader gets the Italian
+  under an English label, because rendering it in English would put words in the critic's
+  mouth that nobody wrote.
 - New appointment: `src/data/events.js`, with the `sources` entry that documents it. An
   entry whose day is unknown gets `wholeMonth: true`, and one with no date at all sorts on
   `0000-00-00` and lands at the end of the timeline: both keep their place in the page, and
@@ -136,3 +143,12 @@ The project is hosted on Vercel and connected to this GitHub repository:
 every push to `main` triggers a production deploy automatically
 (https://origoni-site.vercel.app). Preview deployments are created for other
 branches. No manual `vercel deploy` is needed for normal changes.
+
+## Being found
+
+`robots.txt` allows everything and points at `sitemap.xml`, which holds the one page the
+site has: the section links are fragments of it, not separate addresses. The `canonical`,
+the `og:*` and `twitter:*` tags in `index.html` and the sitemap all carry the absolute
+address, so a domain of her own means editing those three places and nothing else. The
+share card is `public/og.jpg`, 1200x630, built from the portrait and the words the hero
+already uses.

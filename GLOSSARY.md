@@ -17,8 +17,12 @@ La materializzazione di un'opera presso un editore in un anno, con il suo ISBN. 
 _Avoid_: stampa, versione
 
 **Scheda**:
-Il pannello che riporta i dati di catalogo di un'opera: editore, anno, ISBN, pagine, coautrici, sinossi, note.
+Il pannello che riporta i dati di catalogo di un'opera: editore, anno, ISBN, pagine, coautrici, sinossi, note, citazioni di stampa.
 _Avoid_: scheda libro, dettaglio
+
+**Citazione di stampa**:
+Una frase scritta da altri sull'opera, riprodotta alla lettera e collegata alla pagina dove sta. Resta italiana anche nella versione inglese del sito: tradurla sarebbe metterle in bocca parole che nessuno ha scritto.
+_Avoid_: recensione (che è un testo intero, non una frase cavata), endorsement, lode
 
 **Coautrice**:
 Chi ha scritto con l'autrice un'opera a più mani. Va nominata, non assorbita nella voce "autrice".

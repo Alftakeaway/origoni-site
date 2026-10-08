@@ -125,6 +125,49 @@ export default function WorkModal({ work, onClose }) {
               </dl>
             )}
 
+            {/* Citazioni di stampa: verbatim, restano in italiano anche in EN */}
+            {work.press?.length > 0 && (
+              <div className="mt-8">
+                <p className="eyebrow mb-3">{t('work.press')}</p>
+                <div className="space-y-3">
+                  {work.press.map((p, i) => (
+                    <figure
+                      key={i}
+                      className="rounded-r-lg border-l-2 border-sage bg-sage/10 py-3 pl-4 pr-4"
+                    >
+                      <blockquote className="font-serif text-[16px] italic leading-snug text-ink-soft">
+                        {p.quote}
+                      </blockquote>
+                      <figcaption className="mt-2 font-sans text-[10px] uppercase leading-relaxed tracking-widest text-ink-muted">
+                        <span>
+                          {p.href ? (
+                            <a
+                              href={p.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-ink-soft transition-colors duration-300 hover:text-sage-dark"
+                            >
+                              {p.outlet}
+                              <ExternalLink size={10} className="mb-px ml-1 inline-block" />
+                            </a>
+                          ) : (
+                            p.outlet
+                          )}
+                        </span>
+                        {(p.byline || p.date) && (
+                          <span className="block">
+                            {p.byline}
+                            {p.byline && p.date && <> &middot; </>}
+                            {p.date && tr(p.date)}
+                          </span>
+                        )}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Note e contesto */}
             <div className="mt-7 space-y-4">
               {(work.notes ?? []).map((n, i) => (

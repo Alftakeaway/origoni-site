@@ -3,6 +3,8 @@
 // Le fonti stanno in src/data/site.js, e la pagina le elenca.
 // `cover` è la copertina editoriale (in public/covers, con `coverCredit`):
 // dove manca, BookCover disegna una copertina tipografica.
+// `press` sono frasi di stampa sull'opera: testo ripreso alla lettera dalla fonte,
+// che resta italiana anche nella versione inglese del sito, quindi non bilingue.
 export const works = [
   {
     id: 'non-escludo-il-ritorno',
@@ -29,6 +31,23 @@ export const works = [
       {
         it: 'Presentato il 23 marzo 2024 alla libreria “Le Storie” di Garbatella, a Roma.',
         en: 'Presented on 23 March 2024 at the bookshop “Le Storie” in Garbatella, Rome.',
+      },
+    ],
+    press: [
+      {
+        quote:
+          'Tratto da un fatto di cronaca nera degli anni ’20, «Non escludo il ritorno» è il primo romanzo di Claudia Origoni e si presenta fin da subito come un libro molto enigmatico.',
+        outlet: 'Cara Garbatella',
+        byline: 'Anna Di Cesare',
+        date: { it: '26 marzo 2024', en: '26 March 2024' },
+        href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
+      },
+      {
+        quote:
+          'Il romanzo può essere definito un giallo storico che riprende un vero cold case rielaborando con la fantasia artistica un episodio di cronaca nera avvenuto in Sardegna negli anni ’20.',
+        outlet: 'Portale Letterario',
+        date: { it: '7 giugno 2024', en: '7 June 2024' },
+        href: 'https://www.portaleletterario.net/rubriche/segnalazioni-di-redazione/2352/il-cold-case-di-claudia-origoni-arriva-ad-alghero',
       },
     ],
     links: [
@@ -86,6 +105,15 @@ export const works = [
           'La pagina Gli Olmi del sito del premio dichiara: «Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi». La stessa testata ufficiale presenta il premio come Premio Letterario Mandrarossa, «la Sicilia che non ti aspetti», e ne conta due edizioni, oltre trenta librerie coinvolte e cinque sezioni tematiche.',
         en:
           'The Gli Olmi page on the prize’s own site states: “Il Premio Mandrarossa sostiene fin dall’inizio il gruppo degli Olmi”. The same official page names the prize Premio Letterario Mandrarossa, “la Sicilia che non ti aspetti”, and counts two editions, more than thirty bookshops and five thematic sections.',
+      },
+    ],
+    press: [
+      {
+        quote:
+          'L’antologia curata da Stefania Auci e Nadia Terranova raccoglie racconti, memoir e reportage dedicati a biblioteche e archivi dell’isola. Il ricavato sarà destinato a un progetto di sviluppo di una biblioteca e di promozione della lettura.',
+        outlet: 'AGI',
+        date: { it: '3 ottobre 2026', en: '3 October 2026' },
+        href: 'https://www.agi.it/cultura/news/2026-10-03/radici-di-carta-olmi-biblioteche-sicilia-lettura-39367446/',
       },
     ],
     links: [
@@ -186,6 +214,21 @@ export const works = [
           'A pagina 45 il testo dell’autrice corre in italiano e in inglese, con il titolo «Raise your eyes and behold». Dall’attacco: «Alza gli occhi e guarda: guarda Napoli, guardala con gli occhi dell’anima, guarda dentro le pieghe di questa città, fuori dalle immagini delle cartoline che mostrano il Vesuvio, il pino e palazzo reale».',
         en:
           'On page 45 her text runs in Italian and in English, under the title “Raise your eyes and behold”. From her own English opening: “behold Napoli, behold with the eyes of your soul, behold within the creases of this city, out of the postcard images which show Mt. Vesuvius, the famous pine tree and the Royal Palace”.',
+      },
+      {
+        it:
+          'La scheda bibliografica del Centro Studi sul Teatro Napoletano Meridionale ed Europeo registra che nel volume è «seguito dal contributo di Claudia Origoni che offre un ritratto affascinante dei due quartieri affermando che “la Sanità è femmina e Forcella è maschio”».',
+        en:
+          'The bibliographic sheet kept by the Centro Studi sul Teatro Napoletano Meridionale ed Europeo records that the volume carries “the contribution of Claudia Origoni, who offers a fascinating portrait of the two quarters, stating that Sanità is female and Forcella is male”.',
+      },
+    ],
+    press: [
+      {
+        quote:
+          'Questo volume è un vero e proprio viaggio fotografico attraverso due popolari e storici quartieri di Napoli: Sanità e Forcella.',
+        outlet: 'Centro Studi sul Teatro Napoletano Meridionale ed Europeo',
+        date: { it: 'schede bibliografiche 2005', en: 'bibliographic sheets 2005' },
+        href: 'https://www.unisa.it/centri_e_vari/teatro_napoletano/la_critica/schede_biblio/2005',
       },
     ],
     links: [

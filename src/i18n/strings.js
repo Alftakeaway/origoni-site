@@ -38,6 +38,7 @@ export const strings = {
       year: 'Anno',
       pages: 'Pagine',
       coAuthors: 'Con',
+      press: 'Ne hanno scritto',
       coverSource: 'Copertina editoriale, immagine da',
     },
     draft: {
@@ -183,6 +184,7 @@ export const strings = {
       year: 'Year',
       pages: 'Pages',
       coAuthors: 'With',
+      press: 'From the press, in the original Italian',
       coverSource: 'Publisher cover art, image from',
     },
     draft: {
