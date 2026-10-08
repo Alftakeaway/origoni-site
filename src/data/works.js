@@ -305,12 +305,14 @@ export const works = [
   {
     id: 'prima-colazione-come-e-perche',
     title: {
-      it: 'Prima colazione: come & perché. Storia, scienza e cultura',
-      en: 'Prima colazione: come & perché. Storia, scienza e cultura',
+      it: 'La colazione dei Santi e la colazione con i Santi',
+      en: 'La colazione dei Santi e la colazione con i Santi',
     },
     subtitle: {
-      it: 'Volume collettaneo a cura di Mario Mazzetti di Pietralata, con un contributo di Claudia Origoni',
-      en: 'Collective volume edited by Mario Mazzetti di Pietralata, with a contribution by Claudia Origoni',
+      it:
+        'In «Prima colazione: come & perché. Storia, scienza e cultura», volume collettaneo a cura di Mario Mazzetti di Pietralata, capitolo 4 a pagina 65',
+      en:
+        'In “Prima colazione: come & perché. Storia, scienza e cultura”, collective volume edited by Mario Mazzetti di Pietralata, chapter 4 on page 65',
     },
     type: { it: 'Contributo in volume collettaneo', en: 'Contribution to an edited volume' },
     year: 2006,
@@ -320,25 +322,24 @@ export const works = [
     tone: 'ink',
     cover: '/covers/prima-colazione.jpg',
     coverCredit: 'copertina editoriale Agra',
-    draft: true,
     synopsis: {
       it:
-        'Volume collettaneo dato alle stampe da Agra Editrice a Roma nel 2006 sotto la cura di Mario Mazzetti di Pietralata: venti capitoli che prendono il primo pasto della giornata da più lati, con storici dell’alimentazione e delle religioni, nutrizionisti e dietologi, scrittori e critici cinematografici, e un’introduzione di Massimo Montanari. Claudia Origoni è fra i collaboratori del volume. Il titolo e la pagina del suo capitolo non compaiono in nessuna delle schede pubbliche, e la voce aspetta una copia del libro per dirli.',
+        'Volume collettaneo dato alle stampe da Agra Editrice a Roma nel 2006 sotto la cura di Mario Mazzetti di Pietralata: venti capitoli che prendono il primo pasto della giornata da più lati, con storici dell’alimentazione e delle religioni, nutrizionisti e dietologi, scrittori e critici cinematografici, e un’introduzione di Massimo Montanari. Il capitolo 4, a pagina 65, apre su un paradosso: scrivere sulla colazione dei Santi può essere un non-sense, perché il santo in quanto tale pratica l’astinenza e il digiuno, e prima di diventarlo ha comunque vissuto i pasti quotidiani degli uomini del suo tempo. Il viaggio comincia dalla regola di San Benedetto, che dà il nome all’oggetto della ricerca. A partire dal IX secolo gli abati benedettini concessero ai religiosi di bere verso sera, per ristorare le forze stanche del giorno, un bicchiere di vino prima di Compieta: un ristoro preso in comune mentre si faceva la lezione della sera, chiamata Conferenza, Collatio in latino. Durante quelle sedute si leggevano le Collationes di Cassiano, e al vino si accompagnò presto un leggero puntino per ovviare ai disagi del bere a digiuno. La colazione era dunque il prodromo della cena, non l’inizio della giornata, e divenne con il tempo il secondo pasto: il primo a ora sexta intorno a mezzogiorno, il secondo dopo i Vesperi tra le cinque e le sei, finché in alcuni ordini non si ritenne opportuno concedere ai confratelli e alle consorelle un ristoro mattutino.',
       en:
-        'A collective volume published in Rome by Agra Editrice in 2006 under the editorship of Mario Mazzetti di Pietralata: twenty chapters that take the first meal of the day from several sides, with historians of food and of religions, nutritionists and dietologists, writers and film critics, and an introduction by Massimo Montanari. Claudia Origoni is among the volume’s contributors. The title and page of her chapter appear in none of the published records, and the entry waits on a copy of the book to give them.',
+        'A collective volume published in Rome by Agra Editrice in 2006 under the editorship of Mario Mazzetti di Pietralata: twenty chapters that take the first meal of the day from several sides, with historians of food and of religions, nutritionists and dietologists, writers and film critics, and an introduction by Massimo Montanari. Chapter 4, on page 65, opens on a paradox: writing on the breakfast of the Saints may be a nonsense, because the saint as such practises abstinence and fasting, and before becoming one he lived the daily meals of the men of his time. The journey begins with the rule of Saint Benedict, which gives the name to the object of the enquiry. From the ninth century Benedictine abbots allowed the religious to drink towards evening, to restore the day’s exhausted strength, a glass of wine before Compline: a refreshment taken in common while the evening reading was given, called Conferenza, Collatio in Latin. During those meetings the Collationes of Cassian were read, and the wine was soon accompanied by a light snack to offset the discomfort of drinking on an empty stomach. Breakfast was therefore the forerunner of supper, not the start of the day, and in time it became the second meal: the first at sexta around midday, the second after Vespers between five and six, until some orders thought it proper to grant the brothers and sisters a morning refreshment.',
     },
     notes: [
       {
         it:
-          'La voce portava il titolo «La colazione dei santi», che non ha riscontro nelle schede del volume: ora porta quello stampato sulla copertina.',
+          'Il titolo del capitolo ha mezzo gioco tipografico: sulla pagina «dei» e «con» sono in corsivo, «La colazione dei Santi e la colazione con i Santi», a distinguere i pasti dei santi dal pasto consumato in loro compagnia. La voce di questo sito portava in passato il solo primo membro, «La colazione dei santi», e per questo era stata corretta sul titolo del volume: la pagina fotografata scioglie l’equivoco, perché quel titolo era il suo, soltanto dimezzato.',
         en:
-          'The entry carried the title “La colazione dei santi”, which has no counterpart in the volume’s records: it now carries the name printed on the jacket.',
+          'The chapter title carries half a typographic game: on the page “dei” and “con” are set in italic, “La colazione dei Santi e la colazione con i Santi”, telling apart the meals of the saints from the meal taken in their company. This entry once carried only the first half, “La colazione dei santi”, and was for that reason corrected to the title of the volume: the photographed page dissolves the misunderstanding, because that title was hers, merely halved.',
       },
       {
         it:
-          'Il record del Servizio Bibliotecario Nazionale conferma il volume (Roma, Agra, 2006, ISBN 9788861400054) e lo dà di 206 pagine, mentre l’editore e le schede commerciali ne contano 180: qui resta il numero dell’editore, e la differenza non è risolta. Nessun catalogo pubblica i singoli contributi, quindi finché una copia del volume non conferma il capitolo la voce resta bozza.',
+          'Il record del Servizio Bibliotecario Nazionale conferma il volume (Roma, Agra, 2006, ISBN 9788861400054) e lo dà di 206 pagine, mentre l’editore e le schede commerciali ne contano 180: qui resta il numero dell’editore, e la differenza non è risolta. Nessun catalogo pubblica i singoli contributi, né il nome dei collaboratori: il capitolo 4 e la sua pagina vengono dalla copia dell’autrice, fotografata e depositata l’8 ottobre 2026.',
         en:
-          'The volume is confirmed by the record of the Servizio Bibliotecario Nazionale (Rome, Agra, 2006, ISBN 9788861400054), which counts 206 pages where the publisher and the trade listings count 180: the publisher’s number is the one kept here, and the difference is unresolved. No catalogue publishes the individual contributions, so until a copy of the volume confirms the chapter the entry stays a draft.',
+          'The volume is confirmed by the record of the Servizio Bibliotecario Nazionale (Rome, Agra, 2006, ISBN 9788861400054), which counts 206 pages where the publisher and the trade listings count 180: the publisher’s number is the one kept here, and the difference is unresolved. No catalogue publishes the individual contributions or the names of the contributors: chapter 4 and its page come from the author’s own copy, photographed and deposited on 8 October 2026.',
       },
     ],
     links: [
