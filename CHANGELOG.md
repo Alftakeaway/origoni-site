@@ -8,6 +8,48 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.6 - 9 ottobre 2026
+
+**Aggiunta: il testo sul catalogo «Echi» entra per intero, dalla prima riga alla firma.**
+
+- **La lettura.** La pagina del catalogo della mostra di Alessandra Festuccia arriva in tre
+  colonne, fotografate dall'autrice, e le colonne sono state rilette sull'immagine ingrandita,
+  riga per riga. Il pezzo si apre con l'epigrafe dal Timeo, «Sta' a udire, o Socrate una molto
+  maravigliosa Istoria…», e chiude con «Usiamo bene la mostra di Alessandra Festuccia… è un
+  viaggio interiore e una Eco da non sottovalutare…»; in fondo alla terza colonna sta la firma
+  «Claudia Origoni». Il campo `excerpt` di `works.js` riceve sedici capoversi, l'epigrafe
+  compresa, e non riceve una versione inglese: la riga di credito dice che il testo resta
+  italiano anche nella versione inglese del sito.
+- **Che cosa non si tocca.** La pagina stampa «sommerso» dove la grammatica vorrebbe «sommerse»,
+  scrive «Qumram» senza l'acca, apre il discorso del sacerdote con una virgoletta e non la
+  chiude. Sono parole sue e la trascrizione le lascia dove stanno. Il gate accetta sette
+  segnalazioni nuove, tutte con lo stesso motivo, e il motivo è scritto accanto a ciascuna: le
+  righe di ECCEZIONI in `italian-gate.mjs` diventano diciotto.
+- **Titoli, due correzioni.** Le sovracoperte fotografate stampano «La mia maturità “Notte prima
+  degli esami”. Antologia di racconti» e «Il mio intervallo al Liceo Classico “Sannazaro” di
+  Napoli. Antologia di racconti in memoria del Preside Michele De Vivo», con il titolo dentro le
+  virgolette. La scheda aveva un punto al posto delle virgolette in un caso e le aveva perse del
+  tutto nell'altro, e la sinossi portava la stessa svista. I titoli sono corretti in `it` e in
+  `en` insieme, dove le caporali cedono il posto alle virgolette alte e il titolo di secondo
+  grado passa agli apici.
+- **La copia con la penna.** Una fotografia dà un'altra copertina di «Io son l'umile
+  l'ancella…»: il nome dell'autrice in maiuscoletto sopra il titolo, il marchio «Edizioni
+  Nemapress» sotto il sottotitolo, una linea a penna su entrambi e una dedica a mano che
+  l'immagine non rende leggibile. La copertina pubblicata nel sito è quella senza marchio, e il
+  frontespizio della stessa serie di foto stampa «Edizioni di Salpare». Le due cose stanno in
+  una nota nuova, che non prova a metterle d'accordo.
+- **Che cosa resta.** «Citazioni di una vita» non ha ancora un contenitore. La caccia ha
+  attraversato tutte le foto del 5 ottobre: i due colophon fotografati dicono «Volume stampato
+  nel giugno del 2024 presso Grafica Elettronica srl, Napoli per la Valle del Tempo» e «Volume
+  stampato nel giugno del 2025 per la Valle del Tempo», e riguardano altre due antologie. La
+  pagina 69 continua a dare soltanto il proprio numero, e la voce resta bozza.
+- **Prova.** Scheda aperta in browser in italiano e in inglese: sedici capoversi, la riga di
+  credito nella lingua giusta, la scheda dell'Ancella con la nota nuova e il credito della
+  copertina rimasto su «Edizioni di Salpare». Console ferma, `npm run build` pulito, gate e
+  `scan-en.mjs` senza sorprese.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti, una negli appunti.
+
 ## 1.2.5 - 8 ottobre 2026
 
 **Corretto: il racconto in dialetto porta il titolo come lo stampa il volume.**
