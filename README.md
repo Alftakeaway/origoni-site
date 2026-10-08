@@ -28,6 +28,11 @@ placeholder copy from verified fact on the live site, so nothing marked draft sh
 the flag without a check against a source. Each promotion gets a line in
 [CHANGELOG.md](CHANGELOG.md), with the source and the commit.
 
+Drafts are dropped from the RSS as well, since a feed has no way to mark them. While every
+journal post is provisional the generated `feed.xml` holds no items, and the build removes
+the `<link rel="alternate">` pointer from `dist/index.html` together with the on-page «Feed
+RSS» link: the site advertises a subscription only once there is something to receive.
+
 ## Setup
 
 ```bash

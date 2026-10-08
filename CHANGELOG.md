@@ -34,6 +34,21 @@ e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
   sposta da «Volumi» a «Racconti e testi in antologia o in volume collettaneo».
 - **Bozze dopo il giro:** otto in `works.js`, erano nove.
 
+## 1.1.2 - 8 ottobre 2026
+
+**Il sito non pubblicizza più un feed vuoto.**
+
+- **Feed.** `scripts/build-feed.mjs`, dopo aver scritto `dist/feed.xml`, toglie il
+  `<link rel="alternate">` da `dist/index.html` quando gli item sono zero, e
+  `Journal.jsx` non mostra la scritta «Feed RSS» finché il Giornale non ha almeno un
+  articolo. Il feed continua a essere generato al suo indirizzo, e `index.html` in
+  sorgente tiene il tag: è la build a deciderne la sorte, perché solo lei sa che cosa
+  è pubblicato.
+- **Collaudo.** Provato su entrambi i rami: con tutte e sei le voci in bozza l'HTML
+  servito non contiene il tag e la pagina non ha il link; rimettendo `draft: false` su
+  un pezzo il feed esce con un `<item>`, il tag resta e «Feed RSS» ricompare. Il file
+  dei dati è poi tornato com'era, `git diff` su `posts.js` a zero.
+
 ## 1.1.1 - 8 ottobre 2026
 
 **Tolte le bozze: la presentazione di Alghero.**

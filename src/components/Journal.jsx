@@ -7,6 +7,10 @@ import DraftBadge from './DraftBadge'
 import Reveal from './Reveal'
 import PostView from './PostView'
 
+// Il feed esce dalla build senza le bozze: un'iscrizione che non riceve niente
+// non va offerta.
+const hasFeedItems = posts.some((p) => !p.draft)
+
 // Nessuna foto stock come testata: senza immagine reale dell'autrice la
 // intestazione della card è tipografica, con la lettera iniziale del titolo.
 const categoryStyles = {
@@ -69,14 +73,16 @@ export default function Journal() {
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
             {t('journal.intro')}
           </p>
-          <a
-            href="/feed.xml"
-            type="application/rss+xml"
-            className="mt-4 inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
-          >
-            <Rss size={13} className="text-gold-dark" />
-            {t('journal.feed')}
-          </a>
+          {hasFeedItems && (
+            <a
+              href="/feed.xml"
+              type="application/rss+xml"
+              className="mt-4 inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
+            >
+              <Rss size={13} className="text-gold-dark" />
+              {t('journal.feed')}
+            </a>
+          )}
         </Reveal>
 
         {/* Post cards */}
