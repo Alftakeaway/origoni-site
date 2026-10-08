@@ -8,6 +8,24 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.1 - 8 ottobre 2026
+
+**Sistemati: due dettagli del form di contatto.**
+
+- **Firma della lettera.** Il corpo della mail che il visitatore compone non apre più la
+  riga finale con un trattino lungo: la firma è `Nome <indirizzo>`, senza segno davanti.
+  Il trattino non stava nei dati, quindi il gate non lo vedeva; compariva però nella mail
+  che l'autrice riceve, e in entrambe le lingue.
+- **Autocompletamento.** I tre campi prendono `name` (`name`, `email`, `message`), e i due
+  di testo anche `autocomplete` (`name`, `email`): così il browser offre i dati già
+  salvati. La select del motivo resta senza `name`, perché propone quattro scelte e non
+  chiede un dato da ricordare.
+- **Prova.** Con i campi vuoti l'invio si blocca e tutti e tre risultano `:invalid`; con
+  un indirizzo scorretto si blocca solo `email`; corretto il valore, il modulo è valido e
+  compare il messaggio di conferma. Nessuna delle prove ha lasciato la pagina.
+- **Bozze dopo il giro:** invariate, otto in `works.js`, sei nel Giornale, sei negli
+  appuntamenti.
+
 ## 1.2.0 - 8 ottobre 2026
 
 **Inserite: le citazioni di stampa nelle schede, i metadati di condivisione, robots e sitemap.**

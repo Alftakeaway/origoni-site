@@ -23,7 +23,7 @@ export default function Contact() {
     }
     // Hand the composed letter to the visitor's mail client: nothing is stored here.
     const subject = `[${t(`contact.types.${form.type}`)}] ${form.name}`
-    const body = `${form.message}\n\n— ${form.name} <${form.email}>`
+    const body = `${form.message}\n\n${form.name} <${form.email}>`
     window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`
@@ -99,6 +99,8 @@ export default function Contact() {
                 <input
                   required
                   type="text"
+                  name="name"
+                  autoComplete="name"
                   value={form.name}
                   onChange={set('name')}
                   placeholder={t('contact.phName')}
@@ -112,6 +114,8 @@ export default function Contact() {
                 <input
                   required
                   type="email"
+                  name="email"
+                  autoComplete="email"
                   value={form.email}
                   onChange={set('email')}
                   placeholder={t('contact.phEmail')}
@@ -144,6 +148,7 @@ export default function Contact() {
               <textarea
                 required
                 rows={5}
+                name="message"
                 value={form.message}
                 onChange={set('message')}
                 placeholder={t('contact.phMessage')}
