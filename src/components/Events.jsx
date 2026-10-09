@@ -112,7 +112,7 @@ export default function Events() {
                         href={s.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-gold-dark transition-colors hover:text-terracotta-dark"
+                        className="group inline-flex items-center gap-1.5 py-1.5 font-sans text-[11px] uppercase tracking-widest text-gold-dark transition-colors hover:text-terracotta-dark"
                       >
                         {tr(s.label)}
                         <ExternalLink
@@ -133,7 +133,7 @@ export default function Events() {
                     <a
                       href={ics}
                       download={`${e.id}.ics`}
-                      className="ml-auto inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
+                      className="ml-auto inline-flex items-center gap-1.5 py-1.5 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
                     >
                       <CalendarPlus size={13} />
                       {t('events.calendar')}

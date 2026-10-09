@@ -39,7 +39,7 @@ export default function PostView({ post, onClose }) {
       <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between border-b border-ink/8 bg-paper/85 px-6 py-4 backdrop-blur-md">
         <button
           onClick={onClose}
-          className="group inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
+          className="group inline-flex items-center gap-2 py-1.5 font-sans text-xs uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
         >
           <ArrowLeft
             size={15}

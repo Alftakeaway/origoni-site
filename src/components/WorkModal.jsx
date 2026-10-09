@@ -159,10 +159,10 @@ export default function WorkModal({ work, onClose }) {
                               href={p.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-ink-soft transition-colors duration-300 hover:text-sage-dark"
+                              className="inline-flex items-center gap-1 py-1.5 text-ink-soft transition-colors duration-300 hover:text-sage-dark"
                             >
                               {p.outlet}
-                              <ExternalLink size={10} className="mb-px ml-1 inline-block" />
+                              <ExternalLink size={10} />
                             </a>
                           ) : (
                             p.outlet

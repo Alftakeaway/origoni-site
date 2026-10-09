@@ -8,6 +8,25 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.8 - 9 ottobre 2026
+
+**Correzione: i bersagli piccoli, dove il dito non arriva.**
+
+- **Che cosa è cambiato.** Quarantuno link alle fonti erano più bassi dei 24 px di WCAG 2.5.8:
+  diciassette nelle fonti di «Chi scrive», ventiquattro tra le righe «Fonte» degli Eventi e il
+  pulsante «Aggiungi al calendario», due nelle testate delle citazioni di stampa dentro la scheda
+  opera, uno su «Torna al giornale» nella lettura. Tutti sistemati con un `py` sull'elemento
+  stesso, non con un margine del contenitore: la riga non si sposta, cresce solo l'area sensibile.
+  La testata di stampa passa da `<a>` inline a `inline-flex`, così l'icona sta in linea senza la
+  correzione di `mb-px` che serviva prima.
+- **Che cosa è rimasto com'è.** Le etichette «Fonte» e i nomi di testata senza link sono `span`,
+  non bersagli: non sono stati toccati. Gli scatti di controllo confermano che le righe sono
+  cresciute di dodici px senza spostare una parola.
+- **Prova.** La sonda di accessibilità gira ora anche dentro la modale, dentro la lettura e sul
+  piè di pagina: `target <24px` a zero in tutte e nove le sezioni, zero nella modale, zero nella
+  lettura, zero aree cliccabili orfane; il fuoco entra ed esce dal pannello come prima. Contrast
+  invariato: 47 nodi a 1440 e 27 a 390, nessuno sotto soglia.
+
 ## 1.2.7 - 9 ottobre 2026
 
 **Correzione: la passata di Design QA sul sito reso, sezione per sezione.**
