@@ -130,3 +130,53 @@ veri.
 Anche a voce, quando ci vediamo, va benissimo: scrivo io.
 
 Un bacio
+
+## 9 ottobre, il conto dopo il secondo giro di materiale
+
+Oggetto: Quello che ho sistemato, e sei cose che mi servono ancora
+
+Riprende le due lettere precedenti. Apre con quello che le fotografie hanno
+ormai chiuso: la copertina netta del volume su Lia Origoni, che dalle carte
+è risultato un articolo in un annuario di studi galluresi; il capitolo nel
+volume di Mario Mazzetti di Pietralata, il cui titolo completo sta nella
+pagina fotografata l'8 ottobre; la fotografia sul palco della sala del
+Parlamento europeo, che ha trovato la sua serata; le copertine nuove e le
+cinque immagini dello scaffale. Poi mette in fila quello che manca, sempre in
+ordine di facilità.
+
+**1. Quattro numeri di pagine.** Mi mancano le pagine de «I fiori dei santi»,
+de «L'oro nero di Modica», del racconto «Salvate i mobili» e del catalogo
+«Echi»: mi basta la fotografia del colophon o dell'ultima pagina, il numero
+lo leggo io.
+
+**2. Il libro che contiene la pagina 69.** Del pezzo «Citazioni di una vita»
+ho la pagina, non il volume che la tiene: senza frontespizio e colophon,
+contenitore, editore e anno restano da accertare, e la scheda resta a metà.
+
+**3. Che cosa c'è di tuo ne «Il miraggio del futuro fra Covid e Fata
+Morgana».** Nell'elenco degli autori che gira in rete il tuo nome non c'è:
+dimmi che cosa hai scritto lì dentro, a quale pagina e in che anno. Se il
+pezzo non c'è, levo il volume dall'elenco dei tuoi libri.
+
+**4. Le sei date che non trovo.** Palermo a Palazzo del Poeta, di cui non ho
+nemmeno l'anno; Roma a Trastevere nell'ottobre 2024; Torino al Salone nel
+maggio 2024; il tavolo del Salone 2026 sotto lo striscione della Regione
+Siciliana; la serata del 9 maggio 2025 per il premio, di cui mi mancano il
+luogo e il nome della manifestazione; lo stand della Sicilia al Salone 2025.
+Bastano tre o quattro giorni, quelli che ricordi. Con le date chiedo anche
+una conferma: se il tavolo di maggio 2026 sia il medesimo incontro del 17
+maggio, «Da Niscemi alle biblioteche di Sicilia. Gli Olmi».
+
+**5. Le fotografie.** Due copertine mi sono venute larghe invece che alte, e
+prima di pregarti di rifarle ti chiedo se quei due volumi siano davvero di
+formato largo. Mi serve una copia più larga della copertina de «L'oro nero di
+Modica», e un'immagine del gruppo degli Olmi, perché quel che ne circola è un
+video.
+
+**6. I testi tuoi.** Nello scaffale tre libri sono senza una tua riga, nel
+giornale sei pagine hanno ancora la scritta «bozza», e in bibliografia
+restano alcuni segnaposto da sostituire con pubblicazioni vere, anche piccole
+o in rivista.
+
+*La lettera si chiude offrendo la via più semplice: rispondere a voce quando
+ci si vede, che a scrivere e impaginare ci penso io.*
