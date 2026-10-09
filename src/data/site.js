@@ -38,7 +38,7 @@ export const sources = [
     href: 'https://www.unilibro.it/libri/f/autore/claudia_origoni/',
   },
   {
-    label: { it: 'La presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma', en: 'The presentation of “Non escludo il ritorno”, Le Storie bookshop, Rome' },
+    label: { it: 'La presentazione di «Non escludo il ritorno», libreria Le Storie, Roma', en: 'The presentation of “Non escludo il ritorno”, Le Storie bookshop, Rome' },
     href: 'https://caragarbatella.it/presentato-alla-libreria-le-storie-il-primo-romanzo-di-claudia-origoni/',
   },
   {

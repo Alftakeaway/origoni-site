@@ -22,6 +22,36 @@ export default function ReadingControls() {
   const { t } = useLang()
   const [open, setOpen] = useState(false)
   const [{ size, contrast }, setPrefs] = useState(load)
+  // Il pulsante fluttuante copre quello che gli sta sotto: a 390 px finiva
+  // sopra le copertine della griglia, che sono contenuto. È una preferenza di
+  // lettura, quindi si mostra solo dove c'è testo da leggere.
+  const [nearText, setNearText] = useState(false)
+
+  useEffect(() => {
+    const ids = ['events', 'journal', 'about', 'shelf', 'flashes']
+    const nodes = ids.map((id) => document.getElementById(id)).filter(Boolean)
+    if (!('IntersectionObserver' in window) || !nodes.length) {
+      setNearText(true)
+      return undefined
+    }
+    const seen = new Set()
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) seen.add(e.target.id)
+          else seen.delete(e.target.id)
+        }
+        setNearText(seen.size > 0)
+      },
+      { rootMargin: '-30% 0px -30% 0px' },
+    )
+    nodes.forEach((n) => io.observe(n))
+    return () => io.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!nearText) setOpen(false)
+  }, [nearText])
 
   useEffect(() => {
     const root = document.documentElement
@@ -37,74 +67,84 @@ export default function ReadingControls() {
   const sizes = [t('a11y.size1'), t('a11y.size2'), t('a11y.size3')]
 
   return (
-    <div className="fixed bottom-6 left-6 z-40 print:hidden">
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.25 }}
-            className="absolute bottom-16 left-0 w-64 rounded-xl border border-ink/10 bg-paper p-5 shadow-book-hover"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <p className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
-                {t('a11y.title')}
-              </p>
-              <button
-                onClick={() => setOpen(false)}
-                aria-label={t('a11y.close')}
-                className="text-ink-muted transition-colors hover:text-ink"
+    <AnimatePresence>
+      {nearText && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 8 }}
+          transition={{ duration: 0.25 }}
+          className="fixed bottom-6 left-6 z-40 print:hidden"
+        >
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.25 }}
+                className="absolute bottom-16 left-0 w-64 rounded-xl border border-ink/10 bg-paper p-5 shadow-book-hover"
               >
-                <X size={15} />
-              </button>
-            </div>
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="font-sans text-[10px] uppercase tracking-widest text-ink-muted">
+                    {t('a11y.title')}
+                  </p>
+                  <button
+                    onClick={() => setOpen(false)}
+                    aria-label={t('a11y.close')}
+                    className="text-ink-muted transition-colors hover:text-ink"
+                  >
+                    <X size={15} />
+                  </button>
+                </div>
 
-            <p className="mb-2 font-sans text-[11px] uppercase tracking-widest text-ink-soft">
-              {t('a11y.text')}
-            </p>
-            <div className="mb-5 flex gap-2">
-              {sizes.map((label, i) => (
+                <p className="mb-2 font-sans text-[11px] uppercase tracking-widest text-ink-soft">
+                  {t('a11y.text')}
+                </p>
+                <div className="mb-5 flex gap-2">
+                  {sizes.map((label, i) => (
+                    <button
+                      key={label}
+                      onClick={() => setPrefs({ size: i, contrast })}
+                      aria-pressed={size === i}
+                      aria-label={label}
+                      className={`flex-1 rounded-lg border px-2 py-2 font-display leading-none transition-all duration-300 ${
+                        size === i
+                          ? 'border-ink bg-ink text-paper'
+                          : 'border-ink/12 text-ink-soft hover:border-gold hover:text-gold-dark'
+                      }`}
+                    >
+                      <span style={{ fontSize: `${13 + i * 4}px` }}>Aa</span>
+                    </button>
+                  ))}
+                </div>
+
                 <button
-                  key={label}
-                  onClick={() => setPrefs({ size: i, contrast })}
-                  aria-pressed={size === i}
-                  aria-label={label}
-                  className={`flex-1 rounded-lg border px-2 py-2 font-display leading-none transition-all duration-300 ${
-                    size === i
+                  onClick={() => setPrefs({ size, contrast: !contrast })}
+                  aria-pressed={contrast}
+                  className={`flex w-full items-center gap-2.5 rounded-lg border px-3 py-2.5 font-sans text-[11px] uppercase tracking-widest transition-all duration-300 ${
+                    contrast
                       ? 'border-ink bg-ink text-paper'
                       : 'border-ink/12 text-ink-soft hover:border-gold hover:text-gold-dark'
                   }`}
                 >
-                  <span style={{ fontSize: `${13 + i * 4}px` }}>Aa</span>
+                  <Contrast size={14} />
+                  {t('a11y.contrast')}
                 </button>
-              ))}
-            </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-            <button
-              onClick={() => setPrefs({ size, contrast: !contrast })}
-              aria-pressed={contrast}
-              className={`flex w-full items-center gap-2.5 rounded-lg border px-3 py-2.5 font-sans text-[11px] uppercase tracking-widest transition-all duration-300 ${
-                contrast
-                  ? 'border-ink bg-ink text-paper'
-                  : 'border-ink/12 text-ink-soft hover:border-gold hover:text-gold-dark'
-              }`}
-            >
-              <Contrast size={14} />
-              {t('a11y.contrast')}
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <button
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        aria-label={t('a11y.open')}
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/12 bg-paper/90 text-ink-soft shadow-card backdrop-blur transition-all duration-300 hover:border-gold hover:text-gold-dark"
-      >
-        <Type size={17} />
-      </button>
-    </div>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={t('a11y.open')}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/12 bg-paper/90 text-ink-soft shadow-card backdrop-blur transition-all duration-300 hover:border-gold hover:text-gold-dark"
+          >
+            <Type size={17} />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }

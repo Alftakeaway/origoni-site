@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { X, ExternalLink, BookMarked, PencilLine } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
+import { useDialog } from '../utils/dialog'
 import BookCover from './BookCover'
 import DraftBadge from './DraftBadge'
 
@@ -12,16 +12,7 @@ import DraftBadge from './DraftBadge'
 export default function WorkModal({ work, onClose }) {
   const reduce = useReducedMotion()
   const { t, tr, lang } = useLang()
-
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
-  }, [onClose])
+  const panel = useDialog(onClose)
 
   return (
     <motion.div
@@ -37,23 +28,27 @@ export default function WorkModal({ work, onClose }) {
       <div className="absolute inset-0 bg-ink/60 backdrop-blur-sm" onClick={onClose} />
 
       <motion.div
+        ref={panel}
+        tabIndex={-1}
         initial={reduce ? { opacity: 0 } : { opacity: 0, y: 48, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={reduce ? { opacity: 0 } : { opacity: 0, y: 32, scale: 0.97 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="relative max-h-[88vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-paper shadow-book-hover"
+        className="relative max-h-[88vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-paper shadow-book-hover outline-none"
       >
         <button
           onClick={onClose}
-          aria-label="Close"
+          aria-label={t('work.close')}
           className="absolute right-4 top-4 z-10 rounded-full bg-paper/90 p-2.5 text-ink-soft shadow-card backdrop-blur transition-all duration-300 hover:rotate-90 hover:text-gold-dark"
         >
           <X size={18} />
         </button>
 
         <div className="grid md:grid-cols-[2fr_3fr]">
-          {/* Cover */}
-          <div className="relative h-64 overflow-hidden md:h-[30rem] md:self-start">
+          {/* Cover: sticky perché la colonna di destra con sinossi, dati,
+              stampa e note cresce più del volume, e il resto della fascia
+              restava vuoto. */}
+          <div className="relative h-64 overflow-hidden md:sticky md:top-0 md:h-[30rem] md:self-start">
             <BookCover work={work} large />
           </div>
 

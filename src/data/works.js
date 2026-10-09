@@ -32,7 +32,7 @@ export const works = [
         en: 'Nemapress bills her as “an author with Sardinian roots”: the island her family comes from on one side.',
       },
       {
-        it: 'Presentato il 23 marzo 2024 alla libreria “Le Storie” di Garbatella, a Roma.',
+        it: 'Presentato il 23 marzo 2024 alla libreria «Le Storie» di Garbatella, a Roma.',
         en: 'Presented on 23 March 2024 at the bookshop “Le Storie” in Garbatella, Rome.',
       },
     ],

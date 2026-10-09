@@ -8,6 +8,39 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.2.7 - 9 ottobre 2026
+
+**Correzione: la passata di Design QA sul sito reso, sezione per sezione.**
+
+- **Che cosa è stato controllato.** Dodici scatti del sito in produzione a 1440 e 390 px, in
+  italiano e in inglese, più due audit automatici: il primo misura il rapporto di contrasto di
+  ogni nodo di testo visibile (colore reale contro fondo effettivo, con la regola larga di 3:1
+  per il testo grande), il secondo chiede tre cose alla tastiera: le aree cliccabili sono
+  raggiungibili, le modali si prendono il fuoco, i pulsanti hanno un nome.
+- **L'oro sui fondi chiari.** `gold-dark` passa a `#7C5E28`. Il valore precedente era l'oro
+  della copertina, e sulle tre tonalità della carta scendeva a 3.47:1: le etichette a 11 px
+  degli `eyebrow`, dei campi ISBN e delle fonti non erano leggibili. Un solo valore di tavolozza
+  risolve la famiglia intera, perché `.eyebrow` eredita da lì.
+- **La tastiera.** Le card del Giornale erano `cursor-pointer` senza essere raggiungibili: sei
+  articoli apribili solo col mouse. Ora sono `role="button"` con `tabindex="0"` e si aprono con
+  Invio e Spazio. `src/utils/dialog.js` dà a modale e lettura il comportamento che mancava:
+  fuoco al pannello all'apertura, Tab che gira dentro, Escape che chiude, scroll della pagina
+  restituito e fuoco che torna alla card da cui si era partiti.
+- **La scheda opera.** La colonna della copertina è sticky: la colonna di destra con sinossi,
+  dati, stampa e note cresce più del volume, e sotto la copertina restava una fascia vuota.
+- **Il pannello di lettura.** Il pulsante fluttuante a sinistra finiva sopra le copertine della
+  griglia, cioè sopra contenuto: è una preferenza di lettura e ora compare solo dove il testo
+  scorre, intercettato dalle sezioni `events`, `journal`, `about`, `shelf`, `flashes`.
+- **Le etichette.** «Close» e «Close article» erano inglesi dentro l'interfaccia italiana: ora
+  `Chiudi la scheda` e `Chiudi l'articolo`. La voce «bozza» del piè di pagina dice in modo
+  compiuto che cosa è provvisorio e che cosa aspetta un dato di catalogo.
+- **Virgolette.** Le citazioni di titoli nei testi italiani passano a caporali, come nel resto
+  del sito; restano diritte dove il testo è inglese e dove la pagina fotografata è trascritta
+  com'è stampata.
+- **Prova.** Contrast: 47 nodi a 1440 e 25 a 390, zero sotto soglia (prima otto). Tastiera: zero
+  aree cliccabili orfane in tutte le sezioni, `activeIsInside` vero su modale e lettura, fuoco di
+  ritorno alla card vero. Invio apre la recensione di *Pachinko*, Escape la chiude.
+
 ## 1.2.6 - 9 ottobre 2026
 
 **Aggiunta: il testo sul catalogo «Echi» entra per intero, dalla prima riga alla firma.**

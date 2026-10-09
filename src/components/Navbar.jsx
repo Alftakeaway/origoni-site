@@ -79,7 +79,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="link-underline font-sans text-[12px] uppercase tracking-widest text-ink-muted transition-colors hover:text-ink xl:tracking-literary"
+                className="link-underline relative font-sans text-[12px] uppercase tracking-widest text-ink-muted transition-colors before:absolute before:-inset-y-1.5 before:left-0 before:right-0 before:content-[''] hover:text-ink xl:tracking-literary"
               >
                 {l.label}
               </a>

@@ -48,7 +48,7 @@ export default function Contact() {
           <p className="eyebrow mb-4 text-gold-light">{t('contact.eyebrow')}</p>
           <h2 className="font-display text-4xl font-semibold leading-tight md:text-5xl">
             {t('contact.headingA')}
-            <br />
+            <br />{' '}
             <span className="italic text-gold-light">{t('contact.headingB')}</span>
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-paper/60">{t('contact.body')}</p>

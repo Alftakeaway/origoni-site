@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { motion, useScroll, useSpring, useReducedMotion } from 'framer-motion'
 import { X, ArrowLeft, Clock, PencilLine } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
+import { useDialog } from '../utils/dialog'
 
 /**
  * Full-screen long-form reading view with a gold progress bar,
@@ -11,26 +12,19 @@ export default function PostView({ post, onClose }) {
   const reduce = useReducedMotion()
   const { t, tr } = useLang()
   const cats = t('categories')
+  const dialogRef = useDialog(onClose)
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ container: ref })
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
 
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
-  }, [onClose])
-
   return (
     <motion.div
-      className="fixed inset-0 z-[80] bg-paper"
+      className="fixed inset-0 z-[80] bg-paper outline-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      ref={dialogRef}
+      tabIndex={-1}
       role="dialog"
       aria-modal="true"
       aria-label={tr(post.title)}
@@ -55,7 +49,7 @@ export default function PostView({ post, onClose }) {
         </button>
         <button
           onClick={onClose}
-          aria-label="Close article"
+          aria-label={t('journal.closeArticle')}
           className="rounded-full p-2 text-ink-soft transition-all duration-300 hover:rotate-90 hover:text-gold-dark"
         >
           <X size={18} />

@@ -17,7 +17,10 @@ export default {
         gold: {
           DEFAULT: '#C5A059',
           light: '#D9BC80',
-          dark: '#A5823C',
+          /* Sui fondi chiari l'oro della copertina scende a 3.47:1 e le
+             etichette a 11px non sono leggibili: questo tiene i 4.5:1 su
+             tutti e tre i toni della carta. */
+          dark: '#7C5E28',
         },
         sage: {
           DEFAULT: '#8A9A7B',

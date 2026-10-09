@@ -92,6 +92,15 @@ export default function Journal() {
               <motion.article
                 layout
                 key={p.id}
+                role="button"
+                tabIndex={0}
+                aria-label={tr(p.title)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setActive(p)
+                  }
+                }}
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96 }}

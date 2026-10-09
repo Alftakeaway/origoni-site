@@ -31,9 +31,10 @@ export const strings = {
       readMore: 'Apri la scheda',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
-        'Le schede marcate «bozza» non sono definitive: per alcune titoli, anni e sinossi sono segnaposto decisi con l’autrice; per altre manca un dato di catalogo, e la scheda lo dice.',
+        'Le schede marcate «bozza» non sono definitive: per alcune, titoli, anni e sinossi sono segnaposto decisi con l’autrice; per altre manca un dato di catalogo, e la scheda lo dice.',
     },
     work: {
+      close: 'Chiudi la scheda',
       isbn: 'ISBN',
       year: 'Anno',
       pages: 'Pagine',
@@ -55,6 +56,7 @@ export const strings = {
       readMin: 'min di lettura',
       readArticle: 'Leggi l’articolo',
       back: 'Torna al giornale',
+      closeArticle: 'Chiudi l’articolo',
       filterAll: 'Tutti',
       feed: 'Feed RSS',
       authorBio:
@@ -83,7 +85,7 @@ export const strings = {
       heading: 'Chi scrive',
       quote: 'Sono sempre stata un’appassionata di ricerche storiche.',
       quoteSource:
-        'Presentazione di “Non escludo il ritorno”, libreria Le Storie, Roma, 23 marzo 2024',
+        'Presentazione di «Non escludo il ritorno», libreria Le Storie, Roma, 23 marzo 2024',
       paragraphs: [
         'Claudia Origoni lavora con i documenti prima ancora che con le frasi. Il suo primo libro, I fiori dei santi (Barbieri, 2000), è uno studio sui simboli floreali dell’iconografia sacra (i gigli, le rose e le palme che diventano attributi dei santi), seguito nelle storie e nelle leggende che li hanno raffigurati.',
         'Nel 2005 esce Alza gli occhi e guarda (Edizioni Intra Moenia), volume fotografico sui quartieri napoletani della Sanità e di Forcella: fotografie di Elisabetta Valentini e Simona Filippini, testo suo, tra contrasti sociali e potenzialità nascoste. Nel 2009 pubblica con Elena La Delfa L’oro nero di Modica (Coppola Editore ed Edizioni Nemapress), il cioccolato della città barocca e il legame che tiene insieme un centro urbano e la sua storia artigianale.',
@@ -191,6 +193,7 @@ export const strings = {
         'Entries marked “draft” are not final: for some, the titles, years and synopses are placeholders agreed with the author; for others a catalogue datum is missing, and the entry says so.',
     },
     work: {
+      close: 'Close the entry',
       isbn: 'ISBN',
       year: 'Year',
       pages: 'Pages',
@@ -212,6 +215,7 @@ export const strings = {
       readMin: 'min read',
       readArticle: 'Read article',
       back: 'Back to journal',
+      closeArticle: 'Close the article',
       filterAll: 'All',
       feed: 'RSS feed',
       authorBio:

@@ -23,7 +23,7 @@ export const events = [
     year: 2024,
     dateLabel: { it: '26 gennaio 2024', en: '26 January 2024' },
     title: {
-      it: '“Non escludo il ritorno”, romanzo cold case',
+      it: '«Non escludo il ritorno», romanzo cold case',
       en: '“Non escludo il ritorno”, a cold case novel',
     },
     kind: { it: 'Presentazione', en: 'Book presentation' },
@@ -48,7 +48,7 @@ export const events = [
     sort: '2024-03-23',
     year: 2024,
     dateLabel: { it: '23 marzo 2024', en: '23 March 2024' },
-    title: { it: 'Presentazione di “Non escludo il ritorno”', en: 'Presentation of “Non escludo il ritorno”' },
+    title: { it: 'Presentazione di «Non escludo il ritorno»', en: 'Presentation of “Non escludo il ritorno”' },
     kind: { it: 'Presentazione', en: 'Book presentation' },
     place: { it: 'Libreria Le Storie, Garbatella', en: 'Le Storie bookshop, Garbatella' },
     city: 'Roma',
@@ -393,7 +393,7 @@ export const events = [
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
     detail: {
       it:
-        'La cerimonia finale della seconda edizione si è svolta al Tempio di Hera di Selinunte. La presidenza della giuria è passata da Aldo Cazzullo a Concita De Gregorio; tra i giurati Franco Cardini, Neria De Giovanni, Eleonora Lombardo, Carlo Alberto Moretti, Christian Rocca e Nadia Terranova. Il premio Narrativa è andato a “La ragazzina” di Valeria Parrella, con Dario Ferrari e Monica Acito secondi. Il premio sostiene la biblioteca comunale di Niscemi, e nelle cronache della serata il nome di Claudia Origoni compare accanto a quello di Gianni Caruso e dell’organizzazione.',
+        'La cerimonia finale della seconda edizione si è svolta al Tempio di Hera di Selinunte. La presidenza della giuria è passata da Aldo Cazzullo a Concita De Gregorio; tra i giurati Franco Cardini, Neria De Giovanni, Eleonora Lombardo, Carlo Alberto Moretti, Christian Rocca e Nadia Terranova. Il premio Narrativa è andato a «La ragazzina» di Valeria Parrella, con Dario Ferrari e Monica Acito secondi. Il premio sostiene la biblioteca comunale di Niscemi, e nelle cronache della serata il nome di Claudia Origoni compare accanto a quello di Gianni Caruso e dell’organizzazione.',
       en:
         'The final ceremony of the second edition took place at the Temple of Hera in Selinunte. The jury presidency passed from Aldo Cazzullo to Concita De Gregorio; among the jurors Franco Cardini, Neria De Giovanni, Eleonora Lombardo, Carlo Alberto Moretti, Christian Rocca and Nadia Terranova. The Narrative award went to “La ragazzina” by Valeria Parrella, with Dario Ferrari and Monica Acito as runners-up. The prize supports the municipal library of Niscemi, and the reports of the evening place Claudia Origoni’s name beside Gianni Caruso’s and the organisation’s.',
     },
