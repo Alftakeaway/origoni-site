@@ -17,14 +17,16 @@ export default function About() {
               src={portrait.src}
               alt={tr(portrait.alt)}
               loading="lazy"
-              className="mx-auto block w-full max-w-[420px] rounded-xl shadow-card"
+              width={portrait.width}
+              height={portrait.height}
+              className="mx-auto block h-auto w-full max-w-[420px] rounded-xl shadow-card"
             />
             <figcaption className="mt-2 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
               {tr(portrait.credit)}
             </figcaption>
           </figure>
           <p className="eyebrow mb-4 mt-10">{t('about.eyebrow')}</p>
-          <h2 className="font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <h2 className="text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
             {t('about.heading')}
           </h2>
           <figure className="mt-8 border-l-2 border-gold pl-5">
@@ -60,12 +62,16 @@ export default function About() {
                 <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-5">
                   {cited.map((w) => (
                     <li key={w.id}>
-                      <img
-                        src={w.cover}
-                        alt={tr(w.title)}
-                        loading="lazy"
-                        className="max-h-32 w-auto shadow-card"
-                      />
+                      {/* La casella alta quanto le copertine tiene il posto: senza,
+                          la fila si ricompone ogni volta che ne arriva una. */}
+                      <div className="flex h-32 items-center">
+                        <img
+                          src={w.cover}
+                          alt={tr(w.title)}
+                          loading="lazy"
+                          className="h-full w-auto shadow-card"
+                        />
+                      </div>
                       <p className="mt-2 font-sans text-[10px] uppercase tracking-widest text-ink-muted">
                         {w.year}
                       </p>

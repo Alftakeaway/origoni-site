@@ -50,7 +50,7 @@ export default function Journal() {
         <Reveal>
           <p className="eyebrow mb-4">{t('journal.eyebrow')}</p>
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <h2 className="max-w-xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+            <h2 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
               {t('journal.heading')}
             </h2>
             {/* Category filter */}
@@ -135,7 +135,7 @@ export default function Journal() {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold leading-snug text-ink transition-colors duration-300 group-hover:text-gold-dark">
+                  <h3 className="text-balance font-display text-xl font-semibold leading-snug text-ink transition-colors duration-300 group-hover:text-gold-dark">
                     {tr(p.title)}
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">

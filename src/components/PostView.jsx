@@ -65,7 +65,7 @@ export default function PostView({ post, onClose }) {
           className="mx-auto max-w-2xl px-6"
         >
           <p className="eyebrow mb-4">{cats[post.category]}</p>
-          <h1 className="font-display text-4xl font-semibold leading-[1.15] text-ink md:text-5xl">
+          <h1 className="text-balance font-display text-4xl font-semibold leading-[1.15] text-ink md:text-5xl">
             {tr(post.title)}
           </h1>
           <div className="mt-5 flex items-center gap-4 font-sans text-xs uppercase tracking-widest text-ink-muted">

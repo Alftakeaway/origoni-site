@@ -16,7 +16,7 @@ export default function Flashes() {
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
           <p className="eyebrow mb-3">{t('flashes.eyebrow')}</p>
-          <h2 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+          <h2 className="text-balance font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
             {t('flashes.heading')}
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-muted">

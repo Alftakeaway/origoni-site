@@ -59,7 +59,7 @@ export default function WorkModal({ work, onClose }) {
               {work.year && <> &middot; {work.year}</>}
             </p>
             {work.draft && <DraftBadge className="mb-4" />}
-            <h3 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
+            <h3 className="text-balance font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
               {tr(work.title)}
             </h3>
             {work.subtitle && (

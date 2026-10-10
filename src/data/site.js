@@ -21,6 +21,10 @@ export const pressKit = {
 // quindi il credito resta quello dell'archivio e non un nome inventato.
 export const portrait = {
   src: '/foto/autrice-ritratto.jpg',
+  // I pixel veri del file: servono al browser per tenere il posto giusto prima
+  // che la fotografia arrivi, così la colonna non salta quando si carica.
+  width: 677,
+  height: 792,
   alt: {
     it: 'Claudia Origoni, mezzo busto con una giacca rossa su fondo neutro',
     en: 'Claudia Origoni, head and shoulders in a red jacket against a plain ground',

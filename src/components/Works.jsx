@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen } from 'lucide-react'
 import { works } from '../data/works'
@@ -8,16 +8,64 @@ import DraftBadge from './DraftBadge'
 import Reveal from './Reveal'
 import WorkModal from './WorkModal'
 
+// L'indirizzo di una scheda: `#opera/echi`. I dati strutturati che escono dalla
+// build promettono questi indirizzi, quindi devono aprirsi davvero.
+const hashOf = (id) => `#opera/${id}`
+const idFromHash = (hash) => (hash?.startsWith('#opera/') ? decodeURIComponent(hash.slice(7)) : null)
+const byId = (id) => works.find((w) => w.id === id) ?? null
+
 export default function Works() {
   const [active, setActive] = useState(null)
+  const pushed = useRef(false)
   const { t, tr } = useLang()
+
+  useEffect(() => {
+    const id = idFromHash(window.location.hash)
+    if (!id) return
+    const w = byId(id)
+    if (!w) return
+    // La pagina arriva da un link esterno: la scheda si apre sopra le opere,
+    // e lo scorrimento porta lì sotto, non in cima.
+    document.getElementById('works')?.scrollIntoView({ behavior: 'instant', block: 'start' })
+    setActive(w)
+  }, [])
+
+  useEffect(() => {
+    // Il tasto Indietro del browser deve chiudere la scheda, non scappare via.
+    const onPop = () => {
+      pushed.current = false
+      setActive(byId(idFromHash(window.location.hash)))
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  const open = (w) => {
+    setActive(w)
+    window.history.pushState({ opera: w.id }, '', hashOf(w.id))
+    pushed.current = true
+  }
+
+  const close = () => {
+    setActive(null)
+    if (pushed.current) {
+      pushed.current = false
+      window.history.back()
+      return
+    }
+    // Aperta dall'indirizzo altrui: chiudendola l'indirizzo non deve restare
+    // a metà, altrimenti un ricaricamento riapre la scheda da sola.
+    if (idFromHash(window.location.hash)) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search)
+    }
+  }
 
   return (
     <section id="works" className="relative py-28 md:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="eyebrow mb-4">{t('works.eyebrow')}</p>
-          <h2 className="max-w-2xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <h2 className="max-w-2xl text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
             {t('works.heading')}
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
@@ -40,10 +88,10 @@ export default function Works() {
             <Reveal key={w.id} delay={(i % 2) * 0.1}>
               <motion.button
                 data-hoverable
-                onClick={() => setActive(w)}
+                onClick={() => open(w)}
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-                className="group flex h-64 w-full cursor-pointer overflow-hidden rounded-xl border border-ink/8 bg-white/70 text-left shadow-card transition-shadow duration-500 hover:shadow-book-hover"
+                className="group flex min-h-64 w-full cursor-pointer overflow-hidden rounded-xl border border-ink/8 bg-white/70 text-left shadow-card transition-shadow duration-500 hover:shadow-book-hover"
                 aria-label={tr(w.title)}
               >
                 <div className="h-full w-36 shrink-0 overflow-hidden border-r border-ink/5 sm:w-40">
@@ -57,7 +105,7 @@ export default function Works() {
                     {w.draft && <DraftBadge />}
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl font-semibold leading-tight text-ink transition-colors duration-300 group-hover:text-gold-dark">
+                    <h3 className="text-balance font-display text-2xl font-semibold leading-tight text-ink transition-colors duration-300 group-hover:text-gold-dark">
                       {tr(w.title)}
                     </h3>
                     <p className="mt-1.5 font-sans text-xs uppercase tracking-widest text-ink-muted">
@@ -75,7 +123,7 @@ export default function Works() {
       </div>
 
       <AnimatePresence>
-        {active && <WorkModal work={active} onClose={() => setActive(null)} />}
+        {active && <WorkModal work={active} onClose={close} />}
       </AnimatePresence>
     </section>
   )

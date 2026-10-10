@@ -8,7 +8,8 @@ every text field in the data files is `{ it, en }`, Italian before English.
 
 - **Vite 5 + React 18** (lightweight build, no SSR needed for a portfolio)
 - **Tailwind CSS v3** with a custom literary theme (paper / ink / gold / sage palette,
-  Cormorant Garamond + Playfair Display + Plus Jakarta Sans). Held at v3 on purpose, see
+  Cormorant Garamond + Playfair Display + Plus Jakarta Sans, self-hosted as five latin-subset
+  woff2 files: no request leaves the origin for a typeface). Held at v3 on purpose, see
   [docs/adr/0004](docs/adr/0004-tailwind-3-niente-v4.md).
 - **Framer Motion** for physics-based scroll reveals, modals, and page-level transitions
 - **Lucide React** for icons
@@ -26,8 +27,9 @@ and the card credits as a source.
   follow deploys, so one entry is one push to `main`.
 - [GLOSSARY.md](GLOSSARY.md): how titles, sections and the award are written. A title is
   quoted as it is printed, never shortened.
-- `docs/adr/`: five decisions. Italian as the primary language, the mandatory BOZZA badge,
-  the form without a backend, Tailwind 3, and no long dash in Italian prose.
+- `docs/adr/`: six decisions. Italian as the primary language, the mandatory BOZZA badge,
+  the form without a backend, Tailwind 3, no long dash in Italian prose, and the typefaces
+  served from our own origin.
 - `docs/corrispondenza/`: the letters to the author asking for the material still missing,
   in the version cleared for a public repository.
 
@@ -54,7 +56,9 @@ RSS» link: the site advertises a subscription only once there is something to r
 ```bash
 npm install
 npm run dev      # http://localhost:5173
-npm run build    # dist/, then dist/feed.xml from scripts/build-feed.mjs
+npm run validate # scripts/validate-data.mjs alone, without building
+npm run check-links # every remote address, file and in-page anchor the data cites
+npm run build    # validate, dist/, the JSON-LD block, then dist/feed.xml
 npm run preview  # serve the production bundle
 npm run press-kit  # public/press/press-kit-claudia-origoni.pdf, from the same data
 ```
@@ -86,10 +90,23 @@ src/
                            # ReadingControls, Events, About, Shelf, Contact, Flashes,
                            # Footer, Cursor, DraftBadge, Reveal
   utils/ics.js             # .ics composed at runtime as a data URI, floating time
+scripts/validate-data.mjs  # Fails the build: both languages, checksums, files on disk,
+                           # cover credits, https sources, and the draft badge where a
+                           # fact is missing
 scripts/build-feed.mjs     # dist/feed.xml from posts.js, minus the drafts
+scripts/build-jsonld.mjs   # schema.org Person/Book/Article/CreativeWork/Event injected
+                           # into dist/index.html, verified records only
+scripts/check-links.mjs    # Remote sources, public/ files and menu anchors. Fails only on
+                           # a domain that no longer resolves, a 404 or a 410; a 403 from
+                           # an anti-bot service is a warning, so CI stays green on other
+                           # people's policies. Six requests at a time, 15 s each
+scripts/site-url.mjs       # The one public origin shared by the two generators
 scripts/make-press-kit.mjs # public/press PDF: bio, bibliography, press, photographs
+.github/workflows/ci.yml   # validate, build, assert the JSON-LD, check the links; runs on
+                           # push to main, on every pull request, and weekly for rot
 public/
   covers/  foto/  shelf/   # Jacket images, event photographs, reading-log covers
+  fonts/                   # The five latin-subset woff2 files the page actually uses
   press/                   # The generated press kit PDF, served as it stands
   robots.txt  sitemap.xml  # Crawlers welcome, and the one page listed for them
   og.jpg                   # 1200x630 share card: the portrait and the hero's own words

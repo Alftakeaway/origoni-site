@@ -8,6 +8,68 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.3.0 - 10 ottobre 2026
+
+**Caratteri di casa, dati che non si fidano più di noi, indirizzi che aprono una scheda.**
+
+- **I dati si validano da soli.** `scripts/validate-data.mjs` gira prima della build e si ferma
+  se qualcosa non tiene: le due lingue sempre piene, nessun trattino lungo nell'italiano, gli ISBN
+  controllati sulla cifra di sicurezza (EAN-13 e modulo 11), ogni copertina col suo creditore, ogni
+  fatto con la sua fonte, ogni file citato davvero presente in `public/`, gli id non ripetuti. La
+  prima passata ha trovato quattro bugie vere: tre eventi con `wholeMonth`, cioè senza giorno
+  conosciuto, avevano un giorno inventato nel campo tecnico `sort`. Ora chiudono con `-00`, che è
+  il modo onesto di scrivere che non si sa.
+- **I caratteri restano in casa.** Il foglio di Google Fonts dichiarava ventuno facce su due
+  connessioni a un dominio terzo; ora `public/fonts/` ne contiene cinque, nel solo subset latin,
+  per 139 KB dal nostro dominio (vedi `docs/adr/0006-caratteri-self-host.md`). Tre sono in preload
+  perché stanno nella parte di pagina che si vede senza scorrere. La sonda di rete conferma che
+  nessuna richiesta esce dall'origine e che le famiglie effettive sono quelle giuste: Playfair 600
+  nei titoli, Cormorant corsivo 400 nelle righe citate, Jakarta 400 nel corpo.
+- **Le immagini pesano meno e non si spostano.** Quattro fotografie di eventi e una copertina
+  ricompresse: 861 KB in 491, a 780 px di larghezza, che è il doppio di quanto la card mostra.
+  Il ritratto porta `width` e `height` veri (677 × 792) e la fila delle copertine citate sta in
+  una casella alta 128 px, così niente si ricompone quando arriva un file. Controle anche che
+  nessuno dei venticinque file pubblici porti EXIF o coordinate: un repository pubblico non è il
+  posto dove l'indirizzo di casa finisce nei metadati.
+- **I dati strutturati dicono il vero.** `scripts/build-jsonld.mjs` scrive nella pagina costruita
+  venti nodi schema.org: un `Person`, quattro `Book`, un `Article`, sei `CreativeWork`, otto
+  `Event`. Entrano solo le voci senza marca di bozza, niente `birthDate` e niente `alumniOf`, e i
+  titoli stanno come sono stampati: il sottotitolo non viene accodato, perché in alcuni casi è la
+  riga del contenitore, non una parte del nome.
+- **Una scheda ha un indirizzo.** `#opera/echi` apre davvero quella scheda, con le opere sotto e
+  non la pagina in cima; il tasto Indietro la chiude e, se la si apre col pulsante, chiudendola
+  l'indirizzo si pulisce. Sono gli stessi `@id` che il JSON-LD promette, quindi un link condiviso e
+  un dato per il motore di ricerca dicono la stessa cosa.
+- **I titoli si bilanciano da soli.** `text-wrap: balance` sui nove titoli di sezione, sull'h1
+  della lettura, sulla testata della scheda opera e sui quattro tipi di card. A 390 px
+  «Il secolo lungo di «Pachinko» di Min Jin Lee» fa tre righe da 237, 233 e 227 px invece di
+  lasciare «Lee» tutta sola; «Non escludo il ritorno» passa da 152 e 70 a 135 e 100.
+- **La card dell'Ancella non taglia più niente.** Con il titolo verbatim di sei righe l'altezza
+  fissa nascondeva l'editore e il link: `h-64` diventa `min-h-64`, il pavimento resta e la card
+  cresce quando il nome del libro lo chiede.
+- **La CI prova i legami.** `.github/workflows/ci.yml` valida, costruisce, controlla che i dati
+  strutturati siano nella pagina e passa i collegamenti al setaccio ogni lunedì, anche quando
+  nessuno tocca il codice. `scripts/check-links.mjs` fallisce solo per i rotti certi; un 403
+  dell'anti-bot è un avviso.
+
+- **Che cosa non è stato fatto, e perché.** Vitest sui dati: il validatore fa quel lavoro meglio
+  di un test unitario, e due strumenti che dicono la stessa cosa divergono. Playwright: le sonde
+  sul protocollo DevTools provano lo stesso comportamento in due secondi. `:has()` per gli stati
+  delle card: in questa marcatura non c'è un caso che non risolva un selettore figlio, e
+  aggiungere un pseudo-classe per tre selettori non li rende più onesti. La modalità scura: la
+  carta è l'identità del sito, non un tema. I pulsanti «Acquista» e la ricerca sul giornale:
+  vorrebbero dati che non ci sono, e sei articoli su sei sono bozze. Le pagine con un URL proprio,
+  il prerender, l'inglese su `/en/` e la mappa del sito più larga restano in attesa del dominio,
+  perché hanno un indirizzo da promettere.
+
+- **Prova.** `npm run validate` passa con 19 opere, 14 eventi, 6 articoli, 5 libri, 1 appunto e
+  17 fonti; `npm run check-links` dà 29 indirizzi esterni, 1 file e 6 àncore interne, nessuno
+  rotto e sei avvisi (403, 401 e un 504 da servizi anti-bot). Le sonde: cinque file di caratteri
+  caricati e nessun dominio terzo, sette casi di link profondo chiusi bene, ventitré titoli
+  bilanciati misurati a 390 px. Dodici scatti a 1440 e sei a 390, in italiano e in inglese:
+  l'inglese mobile passa dal menu, dove sta l'interruttore, e la prova è nell'attributo `lang`
+  della pagina oltre che nel testo. I due gate dell'italiano sono puliti.
+
 ## 1.2.8 - 9 ottobre 2026
 
 **Correzione: i bersagli piccoli, dove il dito non arriva.**

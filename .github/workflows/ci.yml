@@ -1,0 +1,39 @@
+name: build
+
+# Ad ogni push su main, per ogni pull request e ogni lunedì alle 7:30.
+# I dati si validano da soli, la build li mette in pagina, i collegamenti si
+# provano contro i siti veri: un 404 di un giornale è un fatto da sapere, un
+# 403 dell'anti-bot è un avviso che non ferma nessuna correzione di bozze.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Le fonti tolgono gli articoli: il controllo dei collegamenti torna
+    # anche quando nessuno tocca il codice.
+    - cron: '30 7 * * 1'
+
+jobs:
+  sito:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Valida i dati
+        run: npm run validate
+
+      - name: Costruisci
+        run: npm run build
+
+      - name: I dati strutturati stanno nella pagina costruita
+        run: grep -q 'application/ld+json' dist/index.html
+
+      - name: Prova i collegamenti
+        run: npm run check-links

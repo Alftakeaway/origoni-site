@@ -9,6 +9,8 @@
 // cartaceo o una fotografia dell'archivio dell'autrice.
 // `wholeMonth: true` dice che il giorno non è noto: la data serve solo
 // all'ordinamento e il calendario .ics non viene offerto, per non mentire.
+// In quel caso la `sort` chiude con -00 al posto del giorno: un numero che non
+// si conosce non si scrive, nemmeno dove nessuno lo legge.
 // `sort: '0000-00-00'` marca le voci senza data, che finiscono in fondo.
 //
 // { id, sort, time?, wholeMonth?, year?, dateLabel: { it, en },
@@ -68,7 +70,7 @@ export const events = [
   },
   {
     id: 'salone-2024-torino',
-    sort: '2024-05-18',
+    sort: '2024-05-00',
     wholeMonth: true,
     year: 2024,
     dateLabel: { it: 'maggio 2024', en: 'May 2024' },
@@ -125,7 +127,7 @@ export const events = [
   },
   {
     id: 'roma-trastevere-2024',
-    sort: '2024-10-15',
+    sort: '2024-10-00',
     wholeMonth: true,
     year: 2024,
     dateLabel: { it: 'ottobre 2024', en: 'October 2024' },
@@ -217,7 +219,7 @@ export const events = [
   },
   {
     id: 'salone-2026',
-    sort: '2026-05-16',
+    sort: '2026-05-00',
     wholeMonth: true,
     year: 2026,
     dateLabel: { it: 'maggio 2026', en: 'May 2026' },
@@ -300,7 +302,7 @@ export const events = [
   },
   {
     id: 'salone-2025-premio',
-    sort: '2025-05-18',
+    sort: '2025-05-00',
     wholeMonth: true,
     year: 2025,
     dateLabel: { it: 'maggio 2025', en: 'May 2025' },

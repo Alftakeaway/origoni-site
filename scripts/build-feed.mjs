@@ -6,8 +6,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { posts } from '../src/data/posts.js'
-
-const SITE = 'https://origoni-site.vercel.app'
+import { SITE } from './site-url.mjs'
 const enc = (s) =>
   String(s ?? '')
     .replace(/&/g, '&amp;')

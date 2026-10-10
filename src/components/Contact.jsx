@@ -46,7 +46,7 @@ export default function Contact() {
         {/* Left: pitch */}
         <Reveal>
           <p className="eyebrow mb-4 text-gold-light">{t('contact.eyebrow')}</p>
-          <h2 className="font-display text-4xl font-semibold leading-tight md:text-5xl">
+          <h2 className="text-balance font-display text-4xl font-semibold leading-tight md:text-5xl">
             {t('contact.headingA')}
             <br />{' '}
             <span className="italic text-gold-light">{t('contact.headingB')}</span>

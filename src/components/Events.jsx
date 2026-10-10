@@ -16,7 +16,7 @@ export default function Events() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <p className="eyebrow mb-4">{t('events.eyebrow')}</p>
-          <h2 className="max-w-2xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <h2 className="max-w-2xl text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
             {t('events.heading')}
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
@@ -72,7 +72,7 @@ export default function Events() {
                   {e.draft && <DraftBadge className="ml-auto" />}
                 </div>
 
-                <h3 className="mt-3 font-display text-2xl font-semibold leading-snug text-ink">
+                <h3 className="mt-3 text-balance font-display text-2xl font-semibold leading-snug text-ink">
                   {tr(e.title)}
                 </h3>
 
