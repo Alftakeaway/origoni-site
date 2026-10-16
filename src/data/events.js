@@ -200,13 +200,13 @@ export const events = [
     year: 2025,
     dateLabel: { it: '9 maggio 2025', en: '9 May 2025' },
     title: {
-      it: 'Premio Letterario Mandrarossa, l’incontro di maggio',
-      en: 'Premio Letterario Mandrarossa, the May meeting',
+      it: 'Premio Letterario Mandrarossa: presentazione delle candidature della libreria Modus Vivendi',
+      en: 'Premio Letterario Mandrarossa: presentation of the Modus Vivendi bookshop’s nominations',
     },
-    kind: { it: 'Premio', en: 'Prize' },
+    kind: { it: 'Presentazione delle candidature', en: 'Presentation of nominations' },
+    place: { it: 'Libreria Modus Vivendi', en: 'Modus Vivendi bookshop' },
+    city: 'Palermo',
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
-    draft: true,
-    missingDetails: { it: "Luogo e nome esatto dell’incontro da confermare.", en: "Venue and exact event name awaiting confirmation." },
     photo: '/foto/premio-mandrarossa-2025.jpg',
     photoCaption: {
       it: 'Le etichette Mandrarossa sul tavolo: il premio nasce dal legame fra i vini di Settesoli e le sezioni del riconoscimento.',
@@ -214,9 +214,9 @@ export const events = [
     },
     detail: {
       it:
-        'Un ritratto firmato «Premio Letterario Mandrarossa 9 maggio 2025» la mostra a un tavolo all’aperto, con le bottiglie dell’azienda davanti. È la prova fotografica di un appuntamento che precede di poche settimane la prima premiazione di giugno, e che nessuna delle fonti finora raccolte descrive: manca il luogo, e manca il nome esatto della serata.',
+        'Il 9 maggio 2025, alla libreria Modus Vivendi di Palermo, vengono presentate le candidature della libreria al Premio Letterario Mandrarossa. Una fotografia dell’archivio dell’autrice ritrae Claudia Origoni a un tavolo all’aperto, con le bottiglie Mandrarossa davanti, durante l’incontro che precede la prima premiazione di giugno.',
       en:
-        'A portrait captioned “Premio Letterario Mandrarossa 9 May 2025” shows her at an outdoor table with the estate’s bottles in front of her. It is photographic evidence of an appointment that comes a few weeks before the first award ceremony in June, and that none of the sources gathered so far describes: the place is missing, and so is the exact name of the evening.',
+        'On 9 May 2025, the Modus Vivendi bookshop in Palermo presents its nominations for the Premio Letterario Mandrarossa. A photograph from the author’s archive shows Claudia Origoni at an outdoor table with Mandrarossa bottles in front of her, during the meeting preceding the first award ceremony in June.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
