@@ -303,10 +303,9 @@ export const events = [
   },
   {
     id: 'salone-2025-premio',
-    sort: '2025-05-00',
-    wholeMonth: true,
+    sort: '2025-05-16',
     year: 2025,
-    dateLabel: { it: 'maggio 2025', en: 'May 2025' },
+    dateLabel: { it: '16 maggio 2025', en: '16 May 2025' },
     title: { it: 'Il Premio Mandrarossa al Salone del Libro', en: 'The Premio Mandrarossa at the Salone del Libro' },
     kind: { it: 'Incontro', en: 'Panel' },
     place: { it: 'Stand della Sicilia al Salone del Libro', en: 'Salone Internazionale del Libro, Turin — Sicilian pavilion' },
@@ -318,8 +317,6 @@ export const events = [
       en:
         'Presentation of the prize to the Salone del Libro audience: the coverage places her at the panel table as director of the prize, among the festivals and literary prizes of Sicily.',
     },
-    draft: true,
-    missingDetails: { it: "Giorno preciso dell’incontro da confermare.", en: "Exact event day awaiting confirmation." },
     sources: [
       {
         label: { it: 'Welcome Network, festival e premi in Sicilia al Salone 2025', en: 'Welcome Network, Sicilian festivals and prizes at the 2025 Salone' },
