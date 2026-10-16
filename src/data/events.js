@@ -252,8 +252,9 @@ export const events = [
   },
   {
     id: 'palermo-presentazione',
-    sort: '0000-00-00',
-    dateLabel: { it: 'senza data', en: 'undated' },
+    sort: '2024-02-25',
+    year: 2024,
+    dateLabel: { it: '25 febbraio 2024', en: '25 February 2024' },
     title: {
       it: 'Presentazione a Palermo, a Palazzo del Poeta',
       en: 'Presentation in Palermo, at Palazzo del Poeta',
@@ -262,19 +263,17 @@ export const events = [
     place: { it: 'Palazzo del Poeta', en: 'Palazzo del Poeta' },
     city: 'Palermo',
     role: { it: 'Autrice', en: 'Author' },
-    draft: true,
-    missingDetails: { it: "Data e anno dell’incontro da confermare.", en: "Event date and year awaiting confirmation." },
     photo: '/foto/palermo-presentazione.jpg',
     photoCaption: {
       it:
-        'Tre donne sotto le volte di pietra, il romanzo in mano e una borsa dell’editore: la data dell’incontro non è scritta da nessuna parte.',
-      en: 'Three women under stone vaults, the novel in hand and a bag from the publisher: the date of the meeting is written nowhere.',
+        'La presentazione a Palazzo del Poeta, Palermo, il 25 febbraio 2024: l’autrice con due interlocutrici, il romanzo in mano e una borsa dell’editore.',
+      en: 'The presentation at Palazzo del Poeta, Palermo, on 25 February 2024: the author with two interlocutors, the novel in hand and a bag from the publisher.',
     },
     detail: {
       it:
-        'Una fotografia d’archivio documenta una presentazione palermitana del romanzo: l’autrice fra due interlocutrici, il volume esposto, una borsa con il marchio Nemapress. La scheda promozionale dell’editore, che accompagna il libro con il ritratto dell’autrice e una sua frase sul romanzo, colloca l’incontro a «Palazzo del Poeta, Palermo»; né quella scheda né altre fonti danno l’anno, e la voce resta bozza e in fondo alla timeline finché la data non arriva.',
+        'Il 25 febbraio 2024, a Palazzo del Poeta a Palermo, Claudia Origoni presenta il romanzo. Una fotografia d’archivio la ritrae fra due interlocutrici, con il volume esposto e una borsa con il marchio Nemapress. La scheda promozionale dell’editore colloca l’incontro a Palazzo del Poeta.',
       en:
-        'An archive photograph documents a Palermitan presentation of the novel: the author between two interlocutors, the volume on show, a bag carrying the Nemapress mark. The publisher’s card that accompanies the book places the meeting at “Palazzo del Poeta, Palermo”, but neither that card nor other sources give the year: the entry stays a draft, and at the bottom of the timeline, until the date arrives.',
+        'On 25 February 2024, Claudia Origoni presents the novel at Palazzo del Poeta in Palermo. An archive photograph shows her between two interlocutors, with the volume on display and a bag carrying the Nemapress mark. The publisher’s promotional card places the meeting at Palazzo del Poeta.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
