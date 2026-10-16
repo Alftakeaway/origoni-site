@@ -222,20 +222,17 @@ export const events = [
   },
   {
     id: 'salone-2026',
-    sort: '2026-05-00',
-    wholeMonth: true,
+    sort: '2026-05-16',
     year: 2026,
-    dateLabel: { it: 'maggio 2026', en: 'May 2026' },
+    dateLabel: { it: '16 maggio 2026', en: '16 May 2026' },
     title: {
-      it: 'Conferenza stampa al Salone del Libro',
-      en: 'Press conference at the Salone del Libro',
+      it: 'Presentazione della seconda edizione del Premio Letterario Mandrarossa',
+      en: 'Presentation of the second edition of the Premio Letterario Mandrarossa',
     },
     kind: { it: 'Conferenza stampa', en: 'Press conference' },
     place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
     city: 'Torino',
     role: { it: 'Responsabile del Premio Mandrarossa', en: 'Director of the Premio Mandrarossa' },
-    draft: true,
-    missingDetails: { it: "Giorno e titolo esatto dell’incontro da confermare.", en: "Day and exact event title awaiting confirmation." },
     photo: '/foto/salone-2026-conferenza.jpg',
     photoCaption: {
       it:
@@ -244,9 +241,9 @@ export const events = [
     },
     detail: {
       it:
-        'Una fotografia dell’archivio dell’autrice la ritrae a un tavolo del Salone del Libro 2026, allestito sotto lo striscione della Regione Siciliana, Assessorato dei Beni Culturali e dell’Identità Siciliana; il file reca l’etichetta «Mandrarossa» e la data dell’edizione. Sul tavolo le targhe pieghevoli recano tre nomi, quello dell’autrice con la qualifica di responsabile del premio, quello di Concita De Gregorio come presidente e quello di Melania Petriello come giornalista. Il giorno preciso e il titolo esatto dell’incontro non risultano da nessuna cronaca, quindi la voce resta bozza. Il programma ufficiale del Salone colloca allo Spazio Sicilia, il 17 maggio 2026, l’incontro «Da Niscemi alle biblioteche di Sicilia. Gli Olmi»: che sia lo stesso appuntamento di questo tavolo o un altro della stessa rassegna, la fotografia non lo dice.',
+        'Il 16 maggio 2026 viene presentata ufficialmente la seconda edizione del Premio Letterario Mandrarossa, «La Sicilia che non ti aspetti», al Salone del Libro di Torino. Una fotografia dell’archivio dell’autrice documenta il tavolo sotto lo striscione della Regione Siciliana, Assessorato dei Beni Culturali e dell’Identità Siciliana. Le targhe riportano Claudia Origoni come responsabile del premio, Concita De Gregorio come presidente e Melania Petriello come giornalista.',
       en:
-        'A photograph from the author’s archive shows her at a table of the 2026 Salone del Libro, set up beneath the Regione Siciliana banner, Department of Cultural Heritage and Sicilian Identity; the file carries the “Mandrarossa” label and the date of the edition. On the table, three folded name cards give three names: the author’s with the qualification of director of the prize, Concita De Gregorio’s as president, and Melania Petriello’s as journalist. The exact day and the precise title of the event appear in no report, so the entry stays a draft. The fair’s official programme places the meeting “Da Niscemi alle biblioteche di Sicilia. Gli Olmi” at the Spazio Sicilia on 17 May 2026: whether it is this same table or another appointment of the same programme, the photograph does not say.',
+        'The second edition of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, is officially presented on 16 May 2026 at the Turin Book Fair. A photograph from the author’s archive documents the table beneath the Regione Siciliana banner, Department of Cultural Heritage and Sicilian Identity. The name cards identify Claudia Origoni as director of the prize, Concita De Gregorio as president and Melania Petriello as journalist.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
