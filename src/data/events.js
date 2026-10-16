@@ -226,8 +226,8 @@ export const events = [
     year: 2026,
     dateLabel: { it: '16 maggio 2026', en: '16 May 2026' },
     title: {
-      it: 'Presentazione della seconda edizione del Premio Letterario Mandrarossa',
-      en: 'Presentation of the second edition of the Premio Letterario Mandrarossa',
+      it: 'Conferenza stampa del Premio con presentazione dei candidati finalisti',
+      en: 'Prize press conference and presentation of the shortlisted candidates',
     },
     kind: { it: 'Conferenza stampa', en: 'Press conference' },
     place: { it: 'Salone Internazionale del Libro', en: 'Salone Internazionale del Libro' },
@@ -241,9 +241,9 @@ export const events = [
     },
     detail: {
       it:
-        'Il 16 maggio 2026 viene presentata ufficialmente la seconda edizione del Premio Letterario Mandrarossa, «La Sicilia che non ti aspetti», al Salone del Libro di Torino. Una fotografia dell’archivio dell’autrice documenta il tavolo sotto lo striscione della Regione Siciliana, Assessorato dei Beni Culturali e dell’Identità Siciliana. Le targhe riportano Claudia Origoni come responsabile del premio, Concita De Gregorio come presidente e Melania Petriello come giornalista.',
+        'Il 16 maggio 2026, al Salone del Libro di Torino, si tiene la conferenza stampa del Premio Letterario Mandrarossa, «La Sicilia che non ti aspetti», con la presentazione dei candidati finalisti della seconda edizione. Una fotografia dell’archivio dell’autrice documenta il tavolo sotto lo striscione della Regione Siciliana, Assessorato dei Beni Culturali e dell’Identità Siciliana. Le targhe riportano Claudia Origoni come responsabile del premio, Concita De Gregorio come presidente e Melania Petriello come giornalista.',
       en:
-        'The second edition of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, is officially presented on 16 May 2026 at the Turin Book Fair. A photograph from the author’s archive documents the table beneath the Regione Siciliana banner, Department of Cultural Heritage and Sicilian Identity. The name cards identify Claudia Origoni as director of the prize, Concita De Gregorio as president and Melania Petriello as journalist.',
+        'On 16 May 2026, the Turin Book Fair hosts the press conference of the Premio Letterario Mandrarossa, “La Sicilia che non ti aspetti”, with the presentation of the shortlisted candidates for its second edition. A photograph from the author’s archive documents the table beneath the Regione Siciliana banner, Department of Cultural Heritage and Sicilian Identity. The name cards identify Claudia Origoni as director of the prize, Concita De Gregorio as president and Melania Petriello as journalist.',
     },
     sources: [{ label: { it: 'Fotografia dell’autrice, archivio privato', en: 'Photograph by the author, private archive' } }],
   },
