@@ -496,32 +496,35 @@ export const works = [
       en: 'Il miraggio del futuro fra Covid e Fata Morgana',
     },
     subtitle: {
-      it: 'Antologia a cura di Antonella Pellettieri, collana MenSALe',
-      en: 'An anthology edited by Antonella Pellettieri, MenSALe series',
+      it: 'Antologia a cura di Antonella Pellettieri, collana MenSALe, Documenta et Monumenta, 10',
+      en: 'An anthology edited by Antonella Pellettieri, MenSALe series, Documenta et Monumenta, 10',
     },
     type: { it: 'Testo in antologia', en: 'Text in an anthology' },
     publisher: 'Zaccara',
+    year: 2023,
+    cover: '/covers/il-miraggio-del-futuro.png',
+    coverCredit: 'fotografia fornita per il sito',
     tone: 'terracotta',
     draft: true,
-    missingDetails: { it: "Anno di pubblicazione, titolo e pagine del contributo da confermare.", en: "Publication year, contribution title and pages awaiting confirmation." },
+    missingDetails: { it: 'Titolo e pagine del contributo di Claudia Origoni non disponibili.', en: 'The title and pages of Claudia Origoni’s contribution are not available.' },
     synopsis: {
       it:
-        'Il volume è fra le carte che l’autrice ha fotografato e fra le pubblicazioni che elenca nel proprio profilo professionale. Che cosa contenga di suo, e a quale pagina, resta da scrivere: la scheda si ferma qui e aspetta.',
+        'Curata da Antonella Pellettieri e pubblicata da Zaccara nel 2023, l’antologia raccoglie le testimonianze di 23 autori, tra cui Claudia Origoni, sulle trasformazioni individuali e collettive lasciate dalla pandemia. Il miraggio di Fata Morgana accompagna una riflessione sul futuro, sulle relazioni, sulla cultura e sulla speranza di un mondo capace di condivisione e di pace.',
       en:
-        'The volume is among the papers the author photographed and among the publications she lists in her professional profile. What her own contribution contains, and on which page, is still to be written: the entry stops here and waits.',
+        'Edited by Antonella Pellettieri and published by Zaccara in 2023, the anthology brings together reflections by 23 authors, including Claudia Origoni, on the individual and collective changes left by the pandemic. The mirage of Fata Morgana frames a reflection on the future, relationships, culture and the hope for a world shaped by sharing and peace.',
     },
     notes: [
       {
         it:
-          'La copertina fotografata dall’autrice reca il titolo, la cura di Antonella Pellettieri e la collana MenSALe. L’elenco dei contributori che circola in rete non la nomina, e la voce si tiene sulla parola dell’autrice, che lo comprende fra le sue pubblicazioni.',
+          'La recensione fornita per il sito elenca Claudia Origoni fra i 23 autori dell’antologia. Il titolo e le pagine del suo contributo non sono indicati nel materiale disponibile.',
         en:
-          'The cover photographed by the author carries the title, Antonella Pellettieri’s editorship and the MenSALe series. The list of contributors circulating online does not name her, and the entry rests on the author’s own word, which counts the volume among her publications.',
+          'The review supplied for the website lists Claudia Origoni among the anthology’s 23 authors. The available material does not specify the title or pages of her contribution.',
       },
       {
         it:
-          'Nel profilo professionale l’antologia è ricordata come pubblicazione del Consiglio Nazionale delle Ricerche; la copertina porta il nome dell’editore e della collana. Le due indicazioni stanno nella scheda senza che una escluda l’altra.',
+          'La copertina fornita riporta la curatela di Antonella Pellettieri e il numero 10 della collana MenSALe, Documenta et Monumenta. La recensione indica Zaccara come editore e il 2023 come anno di pubblicazione.',
         en:
-          'In the professional profile the anthology is remembered as a publication of the Consiglio Nazionale delle Ricerche; the cover carries the publisher’s name and the series. Both statements stand in the entry, and neither cancels the other.',
+          'The supplied cover identifies Antonella Pellettieri as editor and the volume as number 10 in the MenSALe, Documenta et Monumenta series. The review identifies Zaccara as publisher and 2023 as the publication year.',
       },
     ],
   },
