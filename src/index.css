@@ -121,3 +121,9 @@
 
 /* Le regole dell'alto contrasto stanno in src/contrast.css: importato dopo
    questo foglio, così Tailwind non tocca i selettori grezzi. */
+
+/* Keyboard navigation clears the fixed header. */
+:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+:focus, section[id] { scroll-margin-top: 7rem; }
+.skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: 1rem; background: #1a1a1a; color: #fdfbf7; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }

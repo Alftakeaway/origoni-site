@@ -56,7 +56,7 @@ export default function BookCover({ work, large = false, pane = false }) {
       <div className={`flex h-full w-full items-center justify-center ${tone.shell}`}>
         <img
           src={work.cover}
-          alt={tr(work.title)}
+          alt={pane ? '' : tr(work.title)}
           loading="lazy"
           className={
             pane

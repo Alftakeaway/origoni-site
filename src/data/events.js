@@ -83,6 +83,7 @@ export const events = [
     city: 'Torino',
     role: { it: 'Autrice', en: 'Author' },
     draft: true,
+    missingDetails: { it: "Giorno, stand e forma dell’incontro da confermare.", en: "Day, stand and event format awaiting confirmation." },
     photo: '/foto/torino-salone-2024.jpg',
     photoCaption: {
       it: 'L’autrice mostra il romanzo sugli scaffali di una libreria al Salone.',
@@ -140,6 +141,7 @@ export const events = [
     city: 'Roma',
     role: { it: 'Autrice', en: 'Author' },
     draft: true,
+    missingDetails: { it: "Giorno, locale e partecipanti da confermare.", en: "Day, venue and participants awaiting confirmation." },
     photo: '/foto/roma-trastevere-2024.jpg',
     photoCaption: {
       it: 'Un tavolo, il romanzo chiuso davanti a lei, la sera dell’incontro.',
@@ -204,6 +206,7 @@ export const events = [
     kind: { it: 'Premio', en: 'Prize' },
     role: { it: 'Fondatrice e responsabile del premio', en: 'Founder and director of the prize' },
     draft: true,
+    missingDetails: { it: "Luogo e nome esatto dell’incontro da confermare.", en: "Venue and exact event name awaiting confirmation." },
     photo: '/foto/premio-mandrarossa-2025.jpg',
     photoCaption: {
       it: 'Le etichette Mandrarossa sul tavolo: il premio nasce dal legame fra i vini di Settesoli e le sezioni del riconoscimento.',
@@ -232,6 +235,7 @@ export const events = [
     city: 'Torino',
     role: { it: 'Responsabile del Premio Mandrarossa', en: 'Director of the Premio Mandrarossa' },
     draft: true,
+    missingDetails: { it: "Giorno e titolo esatto dell’incontro da confermare.", en: "Day and exact event title awaiting confirmation." },
     photo: '/foto/salone-2026-conferenza.jpg',
     photoCaption: {
       it:
@@ -259,6 +263,7 @@ export const events = [
     city: 'Palermo',
     role: { it: 'Autrice', en: 'Author' },
     draft: true,
+    missingDetails: { it: "Data e anno dell’incontro da confermare.", en: "Event date and year awaiting confirmation." },
     photo: '/foto/palermo-presentazione.jpg',
     photoCaption: {
       it:
@@ -318,6 +323,7 @@ export const events = [
         'Presentation of the prize to the Salone del Libro audience: the coverage places her at the panel table as director of the prize, among the festivals and literary prizes of Sicily.',
     },
     draft: true,
+    missingDetails: { it: "Giorno preciso dell’incontro da confermare.", en: "Exact event day awaiting confirmation." },
     sources: [
       {
         label: { it: 'Welcome Network, festival e premi in Sicilia al Salone 2025', en: 'Welcome Network, Sicilian festivals and prizes at the 2025 Salone' },

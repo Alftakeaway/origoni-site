@@ -31,7 +31,7 @@ export const strings = {
       readMore: 'Apri la scheda',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
-        'Le schede marcate «bozza» non sono definitive: per alcune, titoli, anni e sinossi sono segnaposto decisi con l’autrice; per altre manca un dato di catalogo, e la scheda lo dice.',
+        'Le schede marcate «bozza» non sono definitive: si tratta di opere documentate per cui mancano alcuni dati di catalogo, indicati accanto a ogni titolo.',
     },
     work: {
       close: 'Chiudi la scheda',
@@ -51,8 +51,9 @@ export const strings = {
     journal: {
       eyebrow: 'Il giornale letterario',
       heading: 'Appunti dalla scrivania',
+      empty: 'Gli articoli saranno pubblicati dopo la revisione dell’autrice.',
       intro:
-        'Recensioni, saggi brevi e note di scrittura. I pezzi marcati «bozza» sono testi provvisori messi in pagina per far vedere la struttura del giornale: vanno sostituiti con gli articoli veri.',
+        'Recensioni, saggi brevi e note di scrittura dell’autrice.',
       readMin: 'min di lettura',
       readArticle: 'Leggi l’articolo',
       back: 'Torna al giornale',
@@ -111,6 +112,10 @@ export const strings = {
         'Questo scaffale è ancora vuoto: le schede arriveranno con i libri in lettura e con quelli finiti, ognuno con una riga di commento. I libri pubblicati sono nella sezione Opere.',
     },
     a11y: {
+      skip: 'Salta al contenuto',
+      backTop: 'Torna in cima',
+      openMenu: 'Apri il menu',
+      closeMenu: 'Chiudi il menu',
       open: 'Preferenze di lettura',
       title: 'Lettura',
       close: 'Chiudi le preferenze',
@@ -190,7 +195,7 @@ export const strings = {
       readMore: 'Open the entry',
       coverPlaceholder: 'Provisional cover',
       draftNote:
-        'Entries marked “draft” are not final: for some, the titles, years and synopses are placeholders agreed with the author; for others a catalogue datum is missing, and the entry says so.',
+        'Entries marked “draft” are not final: these are documented works with missing catalogue details, listed beside each title.',
     },
     work: {
       close: 'Close the entry',
@@ -210,8 +215,9 @@ export const strings = {
     journal: {
       eyebrow: 'The literary journal',
       heading: 'Notes from the desk',
+      empty: 'Articles will be published after review by the author.',
       intro:
-        'Reviews, short essays and writing notes. The pieces marked “draft” are provisional texts placed on the page to show how the journal works: they are to be replaced with the author’s real articles.',
+        'Reviews, short essays and writing notes by the author.',
       readMin: 'min read',
       readArticle: 'Read article',
       back: 'Back to journal',
@@ -270,6 +276,10 @@ export const strings = {
         'This shelf is still empty: the cards will arrive with the books in progress and the ones finished, each with a line of comment. The published books are under Works.',
     },
     a11y: {
+      skip: 'Skip to content',
+      backTop: 'Back to top',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
       open: 'Reading preferences',
       title: 'Reading',
       close: 'Close reading preferences',

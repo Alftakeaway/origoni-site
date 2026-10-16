@@ -29,7 +29,7 @@ export default function Events() {
             const place = [tr(e.place ?? ''), e.city].filter(Boolean).join(', ')
             // Il calendario si offre solo quando il giorno è documentato: senza,
             // il file .ics porterebbe in agenda una data inventata per ordinare.
-            const dated = e.sort !== '0000-00-00' && !e.wholeMonth
+            const dated = !e.draft && e.sort !== '0000-00-00' && !e.wholeMonth
             const ics = dated
               ? icsForEvent(e, {
                   title: tr(e.title),
@@ -93,6 +93,7 @@ export default function Events() {
                   </span>
                 </div>
 
+                {e.missingDetails && <p className="mt-4 rounded-lg border border-terracotta/35 bg-paper-warm p-3 text-sm text-ink-soft">{tr(e.missingDetails)}</p>}
                 <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">{tr(e.detail)}</p>
 
                 {e.photo && e.photoCaption && (

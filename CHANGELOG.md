@@ -1,3 +1,10 @@
+# Interventi P1, 16 ottobre 2026
+
+- Su approvazione dell’utente: archivio dei segnaposto fuori dal sito; dati mancanti espliciti per opere e incontri reali, senza promuoverli a verificati.
+- Contrasto di badge, categoria saggi e footer; controlli nativi del giornale, filtri con stato, salto al contenuto e nomi dei controlli tradotti.
+- Toolchain Vite aggiornata, Node 24 in CI e header di sicurezza Vercel.
+- Decisione editoriale documentata in ADR 0007; contenuti storici conservati in docs/editorial/.
+
 # Registro delle versioni
 
 Tiene il conto di che cosa è cambiato nel sito, e di dove sta la prova. Le versioni
