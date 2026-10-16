@@ -503,6 +503,7 @@ export const works = [
     publisher: 'Zaccara',
     year: 2023,
     cover: '/covers/il-miraggio-del-futuro.png',
+    coverCorrection: 'miraggio-photo',
     coverCredit: 'fotografia fornita per il sito',
     tone: 'terracotta',
     draft: true,

@@ -1,4 +1,5 @@
 import { useLang } from '../i18n/LanguageContext'
+import StraightenedCover from './StraightenedCover'
 
 // Con la copertina editoriale vera (public/covers) la si mostra per intero,
 // senza ritagli: le due più vecchie arrivano a 200 px dai cataloghi, quindi
@@ -53,7 +54,10 @@ export default function BookCover({ work, large = false, pane = false }) {
 
   if (work.cover) {
     return (
-      <div className={`flex h-full w-full items-center justify-center ${tone.shell}`}>
+      <div className={`flex h-full w-full items-center justify-center ${work.coverCorrection ? 'bg-[#070d10]' : tone.shell}`}>
+        {work.coverCorrection === 'miraggio-photo' ? (
+          <StraightenedCover src={work.cover} title={tr(work.title)} decorative={pane} />
+        ) : (
         <img
           src={work.cover}
           alt={pane ? '' : tr(work.title)}
@@ -64,6 +68,7 @@ export default function BookCover({ work, large = false, pane = false }) {
               : 'h-auto max-h-full w-auto max-w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]'
           }
         />
+        )}
       </div>
     )
   }
