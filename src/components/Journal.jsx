@@ -15,7 +15,7 @@ const hasFeedItems = posts.some((p) => !p.draft)
 // intestazione della card è tipografica, con la lettera iniziale del titolo.
 const categoryStyles = {
   reviews: 'bg-terracotta/12 text-terracotta-dark',
-  essays: 'bg-sage/15 text-sage-dark',
+  essays: 'bg-sage/15 text-ink-soft',
   notes: 'bg-gold/12 text-gold-dark',
 }
 
@@ -54,11 +54,12 @@ export default function Journal() {
               {t('journal.heading')}
             </h2>
             {/* Category filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className={posts.length ? "flex flex-wrap gap-2" : "hidden"}>
               {['all', ...categoryKeys].map((c) => (
                 <button
                   key={c}
                   onClick={() => setFilter(c)}
+                  aria-pressed={filter === c}
                   className={`rounded-full px-4 py-2 font-sans text-xs uppercase tracking-widest transition-all duration-300 ${
                     filter === c
                       ? 'bg-ink text-paper shadow-book'
@@ -71,7 +72,7 @@ export default function Journal() {
             </div>
           </div>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">
-            {t('journal.intro')}
+            {posts.length ? t('journal.intro') : t('journal.empty')}
           </p>
           {hasFeedItems && (
             <a
@@ -92,22 +93,12 @@ export default function Journal() {
               <motion.article
                 layout
                 key={p.id}
-                role="button"
-                tabIndex={0}
-                aria-label={tr(p.title)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    setActive(p)
-                  }
-                }}
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                 data-hoverable
-                onClick={() => setActive(p)}
-                className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-ink/8 bg-paper shadow-card transition-shadow duration-500 hover:shadow-book-hover"
+                className="group flex flex-col overflow-hidden rounded-xl border border-ink/8 bg-paper shadow-card transition-shadow duration-500 hover:shadow-book-hover"
               >
                 <div
                   className={`relative flex h-32 items-end overflow-hidden border-b border-ink/5 bg-gradient-to-br ${categoryWash[p.category]}`}
@@ -142,13 +133,13 @@ export default function Journal() {
                     {tr(p.excerpt)}
                   </p>
 
-                  <span className="mt-5 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-gold-dark">
+                  <button type="button" onClick={() => setActive(p)} aria-label={`${t('journal.readArticle')}: ${tr(p.title)}`} className="mt-5 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-gold-dark">
                     {t('journal.readArticle')}
                     <ArrowUpRight
                       size={14}
                       className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
-                  </span>
+                  </button>
                 </div>
               </motion.article>
             ))}

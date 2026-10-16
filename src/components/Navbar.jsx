@@ -58,7 +58,7 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'border-b border-ink/8 bg-paper/85 py-3 shadow-[0_8px_30px_-18px_rgba(26,26,26,0.35)] backdrop-blur-md'
+          ? 'border-b border-ink/8 bg-paper py-3 shadow-[0_8px_30px_-18px_rgba(26,26,26,0.35)] backdrop-blur-md'
           : 'bg-transparent py-6'
       }`}
     >
@@ -100,9 +100,10 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="text-ink md:hidden"
+          className="flex h-11 w-11 items-center justify-center text-ink md:hidden"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? t('a11y.closeMenu') : t('a11y.openMenu')}
+          aria-controls="mobile-menu"
           aria-expanded={open}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -113,6 +114,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

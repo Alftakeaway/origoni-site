@@ -83,7 +83,7 @@ export default function Works() {
             altezza diversa lasciava un vuoto irregolare in fondo alla sezione.
             La card è orizzontale perché le copertine vere sono verticali e
             piccole: in una fascia larga galleggiavano nel colore. */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {works.map((w, i) => (
             <Reveal key={w.id} delay={(i % 2) * 0.1}>
               <motion.button
@@ -92,13 +92,12 @@ export default function Works() {
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 22 }}
                 className="group flex min-h-64 w-full cursor-pointer overflow-hidden rounded-xl border border-ink/8 bg-white/70 text-left shadow-card transition-shadow duration-500 hover:shadow-book-hover"
-                aria-label={tr(w.title)}
               >
-                <div className="h-full w-36 shrink-0 overflow-hidden border-r border-ink/5 sm:w-40">
+                <div className="h-full w-24 shrink-0 overflow-hidden border-r border-ink/5 sm:w-40">
                   <BookCover work={w} pane />
                 </div>
-                <div className="flex flex-1 flex-col justify-between gap-4 p-5">
-                  <div className="flex items-start justify-between gap-3">
+                <div className="flex min-w-0 flex-1 flex-col justify-between gap-4 p-5">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
                     <span className="rounded-full bg-paper px-3 py-1 font-sans text-[10px] uppercase tracking-widest text-ink-soft">
                       {tr(w.type)}
                     </span>
@@ -108,6 +107,7 @@ export default function Works() {
                     <h3 className="text-balance font-display text-2xl font-semibold leading-tight text-ink transition-colors duration-300 group-hover:text-gold-dark">
                       {tr(w.title)}
                     </h3>
+                    {w.missingDetails && <p className="mt-2 text-sm leading-relaxed text-ink-soft">{tr(w.missingDetails)}</p>}
                     <p className="mt-1.5 font-sans text-xs uppercase tracking-widest text-ink-muted">
                       {[w.publisher, w.year].filter(Boolean).join(' · ')}
                     </p>

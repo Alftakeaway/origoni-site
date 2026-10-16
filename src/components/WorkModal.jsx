@@ -76,7 +76,7 @@ export default function WorkModal({ work, onClose }) {
             {work.draft && (
               <div className="mt-5 flex items-start gap-3 rounded-lg border border-terracotta/35 bg-terracotta/10 p-4">
                 <PencilLine size={15} className="mt-0.5 shrink-0 text-terracotta" />
-                <p className="text-[13px] leading-relaxed text-ink-soft">{t('draft.banner')}</p>
+                <p className="text-[13px] leading-relaxed text-ink-soft">{work.missingDetails ? tr(work.missingDetails) : t('draft.banner')}</p>
               </div>
             )}
 

@@ -6,7 +6,7 @@ export default function DraftBadge({ className = '' }) {
   const { t } = useLang()
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full bg-terracotta px-3 py-1 font-sans text-[10px] font-semibold uppercase tracking-widest text-paper shadow-card ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full bg-terracotta-dark px-3 py-1 font-sans text-[10px] font-semibold uppercase tracking-widest text-paper shadow-card ${className}`}
     >
       <PencilLine size={11} />
       {t('draft.label')}

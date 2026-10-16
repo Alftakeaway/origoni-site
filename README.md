@@ -6,7 +6,7 @@ every text field in the data files is `{ it, en }`, Italian before English.
 
 ## Stack
 
-- **Vite 5 + React 18** (lightweight build, no SSR needed for a portfolio)
+- **Vite 7 + React 18** (lightweight build, no SSR needed for a portfolio)
 - **Tailwind CSS v3** with a custom literary theme (paper / ink / gold / sage palette,
   Cormorant Garamond + Playfair Display + Plus Jakarta Sans, self-hosted as five latin-subset
   woff2 files: no request leaves the origin for a typeface). Held at v3 on purpose, see
@@ -33,7 +33,11 @@ and the card credits as a source.
 - `docs/corrispondenza/`: the letters to the author asking for the material still missing,
   in the version cleared for a public repository.
 
-## Bozze (placeholder content)
+## Pubblicazione dei contenuti
+
+Dal 16 ottobre 2026 i segnaposto sono archiviati in `docs/editorial/`, fuori dal bundle pubblico. Restano 13 opere (11 complete e 2 con dati mancanti espliciti), 14 eventi (6 incompleti), nessun articolo o appunto dimostrativo. Vedere [ADR 0007](docs/adr/0007-pubblicazione-contenuti.md). Il badge non viene rimosso senza verifica.
+
+### Stato precedente (8 ottobre 2026)
 
 As of 8 October 2026, eight of the nineteen bibliography entries, all six journal posts,
 six of the fourteen event cards and the one flash note are provisional: some are placeholder
@@ -54,7 +58,7 @@ RSS» link: the site advertises a subscription only once there is something to r
 ## Setup
 
 ```bash
-npm install
+npm ci
 npm run dev      # http://localhost:5173
 npm run validate # scripts/validate-data.mjs alone, without building
 npm run check-links # every remote address, file and in-page anchor the data cites
