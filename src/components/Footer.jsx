@@ -1,6 +1,7 @@
 import { Feather, ArrowUp } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
 import { developer } from '../data/site'
+import MailGlyph from './MailGlyph'
 
 export default function Footer() {
   const { t } = useLang()
@@ -36,12 +37,11 @@ export default function Footer() {
           </div>
           <p className="flex min-h-6 flex-wrap items-center justify-center gap-x-2 font-sans text-[11px] text-paper/70 md:justify-end">
             <span className="uppercase tracking-widest">{t('footer.credit')}</span>
-            <a
-              href={`mailto:${developer.email}`}
-              className="inline-flex min-h-6 items-center rounded transition-colors duration-300 hover:text-gold-light"
-            >
-              {developer.email}
-            </a>
+            <MailGlyph
+              email={developer.email}
+              label={t('a11y.mailDeveloper')}
+              className="inline-flex min-h-6 items-center"
+            />
           </p>
         </div>
       </div>

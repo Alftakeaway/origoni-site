@@ -15,6 +15,29 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.3.2 - 23 ottobre 2026
+
+**Gli indirizzi si vedono, ma nel testo della pagina non ci sono.**
+
+- **Tutti e due gli indirizzi passano dai pixel.** Quella dell'autrice in «Scrivimi» era ricomposta
+  a runtime e poi scritta come testo nel DOM, quindi un programma che legge la pagina resa la
+  raccoglieva come prima; il credito del footer, che sulla riga appena spedita stava in un `href`,
+  offriva l'indirizzo nello stesso modo. Ora `src/components/MailGlyph.jsx` li dipinge entrambi su
+  un canvas, con i caratteri, il colore e la dimensione del blocco che li ospita, e costruisce il
+  `mailto:` solo nell'istante del clic. Misurato sulla pagina resa: nessun testo con la chiocciola,
+  nessun attributo `mailto`, entrambe le righe dipinte coi loro caratteri (Cormorant corsivo
+  nell'autrice, Plus Jakarta Sans nel credito).
+- **Il pulsante, non il collegamento.** `aria-label` tradotto in entrambe le lingue, raggiungimento
+  con Tab e contorno di focus da 3 px verificati con la tastiera vera, bersagli da 180×28 e 156×24.
+  Il costo sta nella decisione, che è un ADR a sé: la riga non si può più selezionare né copiare, e
+  uno schermo fotografato la legge comunque (`docs/adr/0008-indirizzo-a-pixel.md`).
+- **Le preferenze di lettura rifanno il dipinto.** Un canvas non ingrandisce né scurisce con la
+  pagina, e `ReadingControls.jsx` agisce sulla radice: l'indirizzo sarebbe restato del corpo e del
+  colore di prima. `MailGlyph.jsx` osserva gli attributi di `html` e ripittura, moltiplicando il
+  buffer per lo zoom, che il `font-size` computato non segue. Misurato a zoom 1,25: il buffer passa
+  da 156×28 a 195×35 e l'inchiostro da 1064 a 1425 pixel, quindi la riga cresce nitida; l'alto
+  contrasto non tocca queste due righe chiare su fondo scuro, ma il rifacimento lo copre.
+
 ## 1.3.1 - 23 ottobre 2026
 
 **Il credito di chi ha fatto il sito, e la prova che sta sotto la pagina.**

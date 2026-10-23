@@ -92,7 +92,7 @@ src/
     LanguageContext.jsx    # IT/EN toggle, persists, syncs <html lang> and the title
   components/              # Navbar, Hero, Works, BookCover, WorkModal, Journal, PostView,
                            # ReadingControls, Events, About, Shelf, Contact, Flashes,
-                           # Footer, Cursor, DraftBadge, Reveal
+                           # Footer, MailGlyph, Cursor, DraftBadge, Reveal
   utils/ics.js             # .ics composed at runtime as a data URI, floating time
 scripts/validate-data.mjs  # Fails the build: both languages, checksums, files on disk,
                            # cover credits, https sources, and the draft badge where a
@@ -148,7 +148,10 @@ public/
 - Contact address and social profiles: `src/data/site.js`. The address is kept split and
   base64-encoded in `encodedEmail`, so it is not sitting in the open in the shipped bundle;
   that keeps the casual crawler, not a reader who goes looking, which is the whole of what
-  the encoding claims to do. To change it, re-encode each half with `btoa('local-part')`
+  the encoding claims to do. On the page it is painted onto a canvas by `MailGlyph.jsx`, so
+  the rendered text carries no `@` and the `mailto:` is built on click
+  ([docs/adr/0008](docs/adr/0008-indirizzo-a-pixel.md)) — concealment, not protection.
+  To change it, re-encode each half with `btoa('local-part')`
   and `btoa('domain')`. Delete the `email` line and the site shows no contact details, with
   the form saying so instead of pretending to send.
 - Source list: `sources` in `src/data/site.js`; `About.jsx` renders it. Each event in

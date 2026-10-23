@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Check, Mail, AtSign, FileDown } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
 import { contact, pressKit } from '../data/site'
+import MailGlyph from './MailGlyph'
 import Reveal from './Reveal'
 
 const inquiryTypes = ['press', 'events', 'reader', 'other']
@@ -92,13 +93,13 @@ export default function Contact() {
           </div>
 
           {contact.email && (
-            <a
-              href={`mailto:${contact.email}`}
+            <MailGlyph
+              email={contact.email}
+              label={t('a11y.mailAuthor')}
               className="link-underline mt-10 inline-flex items-center gap-2 font-serif text-lg italic text-paper/80"
             >
               <Mail size={16} className="text-gold-light" />
-              {contact.email}
-            </a>
+            </MailGlyph>
           )}
         </Reveal>
 
