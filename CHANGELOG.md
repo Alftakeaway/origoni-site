@@ -15,6 +15,21 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.3.1 - 23 ottobre 2026
+
+**Il credito di chi ha fatto il sito, e la prova che sta sotto la pagina.**
+
+- **Chi ha fatto il sito ora sta in pagina.** Il footer chiude con «Design e sviluppo» in italiano
+  e «Designed & Developed» in inglese, seguiti dall'indirizzo di posta di chi lo ha progettato e
+  scritto. L'indirizzo fa la stessa strada di quello dell'autrice: `src/data/site.js` lo tiene
+  spezzato e codificato, e lo ricompone solo a runtime, così nel repository pubblico non resta in
+  chiaro per chi raccoglie gli indirizzi. `scripts/validate-data.mjs` ne controlla la forma, come
+  già faceva per l'altro.
+- **La fascia scura, misurata.** L'audit di contrasto si ferma al settanta per cento della pagina e
+  il footer non l'aveva mai letto. Misurato ora, il credito prende `paper/70` come le righe accanto
+  e tutti e sei i testi della fascia stanno a 8,74:1 sul nero. L'indirizzo è un collegamento `mailto`
+  alto 24 px, dentro i bersagli della WCAG 2.5.8.
+
 ## 1.3.0 - 10 ottobre 2026
 
 **Caratteri di casa, dati che non si fidano più di noi, indirizzi che aprono una scheda.**

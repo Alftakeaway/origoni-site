@@ -10,6 +10,14 @@ export const contact = {
   socials: [{ label: 'Instagram', href: 'https://www.instagram.com/claudiaorigoni' }],
 }
 
+// Chi ha progettato e scritto il sito. L'indirizzo fa la stessa strada di
+// quello dell'autrice: spezzato e codificato, ricomposto solo a runtime.
+const encodedDeveloperEmail = ['YWxmcmVkb2ZvcnRlLndlYg==', 'Z21haWwuY29t']
+
+export const developer = {
+  email: `${atob(encodedDeveloperEmail[0])}@${atob(encodedDeveloperEmail[1])}`,
+}
+
 // Materiali stampa per le testate: un PDF che riproduce i testi del sito, rigenerato
 // dai dati della bibliografia e delle fonti. Qui sta solo il percorso pubblico.
 export const pressKit = {

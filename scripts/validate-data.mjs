@@ -12,7 +12,7 @@ import { events } from '../src/data/events.js'
 import { posts, categoryKeys } from '../src/data/posts.js'
 import { shelf } from '../src/data/shelf.js'
 import { flashes } from '../src/data/flashes.js'
-import { contact, portrait, sources } from '../src/data/site.js'
+import { contact, developer, portrait, sources } from '../src/data/site.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = resolve(root, 'public')
@@ -135,7 +135,9 @@ flashes.forEach((f) => {
 })
 
 const at = 'contatto'
-if (contact.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(contact.email)) warn(at, 'l\u2019indirizzo ricomposto non è un indirizzo')
+const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)
+if (contact.email && !emailOk(contact.email)) warn(at, 'l\u2019indirizzo ricomposto non è un indirizzo')
+if (developer.email && !emailOk(developer.email)) warn('crediti', 'l\u2019indirizzo ricomposto non è un indirizzo')
 ;(contact.socials ?? []).forEach((s, i) => walk(s, `${at}.socials[${i}]`, 'social'))
 walk(portrait, 'ritratto')
 sources.forEach((s, i) => {

@@ -1,5 +1,6 @@
 import { Feather, ArrowUp } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext'
+import { developer } from '../data/site'
 
 export default function Footer() {
   const { t } = useLang()
@@ -20,17 +21,28 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex items-center gap-6">
-          <span className="font-sans text-[11px] uppercase tracking-widest">
-            &copy; {new Date().getFullYear()}
-          </span>
-          <a
-            href="#top"
-            aria-label={t('a11y.backTop')}
-            className="rounded-full border border-paper/15 p-2.5 text-paper/60 transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:text-gold-light"
-          >
-            <ArrowUp size={14} />
-          </a>
+        <div className="flex flex-col items-center gap-2 md:items-end">
+          <div className="flex items-center gap-6">
+            <span className="font-sans text-[11px] uppercase tracking-widest">
+              &copy; {new Date().getFullYear()}
+            </span>
+            <a
+              href="#top"
+              aria-label={t('a11y.backTop')}
+              className="rounded-full border border-paper/15 p-2.5 text-paper/60 transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:text-gold-light"
+            >
+              <ArrowUp size={14} />
+            </a>
+          </div>
+          <p className="flex min-h-6 flex-wrap items-center justify-center gap-x-2 font-sans text-[11px] text-paper/70 md:justify-end">
+            <span className="uppercase tracking-widest">{t('footer.credit')}</span>
+            <a
+              href={`mailto:${developer.email}`}
+              className="inline-flex min-h-6 items-center rounded transition-colors duration-300 hover:text-gold-light"
+            >
+              {developer.email}
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -162,6 +162,7 @@ export const strings = {
     footer: {
       quote: '«Un libro è un sogno che si tiene in mano, e una recensione è il sogno di un sogno.»',
       line: 'Dal 2000 al 2026. Bibliografia, date e fonti verificate; le bozze restano segnate.',
+      credit: 'Design e sviluppo',
     },
   },
 
@@ -327,6 +328,7 @@ export const strings = {
       quote:
         '“A book is a dream you hold in your hands, and a review is the dream of a dream.”',
       line: '2000 to 2026. Bibliography, dates and sources verified; drafts marked as such.',
+      credit: 'Designed & Developed',
     },
   },
 }
