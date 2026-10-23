@@ -231,7 +231,7 @@ export const works = [
           'Questo volume è un vero e proprio viaggio fotografico attraverso due popolari e storici quartieri di Napoli: Sanità e Forcella.',
         outlet: 'Centro Studi sul Teatro Napoletano Meridionale ed Europeo',
         date: { it: 'schede bibliografiche 2005', en: 'bibliographic sheets 2005' },
-        href: 'https://www.unisa.it/centri_e_vari/teatro_napoletano/la_critica/schede_biblio/2005',
+        href: 'https://web.archive.org/web/20240920193302/https://www.unisa.it/centri_e_vari/teatro_napoletano/la_critica/schede_biblio/2005',
       },
     ],
     links: [

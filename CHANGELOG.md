@@ -38,6 +38,14 @@ e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
   da 156×28 a 195×35 e l'inchiostro da 1064 a 1425 pixel, quindi la riga cresce nitida; l'alto
   contrasto non tocca queste due righe chiare su fondo scuro, ma il rifacimento lo copre.
 
+- **Una fonte che non c'è più, messa in copia.** Il CI si è fermato sulla scheda bibliografica del
+  Centro Studi sul Teatro Napoletano, che l'ateneo ha tolto: 404 da ieri, e la stessa pagina aveva
+  passato il controllo alla consegna della 1.3.1. La citazione di «Alza gli occhi e guarda» resta
+  lì, ma ora punta alla copia conservata del 20 settembre 2024, dove la frase citata e il
+  «contributo di Claudia Origoni» si leggono ancora parola per parola. `npm run check-links` passa:
+  29 indirizzi esterni, nessuno rotto, cinque da rivedere perché rispondono 401, 403 e 504 ai
+  programmi.
+
 ## 1.3.1 - 23 ottobre 2026
 
 **Il credito di chi ha fatto il sito, e la prova che sta sotto la pagina.**
