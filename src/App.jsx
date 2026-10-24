@@ -12,6 +12,7 @@ import Flashes from './components/Flashes'
 import ReadingControls from './components/ReadingControls'
 import Footer from './components/Footer'
 import Cursor from './components/Cursor'
+import ScrollProgress from './components/ScrollProgress'
 
 function SkipLink() {
   const { t } = useLang()
@@ -25,6 +26,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <LanguageProvider>
         <SkipLink />
+        <ScrollProgress />
         <Cursor />
         <Navbar />
         <ReadingControls />

@@ -26,6 +26,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Test ricerca e filtri
+        run: npm test
+
       - name: Valida i dati
         run: npm run validate
 

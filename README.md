@@ -60,6 +60,7 @@ RSS» link: the site advertises a subscription only once there is something to r
 ```bash
 npm ci
 npm run dev      # http://localhost:5173
+npm test         # search and filter behavior, using Node's built-in test runner
 npm run validate # scripts/validate-data.mjs alone, without building
 npm run check-links # every remote address, file and in-page anchor the data cites
 npm run build    # validate, dist/, the JSON-LD block, then dist/feed.xml
@@ -92,8 +93,10 @@ src/
     LanguageContext.jsx    # IT/EN toggle, persists, syncs <html lang> and the title
   components/              # Navbar, Hero, Works, BookCover, WorkModal, Journal, PostView,
                            # ReadingControls, Events, About, Shelf, Contact, Flashes,
-                           # Footer, MailGlyph, Cursor, DraftBadge, Reveal
+                           # ScrollProgress, Footer, MailGlyph, Cursor, DraftBadge, Reveal
   utils/ics.js             # .ics composed at runtime as a data URI, floating time
+  utils/filterWorks.js     # bilingual catalogue search and type filtering
+tests/filterWorks.test.js  # catalogue search/filter tests
 scripts/validate-data.mjs  # Fails the build: both languages, checksums, files on disk,
                            # cover credits, https sources, and the draft badge where a
                            # fact is missing

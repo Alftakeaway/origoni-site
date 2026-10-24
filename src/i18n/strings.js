@@ -29,6 +29,14 @@ export const strings = {
       intro:
         'Dal 2000 al 2026: un catalogo di simboli floreali nell’arte sacra, un volume fotografico su due quartieri di Napoli, un saggio a quattro mani sul cioccolato di Modica, un articolo su una cantante lirica de La Maddalena, un testo in catalogo di mostra, un romanzo storico costruito su un caso di cronaca del 1925 e sei fra racconti e testi usciti in antologia o in volume collettaneo. Per ogni titolo la scheda riporta editore, anno e, dove esiste, ISBN.',
       readMore: 'Apri la scheda',
+      searchLabel: 'Cerca nella bibliografia',
+      searchPlaceholder: 'Titolo, editore, anno, ISBN…',
+      filterLabel: 'Filtra le opere per tipologia',
+      filterAll: 'Tutte',
+      resultCount: '{count} di {total} opere',
+      emptyTitle: 'Nessun titolo trovato',
+      empty: 'Prova con un altro termine o scegli una tipologia diversa.',
+      clearFilters: 'Azzera ricerca e filtri',
       coverPlaceholder: 'Copertina provvisoria',
       draftNote:
         'Le schede marcate «bozza» non sono definitive: si tratta di opere documentate per cui mancano alcuni dati di catalogo, indicati accanto a ogni titolo.',
@@ -113,6 +121,7 @@ export const strings = {
     },
     a11y: {
       skip: 'Salta al contenuto',
+      pageProgress: 'Avanzamento nella pagina',
       backTop: 'Torna in cima',
       openMenu: 'Apri il menu',
       closeMenu: 'Chiudi il menu',
@@ -196,6 +205,14 @@ export const strings = {
       intro:
         'From 2000 to 2026: a catalogue of floral symbols in sacred art, a photography volume on two quarters of Naples, a co-authored study of the chocolate of Modica, an article on an opera singer from La Maddalena, an exhibition catalogue text, a historical novel built on a real criminal case from 1925 and six pieces, short stories and texts alike, published in anthologies or edited volumes. Each entry carries its publisher, its year and, where it exists, its ISBN.',
       readMore: 'Open the entry',
+      searchLabel: 'Search the bibliography',
+      searchPlaceholder: 'Title, publisher, year, ISBN…',
+      filterLabel: 'Filter works by type',
+      filterAll: 'All',
+      resultCount: '{count} of {total} works',
+      emptyTitle: 'No titles found',
+      empty: 'Try another search term or choose a different type.',
+      clearFilters: 'Clear search and filters',
       coverPlaceholder: 'Provisional cover',
       draftNote:
         'Entries marked “draft” are not final: these are documented works with missing catalogue details, listed beside each title.',
@@ -280,6 +297,7 @@ export const strings = {
     },
     a11y: {
       skip: 'Skip to content',
+      pageProgress: 'Page reading progress',
       backTop: 'Back to top',
       openMenu: 'Open menu',
       closeMenu: 'Close menu',

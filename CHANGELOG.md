@@ -15,6 +15,12 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.3.3 - 24 ottobre 2026
+
+- Ricerca bilingue e filtri per tipologia nella bibliografia: titolo, editore, anno, ISBN e dati collegati; i risultati si riordinano con una transizione breve e rispettano la preferenza di movimento ridotto.
+- Indicatore di avanzamento della lettura accessibile e sincronizzato con lo scorrimento.
+- Test unitari senza dipendenze per ricerca, filtri, accenti e contenuti bilingui.
+
 ## 1.3.2 - 23 ottobre 2026
 
 **Gli indirizzi si vedono, ma nel testo della pagina non ci sono.**
