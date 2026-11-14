@@ -1,5 +1,6 @@
 import { Calendar, CalendarPlus, MapPin, ExternalLink, Users } from 'lucide-react'
 import { events } from '../data/events'
+import { siteUrl } from '../data/site'
 import { icsForEvent } from '../utils/ics'
 import { useLang } from '../i18n/LanguageContext'
 import DraftBadge from './DraftBadge'
@@ -30,12 +31,15 @@ export default function Events() {
             // Il calendario si offre solo quando il giorno è documentato: senza,
             // il file .ics porterebbe in agenda una data inventata per ordinare.
             const dated = !e.draft && e.sort !== '0000-00-00' && !e.wholeMonth
+            // L'indirizzo dentro il file è quello pubblico, non `window.location`:
+            // la pagina si renderizza anche in Node, e un appuntamento scaricato
+            // da un'anteprima locale non deve portarsi dietro localhost.
             const ics = dated
               ? icsForEvent(e, {
                   title: tr(e.title),
                   place,
                   description: tr(e.detail),
-                  url: `${window.location.origin}/#events`,
+                  url: `${siteUrl}/#events`,
                 })
               : null
             return (
@@ -134,6 +138,11 @@ export default function Events() {
                     <a
                       href={ics}
                       download={`${e.id}.ics`}
+                      // Il DTSTAMP dentro il file è l'istante in cui la pagina è
+                      // stata scritta: la build e la visita non coincidono, e per
+                      // un orario che nasce dal calendario è la differenza che
+                      // React si aspetta (suppressHydrationWarning).
+                      suppressHydrationWarning
                       className="ml-auto inline-flex items-center gap-1.5 py-1.5 font-sans text-[11px] uppercase tracking-widest text-ink-muted transition-colors hover:text-gold-dark"
                     >
                       <CalendarPlus size={13} />

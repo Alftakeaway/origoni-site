@@ -4,8 +4,18 @@ import App from './App.jsx'
 import './index.css'
 import './contrast.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const container = document.getElementById('root')
+const albero = (
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
+
+// La build consegna la pagina già scritta (scripts/prerender.mjs): quando #root
+// ha del contenuto si idrata, così il primo pittamento non viene cancellato e
+// ridisegnato. Senza prerender, in dev, si parte dal guscio vuoto come prima.
+if (container.firstElementChild) {
+  ReactDOM.hydrateRoot(container, albero)
+} else {
+  ReactDOM.createRoot(container).render(albero)
+}

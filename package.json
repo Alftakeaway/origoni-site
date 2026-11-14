@@ -1,14 +1,14 @@
 {
   "name": "claudia-origoni",
   "private": true,
-  "version": "1.3.3",
+  "version": "1.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "validate": "node scripts/validate-data.mjs",
     "test": "node --test",
     "check-links": "node scripts/check-links.mjs",
-    "build": "node scripts/validate-data.mjs && vite build && node scripts/build-jsonld.mjs && node scripts/build-feed.mjs",
+    "build": "node scripts/validate-data.mjs && vite build && node scripts/prerender.mjs && node scripts/build-jsonld.mjs && node scripts/build-feed.mjs",
     "preview": "vite preview",
     "press-kit": "node scripts/make-press-kit.mjs",
     "check-publication": "node scripts/check-publication.mjs"

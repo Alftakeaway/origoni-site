@@ -12,15 +12,12 @@ const glyphs = [
   { char: '\u201D', x: '92%', y: '44%', size: 'text-[80px]', dur: 13, delay: 0.4, rot: -4 },
 ]
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.14, delayChildren: 0.3 } },
-}
-
-const item = {
-  hidden: { opacity: 0, y: 34 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
-}
+// L'entrata della prima schermata sta nel CSS (.co-rise in src/index.css) e non
+// in uno stile inline: la build consegna il testo già nell'HTML, e un'opacity
+// scritta dal JavaScript lo nasconderebbe a chi legge senza script e ai motori
+// che non lo eseguono. La cadenza è la stessa di prima: 0.3 s di attesa, poi
+// 0.14 s fra un pezzo e il seguente.
+const ritmo = (i) => ({ '--co-i': i })
 
 export default function Hero() {
   const reduce = useReducedMotion()
@@ -51,58 +48,53 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating typography glyphs */}
-      {!reduce &&
-        glyphs.map((g, i) => (
-          <motion.span
-            key={i}
-            aria-hidden
-            className={`absolute select-none font-display text-ink/[0.07] ${g.size}`}
-            style={{ left: g.x, top: g.y }}
-            animate={{ y: [0, -22, 0], rotate: [g.rot, g.rot + 5, g.rot] }}
-            transition={{ duration: g.dur, repeat: Infinity, delay: g.delay, ease: 'easeInOut' }}
-          >
-            {g.char}
-          </motion.span>
-        ))}
+      {/* Floating typography glyphs: con il moto ridotto restano fermi invece di
+          sparire, così il markup del server e quello del client combaciano. */}
+      {glyphs.map((g, i) => (
+        <motion.span
+          key={i}
+          aria-hidden
+          className={`absolute select-none font-display text-ink/[0.07] ${g.size}`}
+          style={{ left: g.x, top: g.y }}
+          animate={reduce ? undefined : { y: [0, -22, 0], rotate: [g.rot, g.rot + 5, g.rot] }}
+          transition={{ duration: g.dur, repeat: Infinity, delay: g.delay, ease: 'easeInOut' }}
+        >
+          {g.char}
+        </motion.span>
+      ))}
 
       {/* Copy */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="relative z-10 mx-auto max-w-4xl px-6 text-center"
-      >
-        <motion.p variants={item} className="eyebrow mb-6">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <p className="eyebrow co-rise mb-6" style={ritmo(0)}>
           {t('hero.eyebrow')}
-        </motion.p>
+        </p>
 
-        <motion.h1
-          variants={item}
-          className="font-display text-[clamp(2.8rem,8vw,6rem)] font-semibold leading-[1.05] text-ink"
+        <h1
+          className="co-rise font-display text-[clamp(2.8rem,8vw,6rem)] font-semibold leading-[1.05] text-ink"
+          style={ritmo(1)}
         >
           Claudia Origoni
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          variants={item}
-          className="mx-auto mt-7 max-w-xl font-serif text-2xl italic leading-snug text-ink-soft md:text-3xl"
+        <p
+          className="co-rise mx-auto mt-7 max-w-xl font-serif text-2xl italic leading-snug text-ink-soft md:text-3xl"
+          style={ritmo(2)}
         >
           {t('hero.tagline')}
-        </motion.p>
+        </p>
 
-        <motion.p
-          variants={item}
-          className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted"
+        <p
+          className="co-rise mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted"
+          style={ritmo(3)}
         >
           {t('hero.bioA')}
           <span className="font-medium text-ink-soft">{t('hero.bio1')}</span>
           {t('hero.bioB')}
-        </motion.p>
+        </p>
 
-        <motion.div
-          variants={item}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        <div
+          className="co-rise mt-10 flex flex-wrap items-center justify-center gap-4"
+          style={ritmo(4)}
         >
           <a
             href="#works"
@@ -121,17 +113,11 @@ export default function Hero() {
             <Quote size={15} />
             {t('hero.ctaAbout')}
           </a>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Scroll cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        aria-hidden
-      >
+      <div className="co-fade absolute bottom-8 left-1/2 -translate-x-1/2" aria-hidden>
         <motion.div
           animate={reduce ? undefined : { y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -140,7 +126,7 @@ export default function Hero() {
           <span className="font-sans text-[10px] uppercase tracking-literary">{t('hero.scroll')}</span>
           <div className="h-10 w-px bg-gradient-to-b from-gold to-transparent" />
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   )
 }

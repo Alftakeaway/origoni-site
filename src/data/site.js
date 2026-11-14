@@ -1,5 +1,12 @@
 // Dati di contatto e fonti pubbliche.
 // Recapiti forniti dall'autrice (ottobre 2026).
+
+// L'indirizzo pubblico del sito. Lo legge il calendario che la pagina offre e lo
+// leggono gli script della build (feed e dati strutturati): deve coincidere con
+// la `canonical` e con gli `og:url` di index.html, e quando arriva il dominio
+// proprio si cambia qui una riga sola.
+export const siteUrl = 'https://origoni-site.vercel.app'
+
 // L'indirizzo è tenuto spezzato e codificato, e ricomposto solo a runtime:
 // i crawler che estraggono gli indirizzi dal sorgente non lo trovano in chiaro.
 // Per disattivare la posta in uscita cancellare la riga `email`.

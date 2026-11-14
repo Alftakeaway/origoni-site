@@ -55,6 +55,21 @@
     />
   </head>
   <body>
+    <!-- La pagina arriva già scritta nell'HTML (scripts/prerender.mjs), quindi
+         senza JavaScript si legge lo stesso. Qui si dichiara quello che resta
+         chiuso, e dove stanno gli stessi recapiti. -->
+    <noscript>
+      <div
+        class="border-b border-ink/10 bg-paper-warm px-6 pb-5 pt-28 font-sans text-[13px] leading-relaxed text-ink-soft"
+      >
+        <p class="mx-auto max-w-3xl">
+          Senza JavaScript questa pagina si legge lo stesso: bibliografia, appuntamenti e appunti sono già
+          qui. Non si aprono invece le schede delle opere, la versione inglese e l'indirizzo per scrivere
+          all'autrice: gli stessi recapiti stanno nel
+          <a class="link-underline text-gold-dark" href="/press/press-kit-claudia-origoni.pdf">kit stampa</a>.
+        </p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

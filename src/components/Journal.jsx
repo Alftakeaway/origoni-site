@@ -88,7 +88,9 @@ export default function Journal() {
 
         {/* Post cards */}
         <motion.div layout className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
+          {/* initial={false}: le schede del primo giro stanno già nell'HTML della
+              build, e solo quelle che entrano dopo, filtrando, si animano. */}
+          <AnimatePresence mode="popLayout" initial={false}>
             {visible.map((p, i) => (
               <motion.article
                 layout

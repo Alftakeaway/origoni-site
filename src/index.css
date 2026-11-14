@@ -54,6 +54,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* La barra del browser a tinte di carta anche su Firefox, dove le regole
+       -webkit- qui sotto non arrivano. */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(26, 26, 26, 0.28) #f7f2e9;
   }
 
   body {
@@ -99,6 +103,24 @@
     @apply font-sans text-[11px] uppercase tracking-literary text-gold-dark;
   }
 
+  /* Entrata della prima schermata. La pagina esce dalla build già scritta
+     (scripts/prerender.mjs): se l'attesa e la salita le mettesse il JavaScript
+     con uno stile inline, il testo nell'HTML consegnato sarebbe nascosto a chi
+     legge senza script e ai motori che non lo eseguono. Qui parte dal CSS, che
+     gira anche senza JavaScript, e il markup del server e del client combacia.
+     --co-i è il posto del pezzo nella cadenza: 0.3 s di attesa, poi 0.14 s fra
+     l'uno e il seguente, come nella coreografia di prima. */
+  .co-rise {
+    animation: co-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(0.3s + var(--co-i, 0) * 0.14s);
+  }
+  .co-nav-in {
+    animation: co-nav-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .co-fade {
+    animation: co-fade 1s ease-out 2s both;
+  }
+
   /* Long-form article typography */
   .article-body p {
     @apply mb-6 text-[17px] leading-[1.9] text-ink-soft md:text-lg;
@@ -108,13 +130,47 @@
   }
 }
 
+@keyframes co-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 34px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes co-nav-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -80px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes co-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .animate-drift,
   .animate-floaty,
-  .animate-shimmer {
+  .animate-shimmer,
+  .co-rise,
+  .co-nav-in,
+  .co-fade {
     animation: none !important;
   }
 }

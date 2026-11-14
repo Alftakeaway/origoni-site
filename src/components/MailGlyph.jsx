@@ -66,7 +66,18 @@ export default function MailGlyph({ email, label, className = '', children }) {
       className={className}
     >
       {children}
-      <canvas ref={ref} aria-hidden="true" className="block" />
+      {/* Il posto della riga prima che il canvas sia dipinto: senza misure un
+          canvas nasce 300x150, e nell'HTML che la build consegna quel vuoto si
+          vedrebbe. La larghezza in `ch` segue il carattere della riga, poi
+          l'effetto la corregge al pixel. */}
+      <canvas
+        ref={ref}
+        aria-hidden="true"
+        width={1}
+        height={1}
+        className="block"
+        style={{ width: `${email.length}ch`, height: '1.4em' }}
+      />
     </button>
   )
 }

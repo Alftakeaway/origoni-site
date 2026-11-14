@@ -52,11 +52,10 @@ export default function Navbar() {
   const desktopLinks = links.filter((l) => l.href !== '#contact')
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+    // L'entrata è nel CSS (.co-nav-in): la barra deve stare già nell'HTML che la
+    // build consegna, non comparire per mano del JavaScript.
+    <header
+      className={`co-nav-in fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'border-b border-ink/8 bg-paper py-3 shadow-[0_8px_30px_-18px_rgba(26,26,26,0.35)] backdrop-blur-md'
           : 'bg-transparent py-6'
@@ -68,13 +67,15 @@ export default function Navbar() {
             size={20}
             className="text-gold transition-transform duration-500 group-hover:-rotate-12"
           />
-          <span className="font-display text-lg font-semibold tracking-wide text-ink">
+          <span className="whitespace-nowrap font-display text-lg font-semibold tracking-wide text-ink">
             Claudia <span className="text-gold-dark">Origoni</span>
           </span>
         </a>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-4 md:flex xl:gap-7">
+        {/* Desktop links. La riga con marchio, cinque voci, lingua e pulsante
+            sotto i 1024 pixel non ci sta: il nome andava a capo e le voci
+            toccavano il marchio. Sotto quella soglia comanda il menu. */}
+        <ul className="hidden items-center gap-4 lg:flex xl:gap-7">
           {desktopLinks.map((l) => (
             <li key={l.href}>
               <a
@@ -100,7 +101,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="flex h-11 w-11 items-center justify-center text-ink md:hidden"
+          className="flex h-11 w-11 items-center justify-center text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? t('a11y.closeMenu') : t('a11y.openMenu')}
           aria-controls="mobile-menu"
@@ -119,7 +120,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden bg-paper/95 backdrop-blur-md md:hidden"
+            className="overflow-hidden bg-paper/95 backdrop-blur-md lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 pb-4 pt-2">
               {links.map((l) => (
@@ -143,6 +144,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   )
 }
