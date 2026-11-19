@@ -41,7 +41,7 @@ export default function Shelf() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="eyebrow mb-4">{t('shelf.eyebrow')}</p>
-          <h2 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <h2 className="max-w-xl text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl md:leading-none">
             {t('shelf.heading')}
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted">

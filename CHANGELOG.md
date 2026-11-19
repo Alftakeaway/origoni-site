@@ -15,6 +15,16 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.0 - 19 novembre 2026
+
+**Il motore del sito va avanti di tre major e la pagina resta identica al pixel.**
+
+- **React 18.3 → 19.3, Vite 7 → 8 (Rolldown e Oxc), Tailwind 3.4 → 4.3, framer-motion 11 → 13.** `tailwind.config.js` e `postcss.config.js` spariscono: i token (colori, font, ombre, cadenze) sono ora un blocco `@theme` in `src/index.css`, compilato dal plugin Vite di Tailwind. `autoprefixer` non serve più: i prefissi li mette Lightning CSS.
+- **Due trappole della migrazione, trovate misurando.** In Tailwind 4 `leading-tight` vince sempre sulla riga di `md:text-5xl` (passa da `--tw-leading`), mentre in 3 la dimensione responsive la sovrascriveva: ogni titolo desktop cresceva di 12 px e la pagina di 134. Riportato l'intento con `md:leading-none` sulle h2 da 48 px e `md:leading-[2.5rem]` su quelle da 36 px (7 file). Le cadenze `drift`/`floaty` usavano `var(--tw-rotate)`, che in 4 non esiste: ora usano `translate` e `rotate`.
+- **Controllati i cambi silenziosi di Tailwind 4** (colore bordo di default, `rounded-sm`, `shadow-sm`): il progetto non ne fa uso, tutti i bordi hanno colore esplicito e le ombre sono token.
+- **Prova.** Confronto con la produzione al browser, stessa finestra: le otto sezioni e l'altezza totale combaciano (`16453 px`), stessi `h1` da 96 px in Playfair, stessi colori, nessun overflow orizzontale, zero errori in console dopo il reload (idratazione React 19 pulita). `npm test` 5 su 5, `npm run check-publication` verde, JSON-LD presente, build in 0,87 s con 165.180 caratteri di pagina prerenderizzata.
+- **Costo dichiarato.** Il pacchetto JavaScript passa da 142,4 a 167,4 kB gzip e il CSS da 8,0 a 10,5: è il prezzo di React 19.3 e Motion 13 (il CSS cresce perché i token ora sono variabili). Recuperabile con `LazyMotion` se servirà.
+
 ## 1.4.2 - 19 novembre 2026
 
 **Il kit stampa torna in pari con i dati, e l'avviso senza JavaScript non promette più un recapito che non c'è.**

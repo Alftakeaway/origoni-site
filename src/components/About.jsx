@@ -26,7 +26,7 @@ export default function About() {
             </figcaption>
           </figure>
           <p className="eyebrow mb-4 mt-10">{t('about.eyebrow')}</p>
-          <h2 className="text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+          <h2 className="text-balance font-display text-4xl font-semibold leading-tight text-ink md:text-5xl md:leading-none">
             {t('about.heading')}
           </h2>
           <figure className="mt-8 border-l-2 border-gold pl-5">

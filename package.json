@@ -1,7 +1,7 @@
 {
   "name": "claudia-origoni",
   "private": true,
-  "version": "1.4.2",
+  "version": "1.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,20 +14,16 @@
     "check-publication": "node scripts/check-publication.mjs"
   },
   "dependencies": {
-    "framer-motion": "^11.11.9",
+    "framer-motion": "^13.1.1",
     "lucide-react": "^0.453.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
     "@vitejs/plugin-react": "^5.2.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "vite": "^7.3.7"
-  },
-  "overrides": {
-    "postcss-selector-parser": "^7.1.6"
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
   },
   "engines": {
     "node": ">=24 <25"
