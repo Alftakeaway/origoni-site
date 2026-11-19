@@ -48,14 +48,18 @@ export default function Events() {
                 aria-hidden
                 className="absolute -left-[41px] top-2 h-3 w-3 rounded-full border-2 border-paper bg-gold-dark md:-left-[57px]"
               />
-              <article className="overflow-hidden rounded-xl border border-ink/8 bg-white/70 shadow-card">
+              <article
+                className={`overflow-hidden rounded-xl border border-ink/8 bg-white/70 shadow-card ${
+                  e.photo ? 'md:grid md:grid-cols-[minmax(0,50%)_minmax(0,1fr)]' : ''
+                }`}
+              >
                 {e.photo && (
-                  <figure className="flex justify-center border-b border-ink/8 bg-paper-warm/50 px-4 py-4">
+                  <figure className="flex items-center justify-center border-b border-ink/8 bg-paper-warm/50 px-4 py-4 md:h-full md:border-b-0 md:border-r md:px-6 md:py-6">
                     <img
                       src={e.photo}
                       alt={tr(e.photoCaption ?? e.title)}
                       loading="lazy"
-                      className="h-auto max-h-[520px] w-auto max-w-full rounded-lg object-contain shadow-card"
+                      className="h-auto max-h-[520px] w-auto max-w-full rounded-lg object-contain shadow-card md:h-full md:max-h-none"
                     />
                   </figure>
                 )}

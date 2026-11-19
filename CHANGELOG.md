@@ -15,6 +15,14 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.2 - 19 novembre 2026
+
+**La foto passa a sinistra, il testo a destra: la scheda torna affiancata, senza ritagli.**
+
+- **Su schermo largo la scheda con foto è di nuovo a due colonne**, ma al contrario di prima: foto a sinistra su metà scheda (`minmax(0,50%)`), testo a destra, separati da un filo. Su telefono resta la foto sopra e il testo sotto.
+- **La foto continua a vedersi intera**: `object-contain`, altezza quella della scheda, nessun ritaglio. Il manifesto quadrato del Martoglio sta in 463 px di colonna; le foto verticali (es. Palermo, 780×975) riempiono la colonna senza deformarsi.
+- **Prova.** Build verde (166.564 caratteri prerenderizzati), misure al browser: colonna 463×799, immagine contenuta e centrata, `object-fit: contain`, testo a destra.
+
 ## 1.5.1 - 19 novembre 2026
 
 **Le fotografie degli incontri si vedono intere, sopra il testo.**
