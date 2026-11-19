@@ -15,6 +15,14 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.4.1 - 19 novembre 2026
+
+**Il materiale del 19 novembre: il contenitore della pagina 69 e una cerimonia nuova.**
+
+- **«Citazioni di una vita» esce dalla bozza.** Insieme alla pagina del contributo l'autrice ha mandato copertina, frontespizio, colophon e indice del volume che la tiene: «Il miraggio del futuro fra Covid e Fata Morgana», a cura di Antonella Pellettieri, Zaccara, 2023, ISBN 9791280537133, collana MenSALe, Documenta et Monumenta, 10. Le due voci provvisorie (il volume senza contributo e la pagina senza contenitore) diventano una sola scheda, con la sinossi della pagina e tre note che dicono che cosa la documenta: il colophon fotografato («© 2023 Grafiche Zaccara Snc», Lagonegro, «Finito di stampare nel mese di dicembre 2023»), il numero 69 in calce alla pagina con la qualifica «Imprenditrice e Scrittrice», e il limite rimasto, cioè la pagina d'indice precedente a quella fotografata, che parte da 77. L'ISBN passa al carattere di controllo del validatore.
+- **Un appuntamento nuovo, con due fonti cartacee.** Sabato 21 novembre 2026, ore 18, al Teatro Comunale "Nino Martoglio" di Belpasso (CT): la XXXIX edizione del Premio Letterario Internazionale "Nino Martoglio" premia gli Olmi, la comunità di scrittori siciliani di cui l'autrice fa parte, insieme a «Radici di carta» (Kalòs), l'antologia che ospita il suo racconto «Salvate i mobili». Il manifesto della cerimonia e il ritaglio stampa «Alla Letturina il «Nino Martoglio»», entrambi dall'archivio dell'autrice e senza testata dichiarata, stanno nelle fonti; il manifesto è la fotografia della scheda, e la data piena offre il calendario .ics.
+- **Prova.** `npm run validate`: 12 opere, 15 eventi, zero bozze fra le opere e due fra gli eventi (i due incontri col solo mese). Gate italiano e inglese riletti sui nuovi testi: l'unico passivo nuovo nomina chi agisce e resta, i titoli verbatim in inglese restano segnalati e lasciati. `npm test` 5 su 5, `npm run check-publication` e `npm run check-links` verdi; sulla build servita la scheda del contributo e la nuova scheda evento lette al browser in italiano e in inglese.
+
 ## 1.4.0 - 14 novembre 2026
 
 **La pagina arriva già scritta, e il JavaScript la riprende invece di rifarla.**

@@ -413,4 +413,44 @@ export const events = [
       },
     ],
   },
+  {
+    id: 'martoglio-belpasso-2026',
+    sort: '2026-11-21',
+    time: '18:00',
+    year: 2026,
+    dateLabel: { it: '21 novembre 2026, ore 18', en: '21 November 2026, 6 p.m.' },
+    title: {
+      it: 'Premio "Nino Martoglio": gli Olmi premiati a Belpasso',
+      en: '“Nino Martoglio” prize: the Olmi awarded in Belpasso',
+    },
+    kind: { it: 'Premio', en: 'Prize' },
+    place: { it: 'Teatro Comunale "Nino Martoglio"', en: 'Nino Martoglio Municipal Theatre' },
+    city: 'Belpasso (CT)',
+    role: {
+      it: 'Fra i premiati con gli Olmi, la comunità di scrittori siciliani di cui fa parte',
+      en: 'Among the awardees with the Olmi, the Sicilian writers’ community she belongs to',
+    },
+    detail: {
+      it:
+        'La XXXIX edizione del Premio Letterario Internazionale "Nino Martoglio" premia gli Olmi, la comunità di scrittori siciliani di cui l’autrice fa parte, insieme alla raccolta «Radici di carta» (Kalòs), curata da Stefania Auci e Nadia Terranova, che ospita il suo racconto «Salvate i mobili». Il ritaglio stampa elenca fra gli altri premiati Stefania Auci per «Cunti, storie, romanzi. I libri della mia vita» (Mondadori), Massimo Maugeri per «Quel che facciamo dell’amore» (La nave di Teseo) e il gruppo radiofonico Rmb. Promuovono la serata il Comune di Belpasso, la Presidenza dell’Assemblea Regionale Siciliana e il Circolo Culturale Femminile "Athena", con la consulenza scientifica dell’Istituto di Storia dello spettacolo siciliano.',
+      en:
+        'The 39th edition of the “Nino Martoglio” international literary prize awards the Olmi, the Sicilian writers’ community the author belongs to, together with the anthology “Radici di carta” (Kalòs), edited by Stefania Auci and Nadia Terranova, which carries her story “Salvate i mobili”. The press clipping lists among the other awardees Stefania Auci for “Cunti, storie, romanzi. I libri della mia vita” (Mondadori), Massimo Maugeri for “Quel che facciamo dell’amore” (La nave di Teseo) and the radio group Rmb. The evening is promoted by the “Comune di Belpasso”, the Presidency of the Sicilian Regional Assembly and the “Circolo Culturale Femminile Athena”, with the scientific advice of the “Istituto di Storia dello spettacolo siciliano”.',
+    },
+    photo: '/foto/martoglio-belpasso-2026.jpg',
+    photoCaption: {
+      it: 'Il manifesto della XXXIX edizione: sabato 21 novembre, ore 18, al Teatro Comunale "Nino Martoglio" di Belpasso. Archivio dell’autrice.',
+      en: 'The poster of the 39th edition: Saturday 21 November, 6 p.m., at the Nino Martoglio Municipal Theatre in Belpasso. The author’s archive.',
+    },
+    sources: [
+      {
+        label: { it: 'Il manifesto della cerimonia, archivio dell’autrice', en: 'The ceremony poster, the author’s archive' },
+      },
+      {
+        label: {
+          it: 'Ritaglio stampa: Alla Letturina il «Nino Martoglio», archivio dell’autrice',
+          en: 'Press clipping: “Alla Letturina il «Nino Martoglio»”, the author’s archive',
+        },
+      },
+    ],
+  },
 ]

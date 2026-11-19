@@ -489,51 +489,11 @@ export const works = [
     },
   },
 
-  {
-    id: 'il-miraggio-del-futuro-fra-covid-e-fata-morgana',
-    title: {
-      it: 'Il miraggio del futuro fra Covid e Fata Morgana',
-      en: 'Il miraggio del futuro fra Covid e Fata Morgana',
-    },
-    subtitle: {
-      it: 'Antologia a cura di Antonella Pellettieri, collana MenSALe, Documenta et Monumenta, 10',
-      en: 'An anthology edited by Antonella Pellettieri, MenSALe series, Documenta et Monumenta, 10',
-    },
-    type: { it: 'Testo in antologia', en: 'Text in an anthology' },
-    publisher: 'Zaccara',
-    year: 2023,
-    cover: '/covers/il-miraggio-del-futuro.png',
-    coverCorrection: 'miraggio-photo',
-    coverCredit: 'fotografia fornita per il sito',
-    tone: 'terracotta',
-    draft: true,
-    missingDetails: { it: 'Titolo e pagine del contributo di Claudia Origoni non disponibili.', en: 'The title and pages of Claudia Origoni’s contribution are not available.' },
-    synopsis: {
-      it:
-        'Curata da Antonella Pellettieri e pubblicata da Zaccara nel 2023, l’antologia raccoglie le testimonianze di 23 autori, tra cui Claudia Origoni, sulle trasformazioni individuali e collettive lasciate dalla pandemia. Il miraggio di Fata Morgana accompagna una riflessione sul futuro, sulle relazioni, sulla cultura e sulla speranza di un mondo capace di condivisione e di pace.',
-      en:
-        'Edited by Antonella Pellettieri and published by Zaccara in 2023, the anthology brings together reflections by 23 authors, including Claudia Origoni, on the individual and collective changes left by the pandemic. The mirage of Fata Morgana frames a reflection on the future, relationships, culture and the hope for a world shaped by sharing and peace.',
-    },
-    notes: [
-      {
-        it:
-          'La recensione fornita per il sito elenca Claudia Origoni fra i 23 autori dell’antologia. Il titolo e le pagine del suo contributo non sono indicati nel materiale disponibile.',
-        en:
-          'The review supplied for the website lists Claudia Origoni among the anthology’s 23 authors. The available material does not specify the title or pages of her contribution.',
-      },
-      {
-        it:
-          'La copertina fornita riporta la curatela di Antonella Pellettieri e il numero 10 della collana MenSALe, Documenta et Monumenta. La recensione indica Zaccara come editore e il 2023 come anno di pubblicazione.',
-        en:
-          'The supplied cover identifies Antonella Pellettieri as editor and the volume as number 10 in the MenSALe, Documenta et Monumenta series. The review identifies Zaccara as publisher and 2023 as the publication year.',
-      },
-    ],
-  },
-
   // ─────────────────────────────────────────────────────────────────────────────
   // Carte arrivate il 5 ottobre 2026: due antologie della Valle del Tempo, un
-  // catalogo di mostra e una pagina senza contenitore. Ogni voce rimanda alla
-  // pagina firmata che l'autrice ha fotografato nel proprio esemplare.
+  // catalogo di mostra e una pagina il cui contenitore è arrivato il 19 novembre.
+  // Ogni voce rimanda alla pagina firmata che l'autrice ha fotografato nel
+  // proprio esemplare.
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: '7-7-7-numero-palindromo',
@@ -692,31 +652,41 @@ export const works = [
     id: 'citazioni-di-una-vita',
     title: { it: 'Citazioni di una vita', en: 'Citazioni di una vita' },
     subtitle: {
-      it: 'A pagina 69 di un volume collettaneo non ancora identificato',
-      en: 'On page 69 of an edited volume not yet identified',
+      it: 'In «Il miraggio del futuro fra Covid e Fata Morgana», a cura di Antonella Pellettieri, a pagina 69',
+      en: 'In “Il miraggio del futuro fra Covid e Fata Morgana”, edited by Antonella Pellettieri, on page 69',
     },
-    type: { it: 'Racconto in volume collettaneo', en: 'Short story in an edited volume' },
-    tone: 'ink',
-    draft: true,
-    missingDetails: { it: "Volume di appartenenza, editore e anno da identificare.", en: "Containing volume, publisher and year awaiting identification." },
+    type: { it: 'Testo in antologia', en: 'Text in an anthology' },
+    publisher: 'Zaccara',
+    year: 2023,
+    isbn: '9791280537133',
+    cover: '/covers/il-miraggio-del-futuro.png',
+    coverCorrection: 'miraggio-photo',
+    coverCredit: 'fotografia fornita per il sito',
+    tone: 'terracotta',
     synopsis: {
       it:
-        'Una pagina d’autore, e il pezzo prende due citazioni per tenerle aperte come una cornice. La prima è di Ennio Flaiano, dal «Tempo di uccidere»: «Forse l’esperienza è nel capire il valore di certe parole che la vita ci rivela lentamente e a volte non invano». La seconda è la frase di un uomo incontrato a Rabat: «Ogni uomo o donna di questo mondo ha la sua zattera per raggiungere Dio: tu sei cristiana perché sei nata a Roma, io musulmano perché nato a Rabat, ma Dio è Uno: accetta questo dono, non sporchiamo con il denaro queste parole». Da lì il racconto porta al 1 gennaio 1990 dentro una bottega del suk di Rabat, alla ricerca di una fibula d’argento antica: l’uomo che ha regalato quelle parole è seduto a terra su un tappeto berbero dai colori sgargianti, indossa una djellaba a righe bianche e nere e ha una barba lunga come quella di Zaccaria nella Cappella Sistina. Apre una bacheca impolverata e ne cava la fibula, un oggetto berbero fuso in modo approssimativo, chissà in quale villaggio del deserto, successivamente al 1906, con una moneta di vecchio corso che porta incisa la data 1284, l’anno da cui il Marocco conta le sue monete dall’Egira voluta da Maometto nel 622 d.C. L’avrebbe pagata volentieri qualche migliaio di lire, e invece Seffar gliela regala al termine di un discorso incominciato chissà perché intorno a Dio, in francese, fra due sconosciuti. Il suo negozio, all’ingresso della medina, si chiamava «L’ottava meraviglia del mondo».',
+        'Pagina 69 dell’antologia «Il miraggio del futuro fra Covid e Fata Morgana», e il pezzo prende due citazioni per tenerle aperte come una cornice. La prima è di Ennio Flaiano, dal «Tempo di uccidere»: «Forse l’esperienza è nel capire il valore di certe parole che la vita ci rivela lentamente e a volte non invano». La seconda è la frase di un uomo incontrato a Rabat: «Ogni uomo o donna di questo mondo ha la sua zattera per raggiungere Dio: tu sei cristiana perché sei nata a Roma, io musulmano perché nato a Rabat, ma Dio è Uno: accetta questo dono, non sporchiamo con il denaro queste parole». Da lì il racconto porta al 1 gennaio 1990 dentro una bottega del suk di Rabat, alla ricerca di una fibula d’argento antica: l’uomo che ha regalato quelle parole è seduto a terra su un tappeto berbero dai colori sgargianti, indossa una djellaba a righe bianche e nere e ha una barba lunga come quella di Zaccaria nella Cappella Sistina. Apre una bacheca impolverata e ne cava la fibula, un oggetto berbero fuso in modo approssimativo, chissà in quale villaggio del deserto, successivamente al 1906, con una moneta di vecchio corso che porta incisa la data 1284, l’anno da cui il Marocco conta le sue monete dall’Egira voluta da Maometto nel 622 d.C. L’avrebbe pagata volentieri qualche migliaio di lire, e invece Seffar gliela regala al termine di un discorso incominciato chissà perché intorno a Dio, in francese, fra due sconosciuti. Il suo negozio, all’ingresso della medina, si chiamava «L’ottava meraviglia del mondo».',
       en:
-        'An author’s page, and the piece takes two quotations to hold them open like a frame. The first is Ennio Flaiano’s, from “Tempo di uccidere”: “Perhaps experience lies in understanding the value of certain words that life reveals to us slowly and sometimes not in vain”. The second is a sentence heard from a man met in Rabat: “Every man or woman in this world has their own raft to reach God: you are Christian because you were born in Rome, I Muslim because I was born in Rabat, but God is One: accept this gift, let us not soil these words with money”. From there the story carries us on 1 January 1990 into a workshop in the suk of Rabat, in search of an ancient silver fibula: the man who gave those words is sitting on the ground on a Berber carpet of blazing colours, wearing a djellaba with black and white stripes, his beard as long as Zachariah’s in the Sistine Chapel. He opens a dusty case and takes out the fibula, a Berber object roughly cast, who knows in what village of the desert, after 1906, from an old circulating coin engraved with the date 1284, the year Morocco counts its coins from the Hijra decreed by Muhammad in 622 AD. She would have gladly paid several thousand lire for it; instead Seffar gives it to her at the end of a conversation begun for reasons unknown around God, in French, between two strangers. His shop, at the entrance of the medina, was called “L’ottava meraviglia del mondo”, the eighth wonder of the world.',
+        'Page 69 of the anthology “Il miraggio del futuro fra Covid e Fata Morgana”, and the piece takes two quotations to hold them open like a frame. The first is Ennio Flaiano’s, from “Tempo di uccidere”: “Perhaps experience lies in understanding the value of certain words that life reveals to us slowly and sometimes not in vain”. The second is a sentence heard from a man met in Rabat: “Every man or woman in this world has their own raft to reach God: you are Christian because you were born in Rome, I Muslim because I was born in Rabat, but God is One: accept this gift, let us not soil these words with money”. From there the story carries us on 1 January 1990 into a workshop in the suk of Rabat, in search of an ancient silver fibula: the man who gave those words is sitting on the ground on a Berber carpet of blazing colours, wearing a djellaba with black and white stripes, his beard as long as Zachariah’s in the Sistine Chapel. He opens a dusty case and takes out the fibula, a Berber object roughly cast, who knows in what village of the desert, after 1906, from an old circulating coin engraved with the date 1284, the year Morocco counts its coins from the Hijra decreed by Muhammad in 622 AD. She would have gladly paid several thousand lire for it; instead Seffar gives it to her at the end of a conversation begun for reasons unknown around God, in French, between two strangers. His shop, at the entrance of the medina, was called “L’ottava meraviglia del mondo”, the eighth wonder of the world.',
     },
     notes: [
       {
         it:
-          'La pagina arriva da una fotografia del volume inviata dall’autrice: fra le carte ricevute non ci sono né il frontespizio né il colophon, quindi contenitore, editore e anno restano da accertare, e la voce si pubblica come bozza.',
+          'Il contenitore è documentato dalle fotografie che l’autrice ha inviato il 19 novembre 2026 insieme alla pagina del contributo: copertina, frontespizio, colophon e indice del volume. Il colophon reca «© 2023 Grafiche Zaccara Snc», C.da Verneta, Area Pip, 85042 Lagonegro (Pz), e «Finito di stampare nel mese di dicembre 2023»: editore e anno vengono dalla carta del volume, non più da una recensione.',
         en:
-          'The page comes from a photograph of the volume sent by the author: among the papers received there is neither the title page nor the colophon, so container, publisher and year remain to be established, and the entry is published as a draft.',
+          'The container is documented by the photographs the author sent on 19 November 2026 together with the page of her contribution: jacket, title page, colophon and index of the volume. The colophon reads “© 2023 Grafiche Zaccara Snc”, C.da Verneta, Area Pip, 85042 Lagonegro (Pz), and “Finito di stampare nel mese di dicembre 2023”: publisher and year now come from the volume’s own paper, no longer from a review.',
       },
       {
         it:
-          'Sopra il titolo stanno il nome dell’autrice e la qualifica «Imprenditrice e Scrittrice», in calce il numero 69: è quanto la pagina lascia sapere di sé.',
+          'L’indice fotografato parte da pagina 77 e non nomina questo contributo: la riga che lo elenca sta nella pagina d’indice precedente, che l’autrice non ha fotografato. La pagina del contributo reca in calce il numero 69 e in alto il nome dell’autrice con la qualifica «Imprenditrice e Scrittrice»; la recensione fornita per il sito elenca Claudia Origoni fra i 23 autori dell’antologia.',
         en:
-          'Above the title stand the author’s name and the qualification “Imprenditrice e Scrittrice”, at the foot the number 69: this is what the page lets be known about itself.',
+          'The photographed index starts at page 77 and does not name this contribution: the line listing it stands on the previous index page, which the author did not photograph. The contribution’s page carries the number 69 at the foot and, above the title, the author’s name with the qualification “Imprenditrice e Scrittrice”; the review supplied for the website lists Claudia Origoni among the anthology’s 23 authors.',
+      },
+      {
+        it:
+          'La collana è MenSALe, Documenta et Monumenta, 10, diretta da Antonella Pellettieri, che del volume è anche la curatrice. Il colophon dichiara in copertina Caspar David Friedrich, «Le tre età dell’uomo», 1835, e la progettazione grafica di BrucoMela Design.',
+        en:
+          'The series is MenSALe, Documenta et Monumenta, 10, directed by Antonella Pellettieri, who also edits the volume. The colophon credits the jacket to Caspar David Friedrich, “Le tre età dell’uomo”, 1835, and the graphic design to BrucoMela Design.',
       },
     ],
   },
