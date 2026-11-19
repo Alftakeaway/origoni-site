@@ -11,7 +11,7 @@ export const siteUrl = 'https://origoni-site.vercel.app'
 // e dipinto come pixel su un canvas (MailGlyph): non compare in chiaro né
 // nell'HTML che la build consegna né nel testo della pagina.
 // Per disattivare la posta in uscita cancellare la riga `email`.
-const encodedEmail = ['Y2xhdWRpYW9yaWdvbmk=', 'eWFob28uaXQ=']
+const encodedEmail = ['Y2xhdWRpYW9yaWdvbmlsaWJyaQ==', 'Z21haWwuY29t']
 
 export const contact = {
   email: `${atob(encodedEmail[0])}@${atob(encodedEmail[1])}`,

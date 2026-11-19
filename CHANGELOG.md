@@ -15,6 +15,13 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.5 - 19 novembre 2026
+
+**L’indirizzo di posta passa a `claudiaorigonilibri@gmail.com`.**
+
+- **Cambiata la coppia codificata in `src/data/site.js`** (parte locale e dominio in base64): l’indirizzo continua a non stare in chiaro nell’HTML. Da lì lo prendono la scheda Contatti (disegnata su canvas, `aria-label` generico), il pulsante del modulo e il piè di pagina.
+- **Prova.** L’indirizzo ricomposto dai due pezzi è `claudiaorigonilibri@gmail.com`; `npm run validate` e `check-publication` verdi (nessun `mailto:` e nessun indirizzo in chiaro nell’HTML prerenderizzato); canvas ridipinto nel browser con il nuovo indirizzo. Instagram invariato.
+
 ## 1.5.4 - 19 novembre 2026
 
 **La locandina “Athena” entra anche nel kit stampa, senza allungarlo.**
