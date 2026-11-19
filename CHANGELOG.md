@@ -15,6 +15,14 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.1 - 19 novembre 2026
+
+**Le fotografie degli incontri si vedono intere, sopra il testo.**
+
+- **Otto incontri su quindici hanno una foto, e in tutti la foto stava in una colonna da 240 px con `object-cover`.** Il manifesto del Premio Martoglio è quadrato (1254×1254): nella colonna restava una fetta verticale, senza titolo né data. Lo stesso per i manifesti e i ritratti verticali degli altri incontri.
+- **Ora la foto sta sopra, intera e centrata**, in una fascia color carta con ombra leggera: `object-contain`, altezza massima 520 px, larghezza al massimo quella della scheda. Nessun ritaglio, proporzione dell'originale conservata (prova al browser: 1254×1254 → 520×520; 780×975 → 416×520).
+- **Prova.** Build verde con 165.437 caratteri prerenderizzati, `npm test` 5 su 5; misure sulle schede Martoglio e Mandrarossa con rapporto larghezza/altezza identico all'originale.
+
 ## 1.5.0 - 19 novembre 2026
 
 **Il motore del sito va avanti di tre major e la pagina resta identica al pixel.**
