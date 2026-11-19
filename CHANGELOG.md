@@ -15,6 +15,15 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.3 - 19 novembre 2026
+
+**Il Premio Martoglio ha due immagini: il manifesto e la locandina del Circolo “Athena”.**
+
+- **Nuovo campo `photo2` (+ `photo2Caption`) negli eventi.** La colonna delle immagini le impila, tutte intere e senza ritagli (`w-full h-auto`): nel Martoglio il manifesto 1254×1254 e la locandina 800×380 riempiono la colonna (414×414 + 414×196 = 846 px su una scheda alta 848).
+- **Didascalie separate**, una per immagine, in italiano e inglese.
+- **Nota**: il kit stampa (`npm run press-kit`) usa ancora solo `photo`; va esteso se si vuole la locandina nel PDF.
+- **Prova.** Build verde (166.809 caratteri prerenderizzati), due immagini caricate nel browser con dimensioni naturali corrette, `npm test` 5 su 5.
+
 ## 1.5.2 - 19 novembre 2026
 
 **La foto passa a sinistra, il testo a destra: la scheda torna affiancata, senza ritagli.**

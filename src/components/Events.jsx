@@ -42,6 +42,11 @@ export default function Events() {
                   url: `${siteUrl}/#events`,
                 })
               : null
+            // Una o due immagini per scheda: la colonna le impila, tutte intere.
+            const photos = [
+              e.photo && { src: e.photo, caption: e.photoCaption },
+              e.photo2 && { src: e.photo2, caption: e.photo2Caption },
+            ].filter(Boolean)
             return (
             <Reveal key={e.id} delay={(i % 3) * 0.08} className="relative pb-12 last:pb-0">
               <span
@@ -50,17 +55,20 @@ export default function Events() {
               />
               <article
                 className={`overflow-hidden rounded-xl border border-ink/8 bg-white/70 shadow-card ${
-                  e.photo ? 'md:grid md:grid-cols-[minmax(0,50%)_minmax(0,1fr)]' : ''
+                  photos.length > 0 ? 'md:grid md:grid-cols-[minmax(0,50%)_minmax(0,1fr)]' : ''
                 }`}
               >
-                {e.photo && (
-                  <figure className="flex items-center justify-center border-b border-ink/8 bg-paper-warm/50 px-4 py-4 md:h-full md:border-b-0 md:border-r md:px-6 md:py-6">
-                    <img
-                      src={e.photo}
-                      alt={tr(e.photoCaption ?? e.title)}
-                      loading="lazy"
-                      className="h-auto max-h-[520px] w-auto max-w-full rounded-lg object-contain shadow-card md:h-full md:max-h-none"
-                    />
+                {photos.length > 0 && (
+                  <figure className="flex flex-col items-center justify-center gap-4 border-b border-ink/8 bg-paper-warm/50 px-4 py-4 md:h-full md:border-b-0 md:border-r md:px-6 md:py-6">
+                    {photos.map((p) => (
+                      <img
+                        key={p.src}
+                        src={p.src}
+                        alt={tr(p.caption ?? e.title)}
+                        loading="lazy"
+                        className="block h-auto w-full rounded-lg object-contain shadow-card"
+                      />
+                    ))}
                   </figure>
                 )}
                 <div className="p-6 md:p-7">
@@ -100,10 +108,12 @@ export default function Events() {
                 {e.missingDetails && <p className="mt-4 rounded-lg border border-terracotta/35 bg-paper-warm p-3 text-sm text-ink-soft">{tr(e.missingDetails)}</p>}
                 <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">{tr(e.detail)}</p>
 
-                {e.photo && e.photoCaption && (
-                  <p className="mt-3 font-sans text-[11px] leading-relaxed text-ink-muted">
-                    {tr(e.photoCaption)}
-                  </p>
+                {photos.map((p, j) =>
+                  p.caption ? (
+                    <p key={j} className="mt-3 font-sans text-[11px] leading-relaxed text-ink-muted">
+                      {tr(p.caption)}
+                    </p>
+                  ) : null,
                 )}
 
                 <div className="mt-5 flex flex-wrap items-center gap-2.5 border-t border-ink/8 pt-4">
