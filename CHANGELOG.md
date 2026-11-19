@@ -15,6 +15,17 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.4.2 - 19 novembre 2026
+
+**Il kit stampa torna in pari con i dati, e l'avviso senza JavaScript non promette più un recapito che non c'è.**
+
+- **Kit stampa rigenerato, edizione novembre 2026.** Dodici titoli in bibliografia, con «Citazioni di una vita» e il suo ISBN, e otto fotografie d'evento, con il manifesto di Belpasso. La pagina Contatti ora dichiara dove si legge l'indirizzo di posta dell'autrice (la sezione Contatti del sito, con JavaScript attivo) e perché il PDF non lo stampa: tenerlo fuori dagli elenchi automatici.
+- **L'avviso per chi naviga senza JavaScript dice il vero.** Prima prometteva «gli stessi recapiti» nel kit stampa, ma il kit non contiene l'indirizzo e non può contenerlo, perché il repository è pubblico. Ora l'avviso dichiara che l'indirizzo compare solo a JavaScript acceso e indica il profilo Instagram, che il kit elenca davvero insieme a biografia, bibliografia e fotografie. Letto al browser con JavaScript spento: la banda si legge e la pagina sotto resta intera.
+- **Il commento in `src/data/site.js` descrive la protezione attuale.** L'indirizzo non è più soltanto spezzato e codificato contro i crawler: la pagina lo dipinge come pixel su un canvas, e il commento lo dice.
+- **I cinque link che rispondono male ai programmi, provati con un browser vero.** IBS, Salone del Libro e le tre schede Unilibro danno 504/403/401 alle richieste automatiche; con Chrome rispondono 200 e i titoli corrispondono. Restano come sono: il blocco è contro i bot, non contro chi legge.
+- **Archivio.** La lista di quanto manca dopo il materiale del 19 novembre sta in `docs/corrispondenza/claudia-novembre-2026.md`, in versione redatta.
+- **Prova.** `npm run validate`: 12 opere, 15 eventi, zero bozze fra le opere. Gate italiano e inglese riletti (exit 0; i passivi segnalati sono quelli già letti e lasciati, i cinque titoli verbatim in inglese restano). `npm test` 5 su 5, `npm run check-publication` e `npm run check-links` verdi (29 esterni, 1 file, 7 àncore, nessuno rotto). PDF riletto pagina per pagina: edizione, conteggi, Contatti e assenza dell'indirizzo in chiaro.
+
 ## 1.4.1 - 19 novembre 2026
 
 **Il materiale del 19 novembre: il contenitore della pagina 69 e una cerimonia nuova.**

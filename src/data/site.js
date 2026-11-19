@@ -7,8 +7,9 @@
 // proprio si cambia qui una riga sola.
 export const siteUrl = 'https://origoni-site.vercel.app'
 
-// L'indirizzo è tenuto spezzato e codificato, e ricomposto solo a runtime:
-// i crawler che estraggono gli indirizzi dal sorgente non lo trovano in chiaro.
+// L'indirizzo è spezzato e codificato nel sorgente, ricomposto solo a runtime
+// e dipinto come pixel su un canvas (MailGlyph): non compare in chiaro né
+// nell'HTML che la build consegna né nel testo della pagina.
 // Per disattivare la posta in uscita cancellare la riga `email`.
 const encodedEmail = ['Y2xhdWRpYW9yaWdvbmk=', 'eWFob28uaXQ=']
 

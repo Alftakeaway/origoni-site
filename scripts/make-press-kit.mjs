@@ -17,7 +17,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url))
 const TMP = `${ROOT}.press-build`
 const DEST = `${ROOT}public/press/press-kit-claudia-origoni.pdf`
 const PUBLIC = 'https://origoni-site.vercel.app'
-const EDIZIONE = 'ottobre 2026'
+const EDIZIONE = 'novembre 2026'
 
 // Chrome stampa l'HTML e lo restituisce in PDF: nessuna dipendenza annodata al progetto.
 const SEGNI = [
@@ -127,7 +127,9 @@ const html = `<!doctype html>
   <h2>Contatti</h2>
   <p>Per richieste della stampa e inviti alle presentazioni: il modulo nella sezione
     «Contatti» di <code>${PUBLIC}/#contact</code>, che apre una lettera nel client di posta
-    di chi scrive e non conserva nulla. Profilo: <code>${contact.socials
+    di chi scrive e non conserva nulla. L’indirizzo di posta dell’autrice si legge nella
+    stessa sezione del sito, con JavaScript attivo: qui non lo stampiamo, per tenerlo
+    fuori dagli elenchi automatici. Profilo: <code>${contact.socials
       .map((s) => s.href.replace(/^https?:\/\//, ''))
       .join(', ')}</code>.</p>
   <p>Le opere, gli incontri e le fonti stanno sul sito, in italiano e in inglese. Il Premio
