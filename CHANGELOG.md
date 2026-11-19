@@ -15,6 +15,14 @@ Le regole del registro sono quelle del progetto: un fatto entra solo se ha una
 fonte, i testi provvisori portano il badge BOZZA (vedi `docs/adr/0002-badge-bozza-obbligatorio.md`),
 e i titoli si citano come sono stampati (vedi `GLOSSARY.md`).
 
+## 1.5.4 - 19 novembre 2026
+
+**La locandina “Athena” entra anche nel kit stampa, senza allungarlo.**
+
+- **Kit stampa**: la griglia delle fotografie accoppia le immagini dello stesso evento nella stessa cella (due affiancate a 38 mm), così le nove immagini restano su **quattro pagine** come prima. Il conteggio in fondo conta gli scatti (9), non gli eventi.
+- **La locandina passa da WebP a JPEG** (`/foto/martoglio-circolo-athena.jpg`, 65 kB, convertita con ffmpeg): dentro il PDF il WebP costava +340 kB, perché Chrome lo incorpora decodificato. Il kit resta a 1.095 kB (era 1.026).
+- **Prova.** PDF di 4 pagine, 8 celle e 10 immagini (9 d'evento più il ritratto); pagina Fotografie riletta al browser con gli stessi fogli di stile, nessuna immagine rotta, sitografia e testi invariati.
+
 ## 1.5.3 - 19 novembre 2026
 
 **Il Premio Martoglio ha due immagini: il manifesto e la locandina del Circolo “Athena”.**

@@ -48,7 +48,15 @@ const real = works
   .filter((w) => !w.draft)
   .sort((a, b) => Number(a.year) - Number(b.year))
 const press = works.filter((w) => w.press?.length)
-const photos = events.filter((e) => e.photo)
+const photos = events
+  .map((e) => ({
+    shots: [
+      e.photo && { src: e.photo, caption: e.photoCaption },
+      e.photo2 && { src: e.photo2, caption: e.photo2Caption },
+    ].filter(Boolean),
+  }))
+  .filter((g) => g.shots.length)
+const nShots = photos.reduce((n, g) => n + g.shots.length, 0)
 const bio = strings.it.about.paragraphs
 
 const riga = (w) => {
@@ -102,7 +110,8 @@ const html = `<!doctype html>
           padding-top: 3mm; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
   figure { margin: 0 0 3mm; }
-  figure img { width: 100%; height: 38mm; object-fit: cover; border: .6pt solid #d8d2c4; }
+  .shots { display: flex; gap: 1mm; }
+  figure img { flex: 1 1 0; min-width: 0; width: 100%; height: 38mm; object-fit: cover; border: .6pt solid #d8d2c4; }
   figcaption { font-size: 7.2pt; line-height: 1.3; color: #5a5a5a; margin-top: 1.2mm; }
   figcaption code { font-size: 7pt; }
 </style></head><body>
@@ -160,16 +169,18 @@ const html = `<!doctype html>
   <div class="grid">
     ${photos
       .map(
-        (e) => `<figure>
-      <img src="${file(e.photo)}" alt="">
-      <figcaption>${esc(it(e.photoCaption))}<br><code>${e.photo}</code></figcaption>
+        (g) => `<figure>
+      <div class="shots">${g.shots.map((s) => `<img src="${file(s.src)}" alt="">`).join('')}</div>
+      <figcaption>${g.shots
+        .map((s) => `${esc(it(s.caption))}<br><code>${s.src}</code>`)
+        .join('<br>')}</figcaption>
     </figure>`,
       )
       .join('')}
   </div>
   <div class="foot">Le immagini sono a risoluzione web e senza dati EXIF. Gli originali stanno
-    nell’archivio dell’autrice e si forniscono su richiesta della testata. ${photos.length}
-    scatti d’evento oltre al ritratto in prima pagina.</div>
+    nell'archivio dell'autrice e si forniscono su richiesta della testata. ${nShots}
+    scatti d'evento oltre al ritratto in prima pagina.</div>
 </div>
 
 </body></html>`

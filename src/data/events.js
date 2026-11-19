@@ -441,7 +441,7 @@ export const events = [
       it: 'Il manifesto della XXXIX edizione: sabato 21 novembre, ore 18, al Teatro Comunale "Nino Martoglio" di Belpasso. Archivio dell’autrice.',
       en: 'The poster of the 39th edition: Saturday 21 November, 6 p.m., at the Nino Martoglio Municipal Theatre in Belpasso. The author’s archive.',
     },
-    photo2: '/foto/martoglio-circolo-athena.webp',
+    photo2: '/foto/martoglio-circolo-athena.jpg',
     photo2Caption: {
       it: 'La locandina del Circolo Culturale Femminile "Athena": il ritratto di Nino Martoglio e la XXXIX edizione, Belpasso 2026.',
       en: 'The poster of the Circolo Culturale Femminile “Athena”: the portrait of Nino Martoglio and the 39th edition, Belpasso 2026.',
